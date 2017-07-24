@@ -1,0 +1,135 @@
+{
+    "data": {
+        "breathRate": {
+            "list": [
+                {
+                    "key": "2016-04-23 04:00:00",
+                    "value": "7"
+                },
+                {
+                    "key": "2016-04-23 04:05:00",
+                    "value": "8"
+                },
+				{
+                    "key": "2016-04-23 04:10:00",
+                    "value": "7"
+                },
+                {
+                    "key": "2016-04-23 04:15:00",
+                    "value": "8"
+                }
+            ],
+            "maxValue": 8,
+            "minValue": 7,
+            "avgValue": 7,
+            "dateTime": "2016-04-23",
+            "sleepAnalysisVO": {
+                "sleepAnalysisName": "mattress_breathRate_range",
+                "minValue": 16,
+                "maxValue": 20,
+                "tips": null,
+                "suggest": null,
+                "referRange": "16~20´Î",
+                "rangeFlag": 1
+            }
+        },
+        "dateTime": "2016-04-23",
+        "heartRate": {
+            "list": [
+                {
+                    "key": "2016-04-23 04:00:00",
+                    "value": "71"
+                },
+                {
+                    "key": "2016-04-23 04:05:00",
+                    "value": "70"
+                },
+				{
+                    "key": "2016-04-23 04:10:00",
+                    "value": "65"
+                },
+                {
+                    "key": "2016-04-23 04:15:00",
+                    "value": "98"
+                },
+				{
+                    "key": "2016-04-23 04:20:00",
+                    "value": "100"
+                },
+                {
+                    "key": "2016-04-23 04:25:00",
+                    "value": "78"
+                },
+				{
+                    "key": "2016-04-23 04:54:30",
+                    "value": "25"
+                },
+                {
+                    "key": "2016-04-23 04:55:00",
+                    "value": "57"
+                },
+				{
+                    "key": "2016-04-23 05:00:00",
+                    "value": "85"
+                },
+				{
+                    "key": "2016-04-23 05:05:00",
+                    "value": "67"
+                },
+				{
+                    "key": "2016-04-23 05:10:00",
+                    "value": "87"
+                },
+				{
+                    "key": "2016-04-23 15:10:00",
+                    "value": "110"
+                },
+				{
+                    "key": "2016-04-23 15:15:00",
+                    "value": "10"
+                }
+            ],
+            "maxValue": 71,
+            "minValue": 25,
+            "avgValue": 70,
+            "dateTime": "2016-04-23",
+            "sleepAnalysisVO": {
+                "sleepAnalysisName": "mattress_heartRate_range",
+                "minValue": 60,
+                "maxValue": 100,
+                "tips": null,
+                "suggest": null,
+                "referRange": "60~100´Î",
+                "rangeFlag": 1
+            }
+        },
+        "turnOverTimes": {
+            "list": [
+                {
+                    "key": "2016-04-23 04:00:00",
+                    "value": "0"
+                },
+                {
+                    "key": "2016-04-23 04:05:00",
+                    "value": "0"
+                }
+            ],
+            "maxValue": 0,
+            "minValue": 0,
+            "avgValue": 0,
+            "dateTime": "2016-04-23",
+            "sleepAnalysisVO": {
+                "sleepAnalysisName": "mattress_turnOverTimes_range",
+                "minValue": 10,
+                "maxValue": 25,
+                "tips": null,
+                "suggest": null,
+                "referRange": "10~25´Î",
+                "rangeFlag": 1
+            }
+        },
+        "detectionDuration": 1440,
+        "dayData": {}
+    },
+    "code": 0
+}

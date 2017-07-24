@@ -1,0 +1,344 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+/*文章详情页样式*/
+.app-body header{
+	color:#333333;
+	
+	padding:2.25rem 1.33rem 0.92rem;
+    border-bottom: 1px solid rgb(236,236,236);
+	line-height:31px;
+	font-weight:bold;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    display: block;
+    
+}
+.app-body header h1{
+    font-size:21px;
+    line-height: 36px;
+}
+.app-body section.labelNav,.app-body section.articleDate{
+	margin: 0 0 0 1.33rem;
+}
+.headerCon{
+    padding-top: 1rem;
+}
+.spanLeft{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: rgb(140,140,140);
+    font-weight: normal;
+    line-height: 24px;
+}
+.spanRight{
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    color: rgb(140,140,140);
+    line-height: 20px;
+    font-weight: normal;
+
+}
+.spanRight label {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.spanRight i{
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;  
+}
+.spanRight .i1{
+    margin-left: 20px;
+    background: url('../../static/img/icon_look.png') no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.spanRight .i2{
+    background: url('../../static/img/icon_save.png') no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.app-body section.labelNav label.labelName{
+	display:inline-block;
+	line-height:2.08rem;
+	height:2.08rem;
+	margin-right:0.91rem;
+/* 	border-radius:25px;
+	border:1px solid #c5c5c5; */
+	color:#ff8077;
+	font-size:13px;
+	padding: 0 12.5px;
+	box-sizing:border-box;
+	margin-bottom:1.33rem;
+    position: relative;
+    border:none;
+}
+.app-body section.labelNav label.labelName:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:25px;
+    border: 1px solid #e5e5e5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.app-body section.articleDate{
+	font-size:12px;
+	color:#999999;
+    height: 12px;
+    line-height: 12px;
+}
+.app-body section.articleContent{
+	font-size:16px;
+	color:#333333;
+	line-height:24px;
+	margin:1.1rem 1.33rem;
+	text-align: justify;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+/* .app-body section.articleContent img{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+ *//*方案详情-详情页样式*/
+.app-detail>header{
+	margin:1rem 1.33rem;
+	color:#666666;
+	font-size:15px;
+	line-height:24px;
+	text-align: justify;
+}
+.app-detail>div.backgroundGap{
+	width:100%;
+	height:1rem;
+	background-color:#f9f4f3;
+}
+.app-detail>section.details{
+	margin:1rem 1.33rem;
+	font-size:15px;
+	line-height:24px;
+	color:#666666;
+	text-align: justify;
+	overflow:hidden;
+}
+.app-detail>section.details img{
+	display:inline-block;
+	width:100%;
+	height:100%;
+}
+/*了解c-life页样式*/
+.app-understand{
+	width:100%;
+	overflow:hidden;
+}
+.app-understand .s{
+    position: relative;
+    width: 100%;
+    height: 21.95rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+}
+@media all and ( orientation:landscape) {
+    .s {
+        background-size: auto 100%;
+    }
+}
+@media all and ( min-width:768px) {
+    .s {
+        background-size: auto 100%;
+    }
+}
+.app-understand .s h2,.app-understand .s p {
+    width: 100%;
+    line-height: 1;
+}
+.app-understand .s-1 {
+    background-image: url('../img/bg0.png');
+    background-size: 100% 100%;
+}
+.app-understand .s-1 .tv {
+    position: relative;
+    top: 1.45rem;
+    width: 28.79rem;
+    height: 16.02rem;
+    margin-left: 1.13rem;
+    background: #000;
+}
+.app-understand .s-1 .tv .play {
+    display: block;
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background: #5d5d5d;
+}
+.app-understand .s-1 .tv .play:before {
+    content: '';
+    display: block;
+    z-index: 300;
+    width: 61px;
+    height: 100%;
+    margin: 0 auto;
+}
+.app-understand .s-1 .tv .play:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg-cover.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+.app-understand .s-1 .tv .video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #000!important;
+    vertical-align: top;
+    border: 0;
+    outline: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+    .app-understand .s-2 {
+        height:17.38rem;
+        background-image: url('../img/bg1.png');
+    }
+    .app-understand .s-3 {
+        height:17.38rem;
+        background-image: url('../img/bg2.png');
+    }
+    .app-understand .s-4 {
+        height:17.38rem;
+        background-image: url('../img/bg3.png');
+    }
+    .app-understand .s-5 {
+        height:17.38rem;
+        background-image: url('../img/bg4.png');
+    }
+    .app-understand .s-6 {
+        height:17.38rem;
+        background-image: url('../img/bg5.png');
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 3){
+    .app-understand .s-2 {
+        height:16.67rem;
+        background-image: url('../img/bg6.png');
+    }
+    .app-understand .s-3 {
+        height:16.67rem;
+        background-image: url('../img/bg7.png');
+    }
+    .app-understand .s-4 {
+        height:16.67rem;
+        background-image: url('../img/bg8.png');
+    }
+    .app-understand .s-5 {
+        height:16.67rem;
+        background-image: url('../img/bg9.png');
+    }
+    .app-understand .s-6 {
+        height:16.67rem;
+        background-image: url('../img/bg10.png');
+    }
+}
+
+/*分享出去提示下载*/
+.download{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.2rem;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 10;
+    padding: 0 16px;
+    /*background: rgba(21,22,33,.8);*/
+}
+.download:after{
+    content: '';
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #151621;
+}
+.download-left {
+    float: left;
+    height: 5.2rem;
+    line-height: 5.2rem;
+    overflow: hidden;
+}
+.download-left i{
+    float: left;
+    width: 2.5rem;
+    height: 5.2rem;
+    background: url(../img/icon-index.png) no-repeat center left;
+    background-size: 100% auto;
+    margin-right: 0.6rem;
+}
+.download-left span {
+    float: left;
+    font-size: 16px;
+    line-height: 5.24rem;
+    vertical-align: middle;
+}
+.download-right {
+    float: right;
+    height: 5.2rem;
+    font-size: 15px;
+    text-align: right;
+    line-height: 5.2rem;
+    vertical-align: top;
+}
+.download-right span {
+    height: 1.8333rem;
+    padding: 5px;
+    margin-right: 0.8rem;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #F5B232;
+}
+.download-right i{
+    display: block;
+    float: right;
+    width: 1.8333rem;
+    height: 5.2rem;
+    line-height: 5.2rem;
+    background: url(../img/closed-index.png) no-repeat center right;
+    background-size: 100% auto;
+}
+.hide{
+    display: none;
+}

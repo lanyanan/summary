@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+.root {
+  height: 100%;
+}
+
+.guide-box {
+  height: 100%;
+  padding: 4.083333rem 1.333333rem 0;
+  background: url(../../static/img/yindao-bg.png) no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+
+.guide-box p {
+  text-align: center;
+  font-size: 14px;
+  color: #333333;
+}
+
+.guide-box p:nth-child(2) {
+  margin: 0.583333rem 0 1.291667rem 0;
+}
+
+.guide-step {
+  padding: 1.5rem 1.333333rem;
+  background: #f7f7f7;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 0.833333rem;
+}
+
+/*border: 1px solid #c3c3c3;*/
+
+.guide-step span {
+  line-height: 1.666667rem;
+}
+
+.guide-step .number {
+  width: 1.583333rem;
+  font-weight: 600;
+}
+
+.guide-box .qr-code {
+  margin-top: 4.416667rem;
+  margin-bottom: 1.0rem;
+}
+
+.guide-box p:last-child {
+  margin-top: 0.833333rem;
+}

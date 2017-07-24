@@ -1,0 +1,1019 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  border: 1px solid #dedede;
+}
+
+input[type="button"] {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.flex-cell {
+  display: block;
+  /* OLD */
+  width: 100%;
+  /* OLD */
+}
+
+.flex,
+.flex-column {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex {
+  -webkit-box-orient: horizontal;
+  /* OLD */
+  -moz-box-orient: horizontal;
+  /* OLD */
+  -ms-box-orient: horizontal;
+  /* OLD */
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  /* OLD */
+  -moz-box-orient: vertical;
+  /* OLD */
+  -ms-box-orient: vertical;
+  /* OLD */
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-cell {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* settingbtn */
+
+/*保存设置按钮组件*/
+
+.settingbtn-on {
+  background-color: #fafafa;
+  line-height: 49px;
+  height: 49px;
+  text-align: center;
+  border-top: 1px solid #dadada;
+  color: #f45a4f;
+}
+
+.settingbtn-on>em,
+.settingbtn-active>em {
+  font-size: 17px;
+}
+
+.settingbtn-off {
+  background-color: #fafafa;
+  line-height: 49px;
+  height: 49px;
+  text-align: center;
+  border-top: 1px solid #dadada;
+}
+
+.settingbtn-off>em {
+  font-size: 17px;
+  color: #f45a4f;
+  opacity: 0.4;
+}
+
+.settingbtn-active {
+  background-color: #f45a4f;
+  line-height: 49px;
+  height: 49px;
+  text-align: center;
+  border-top: 1px solid #dadada;
+  color: #ffffff;
+}
+
+/*公共media query查询 1rem初始设置为12px
+dpr为2时对应750的效果图 dpr为3时对应1080的效果图
+查询区间间隔暂时设置为30px 对应3倍图时 1rem大小变化1px
+对于dpr为2的有额外百分之4.2增大的兼容*/
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width:350px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 71.62%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 68.75%;
+    }
+}
+}
+
+@media screen and (min-width: 351px) and (max-width:380px) {
+  html,
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width:410px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 84.64%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 81.25%;
+    }
+}
+}
+
+@media screen and (min-width: 411px) and (max-width:440px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 91.15%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 87.5%;
+    }
+}
+}
+
+@media screen and (min-width: 441px) and (max-width:470px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 97.66%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 93.75%;
+    }
+}
+}
+
+@media screen and (min-width: 471px) and (max-width:500px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 104.17%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 100%;
+    }
+}
+}
+
+@media screen and (min-width: 501px) and (max-width:539px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 110.68%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 106.25%;
+    }
+}
+}
+
+@media screen and (min-width: 540px) {
+  html,
+  body {
+    font-size: 150%;
+  }
+}
+
+section.tips {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  z-index: 9993;
+  background: rgba(0,0,0,0.8);
+}
+
+section.tips-main {
+  width: 26.667rem;
+  height: 13.083rem;
+  border-radius: 10px;
+  margin: 20rem auto 0;
+  background: #fff;
+  /* overflow-y: scroll; */
+}
+
+section.tips-main>.box-tips,
+section.toast-main {
+  padding: 20px 20px 28px;
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  /* height:300px; */
+}
+
+section.tips-main>.box-tips {
+  height: 9rem;
+}
+
+section.toast-main {
+  padding: 0px;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+section.tips-main>.box-btn {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  height: 4.0rem;
+  line-height: 4.0rem;
+  font-size: 17px;
+  color: #3285ff;
+  border-top: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+section.box-toast {
+  width: 60%;
+  height: 80px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  /* line-height:100px; */
+  position: fixed;
+  bottom: -100px;
+  left: 20%;
+  border-radius: 10px;
+  z-index: 9994;
+  background: #e5e5e5;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* 淡入淡出 */
+
+@-webkit-keyframes toastN {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toastN {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .devscreen {
+    height: 240px !important;
+    min-height: 230px !important;
+    width: 228px !important;
+  }
+
+  .boxtitle {
+    font-size: 14px !important;
+  }
+
+  .filterlife>.smalltitle {
+    left: 1.5rem !important;
+  }
+}
+
+html,
+body {
+  font-size: 75%;
+  font-family: "Microsoft Yahei" !important;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#panel-scroller {
+  height: 100%;
+}
+
+.slide-down,
+.slide-up {
+  -webkit-transition: -webkit-transform 1.1s;
+  transition: -webkit-transform 1.1s;
+  transition: transform 1.1s;
+  transition: transform 1.1s, -webkit-transform 1.1s;
+}
+
+.slide-up {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.slide-down {
+  overflow: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.startupface {
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*盒子标题文字样式*/
+
+.boxtitle {
+  padding: 0.1rem 1.3rem;
+  font-size: 18px;
+}
+
+/*关机界面样式*/
+
+.shutdownface {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #959595;
+  text-align: center;
+  overflow: hidden;
+}
+
+.shutdownface>.pic {
+  margin: 0 auto;
+  width: 20.5rem;
+  height: 21.5rem;
+  background: url("../img/airPurifier/bg.png") no-repeat 0 0;
+  background-size: 100%;
+}
+
+.shutdownface>.power {
+  background: url("../img/airPurifier/power.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  width: 6.6rem;
+  height: 6.6rem;
+  display: block;
+  margin: 8.6rem auto 0;
+}
+
+#mytoast {
+  z-index: 9999;
+  height: 50px;
+  font-size: 18px;
+}
+
+#mytoast div.block {
+  color: #eb917f;
+}
+
+#childlock {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*主界面样式*/
+
+.mainscreen {
+  width: 100%;
+  margin: 0px;
+  height: 25rem;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.bg-y {
+  background: -webkit-linear-gradient(#288ce2, #69b4f4);
+  /* Safari 5.1 - 6.0 */
+  /* Opera 11.1 - 12.0 */
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#288ce2, #69b4f4);
+  background-size: 100% 100%;
+}
+
+.bg-l {
+  background: -webkit-linear-gradient(#2088E0, #4BA2EC);
+  /* Safari 5.1 - 6.0 */
+  /* Opera 11.1 - 12.0 */
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#2088E0, #4BA2EC);
+  background-size: 100% 100%;
+}
+
+.bg-z {
+  background: -webkit-linear-gradient(#c06a00, #f4bb00);
+  /* Safari 5.1 - 6.0 */
+  /* Opera 11.1 - 12.0 */
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#c06a00, #f4bb00);
+  background-size: 100% 100%;
+}
+
+.bg-c {
+  background-color: #ff0000;
+}
+
+.bg-w {
+  background-color: gray;
+}
+
+/*背景色渐变样式*/
+
+@-webkit-keyframes myfirst {
+  0% {
+    background-color: #288ce2;
+  }
+
+  25% {
+    background-color: #0665a5;
+  }
+
+  50% {
+    background-color: #c06a00;
+  }
+
+  100% {
+    background-color: #ff0000;
+  }
+}
+
+.bg-change {
+  animation: myfirst 10s linear  infinite alternate;
+  /* Firefox: */
+  -moz-animation: myfirst 10s linear  infinite alternate;
+  /* Safari 和 Chrome: */
+  -webkit-animation: myfirst 10s linear  infinite alternate;
+  /* Opera: */
+  -o-animation: myfirst 10s linear  infinite alternate;
+}
+
+/*室内组件样式*/
+
+.devscreen {
+  width: 69%;
+  min-height: 84%;
+  max-width: 20rem;
+  background: url("../img/airPurifier/bg.png") no-repeat 0 0;
+  margin: 0 auto;
+  background-size: 100% 100%;
+}
+
+.screenul {
+  list-style: none;
+  text-align: center;
+  width: 65%;
+  margin: 0rem auto;
+  padding-top: 4.28rem;
+  color: #ffffff;
+}
+
+.screenul>.titleli {
+  font-size: 14px;
+}
+
+.screenul>.airli {
+  font-size: 48px;
+  padding-top: 0.34rem;
+  margin-bottom: 0.6rem;
+}
+
+.screenul>.templi {
+  font-size: 14px;
+  padding-bottom: 0.41rem;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.screenul>.pmli {
+  font-size: 16px;
+  margin: 3px auto;
+}
+
+.warn {
+  background: #FF6262;
+  width: 45px;
+}
+
+/*室外组件及开关(表情)按钮样式*/
+
+.mainscreen>.al>img {
+  width: 3rem;
+  float: left;
+}
+
+.mainscreen>.ar>img {
+  float: right;
+  width: 3rem;
+}
+
+.outdoorscreen {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  font-size: 1rem;
+  height: 3.3rem;
+  line-height: 3.3rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0rem;
+}
+
+.outdoorscreen>div>img {
+  width: 1rem;
+  max-height: 2rem;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.al {
+  bottom: 4.2rem;
+  left: 1.3rem;
+  z-index: 12;
+}
+
+.ar {
+  bottom: 4.2rem;
+  right: 1.3rem;
+  z-index: 2;
+}
+
+.outdoorscreen>.divl {
+  border-top: 1px rgba(255,255,255,0.5) solid;
+  border-right: 1px rgba(255,255,255,0.3) solid;
+}
+
+.outdoorscreen>.divl>.inforspacing {
+  margin-left: 2rem;
+}
+
+.outdoorscreen>.divr {
+  border-top: 1px rgba(255,255,255,0.5) solid;
+}
+
+/*模式选择组件样式*/
+
+.modes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(212,214,217,0.8);
+}
+
+.modes>dl {
+  margin: 1rem 0.9rem;
+  color: #A8ACB2;
+}
+
+.modes>dl.on {
+  color: #4F9BE7;
+}
+
+.modes>dl>dd>img {
+  width: 84%;
+}
+
+.modes>dl>dt {
+  margin: 0.51rem auto 0.45rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+/*定时切换组件样式*/
+
+.clock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 1.7rem 0;
+  color: #6f7680;
+}
+
+.clock>.left-btn {
+  padding-left: 2rem;
+  background: url(../img/airPurifier/larrow-off.png) 30%  no-repeat;
+  background-size: 22%;
+}
+
+.clock>.right-btn {
+  padding-right: 2rem;
+  background: url(../img/airPurifier/rarrow-off.png) 30%  no-repeat;
+  background-size: 22%;
+}
+
+.clock>.mvalue-on {
+  font-size: 4rem;
+  margin: -1.4rem 0;
+  display: block;
+}
+
+.clock>.mvalue-off {
+  display: none;
+}
+
+.clock>.remain-on {
+  font-size: 1.8rem;
+  margin: -0.3rem 0 -0.3rem -1.8rem;
+  display: block;
+}
+
+.clock>.remain-off {
+  display: none;
+}
+
+.clock>.remain-on>.svalue {
+  font-size: 1.33rem;
+}
+
+.clock>.remain-off>.svalue {
+  font-size: 1.33rem;
+}
+
+.clock>.mvalue-on>.svalue {
+  font-size: 1.33rem;
+}
+
+.clock>.mvalue-off>.svalue {
+  font-size: 1.33rem;
+}
+
+/*.clock>.center-cell{text-align: center;-webkit-flex: 2;-ms-flex: 2;flex: 2;/* NEW, Spec - Opera 12.1, Firefox 20+ }*/
+
+/*紫外线开关组件样式*/
+
+.uv {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(212,214,217,0.8);
+  padding: 1.7rem 0;
+  color: #6f7680;
+  position: relative;
+}
+
+.uv>.flex-cell>.on {
+  position: absolute;
+  right: -8.25rem;
+  width: 14.2rem;
+  height: 8.33rem;
+  z-index: 2;
+  background: url(../img/airPurifier/switch-on.png) no-repeat;
+  background-size: 33%;
+}
+
+.uv>.flex-cell>.off {
+  position: absolute;
+  right: -8.25rem;
+  width: 14.2rem;
+  height: 8.33rem;
+  z-index: 2;
+  background: url(../img/airPurifier/switch-off.png) no-repeat;
+  background-size: 33%;
+}
+
+/*负离子开关组件样式*/
+
+.anion {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1px solid rgba(212,214,217,0.8);
+  padding: 1.7rem 0;
+  color: #6f7680;
+  position: relative;
+}
+
+.anion>.flex-cell>.on {
+  position: absolute;
+  right: -8.25rem;
+  width: 14.1rem;
+  height: 8.33rem;
+  z-index: 2;
+  background: url(../img/airPurifier/switch-on.png) no-repeat;
+  background-size: 33%;
+}
+
+.anion>.flex-cell>.off {
+  position: absolute;
+  right: -8.25rem;
+  width: 14.1rem;
+  height: 8.33rem;
+  z-index: 3;
+  background: url(../img/airPurifier/switch-off.png) no-repeat;
+  background-size: 33%;
+}
+
+.speed {
+  border-bottom: 1px solid rgba(212,214,217,0.8);
+}
+
+.speed>span {
+  margin: 1.7rem 1.25rem;
+  font-size: 18px;
+  color: #6f7680;
+}
+
+.speed>dl {
+  padding: 1rem 0.2rem;
+}
+
+.speed dd {
+  height: 42px;
+  line-height: 42px;
+  width: 42px;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  color: #9FA4AB;
+  border: 1px solid #9FA4AB;
+}
+
+.speed .on {
+  color: #4AA1EC;
+  border: 1px solid #4AA1EC;
+}
+
+.speed .off {
+  color: #9FA4AB;
+  border: 1px solid #9FA4AB;
+}
+
+.clock .time b {
+  font-size: 20px;
+}

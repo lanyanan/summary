@@ -1,0 +1,93 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+/* @import url(../../../common/static/mediaQuery.css); */
+
+body{color:#5E5E5E;}
+img,span,a,b,li{display:inline-block; text-decoration:none;color:#5E5E5E;}
+.show{display:block;}
+.hide{display:none;}
+.cor-red{color:#FF3E46;}
+.cor-green{color:#51B9C2;}
+.txt-center{text-align: center;}
+.line{height:0.833333rem;background:#eee;}
+/* 顶部栏 */
+.header{height:8.333333rem;background:#FF813D ; /* background: linear-gradient(#FF3E42,#FEBC7D); */}
+.header>a{padding:1.5rem 1.666667rem;font-size: 1.333333rem;}
+.header .photo{width:4.416667rem;height:4.416667rem;border-radius: 50%;border:1px solid #FFC0A5;}
+.header .nikename{height:4.75rem;vertical-align: middle;margin-left:1.041667rem;color:#fff;}
+
+/* tab导航栏 */
+.nav ul{border-bottom: 1px solid #C6C6C6;}
+.nav li{height:3.583333rem;line-height: 3.583333rem;text-align: center;}
+.nav .active{color: #FF813E;border-bottom: 2px solid #FF813E;width:100%;}
+
+/* 内容部分 */
+.dev-info{padding:0.833333rem;}
+.dev-info span{display:inline;}
+.dev-info img{width:100%;margin: 0.833333rem 0;}
+.is-on{margin-top: 6.666667rem;position:relative;}
+.circle-text{text-align: center;line-height: 12.5rem;color:#FF813E;font-size:1.5rem;position:absolute;top:0;left:50%;margin-left: -2.083333rem}
+.circle-img{width:10rem;height:10rem;border-top:0.5rem solid #FF813E;border-right: 0.5rem solid #FF813E;
+			border-left: 0.5rem solid #fff;border-bottom: 0.5rem solid #FF813E;border-radius: 50%;margin:0 auto;-webkit-animation:circle 2s infinite linear;/*匀速 循环*/}
+@-webkit-keyframes circle{
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(-360deg); }
+}
+.measure-time img{height:1.666667rem;width:1.666667rem;margin:0.833333rem;}
+.measure-time span{vertical-align: 1.3rem;color:#D1D1D1;}
+.measure-data {width:12rem;margin:0 auto;margin-top: 1.666667rem;text-align: center;font-size:14px;}
+.measure-data span:not(:nth-child(2)){margin-top: 1rem;}
+.measure-data span:nth-child(2){color:#40DB90;font-size:40px;margin:0 0.833333rem;}
+.measure-data .refer{font-size: 14px;color: #D1D1D1;margin-top:0.416667rem;}
+.glucoseBtn{height:2.166667rem;line-height:2.166667rem;width:7.333333rem;font-size: 14px;border-radius: 0.416667rem;background:#FF813E;color:#fff;margin:10px auto;}
+.off{background:#fff !important;color:#5e5e5e !important;border: 1px solid #5E5E5E;}
+.unable{background:#FFCAA3 !important;color:#fff !important;}
+.chose-status{margin-top: 4.166667rem;padding:0.833333rem;}
+.chose-status>div{text-align: center;margin:0 auto;}
+.chose-status>div>p{margin:0.666667rem;}
+
+
+/* range控件 */
+.d-range{width:80%;margin:1.666667rem auto;position:relative;height:4rem;}
+.range-line{width:100%;position:absolute;top:1.25rem;border-radius: 1.0rem;}
+.range-line span{height:0.666667rem;}
+.range-line span:first-child{border-top-left-radius: 6px;border-bottom-left-radius: 6px;}
+.range-line span:last-child{border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
+.range-text{position:relative;}
+.range-text span{position:absolute;font-size: 12px;}
+
+input[type="range"] {
+    margin-top: 1.666667rem;
+    background-color: transparent;
+    border-radius: 15px;
+    width: 100%;
+    -webkit-appearance: none;
+    height:0.5rem;
+    position:absolute;
+    z-index: 10;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    top: -5px;
+    height:1.25rem;
+    width:1.25rem;
+    transform: translateY(-4px);
+    background: none repeat scroll 0 0 #fff;
+    border:2px solid #FF4044 ;
+    border-radius: 50%;
+
+}
+
+/* 历史数据表格 */
+.chart{width:100%;height:25rem;margin: 0 auto;marin-bottom: 4rem;}
+.pulseChart{width:100%;height:15rem;margin: 0 auto;}
+.oxygenChart{width:100%;height:15rem;margin: 0 auto;marin-bottom: 4rem;}
+.chart-bottom{font-size:14px;margin:15px 25px}
+.unnormal b{height:8px;width:8px;border-radius: 50%;background:#FF4045;margin:0 6px; }
+.xy-symbol b,.ml-symbol b{height:2px;width:35px;background:#FF4045;margin-left: 6px;vertical-align: middle;}
+.ml-symbol b{background:#3FDC90}
+.xy-symbol,.ml-symbol{float: right;margin-left: 16px;}
+
+
+.hsty-btn{height:3.833333rem;width:100%;background:#FF813D;background-size: 5%;font-size: 1.166667rem;line-height: 3.833333rem;justify-content: center;position:absolute;color:#fff;margin-top: 0.833333rem;}

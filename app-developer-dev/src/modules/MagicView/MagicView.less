@@ -1,0 +1,182 @@
+#magicview {
+    width:458px;
+    margin:0 auto 30px;
+    min-height:5000px;
+}
+#magicview>.canvas-range{
+    float:left;
+    width:10px;
+    input{
+        width:182px;
+        height:10px;
+        transform: rotate(90deg);
+        margin-left: -75px;
+        margin-top:75px;
+        background:url(../../../../static/img/height-range.png) no-repeat;
+        &::-webkit-slider-runnable-track {
+            visibility: hidden;
+        }
+    }
+}
+#magicview>.canvas-wrap {
+    margin-left:50px;
+    position:relative;
+    // box-sizing:border-box;
+    border:10px solid;
+    border-bottom-width:30px;
+    border-image:url(../../../../static/img/border-magicview.png) 10 10 30 round;
+    z-index: 1;
+   /*  border: 20px solid;
+    border-top-width: 80px;
+    border-bottom-width: 90px;
+    border-image: url("../../../../static/img/mobile.png") 80 20 90 round; */
+}
+#magicview>.canvas-wrap>.drop-area {
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#magicview>.canvas-wrap>.resize-canvas {
+    position:absolute;
+    bottom:-33px;
+    width:100%;
+    height:33px;
+    cursor: n-resize;
+    opacity:0;
+}
+
+// 虚拟widget，用于拖放时占位
+.virtual-widget{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    background-color:rgba(255,255,255,0.5);
+    border:1px solid #ccc;
+}
+
+// 影子widget，用于调整控件位置、大小等
+.ghost{
+    position:absolute;
+    display:none;
+    z-index:999;
+}
+
+.ghost>.handle{
+    position:absolute;
+    margin:0;
+    width:8px;
+    height:8px;
+    background:#ff6600;
+    border-radius:2px;
+    border:1px solid #dd5500;
+}
+.ghost>.handleline{
+    position:absolute;
+    background-color:#fe9d60;
+}
+.ghost>.handleline.lv{
+    width:1px;
+    height:667px;
+}
+.ghost>.handleline.th{
+    height:1px;
+    width:375px;
+}
+.ghost>.handleline.rv{
+    width:1px;
+    height:667px;
+    right:0px;
+}
+.ghost>.handleline.bh{
+    height:1px;
+    width:375px;
+    bottom:0px;
+}
+.ghost>.handle.tl{
+    top:-4px;
+    left:-4px;
+    cursor: nw-resize;
+}
+.ghost>.handle.tc{
+    top:-4px;
+    left:50%;
+    margin-left:-4px;
+    cursor: n-resize;
+}
+.ghost>.handle.tr{
+    top:-4px;
+    right:-4px;
+    cursor: ne-resize;
+}
+.ghost>.handle.ml{
+    top:50%;
+    left:-4px;
+    margin-top:-4px;
+    cursor: w-resize;
+}
+.ghost>.handle.mr{
+    top:50%;
+    right:-4px;
+    margin-top:-4px;
+    cursor: w-resize;
+}
+.ghost>.handle.bl{
+    bottom:-4px;
+    left:-4px;
+    cursor: ne-resize;
+}
+.ghost>.handle.bc{
+    bottom:-4px;
+    left:50%;
+    margin-left:-4px;
+    cursor: n-resize;
+}
+.ghost>.handle.br{
+    bottom:-4px;
+    right:-4px;
+    cursor: nw-resize;
+}
+.ghost>.handle.ro{
+    width:16px;
+    height:16px;
+    top: -30px;
+    left: 50%;
+    margin-left: -8px;
+    cursor: pointer;
+}
+// 文字编辑区域
+#textedit{
+    position:absolute;
+    box-sizing:border-box;
+    z-index:99;
+    text-align:center;
+}
+#multipletextedit{
+    position:absolute;
+    box-sizing:border-box;
+    z-index:99;
+    overflow:hidden;
+    border:none;
+    resize:none;
+}
+#selection-frame {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+}
+#selection-frame-item {
+    position: absolute;
+    left:50%;
+    top:50%;
+    border: 1px dotted #ff6600;
+    pointer-events: none;
+}
+  

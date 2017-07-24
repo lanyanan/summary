@@ -1,0 +1,262 @@
+/*时间设置组件*/
+
+.modeSelect {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -ms-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;*/
+  z-index: 999;
+}
+
+
+
+
+
+.modeSelect>section:first-child {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 22.22rem;
+  width: 100%;
+  height: 100%;
+}
+
+.modeselect {
+  height: 31.02rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.modeselect>.selecttitle {
+  height: 10.75rem;
+  line-height: 3.75rem;
+  background-color: #EEEEF1;
+}
+
+.modeselect>.selecttitle>.title {
+  margin-left: 1.333rem;
+  font-size: 1.167rem;
+  color: #303030;
+}
+
+.modeselect>.time {
+  height: 16.24rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.modeselect>.time>section.hour,
+.modeselect>.time>section.minute {
+  display: inline-block;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+}
+
+.modeselect>.time>section.hour {
+  left: 0%;
+}
+
+.modeselect>.time>section.minute {
+  left: 50%;
+}
+
+.modeselect>.time>.timetext {
+  position: absolute;
+  top: 66%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  line-height: 3.75rem;
+  height: 3.75rem;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.modeselect>.time>.timetext>.hour {
+  position: absolute;
+  left: 33%;
+  color: #303030;
+  font-size: 1.167rem;
+}
+
+.modeselect>.time>.timetext>.minute {
+  position: absolute;
+  left: 66%;
+  color: #303030;
+  font-size: 1.167rem;
+}
+
+.modeselect>.time>.timetext>.status {
+  position: absolute;
+  right: 10%;
+  color: #303030;
+  font-size: 14px;
+}
+
+.modeselect>.time>.hourvalue,
+.modeselect>.time>.minutevalue {
+  width: 1.67rem;
+  font-size: 1.5rem;
+  color: #303030;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  margin-top: 0.27rem;
+}
+
+.modeselect>.time>.hourvalue {
+  left: 25%;
+}
+
+.modeselect>.time>.minutevalue {
+  left: 56%;
+}
+
+.modeselect>.time>.hourvalue>span,
+.modeselect>.time>.minutevalue>span {
+  line-height: 2.73rem;
+  height: 2.73rem;
+  display: block;
+}
+
+.modeselect>.time>.hourvalue>.line1,
+.modeselect>.time>.minutevalue>.line1 {
+  opacity: 0;
+}
+
+.modeselect>.time>.hourvalue>.line2,
+.modeselect>.time>.minutevalue>.line2 {
+  opacity: 0.5;
+}
+
+.modeselect>.time>.hourvalue>.line3,
+.modeselect>.time>.minutevalue>.line3 {
+  line-height: 4.75rem;
+  height: 4.75rem;
+}
+
+.modeselect>.time>.hourvalue>.line4,
+.modeselect>.time>.minutevalue>.line4 {
+  opacity: 0;
+}
+
+.modeselect>.selectbtn {
+  height: 4.0rem;
+  line-height: 4.0rem;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.modeselect>.selectbtn>span:nth-child(1) {
+  border-right: 1px solid #cccccc;
+  font-size: 1.333rem;
+  color: #303030;
+}
+
+.modeselect>.selectbtn>span:nth-child(2) {
+  font-size: 1.333rem;
+  color: #ff7734;
+}
+
+/*选择模式组件样式*/
+
+.modelist {
+  width: 100%;
+  height: 5.833rem;
+  overflow: hidden;
+}
+
+.parent {
+  width: 200.0rem;
+  height: 5.833rem;
+}
+
+.son {
+  height: 3.333rem;
+  width: 3.333rem;
+  border-radius: 50%;
+  background-color: #737579;
+  position: relative;
+  display: inline-block;
+  margin-right: 2.167rem;
+}
+
+@media screen and (max-width: 320px) {
+  .son {
+    height: 3.333rem;
+    width: 3.333rem;
+    border-radius: 50%;
+    background-color: #737579;
+    position: relative;
+    display: inline-block;
+    margin-right: 2.689rem;
+  }
+
+  .parent {
+    width: 84.0rem;
+    height: 5.833rem;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width:380px) {
+  .son {
+    height: 3.333rem;
+    width: 3.333rem;
+    border-radius: 50%;
+    background-color: #737579;
+    position: relative;
+    display: inline-block;
+    margin-right: 2.927rem;
+  }
+
+  .parent {
+    width: 82.0rem;
+    height: 5.833rem;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  .son {
+    height: 3.333rem;
+    width: 3.333rem;
+    border-radius: 50%;
+    background-color: #737579;
+    position: relative;
+    display: inline-block;
+    margin-right: 2.227rem;
+  }
+}
+
+.son>img {
+  width: 1.667rem;
+  height: 1.667rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.833rem;
+  margin-top: -0.833rem;
+}
+
+.centerflag {
+  display: block;
+  margin: 0 auto;
+}
+
+.modename {
+  font-size: 1.167rem;
+  color: #ff7734;
+  display: block;
+  margin-top: 1.083rem;
+  text-align: center;
+}

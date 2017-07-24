@@ -1,0 +1,106 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+html,body{height:100%;}
+body{font-family:"Microsoft YaHei";}
+img,span,a,b,li{display:inline-block; text-decoration:none;color:#333;}
+.cor-orange{color:#EB6E4A !important;}
+.cor-green{color:#3FB57D;}
+.cor-yellow{color:#F7A905;}
+.cor-gray{color:#969696 !important;}
+.line{height:2px;background:#eee;}
+.fs24{font-size: 24px}
+.show{display:block;}
+.hide{display:none;}
+
+/* 顶部栏
+.header{height:20rem;background:#3FB57D;text-align: center;}
+.header>a{font-size: 1.333333rem;color:#fff;}
+.header .photo{width:4.416667rem;height:4.416667rem;border-radius: 50%;}
+.details ul li:first-child{opacity: .5;}
+.details ul li:nth-child(2){font-size: 30px;}
+.details ul:last-child{border-left:1px solid #329164;}
+.time{margin-top: 0.833333rem;opacity:.7;} */
+
+
+/* 顶部栏 */
+.header{background:#3FB57D;}
+.header>a{padding:0.833333rem 1.333333rem;font-size:14px;}
+.header .photo{width:3.333333rem;height:3.333333rem;border-radius: 50%;vertical-align: middle;}
+.header .switch{width:1.166667rem;height:1.166667rem;margin-left: -1.166667rem;vertical-align: -1.5rem;}
+.header .nikename{height:3.333333rem;vertical-align: middle;line-height: 3.333333rem; margin-left:0.666667rem;color:#fff;}
+
+
+/* range控件 */
+.d-range{width:80%;margin:2.5rem auto;position:relative;height:4rem;}
+.range-line{width:100%;position:absolute;top:1.25rem;border-radius: 1.0rem;}
+.range-line span{height:0.35rem;}
+.range-line span:first-child{border-top-left-radius: 6px;border-bottom-left-radius: 6px;}
+.range-line span:last-child{border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
+.range-text{position:relative;}
+.range-text span{position:absolute;font-size: 12px;}
+
+input[type="range"] {
+    margin-top: 2rem;
+    background-color: transparent;
+    border-radius: 15px;
+    width: 100%;
+    -webkit-appearance: none;
+    height:0.5rem;
+    position:absolute;
+    z-index: 10;
+}
+input[type="range"]::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  cursor: default;
+	  margin-top: -6px;
+	  width:12px;
+	  -webkit-transform: translateY(-4px);
+	          transform: translateY(-4px);
+	  border-top:5px solid #3FB57D;
+	  border-right:6px solid transparent;
+	  border-left:6px solid transparent;
+
+}
+.measure-time {margin:0.666667rem 1.333333rem; color:#969696;font-size: 1.25rem;}
+.measure-data {width:16rem;margin:0 auto;margin-top: 1.666667rem;text-align: center;font-size:14px;}
+.measure-data span:not(:nth-child(2)){margin-top: 1.5rem;text-align: right;}
+.measure-data span:nth-child(2){font-size:3.166667rem;padding:0 1.6rem;}
+.measure-data span:nth-child(3){text-align: left;margin-left: -15px;}
+
+/* echart 表格 */
+.chart{width:100%;height:30rem;margin: 0 auto;}
+
+/* 底部按钮
+.footer{height:3rem;line-height: 3rem;width:85%;margin:0.833333rem auto;}
+.footer .btn{width:100px;color: #fff;border-radius: 10px;background:#3FB57D;text-align: center;}
+.footer .btn:first-child{color:#3FB57D;background:#fff;border:1px solid #3FB57D;margin-right: 10px;} */
+
+
+.footer{ height:28px;line-height:28px;width:100%;background:#3FB57D;font-size: 14px;text-align: center;padding:10px 0;position:fixed;bottom:0;}
+.footer .btn{color:#fff;}
+.footer .btn:first-child{border-right:1px solid #1C7B4E;}
+
+
+/* 引导页 */
+.guide,.step2{font-size: 1.333333rem;text-align: center;color:#646464;}
+.guide ul{text-align: left;width: 80%;margin: 0 auto;padding-bottom:45px;}
+.guide ul li{margin-bottom: 2rem;color:#646464;}
+.guide ul li:nth-child(2){padding-left: 5rem;text-indent: -5.0rem;}
+.guide-img{width:15.416667rem;margin:2.583333rem 0 3.333333rem 0;}
+.step2{position:absolute; margin: auto; top: 0; left: 0; bottom: 0; right: 0;height:15.416667rem;width:15.416667rem;color:#3FB57D;}
+.step2 .tip{margin-top: -9.5rem;}
+.step2 .guide-img{-webkit-animation:circle 8s infinite linear;/*匀速 循环*/margin:0;}
+
+@-webkit-keyframes circle{
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(360deg); }
+}
+
+.failed p{color:#EB6E4A;}
+.failed ul{font-size: 1.166667rem;margin-top: 3.0rem;color:#646464;}
+.failed ul li{margin-bottom:0.5rem;display:block;}
+.failed ul li:first-child{font-size: 1.333333rem;}
+
+

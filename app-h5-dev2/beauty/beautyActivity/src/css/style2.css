@@ -1,0 +1,50 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+html,
+body,
+.full-window{
+    height: 100%;
+    width: 100%;
+}
+.full-window{
+    overflow-y: auto;
+    background: #a3d5d1;
+    }
+.container{
+    background: url(../../static/img/beautyHammer/back.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding-top: 5%
+}
+.title{
+    width: 100%;
+    text-align: center;
+}
+.title img{width: 95%;}
+.title-text{
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+.content{
+    box-sizing: border-box;
+    color: #ed8180;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    line-height: 1.45;
+    /*background: url(../../static/img/beautyHammer/back.png) no-repeat;
+    background-position-y: 40%;
+    background-size: 100% 100%;*/
+}
+.content h6{
+    font-weight: bold;
+}
+.qrcode{
+    text-align: center;
+    margin-top: 1rem;
+}
+.qrcode img{
+    height: 8rem;
+    width: 8rem;
+}

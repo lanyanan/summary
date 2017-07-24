@@ -1,0 +1,379 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../static/css/calendar.css);
+
+/*html,body{font-size:75%;font-family:"Microsoft Yahei" !important;border:0px; height:100%;}*/
+/*a{-webkit-tap-highlight-color:transparent;}*/
+/*.app-body{position:absolute;top:0;bottom:0;left:0;right:0;overflow-y: hidden;overflow-x:hidden;width: 100%;height: 100%;}*/
+/*#panel-scroller{height: 100%;}*/
+
+html,body,.app-body {
+    height: 100%;
+    overflow: hidden;
+}
+.app-body, .slide-up, .slide-down,main {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+main{
+    overflow: hidden;
+}
+/*快捷按钮*/
+.btnlist-body{
+    background:#FFF;
+    opacity: 1;
+    animation:fade 1s;
+}
+.btnlist{
+    padding:0 1rem;
+}
+
+.btn-title{
+    font-size:13px;
+    color:#A9A9A9;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.btnlist article{
+    text-align: center;
+    color:#848484;
+    font-size:14.5px;
+}
+
+.btnlist article img{
+    width:48px;
+    height:48px;
+}
+
+.btnlist article p{
+    margin-top: 0.5rem;
+}
+.btnlist .triggered {
+    color: #8e8e8e;
+    opacity: 0.5!important;
+}
+/*主界面样式---- 上面背景 */
+.app_bgimghg{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+    background: url('../img/home_bg.jpg') no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.app-body .mode-items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.app-body dl {
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: wrap;
+    flex-direction: wrap;
+}
+.app-body .mode {
+    display: inline-block;
+    width: 33%;
+    /*padding-top: 36px;*/
+    /*padding-bottom: 57px;*/
+    height: 20%;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: 2.5rem 2.5rem;
+    color: #848484;
+    font-size: 1.1rem;
+    line-height: 15rem;
+    text-align: center;
+    border-bottom: 0.8px solid #dcdcdc;
+    border-right: 0.8px solid #dcdcdc;
+}
+
+.app-body .mode-items >dd:nth-child(3){
+    border-right: 0;
+}
+
+.app-body .mode-items >dd:nth-child(6){
+    border-right: 0;
+}
+.app-body .mode.on {
+    color: #01a040;
+}
+
+
+/*-----------------  上部可滑动View  --------------*/
+.bgSection{
+    /*padding-top:40%;*/
+    width: 100%;
+    position: absolute;
+    /*bottom: 0;*/
+}
+.bgSection .flex-cell{
+    opacity: 0.5;
+    background: #333333;
+    color: #d6d6d6;
+    font-size: 5rem;
+}
+.bgSection >span:nth-child(1){
+    border-right: 0.7px solid #FFFFFF;
+    opacity: 0.4;
+}
+.bgSection .flex-cell .bgIndex{
+    position: relative;
+    display: inline-block;
+    padding-top:4rem;
+    text-align: center;
+    width: 8.5rem;
+    height: 5rem;
+    font-size: 4rem;;
+    background: url(../img/home_icon_arrow.png) no-repeat center right;
+    background-position: 95% 90%;
+    background-size: 14%;
+    font-family: "DIN Condensed";
+
+}
+
+.bgSection>.flex-cell>h5 {
+    position: relative;
+    color: white;
+    font-size:1.5rem;
+    font-family: '黑体';
+    /*left: 10px;*/
+
+}
+
+@import url(swiper.min.css);
+
+.swiper-container {
+    position: absolute;
+    width: 100%;
+    height:40%;
+    bottom: 0rem;
+}
+.swiper-wrapper{
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    /*background: #fff;*/
+    /* Center slide text vertically */
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*-webkit-justify-content: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+}
+
+.swiper-slide.flex.checkGraph .indexNum{
+    position: relative;
+    display: inline-block;
+    padding-top:2rem;
+    text-align: center;
+    width: 8.5rem;
+    height: 4rem;
+    color: white;
+    background-position: 95% 90%;
+    background-size: 14%;
+    font-family: "DIN Condensed";
+
+}
+
+.indexNum.ios{
+    font-size: 5rem;
+}
+
+.indexNum.android{
+    font-size: 4rem;
+}
+
+.swiper-slide.flex.checkGraph H5{
+    position: relative;
+    color: white;
+    font-size:1.1rem;
+    opacity: 0.6;
+    font-family: '黑体';
+
+}
+
+.Btn-checkGraph{
+    position: relative;
+
+    left: -2rem;
+    width: 130%;
+    height: 2rem;
+    vertical-align:middle;
+    line-height:2.4rem;
+    color: whitesmoke;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    background: url(../img/i-arrow-off.png) no-repeat center right;
+    background-position: 95% 45%;
+    background-size: 5%;
+    font-family: "DIN Condensed";
+}
+.Btn-checkGraph.ios{
+    top:1rem;
+
+}
+.Btn-checkGraph.android{
+    top:0rem;
+
+}
+/*--------^^^^^^^^^^^^^-----------*/
+
+.app_bgimghg .errorDiv{
+    position: relative;
+    width: 100%;
+    height: 3.8rem;
+    background: #e5691f;
+    top: 73px;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 4rem;
+    font-size:16px;
+    font-family: '黑体';
+    color: white;
+
+}
+.app_bgimghg .errorDiv.off {
+    opacity: 0;
+}
+
+/*.setting-page nav.ios {*/
+    /*padding-top: 0;*/
+    /*height: 64px;*/
+    /*line-height: 84px;*/
+/*}*/
+/*.setting-page nav.android {*/
+    /*padding-top: 0;*/
+    /*height: 73px;*/
+    /*line-height: 73px;*/
+/*}*/
+@import url(TempSelect.css);
+@import url(swiperHTML.css);
+
+
+
+/*-------------------CheckGraph--------------------------*/
+
+.checkGraph-page{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+}
+
+.checkGraph-page nav {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkGraph-page nav:before {
+    z-index: -1;
+}
+.checkGraph-page nav.ios {
+    padding-top: 0;
+    height: 64px;
+    line-height: 84px;
+    background: #01a040;
+}
+.checkGraph-page nav.android {
+    padding-top: 0;
+    height: 73px;
+    line-height: 73px;
+    background: #01a040;
+}
+
+.downView{
+    position: relative;
+    width: 100%;
+    height: 84%;
+    background: white;
+}
+
+.downView .textContent{
+    position: relative;
+    width: 100%;
+    height: 45%;
+    /*background: yellow;*/
+}
+.downView .textContent .flexCell-center{
+    position:relative;
+    margin:4rem auto 0;
+}
+
+.downView .textContent H5{
+    color: #969696;
+    font-size: 2rem;
+}
+.downView .GraphChart{
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 50%;
+}
+.downView .dataSelect{
+    position: relative;
+    background: white;
+    border-top: 1px solid #afafaf;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.6rem;
+    background: url(../img/bottom_icon_arrow.png) no-repeat center right;
+    background-position: 75% 55%;
+    background-size: 3%;
+}
+.downView .dataSelect .dataText{
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    width: 3rem;
+    height: 3rem;
+    top: 0.3rem;
+    right: 1rem;
+    background: url(../img/bottom_icon_sj.png) no-repeat center right;
+    background-position: 50% 100%;
+    background-size: 60%;
+}
+
+
+
+#chart{width:100%;height:100%;margin: 0 auto;marin-bottom: 4rem;}
+
+/* //历史数据 */
+.calendar-wrap{background:linear-gradient(#FFAEBA,#FFB18B);width: 100%;height: 20%; margin: 0 auto; font-size: 1.5rem;}
+
+
+/*--------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-----------*/
+
+@import url(kalen_TimeSelect.css);

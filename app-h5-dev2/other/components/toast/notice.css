@@ -1,0 +1,18 @@
+
+.het-toast{position: fixed; width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;text-align:center;z-index: 1999;left: 0;top:0;}
+.het-toast-text {min-width: 60px;display: inline-block;margin: auto 15px;border-radius: 3px;color: #fff;background-color: rgba(0,0,0,.8);font-size: 13px;line-height: 1.18;padding: 10px 15px;}
+.het-animate-fadein{animation: fadeIn 0.5s;}
+.het-icon{width: 36px;height: 36px;display: inline-block;background-size: contain; background-repeat: no-repeat;}
+.het-icon-loading{background-image:url(img/load.gif);}
+.het-icon-success{background-image:url(img/success.png);}
+.het-icon-fail{background-image:url(img/fail.png);}
+.het-icon-offline{background-image:url(img/offline.png);}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

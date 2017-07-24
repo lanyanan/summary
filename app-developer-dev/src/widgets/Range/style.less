@@ -1,0 +1,159 @@
+.widgetRange{
+	width:100%;
+	background-color:transparent;
+    position:absolute;
+    z-index: 3;
+    opacity:0;
+    top:50%;
+    left:0;
+    margin-top: -10.5px;
+    margin-left: 5.5px;
+}
+.rangeblock{
+    position: relative;
+    height:100%;
+}
+.rangeblock>span.rangeblock-on{
+    width:22px;
+    height:24px;
+    color:#ffffff;
+    position: absolute;
+    margin-top:-12px;
+    top:50%;
+    z-index:2;
+    display:inline-block;
+    background-size: 100% 100%;
+    border: 1px solid #c7c9c8;
+    border-radius: 50%;
+    background: #fff;
+    em{
+        position: absolute;
+        color:#999;
+        left: 50%;
+        top: -20px;
+        width: 20px;
+        margin-left: -10px;
+        height: 20px;
+        line-height: 20px;
+
+    }
+}
+.rangeblock>span.slider-on{
+    border: none;
+    position: absolute;
+    width:100%;
+    height:3px;
+    top:50%;
+    margin-top:-1.5px;
+    left:0;
+    z-index:-1;
+    display:inline-block;
+    background-size: 100% 100%;
+    background: #e2e2e2;
+    border-radius: 5px;
+}
+.rangeblock>span.slider-on-active{
+    border: none;
+    position: absolute;
+    width:0px;
+    height:3px;
+    top:50%;
+    margin-top:-1.5px;
+    left:0;
+    z-index:-1;
+    display:inline-block;
+    background-size: 100% 100%;
+    background: #3a96ff;
+    border-radius: 5px;
+}
+.rangeblock>div>i.stallPoint{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    background: blue;
+    border-radius: 50%;
+    bottom: 49%;
+    margin-left: 2px;
+    color:#999;
+}
+.rangeblock>div>span.stallName{
+	display: inline-block;
+    position: absolute;
+    bottom: 50%;
+    margin-bottom:-36px;
+    width:48px;
+    text-align:center;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    color:#999;
+}
+.range-num{display: none;}
+.range-sun{display: none;}
+.range-num span,.range-num i{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    color:#999;
+}
+.range-style0 .range-num,.range-style1 .range-num,.range-style2 .range-sun{
+    display: block;
+}
+
+.range-style0 .range-num span{
+    left:5px;
+    bottom: 0px;
+}
+
+.range-style0 .range-num i{
+    right:5px;
+    bottom:0px;
+}
+
+.range-style1 .range-num span{
+    left:-30px;
+    top:50%;
+    margin-top: -10px;
+}
+
+.range-style1{
+    margin: 0 40px 0 40px;
+}
+
+.range-style1 .range-num i{
+    right:-40px;
+    top:50%;
+    margin-top: -10px;
+}
+
+.range-style2 .range-sun span{
+    position: absolute;
+    left: -40px;
+    width: 32px;
+    top: 50%;
+    margin-top: -16px;
+    height: 32px;
+    background-size: 100% 100%;
+    background: url(../static/img/lsun.png)
+}
+.range-style2{
+    margin: 0 40px 0 40px;
+}
+
+.range-style2 .range-sun i{
+    position: absolute;
+    right: -56px;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    background-size: 100% 100%;
+    background: url(../static/img/bsun.png)
+}
+
+

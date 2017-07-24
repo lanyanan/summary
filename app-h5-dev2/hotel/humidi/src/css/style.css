@@ -1,0 +1,109 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+
+/*@import url(../../../common/static/mediaQuery.css); */
+@import url(./mediaQuery.css);
+@import url(./TipView.css);
+@import url(./AromaSegView.css);
+@import url(./ColorSelectView.css);
+@import url(./ColorRingView.css);
+@import url(./YYSlide.css);
+@import url(./Slider.css);
+@import url(./AromaMistAndTimeView.css);
+@import url(./TimeShowView.css);
+@import url(./PickerView1.css);
+@import url(./CloseView.css);
+@import url(./SiglePickView.css);
+@import url(./AromaOrderTable.css);
+@import url(./CommonView.css);
+@import url(./PlanSetting.css);
+
+body{background:#28263a;}
+.upView{
+    position: relative;
+    width: 100%;
+    height: 33rem;
+    background-color: rgb(90, 186, 21);
+    background-image: url(../../static/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /*display: flex;
+    align-items: center;*/
+}
+
+
+.upView .aromaImg{
+    position: relative;
+    width: 17.2rem;
+    height: 19rem;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.upView .aromaImg>img{
+    width: 17.2rem;
+    height: 19rem;
+}
+
+
+.upView > .aromaContent{
+    position: relative;
+    width: 172px;
+    height: 190px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url(../../static/img/pic-07-1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+}
+.upView > .aromaContent > .opacityAroma{
+    width: 100%;
+    height:100%;
+    background-image: url(../../static/img/pic-07-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+}
+.upView > .aromaContent > .aromaCanvas{
+    width: 172px;
+    height: 190px;
+    /*position: absolute;*/
+}
+
+
+.upView .switch{
+    position: absolute;
+    width: 3.6rem;
+    height: 3.6rem;
+    right: 2.8rem;
+    bottom: 2.8rem;
+    background-image: url(../../static/img/switch-off.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.downView{
+    background-color: #28263a;
+}
+
+.closeView-enter{
+    transform: translateY(100%);
+}
+
+.closeView-enter.closeView-enter-active{
+    transform: translateY(0);
+    transition: transform 300ms linear;
+}
+.closeView-leave{
+    transform: translateY(0);
+}
+.closeView-leave.closeView-leave-active{
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+}

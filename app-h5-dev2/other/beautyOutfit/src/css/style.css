@@ -1,0 +1,200 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+
+html,body,#ROOT,.full{
+    width: 100%;
+    height: 100%;
+}
+.full{
+    display: flex;
+    flex-direction: column;
+}
+.tab{
+    flex-grow: 1;
+    position: relative;
+}
+.tab-host{
+   flex-shrink: 0;
+   height: 3.5rem;
+   line-height: 3.5rem;
+   display: flex;
+}
+.tab-host .tab-btn{
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    border-bottom: solid 1px #eee;
+}
+.tab-btn.active{
+    border-bottom: solid 2px #f45a4f;
+    color: #f45a4f;
+}
+.scroll{
+    position: absolute;
+    background:#fdfdfd;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+.water-full{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+.water-full>.column{
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+.column .item{
+    background: #fff;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: solid #eee 1px ;
+    transition: opacity .8s;
+    opacity: 0;
+}
+.item .photo{
+    box-sizing: border-box;
+}
+.item .photo,.item .photo img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.item .title{
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+.item .title p{
+    font-size: 1.15rem;
+}
+.item .badge-view{
+    padding:0.5rem 0;
+    margin: 0 0.5rem;
+    border-top: solid 1px #eee;
+    color: #999;
+}
+.item .badge-view span{
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+.item .badge-view span::before{
+    content: '#';
+    margin-right: 2px;
+}
+.pull-tips,.flip{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+}
+.go-top{
+    width: 3rem;
+    height: 3rem;
+    background: url(../../static/img/goUp.png) no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+
+}
+.cover-layout{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.message{
+    width: 50%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 3;
+}
+
+/*文章详情页样式*/
+.app-body header{
+	color:#333333;
+	font-size:21px;
+	margin:2.25rem 1.33rem 0.92rem;
+	line-height:31px;
+	font-weight:bold;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+.app-body section.labelNav,.app-body section.articleDate{
+	margin: 0 0 0 1.33rem;
+}
+.app-body section.labelNav label.labelName{
+	display:inline-block;
+	line-height:2.08rem;
+	height:2.08rem;
+	margin-right:0.91rem;
+/* 	border-radius:25px;
+	border:1px solid #c5c5c5; */
+	color:#ff8077;
+	font-size:13px;
+	padding: 0 12.5px;
+	box-sizing:border-box;
+	margin-bottom:1.33rem;
+    position: relative;
+    border:none;
+}
+.app-body section.labelNav label.labelName:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:25px;
+    border: 1px solid #e5e5e5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.app-body section.articleDate{
+	font-size:12px;
+	color:#999999;
+    height: 12px;
+    line-height: 12px;
+}
+.app-body section.articleContent{
+	font-size:15px;
+	color:#333333;
+	line-height:24px;
+	margin:1.33rem 1.33rem;
+	text-align: justify;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+.app-body section.articleContent img{
+	display:inline-block;
+	width:100%;
+	height:100%;
+}

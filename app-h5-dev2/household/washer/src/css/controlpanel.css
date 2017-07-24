@@ -1,0 +1,41 @@
+
+
+.ControlPannel {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 6.5rem;
+    height: 13rem;
+
+    overflow: hidden;
+}
+
+.ControlPannel div img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.ControlPannel div{
+    position: absolute;
+    top: 42.7%;
+    left: 0;
+    width: 100%;
+
+    transform-origin: 100% 50%;
+}
+
+.ControlPannel .modeOne{
+    transform: rotate(60deg);
+}
+
+.ControlPannel .modeTwo{
+    transform: rotate(20deg);
+}
+
+.ControlPannel .modeThree{
+    transform: rotate(-20deg);
+}
+
+.ControlPannel .modeFour{
+    transform: rotate(-60deg);
+}

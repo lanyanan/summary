@@ -1,0 +1,14 @@
+.het-modal-mask{position: fixed;top: 0;right: 0;left: 0;bottom: 0;height: 100%;z-index: 999;background-color: rgba(0,0,0,.8);}
+.het-modal-wrap{position: fixed;overflow: auto;top: 0;right: 0;bottom: 0;left: 0;height: 100%;z-index: 999;outline: 0;display: flex;align-items: center;justify-content: center;}
+.het-modal{width: 270px; height: auto;;}
+.het-modal-content{position: relative;background-color: #fff;border: 0;background-clip: padding-box;text-align: center;height: 100%;overflow: hidden;border-radius: 6px;height: auto;padding-top: 15px;}
+.het-modal-title{font-size: 16px;padding: 6px 15px 15px;}
+.het-modal-body{font-size: 13px;color: #333;height: 100%;overflow: auto;padding: 0 15px 15px;}
+.het-modal-button-group{border-top: 1px solid #ddd;display: flex;}
+.het-modal-button-group .het-modal-button{color: #000;flex: 1;box-sizing: border-box;text-align: center;text-decoration: none;width: auto;display: block;height:50px;line-height: 50px;border-right: 1px solid #ddd;}
+.het-modal-button-group .het-modal-button:last-child{color: #108ee9;border-right: 0;}
+.het-modal-hidden{display: none;}
+.het-fade-enter {opacity: 0.01;}
+.het-fade-enter.het-fade-enter-active {opacity: 1;transition: opacity 150ms ease-in;}
+.het-fade-leave {opacity: 1;}
+.het-fade-leave.het-fade-leave-active {opacity: 0.01;transition: opacity 150ms ease-in;}

@@ -1,0 +1,2060 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(11);
+
+
+/***/ },
+/* 1 */,
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _BaseComponentClass = __webpack_require__(3);
+
+	Object.defineProperty(exports, 'BaseComponent', {
+	  enumerable: true,
+	  get: function get() {
+	    return _BaseComponentClass.BaseComponent;
+	  }
+	});
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var BaseComponent = exports.BaseComponent = function (_React$Component) {
+	    _inherits(BaseComponent, _React$Component);
+
+	    function BaseComponent(props) {
+	        _classCallCheck(this, BaseComponent);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BaseComponent).call(this, props));
+
+	        var originComponentDidMount = _this.componentDidMount; // 接管子类方法
+	        var originComponentWillUnmount = _this.componentWillUnmount; // 接管子类方法
+	        _this.state = {};
+	        _this._isMounted = false;
+	        // 重定义子类componentDidMount
+	        _this.componentDidMount = function () {
+	            _this.superComponentDidMount();
+	            if (typeof originComponentDidMount === 'function') {
+	                originComponentDidMount.call(_this);
+	            }
+	        };
+	        // 重定义子类componentWillUnmount
+	        _this.componentWillUnmount = function () {
+	            _this.superComponentWillUnmount();
+	            if (typeof originComponentWillUnmount === 'function') {
+	                originComponentWillUnmount.call(_this);
+	            }
+	        };
+	        return _this;
+	    }
+
+	    /**
+	     * 监听Store通用方法
+	     * @param    {object}   store   Reflux之Store对象
+	     */
+
+
+	    _createClass(BaseComponent, [{
+	        key: 'listenStore',
+	        value: function listenStore(store) {
+	            var _this2 = this;
+
+	            store.listen(function (data) {
+	                if (_this2.isMounted()) {
+	                    _this2.setState(data);
+	                }
+	            });
+	        }
+	        // 基类DidMount方法
+
+	    }, {
+	        key: 'superComponentDidMount',
+	        value: function superComponentDidMount() {
+	            this._isMounted = true;
+	        }
+	        // 基类WillUnmount方法
+
+	    }, {
+	        key: 'superComponentWillUnmount',
+	        value: function superComponentWillUnmount() {
+	            this._isMounted = false;
+	        }
+	        // 判断组件是否已挂载
+
+	    }, {
+	        key: 'isMounted',
+	        value: function isMounted() {
+	            return this._isMounted;
+	            // exceptions for flow control :(
+	            /*if (!this._isMounted) {
+	                try {
+	                    ReactDOM.findDOMNode(this);
+	                    this._isMounted = true;
+	                } catch (e) {
+	                    // Error: Invariant Violation: Component (with keys: props,context,state,refs,_reactInternalInstance) contains `render` method but is not mounted in the DOM
+	                    this._isMounted = false;
+	                } 
+	            }
+	            return this._isMounted;*/
+	        }
+	    }]);
+
+	    return BaseComponent;
+	}(React.Component);
+
+	;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+	/**
+	 * 公共Actions，所有action均需统一在此文件登记，以防重名造成store冲突
+	 * @type {actions}
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var Actions = exports.Actions = Reflux.createActions(['repaint', // 接收到数据，重新渲染'
+	'ready', 'readyData', 'getData', 'postHisData', 'readyHisData', 'getHisData', 'getNoData', 'sendDate', 'postDate', 'getCalendarData', // 获取日历数据
+	//App
+	'getAppHisData', 'selectedDate' // 选择日期
+	]);
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	/**
+	 * 公共store，建议所有store事件都在此文件定义
+	 * ! 注意，Store方法不能使用箭头函数，否则将报this未定义
+	 * @type {store}
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Store = undefined;
+
+	var _BaseComponentClass = __webpack_require__(2);
+
+	var _fun = __webpack_require__(6);
+
+	var _Actions = __webpack_require__(4);
+
+	var options = {};
+	var data = [];
+	// 格式化日期为 yyyy-MM-dd的形式
+	function ymd(d) {
+	    return (d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()).replace(/(?=\b\d\b)/g, '0');
+	}
+	// 格式化日期为 yyyy-MM的形式
+	function ym(d) {
+	    return (d.getFullYear() + '-' + (d.getMonth() + 1)).replace(/(?=\b\d\b)/g, '0');
+	}
+
+	var Store = exports.Store = Reflux.createStore({
+	    listenables: [_Actions.Actions],
+	    onReady: function onReady(data) {
+	        var _this = this,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatDataList';
+	        //options.accessToken = data.accessToken ? data.accessToken : options.accessToken
+	        options.appId = data.appId ? data.appId : options.appId;
+	        options.deviceId = data.deviceId ? data.deviceId : options.deviceId;
+	        options.timestamp = data.timestamp ? data.timestamp : options.timestamp;
+	        options.memberId = typeof data.memberId !== 'undefined' ? data.memberId : options.memberId;
+	        options.userType = typeof data.userType !== 'undefined' ? data.userType : options.userType;
+	        options.img = data.img;
+	        options.nickname = data.nickname;
+	        //data.timestamp = +new Date();
+	        //options.timestamp = +new Date();
+	        //console.log(data, options, 'from stores1');
+	        //this.trigger(data);
+	        het.get(url, data, function (data) {
+	            //console.log(data, '1');
+	            data = JSON.parse(data).data.list;
+	            function groupData(data) {
+	                var newData = {};
+	                var arrData = [];
+	                // 分组
+	                for (var i in data) {
+	                    //data[i].dataTime=Funs.dateFormat( data[i].dataTime, 'yyyy-MM-dd hh:mm:ss', true);
+	                    var k = (data[i].dataTime || '').replace(/\s.+$/, '');
+
+	                    if (!newData[k]) {
+	                        newData[k] = [];
+	                    }
+	                    newData[k].push(data[i]);
+	                }
+	                // 排序
+	                for (var j in newData) {
+	                    newData[j].sort(function (a, b) {
+	                        return a[j] < b[j + 1];
+	                    });
+	                    arrData.push(newData[j]);
+	                }
+	                return arrData;
+	            };
+	            data = groupData(data);
+	            //console.log(data, '2');
+	            _this.trigger({ 'data': data });
+	            //console.log(data, 'suc from readyData1');
+	        }, function (data) {
+	            console.log('fail sendData', data);
+	            het.toast('获取数据失败');
+	        });
+	    },
+	    onRepaint: function onRepaint(data) {
+	        this.trigger(data);
+	        console.log(data, 'from repaint');
+	    },
+	    onSendDate: function onSendDate(data) {
+	        var _this = this,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatMonthData';
+	        //options.accessToken = data.accessToken ? data.accessToken : options.accessToken;
+	        options.appId = data.appId ? data.appId : options.appId;
+	        options.deviceId = data.deviceId ? data.deviceId : options.deviceId;
+	        options.timestamp = data.timestamp ? data.timestamp : options.timestamp;
+	        options.memberId = typeof data.memberId !== 'undefined' ? data.memberId : options.memberId;
+	        options.userType = typeof data.userType !== 'undefined' ? data.userType : options.userType;
+	        options.img = data.img;
+	        options.nickname = data.nickname;
+	        //console.log(data,'from app ready');
+	        //this.trigger(options);
+	        het.get(url, data, function (data) {
+	            data = JSON.parse(data);
+	            //console.log(data,'parse')
+	            function classifyFn(data) {
+	                data = data.data;
+	                var len = data.length,
+	                    newArr = {},
+	                    _weight = [],
+	                    _fatRate = [],
+	                    _bmiRate = [],
+	                    _meatRate = [],
+	                    _dataTime = [],
+	                    _boneWeight = [],
+	                    _metabolismRate = [],
+	                    _moistureRate = [];
+	                for (var i = 0; i < len; i++) {
+	                    if (data[i].dataTime[5] == 0) {
+	                        if (data[i].dataTime[8] == 0) {
+	                            _dataTime.push(data[i].dataTime.substring(6, 7) + '.' + data[i].dataTime.substring(9));
+	                        } else {
+	                            _dataTime.push(data[i].dataTime.substring(6).replace('-', '.'));
+	                        }
+	                    } else {
+	                        if (data[i].dataTime[8] == 0) {
+	                            _dataTime.push(data[i].dataTime.substring(5, 7) + '.' + data[i].dataTime.substring(9));
+	                        } else {
+	                            _dataTime.push(data[i].dataTime.substring(5).replace('-', '.'));
+	                        }
+	                    }
+	                    _weight.push(data[i].weight);
+	                    _fatRate.push(data[i].fatRate);
+	                    _bmiRate.push(data[i].bmiRate);
+	                    _meatRate.push(data[i].meatRate);
+	                    _boneWeight.push(data[i].boneWeight);
+	                    _metabolismRate.push(data[i].metabolismRate);
+	                    _moistureRate.push(data[i].moistureRate);
+	                }
+	                return newArr = { _dataTime: _dataTime, _weight: _weight, _fatRate: _fatRate, _bmiRate: _bmiRate, _meatRate: _meatRate, _boneWeight: _boneWeight, _metabolismRate: _metabolismRate, _moistureRate: _moistureRate };
+	            };
+	            data = classifyFn(data);
+	            _this.trigger({ "data": data });
+	        }, function () {
+	            console.log('fail sendData');
+	            het.toast('获取数据失败');
+	        });
+	    },
+	    onGetHisData: function onGetHisData(beginDate, endDate) {
+	        var _this = this,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatMonthData';
+	        options.beginDate = ymd(beginDate);
+	        options.endDate = ymd(endDate);
+	        console.log(options);
+	        if (options.appId) {
+	            het.get(url, options, function (data) {
+	                data = JSON.parse(data);
+	                function classifyFn(data) {
+	                    data = data.data;
+	                    var len = data.length,
+	                        newArr = {},
+	                        _weight = [],
+	                        _fatRate = [],
+	                        _bmiRate = [],
+	                        _meatRate = [],
+	                        _dataTime = [],
+	                        _boneWeight = [],
+	                        _metabolismRate = [],
+	                        _moistureRate = [];
+	                    for (var i = 0; i < len; i++) {
+	                        if (data[i].dataTime[5] == 0) {
+	                            if (data[i].dataTime[8] == 0) {
+	                                _dataTime.push(data[i].dataTime.substring(6, 7) + '.' + data[i].dataTime.substring(9));
+	                            } else {
+	                                _dataTime.push(data[i].dataTime.substring(6).replace('-', '.'));
+	                            }
+	                        } else {
+	                            if (data[i].dataTime[8] == 0) {
+	                                _dataTime.push(data[i].dataTime.substring(5, 7) + '.' + data[i].dataTime.substring(9));
+	                            } else {
+	                                _dataTime.push(data[i].dataTime.substring(5).replace('-', '.'));
+	                            }
+	                        }
+	                        _weight.push(data[i].weight);
+	                        _fatRate.push(data[i].fatRate);
+	                        _bmiRate.push(data[i].bmiRate);
+	                        _meatRate.push(data[i].meatRate);
+	                        _boneWeight.push(data[i].boneWeight);
+	                        _metabolismRate.push(data[i].metabolismRate);
+	                        _moistureRate.push(data[i].moistureRate);
+	                    }
+	                    return newArr = { _dataTime: _dataTime, _weight: _weight, _fatRate: _fatRate, _bmiRate: _bmiRate, _meatRate: _meatRate, _boneWeight: _boneWeight, _metabolismRate: _metabolismRate, _moistureRate: _moistureRate };
+	                };
+	                data = classifyFn(data);
+	                _this.trigger({ "data": data });
+	            }, function () {
+	                console.log('fail sendData');
+	                //het.toast('数据请求错误')
+	            });
+	        }
+	    },
+	    onPostDate: function onPostDate(data_id) {
+	        var data = options,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatDataList',
+	            _this = this;
+	        var reload = options;
+	        data.dataId = data_id;
+	        het.post('/v1/app/chealth/bodyfat/deleteBodyFatDataById', data, function (data) {
+	            //console.log(data, 'suc post');
+	            //het.toast('post suc');
+	            het.get(url, reload, function (data) {
+	                data = JSON.parse(data).data.list;
+	                function groupData(data) {
+	                    var newData = {};
+	                    var arrData = [];
+
+	                    // 分组
+	                    for (var i in data) {
+	                        var k = (data[i].dataTime || '').replace(/\s.+$/, '');
+	                        if (!newData[k]) {
+	                            newData[k] = [];
+	                        }
+	                        newData[k].push(data[i]);
+	                    }
+	                    // 排序
+	                    for (var j in newData) {
+	                        newData[j].sort(function (a, b) {
+	                            return a[j] < b[j + 1];
+	                        });
+	                        arrData.push(newData[j]);
+	                    }
+	                    return arrData;
+	                };
+	                data = groupData(data);
+	                _this.trigger({ 'data': data });
+	                console.log(data, 'suc from reload data');
+	            }, function (data) {
+	                console.log(data, 'err from readyData');
+	                //het.toast('数据请求错误')
+	            });
+	        }, function (data) {
+	            console.log(data, 'fail post');
+	            het.toast('删除数据失败');
+	        });
+	    },
+	    onSelectedDate: function onSelectedDate(dates) {
+	        dates.slidedCalendarShow = false;
+	        this.trigger(dates);
+	    },
+	    groupData: function groupData(data) {
+	        var newData = {};
+	        var arrData = [];
+	        // 分组
+	        data = data.data.list;
+	        for (var i in data) {
+	            var key = data[i].dataTime.replace(/\s.+$/, '');
+	            if (!newData[key]) {
+	                newData[key] = [];
+	            }
+	            newData[key].push(data[i]);
+	        }
+	        // 排序
+	        for (var j in newData) {
+	            newData[j].sort(function (a, b) {
+	                return a.dataTime > b.dataTime;
+	            });
+	            arrData.push(newData[j]);
+	        }
+	        arrData.sort(function (a, b) {
+	            return a[0].dataTime < b[0].dataTime;
+	        });
+	        return arrData;
+	    },
+	    onReadyHisData: function onReadyHisData(data) {
+	        this.trigger(data);
+	    },
+	    onGetNoData: function onGetNoData(data) {
+	        this.trigger(data);
+	    },
+	    onGetAppHisData: function onGetAppHisData(beginDate, endDate) {
+	        var _this = this,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatMonthData';
+	        options.beginDate = ymd(beginDate);
+	        options.endDate = ymd(endDate);
+	        //console.log(options,'*************************');
+	        if (options.appId) {
+	            het.get(url, options, function (data) {
+	                data = JSON.parse(data);
+	                function classifyFn(data) {
+	                    data = data.data;
+	                    var len = data.length,
+	                        newArr = {},
+	                        _weight = [],
+	                        _fatRate = [],
+	                        _bmiRate = [],
+	                        _meatRate = [],
+	                        _dataTime = [],
+	                        _boneWeight = [],
+	                        _metabolismRate = [],
+	                        _moistureRate = [];
+	                    for (var i = 0; i < len; i++) {
+	                        if (data[i].dataTime[5] == 0) {
+	                            if (data[i].dataTime[8] == 0) {
+	                                _dataTime.push(data[i].dataTime.substring(6, 7) + '.' + data[i].dataTime.substring(9));
+	                            } else {
+	                                _dataTime.push(data[i].dataTime.substring(6).replace('-', '.'));
+	                            }
+	                        } else {
+	                            if (data[i].dataTime[8] == 0) {
+	                                _dataTime.push(data[i].dataTime.substring(5, 7) + '.' + data[i].dataTime.substring(9));
+	                            } else {
+	                                _dataTime.push(data[i].dataTime.substring(5).replace('-', '.'));
+	                            }
+	                        }
+	                        _weight.push(data[i].weight);
+	                        _fatRate.push(data[i].fatRate);
+	                        _bmiRate.push(data[i].bmiRate);
+	                        _meatRate.push(data[i].meatRate);
+	                        _boneWeight.push(data[i].boneWeight);
+	                        _metabolismRate.push(data[i].metabolismRate);
+	                        _moistureRate.push(data[i].moistureRate);
+	                    }
+	                    return newArr = { _dataTime: _dataTime, _weight: _weight, _fatRate: _fatRate, _bmiRate: _bmiRate, _meatRate: _meatRate, _boneWeight: _boneWeight, _metabolismRate: _metabolismRate, _moistureRate: _moistureRate };
+	                };
+	                data = classifyFn(data);
+	                //console.log(data);
+	                _this.trigger({ "data": data });
+	            }, function (data) {
+	                console.log('fail sendData', data);
+	                het.toast('获取数据失败');
+	            });
+	        }
+	    },
+	    getCalendarData: function getCalendarData(beginDate, endDate) {
+	        //let d1 = new Date();
+	        //let d2 = new Date();
+	        //d1.setMonth(d2.getMonth()-11);
+	        options.beginDate = beginDate;
+	        options.endDate = endDate;
+	        console.log(options, '*************from 22');
+	        var _this = this,
+	            url = '/v1/app/chealth/bodyfat/getBodyFatMonthData';
+	        het.get(url, options, function (data) {
+	            data = JSON.parse(data);
+	            function classifyFn(data) {
+	                data = data.data;
+	                var len = data.length,
+	                    newArr = {},
+	                    _weight = [],
+	                    _fatRate = [],
+	                    _bmiRate = [],
+	                    _meatRate = [],
+	                    _dataTime = [];
+	                for (var i = 0; i < len; i++) {
+	                    if (data[i].dataTime[5] == 0) {
+	                        if (data[i].dataTime[8] == 0) {
+	                            _dataTime.push(data[i].dataTime.substring(6, 7) + '.' + data[i].dataTime.substring(9));
+	                        } else {
+	                            _dataTime.push(data[i].dataTime.substring(6).replace('-', '.'));
+	                        }
+	                    } else {
+	                        if (data[i].dataTime[8] == 0) {
+	                            _dataTime.push(data[i].dataTime.substring(5, 7) + '.' + data[i].dataTime.substring(9));
+	                        } else {
+	                            _dataTime.push(data[i].dataTime.substring(5).replace('-', '.'));
+	                        }
+	                    }
+	                    _weight.push(data[i].weight);
+	                    _fatRate.push(data[i].fatRate);
+	                    _bmiRate.push(data[i].bmiRate);
+	                    _meatRate.push(data[i].meatRate);
+	                }
+	                return newArr = { _dataTime: _dataTime, _weight: _weight, _fatRate: _fatRate, _bmiRate: _bmiRate, _meatRate: _meatRate };
+	            };
+	            data = classifyFn(data);
+	            _this.trigger({ "data": data });
+	        }, function () {
+	            console.log('fail sendData');
+	            //het.toast('数据请求错误')
+	        });
+	    }
+	});
+
+	//onDelete(id) {
+	//    let newData = [];
+	//    data.map((it)=> {
+	//        if (it.dataId !== id) {
+	//            newData.push(it);
+	//        }
+	//    });
+	//    data = newData;
+	//    this.trigger(newData)
+	//},
+	//appId	    是	Integer	应用标识
+	//deviceId	是	string	设备id
+	//timestamp	是	number	时间戳
+	//memberId	是	string	用户编号（切换用户用）
+	//userType	是	string	用户身份（1：医生 3：患者）
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Funs = undefined;
+
+	var _fun = __webpack_require__(7);
+
+	var _fun2 = _interopRequireDefault(_fun);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.Funs = _fun2.default;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var Funs = {
+	    /*
+	        * 获取url参数
+	        * sName ：参数名
+	        * return : 返回参数值（没有的时候返回空）
+	        */
+	    getUrlParam: function getUrlParam(sName) {
+	        var reg = new RegExp("(^|&)" + sName + "=([^&]*)(&|$)", "i");
+	        var r = window.location.search.substr(1).match(reg);
+	        if (r != null) return decodeURIComponent(r[2]); // (r[2]);
+	        return "";
+	    },
+
+	    /**
+	     * 合并对象
+	     * target  target 对象
+	     * return 合并后对象 
+	     */
+	    _extends: function _extends(target) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            var source = arguments[i];
+	            for (var key in source) {
+	                if (Object.prototype.hasOwnProperty.call(source, key)) {
+	                    target[key] = source[key];
+	                }
+	            }
+	        }
+	        return target;
+	    }, // 公共函数模块
+	    /**
+	     * 格式化时间函数
+	     * @param    {string}   date   日期字符串或时间戳
+	     * @param    {string}   format 格式，缺省为：yyyy-MM-dd hh:mm:ss
+	     * @param    {Boolean}  isUTC  是否UTC时间，如传入为UTC时间，将自动转为本地时间
+	     * @return   {string}          按format格式输出日期
+	     */
+	    dateFormat: function dateFormat(date, format, isUTC) {
+	        var timezoneOffset = 0;
+	        var dateObj = new Date(date);
+	        var patt = /^(?:(\d+)-(\d+)-(\d+))?\s?(?:(\d+):(\d+):(\d+))?$/;
+	        var dateArr;
+	        var now = new Date();
+	        // IOS 解析失败时尝试手动解析
+	        if (dateObj.toString() === 'Invalid Date' && typeof date === 'string') {
+	            dateArr = date.match(patt) || [];
+	            dateObj = new Date(dateArr[1] || now.getFullYear(), dateArr[2] - 1 || now.getMonth(), dateArr[3] || now.getDate(), dateArr[4] || now.getHours(), dateArr[5] || now.getMinutes(), dateArr[6] || now.getSeconds());
+	        }
+	        format = format || 'yyyy-MM-dd hh:mm:ss';
+	        if (isUTC) {
+	            // 处理utc时间
+	            timezoneOffset = new Date().getTimezoneOffset();
+	            dateObj.setMinutes(dateObj.getMinutes() - timezoneOffset);
+	        }
+	        var map = {
+	            'M': dateObj.getMonth() + 1, //月份
+	            'd': dateObj.getDate(), //日
+	            'h': dateObj.getHours(), //小时
+	            'm': dateObj.getMinutes(), //分
+	            's': dateObj.getSeconds(), //秒
+	            'q': Math.floor((dateObj.getMonth() + 3) / 3), //季度
+	            'S': dateObj.getMilliseconds() //毫秒
+	        };
+	        format = format.replace(/([yMdhmsqS])+/g, function (all, t) {
+	            var v = map[t];
+	            if (v !== undefined) {
+	                if (all.length > 1) {
+	                    v = '0' + v;
+	                    v = v.substr(v.length - 2);
+	                }
+	                return v;
+	            } else if (t === 'y') {
+	                return (dateObj.getFullYear() + '').substr(4 - all.length);
+	            }
+	            return all;
+	        });
+	        return format;
+	    },
+	    /**
+	     * [dateFormatFull description]
+	     * @param  {[type]} dateTime [时间戳]
+	     * @param  {[type]} type     [“-”] 返回2016-07-30   [“month”] 返回2016-07    [“day”] 返回 日   
+	     * @param  {[type]} flag     [1]  返回12：30
+	     * @return {[type]}          [description]
+	     */
+	    dateFormatFull: function dateFormatFull(dateTime, type, flag) {
+	        var d = new Date(dateTime * 1000),
+	            y = d.getFullYear(),
+	            m = d.getMonth() + 1,
+	            day = d.getDate(),
+	            h = d.getHours(),
+	            mn = d.getMinutes(),
+	            s = d.getSeconds(),
+	            res;
+	        m = m > 9 ? m : '0' + m;
+	        day = day > 9 ? day : '0' + day;
+	        h = h > 9 ? h : '0' + h;
+	        mn = mn > 9 ? mn : '0' + mn;
+	        s = s > 9 ? s : '0' + s;
+	        if (type === '-') {
+	            res = y + '-' + m + '-' + day;
+	            if (flag) {
+	                res = h + ':' + mn;
+	            }
+	        } else if (type === 'month') {
+	            res = y + '-' + m;
+	        } else if (type === 'day') {
+	            res = d.getDate();
+	        } else if (type === 'full') {
+	            res = y + '-' + m + '-' + day + " " + h + ':' + mn;
+	        }
+	        return res;
+	    },
+	    /**
+	     * [utcToLocal utc时间转换为本地时间]
+	     * @param  {[type]} utc [utc 时间 格式为‘2016-06-06 12:12:12’]
+	     * @param  {[type]} type [返回格式  1：时+分 ]
+	     * @return {[type]}     [description]
+	     */
+	    utcToLocal: function utcToLocal(utc, type) {
+	        var utcDay = utc.split(' '),
+	            utcDate = utcDay[0].split('-'),
+	            utcTime = utcDay[1].split(':'),
+	            timestamp = Math.round(Date.UTC(utcDate[0], utcDate[1] - 1, utcDate[2], utcTime[0], utcTime[1], utcTime[2]) / 1000),
+	            time = this.dateFormatFull(timestamp, "full");
+	        if (type == 1) {
+	            time = this.dateFormatFull(timestamp, "-", 1);
+	        }
+	        return time;
+	    },
+	    timestampToUtc: function timestampToUtc(timestamp, type) {
+	        var d = new Date(timestamp * 1000),
+	            y = d.getUTCFullYear(),
+	            m = d.getUTCMonth() + 1,
+	            day = d.getUTCDate(),
+	            h = d.getUTCHours(),
+	            mn = d.getUTCMinutes(),
+	            s = d.getUTCSeconds(),
+	            res;
+	        m = m > 9 ? m : '0' + m;
+	        day = day > 9 ? day : '0' + day;
+	        h = h > 9 ? h : '0' + h;
+	        mn = mn > 9 ? mn : '0' + mn;
+	        s = s > 9 ? s : '0' + s;
+	        if (type === '-') {
+	            res = y + '-' + m + '-' + day + " " + h + ':' + mn + ':' + s;
+	        }
+	        return res;
+	    }
+	};
+	module.exports = Funs;
+
+/***/ },
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _BaseComponentClass = __webpack_require__(2);
+
+	var _fun = __webpack_require__(6);
+
+	var _Actions = __webpack_require__(4);
+
+	var _Store = __webpack_require__(5);
+
+	var _SlidedCalendar = __webpack_require__(12);
+
+	var _Echarts = __webpack_require__(13);
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by Administrator on 2016-08-06.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	//import {Funs} from '../../../common/src/fun.es6';
+
+
+	var _ReactRouter = ReactRouter;
+	var Router = _ReactRouter.Router;
+	var Route = _ReactRouter.Route;
+	var hashHistory = _ReactRouter.hashHistory;
+
+	var endDate = new Date();
+	var beginDate = new Date();
+	beginDate.setMonth(beginDate.getMonth() - 2); // 前两个月的数据
+	het.domReady(function () {
+	    // 配置sdk
+	    het.config({
+	        debugMode: 'print', // 打印调试数据
+	        updateFlagMap: {}
+	    });
+	});
+
+	het.ready(function (data) {
+	    _Actions.Actions.sendDate(data);
+	});
+
+	// 接收app推送数据
+	het.repaint(function (data) {
+	    //Actions.getHisData(data);
+
+	});
+
+	// 创建React组件
+
+	var App = function (_BaseComponent) {
+	    _inherits(App, _BaseComponent);
+
+	    function App(props) {
+	        _classCallCheck(this, App);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+
+	        var isAndroid = !!(navigator.userAgent.indexOf('Android') + 1);
+	        var endDate = new Date();
+	        var beginDate = new Date();
+	        beginDate.setMonth(beginDate.getMonth() - 2); // 前两个月的数据
+	        _this.state = {
+	            headerTop: isAndroid ? 73 : 64,
+	            slidedCalendarShow: false,
+	            startDate: beginDate,
+	            endDate: endDate
+	        };
+	        //console.log(this.state.startDate, this.state.endDate)
+
+	        _this.listenStore(_Store.Store); // 监听Store
+	        //Actions.sendDate(beginDate, endDate);
+	        //Actions.getCalendarData();
+	        return _this;
+	    }
+
+	    _createClass(App, [{
+	        key: 'selectedDate',
+	        value: function selectedDate(d) {
+	            _Actions.Actions.getHisData(d.startDate, d.endDate);
+	            _Actions.Actions.selectedDate(d);
+	            _Actions.Actions.getHisData(d.startDate, d.endDate);
+	        }
+	    }, {
+	        key: 'ymd',
+	        value: function ymd(d) {
+	            //d = new Date(d);
+	            return d.getFullYear() + '.' + (d.getMonth() + 1) + '.' + d.getDate();
+	        }
+	    }, {
+	        key: 'clickDate',
+	        value: function clickDate(e) {
+	            e.preventDefault();
+	            this.setState({ slidedCalendarShow: true });
+	        }
+	    }, {
+	        key: 'stopSlider',
+	        value: function stopSlider(e) {
+	            e.preventDefault();
+	            e.stopPropagation();
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var selDateText = this.ymd(this.state.startDate) + '~' + this.ymd(this.state.endDate);
+	            //console.log(this.state.data);
+	            return React.createElement(
+	                'div',
+	                null,
+	                React.createElement(
+	                    'div',
+	                    null,
+	                    React.createElement(
+	                        'div',
+	                        { className: 'his-header bg-color', onTouchStart: this.stopSlider },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'his-date bg-color' },
+	                            React.createElement('div', null),
+	                            React.createElement(
+	                                'a',
+	                                { href: 'health://skip_url/toDataPick', className: 'wrap-block',
+	                                    onTouchStart: this.clickDate.bind(this) },
+	                                React.createElement('img', { className: 'his-date-img', src: './../static/img/data_pic.png' }),
+	                                selDateText
+	                            )
+	                        )
+	                    ),
+	                    React.createElement(_Echarts.Echarts, { mydata: this.state.data })
+	                ),
+	                React.createElement(_SlidedCalendar.SlidedCalendar, { show: this.state.slidedCalendarShow, validDates: this.state.validDates,
+	                    startDate: this.state.startDate,
+	                    endDate: this.state.endDate, cb: this.selectedDate.bind(this), id: 'speSilder' })
+	            );
+	        }
+	    }]);
+
+	    return App;
+	}(_BaseComponentClass.BaseComponent);
+
+	// 开始渲染
+
+
+	het.domReady(function () {
+	    het.setTitle('历史数据');
+	    // 无路由方式
+	    // ReactDOM.render(<App />, document.getElementById('ROOT'));
+
+	    // 路由方式
+	    ReactDOM.render(React.createElement(
+	        Router,
+	        { history: hashHistory },
+	        React.createElement(Route, { path: '/', component: App })
+	    ), document.getElementById('ROOT'));
+	});
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	/**
+	 * 滑动式日期区间选择器
+	 * @prop {boolean}  show       是否显示该组件，缺省为false
+	 * @prop {array}    validDates 有数据的日期数组，格式：['2016-1-1', '2016-1-2', ...]
+	 * @prop {date}     startDate  开始时间，可选。格式：'2016-1-1'
+	 * @prop {date}     endDate    结束时间，可选。格式：'2016-1-1'
+	 * @prop {integer}  months     可选月数，缺省为12个月
+	 * @prop {function} cb         点确定的回调函数，返回date对象，格式：{startDate: Date1, endDate: Date2}
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.SlidedCalendar = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _BaseComponentClass = __webpack_require__(2);
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// 创建React组件
+
+	var SlidedCalendar = exports.SlidedCalendar = function (_BaseComponent) {
+	    _inherits(SlidedCalendar, _BaseComponent);
+
+	    function SlidedCalendar(props) {
+	        _classCallCheck(this, SlidedCalendar);
+
+	        var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(SlidedCalendar).call(this, props));
+
+	        var _this = _this2;
+	        _this2.top = _this2.props.top ? _this2.props.top : 0;
+	        _this2.calendar = _this2.createCalendarData(_this2.props.months || 12);
+	        _this2.shouldScroll = false; // 是否应滚动到底部
+	        _this2.state = {
+	            show: props.show ? props.show : false,
+	            validDates: (props.validDates || []).map(function (d) {
+	                return _this2.zeroTimestamp(d);
+	            }),
+	            startDate: props.startDate ? _this.zeroTimestamp(props.startDate) : Infinity,
+	            endDate: props.endDate ? _this.zeroTimestamp(props.endDate) : 0
+	        };
+	        _this2.touchCounter = 0; // 点击计数器
+	        _this2.selectDate = _this2.selectDate.bind(_this2);
+	        _this2.submit = _this2.submit.bind(_this2);
+	        return _this2;
+	    }
+
+	    _createClass(SlidedCalendar, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            this.shouldScroll = true;
+	        }
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(props) {
+	            var _this3 = this;
+
+	            var _this = this;
+	            this.setState({
+	                show: props.show ? props.show : false,
+	                validDates: (props.validDates || []).map(function (d) {
+	                    return _this3.zeroTimestamp(d);
+	                }),
+	                startDate: props.startDate ? _this.zeroTimestamp(props.startDate) : Infinity,
+	                endDate: props.endDate ? _this.zeroTimestamp(props.endDate) : 0
+	            });
+	            this.shouldScroll = true;
+	        }
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate() {
+	            if (this.shouldScroll) {
+	                var main = ReactDOM.findDOMNode(this.refs.main);
+	                main.scrollTop = main.scrollHeight;
+	                this.shouldScroll = false;
+	            }
+	        }
+	        // 生成0点时间戳，用于对比
+
+	    }, {
+	        key: 'zeroTimestamp',
+	        value: function zeroTimestamp(date) {
+	            var time = new Date(date.toString());
+	            time.setHours(0);
+	            time.setMinutes(0);
+	            time.setSeconds(0);
+	            return time.getTime();
+	        }
+	        // 生成日历数据
+
+	    }, {
+	        key: 'createCalendarData',
+	        value: function createCalendarData(forwardMonth) {
+	            forwardMonth = parseInt(forwardMonth);
+	            var cData = [];
+	            var cursor = new Date();
+	            cursor.setMonth(cursor.getMonth() - forwardMonth);
+	            for (var i = forwardMonth; i > 0; i--) {
+	                cursor.setMonth(cursor.getMonth() + 1);
+	                cData.push({
+	                    year: cursor.getFullYear(),
+	                    month: cursor.getMonth(),
+	                    data: monthData(cursor)
+	                });
+	            }
+	            function monthData(date) {
+	                var d = new Date(date);
+	                var wData = []; // 周数据
+	                var mData = []; // 月数据
+	                var m = d.getMonth();
+	                d.setDate(1);
+	                for (var h = 0; h < d.getDay(); h++) {
+	                    wData.push(0);
+	                }
+	                for (var _i = 0; _i < 6; _i++) {
+	                    for (var j = _i === 0 ? h : 0; j < 7; j++) {
+	                        if (d.getMonth() - m === 0) {
+	                            wData.push(d.getDate());
+	                        } else {
+	                            if (_i >= 4 && j === 0) {
+	                                // 排除最后一周全空的情况
+	                                break;
+	                            }
+	                            wData.push(0);
+	                        }
+	                        d.setDate(d.getDate() + 1);
+	                    }
+	                    mData.push(wData);
+	                    wData = [];
+	                }
+	                return mData;
+	            }
+	            return cData;
+	        }
+	    }, {
+	        key: 'selectDate',
+	        value: function selectDate(e) {
+	            var date = parseInt(e.currentTarget.getAttribute('data-date'));
+	            this.touchCounter++;
+	            if (this.touchCounter % 2) {
+	                this.setState({ startDate: date, endDate: 0 });
+	            } else if (this.state.startDate > date) {
+	                this.touchCounter--;
+	                this.setState({ startDate: date, endDate: 0 });
+	                // alert('结束时间不能小于开始时间');
+	            } else {
+	                    this.setState({ endDate: date });
+	                }
+	        }
+	    }, {
+	        key: 'submit',
+	        value: function submit() {
+	            var _this = this;
+	            if (typeof this.props.cb === 'function') {
+	                this.props.cb({
+	                    startDate: new Date(_this.state.startDate),
+	                    endDate: new Date(_this.state.endDate)
+	                });
+	            }
+	            this.setState({ show: false });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this4 = this;
+
+	            var today = this.zeroTimestamp(new Date().toString());
+	            return React.createElement(
+	                'div',
+	                { ref: 'main', className: 'slided-calendar', style: { top: '-9rem', position: 'fixed', bottom: 0, display: this.state.show ? 'block' : 'none' } },
+	                React.createElement(
+	                    'ul',
+	                    { className: 'sc-row head', style: { top: this.top } },
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '日'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '一'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '二'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '三'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '四'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '五'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        '六'
+	                    )
+	                ),
+	                this.calendar.map(function (m, idx1) {
+	                    // 遍历月份
+	                    return React.createElement(
+	                        'section',
+	                        { key: idx1 },
+	                        React.createElement(
+	                            'h2',
+	                            null,
+	                            m.year,
+	                            '年',
+	                            m.month + 1,
+	                            '月'
+	                        ),
+	                        m.data.map(function (w, idx2) {
+	                            // 遍历周
+	                            return React.createElement(
+	                                'ul',
+	                                { key: idx2, className: 'sc-row' },
+	                                w.map(function (d, idx3) {
+	                                    // 遍历天
+	                                    if (d !== 0) {
+	                                        var theDay = _this4.zeroTimestamp(m.year + '-' + (m.month + 1) + '-' + d);
+	                                        var txt = theDay === today ? '今' : d;
+	                                        var classNames = '';
+	                                        // 当天0时时间戳
+	                                        // 有效日期样式
+	                                        classNames += _this4.state.validDates.indexOf(theDay) > -1 ? ' sc-vali' : '';
+	                                        // 今天样式
+	                                        classNames += theDay === today ? ' sc-today' : '';
+	                                        // 开始样式
+	                                        classNames += theDay === _this4.state.startDate ? ' sc-start' : '';
+	                                        // 结束样式
+	                                        classNames += theDay === _this4.state.endDate ? ' sc-end' : '';
+	                                        // 区间样式
+	                                        classNames += theDay > _this4.state.startDate && theDay < _this4.state.endDate ? ' sc-among' : '';
+	                                        return React.createElement(
+	                                            'li',
+	                                            { key: idx3, className: classNames, 'data-date': theDay, onClick: _this4.selectDate },
+	                                            React.createElement(
+	                                                'i',
+	                                                null,
+	                                                txt
+	                                            )
+	                                        );
+	                                    } else {
+	                                        return React.createElement(
+	                                            'li',
+	                                            { key: idx3, className: 'sc-e' },
+	                                            ' '
+	                                        );
+	                                    }
+	                                })
+	                            );
+	                        })
+	                    );
+	                }),
+	                React.createElement(
+	                    'footer',
+	                    { className: 'sc-footer' },
+	                    React.createElement(
+	                        'a',
+	                        { href: '#', onTouchEnd: this.submit, style: { position: 'fixed', bottom: 0, width: '100%' } },
+	                        '确定'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SlidedCalendar;
+	}(_BaseComponentClass.BaseComponent);
+
+	;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Echarts = undefined;
+
+	var _Actions = __webpack_require__(4);
+
+	var _fun = __webpack_require__(6);
+
+	/**
+	 * Created by Administrator on 2014-08-23.
+	 */
+	/**
+	 * Created by Administrator on 2014-08-12.
+	 */
+	var Echarts = exports.Echarts = React.createClass({
+	    displayName: 'Echarts',
+
+	    getInitialState: function getInitialState() {
+	        return {};
+	    },
+	    //    "boneWeight": "16.3",  // 骨量
+	    //    "metabolismRate": "3.4",  // 基础代谢率
+	    //    "moistureRate": "5.6"//水分比例
+	    render: function render() {
+	        var _this = this;
+
+	        var mydata = this.props.mydata;
+	        if (mydata) {
+	            (function () {
+	                var _data = _this.props.mydata ? _this.props.mydata : '',
+	                    x_data = _data._dataTime ? _data._dataTime : '',
+	                    weight = _data._weight ? _data._weight : '',
+	                    fatRate = _data._fatRate ? _data._fatRate : '',
+	                    bmiRate = _data._bmiRate ? _data._bmiRate : '',
+	                    meatRate = _data._meatRate ? _data._meatRate : '',
+	                    boneWeight = _data._boneWeight ? _data._boneWeight : '',
+	                    metabolismRate = _data._metabolismRate ? _data._metabolismRate : '',
+	                    moistureRate = _data._moistureRate ? _data._moistureRate : '',
+	                    chart_weight = ReactDOM.findDOMNode(_this.refs.chart_weight),
+	                    chart_fat = ReactDOM.findDOMNode(_this.refs.chart_fat),
+	                    chart_bone = ReactDOM.findDOMNode(_this.refs.chart_bone),
+	                    chart_muscle = ReactDOM.findDOMNode(_this.refs.chart_muscle),
+	                    chart_boneWeight = ReactDOM.findDOMNode(_this.refs.chart_boneWeight),
+	                    chart_metabolismRate = ReactDOM.findDOMNode(_this.refs.chart_metabolismRate),
+	                    chart_moistureRate = ReactDOM.findDOMNode(_this.refs.chart_moistureRate);
+
+	                //console.log('*************************************', weight, x_data)
+	                setTimeout(function () {
+	                    var myChart_weight = echarts.init(chart_weight);
+	                    var mychart_fat = echarts.init(chart_fat);
+	                    var mychart_bone = echarts.init(chart_bone);
+	                    var mychart_muscle = echarts.init(chart_muscle);
+	                    var mychart_boneWeight = echarts.init(chart_boneWeight);
+	                    var mychart_metabolismRate = echarts.init(chart_metabolismRate);
+	                    var mychart_moistureRate = echarts.init(chart_moistureRate);
+	                    // 指定图表的配置项和数据
+	                    var option_weight = {
+	                        title: {
+	                            text: '体重(kg)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '2%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 150,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '体重(kg)',
+	                            type: 'line',
+	                            stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: weight
+	                        }]
+	                    };
+	                    var option_fat = {
+	                        title: {
+	                            text: '脂肪率(%)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 50,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '脂肪率(%)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: fatRate
+	                        }]
+	                    };
+	                    var option_bone = {
+	                        title: {
+	                            text: 'bmi'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        //toolbox: {
+	                        //    feature: {
+	                        //        saveAsImage: {}
+	                        //    }
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 50,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: 'bmi',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: bmiRate
+	                        }]
+	                    };
+	                    var option_muscle = {
+	                        title: {
+	                            text: '肌肉比例(kcal)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 100,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '肌肉比例(kcal)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: meatRate
+	                        }]
+	                    };
+	                    var option_boneWeight = {
+	                        title: {
+	                            text: '骨量(kg)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 10,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '骨量(kg)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: boneWeight
+	                        }]
+	                    };
+	                    var option_metabolismRate = {
+	                        title: {
+	                            text: '基础代谢率(kcal)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        //toolbox: {
+	                        //    feature: {
+	                        //        saveAsImage: {}
+	                        //    }
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 4000,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '基础代谢率(kcal)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: metabolismRate
+	                        }]
+	                    };
+	                    var option_moistureRate = {
+	                        title: {
+	                            text: '水分比例(%)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 100,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '水分比例(%)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: moistureRate
+	                        }]
+	                    };
+	                    // 使用刚指定的配置项和数据显示图表。
+	                    myChart_weight.setOption(option_weight);
+	                    mychart_fat.setOption(option_fat);
+	                    mychart_bone.setOption(option_bone);
+	                    mychart_muscle.setOption(option_muscle);
+	                    mychart_boneWeight.setOption(option_boneWeight);
+	                    mychart_metabolismRate.setOption(option_metabolismRate);
+	                    mychart_moistureRate.setOption(option_moistureRate);
+	                }, 600);
+	            })();
+	        }
+	        return React.createElement(
+	            'ul',
+	            { className: 'date-chart ' },
+	            React.createElement('li', { ref: 'chart_weight' }),
+	            React.createElement('li', { ref: 'chart_bone' }),
+	            React.createElement('li', { ref: 'chart_fat' }),
+	            React.createElement('li', { ref: 'chart_moistureRate' }),
+	            React.createElement('li', { ref: 'chart_muscle' }),
+	            React.createElement('li', { ref: 'chart_metabolismRate' }),
+	            React.createElement('li', { ref: 'chart_boneWeight' })
+	        );
+	    },
+	    componentWillUpdate: function componentWillUpdate() {
+	        var _this2 = this;
+
+	        //console.log('*************');
+	        if (this.props.mydata) {
+	            (function () {
+	                var _data = _this2.props.mydata ? _this2.props.mydata : '',
+	                    x_data = _data._dataTime ? _data._dataTime : '',
+	                    weight = _data._weight ? _data._weight : '',
+	                    fatRate = _data._fatRate ? _data._fatRate : '',
+	                    bmiRate = _data._bmiRate ? _data._bmiRate : '',
+	                    meatRate = _data._meatRate ? _data._meatRate : '',
+	                    boneWeight = _data._boneWeight ? _data._boneWeight : '',
+	                    metabolismRate = _data._metabolismRate ? _data._metabolismRate : '',
+	                    moistureRate = _data._moistureRate ? _data._moistureRate : '',
+	                    chart_weight = ReactDOM.findDOMNode(_this2.refs.chart_weight),
+	                    chart_fat = ReactDOM.findDOMNode(_this2.refs.chart_fat),
+	                    chart_bone = ReactDOM.findDOMNode(_this2.refs.chart_bone),
+	                    chart_muscle = ReactDOM.findDOMNode(_this2.refs.chart_muscle),
+	                    chart_boneWeight = ReactDOM.findDOMNode(_this2.refs.chart_boneWeight),
+	                    chart_metabolismRate = ReactDOM.findDOMNode(_this2.refs.chart_metabolismRate),
+	                    chart_moistureRate = ReactDOM.findDOMNode(_this2.refs.chart_moistureRate);
+
+	                //console.log('*************************************', weight, x_data)
+	                setTimeout(function () {
+	                    var myChart_weight = echarts.init(chart_weight);
+	                    var mychart_fat = echarts.init(chart_fat);
+	                    var mychart_bone = echarts.init(chart_bone);
+	                    var mychart_muscle = echarts.init(chart_muscle);
+	                    var mychart_boneWeight = echarts.init(chart_boneWeight);
+	                    var mychart_metabolismRate = echarts.init(chart_metabolismRate);
+	                    var mychart_moistureRate = echarts.init(chart_moistureRate);
+	                    // 指定图表的配置项和数据
+	                    var option_weight = {
+	                        title: {
+	                            text: '体重(kg)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '2%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 150,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '体重(kg)',
+	                            type: 'line',
+	                            stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: weight
+	                        }]
+	                    };
+	                    var option_fat = {
+	                        title: {
+	                            text: '脂肪率(%)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 50,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '脂肪率(%)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: fatRate
+	                        }]
+	                    };
+	                    var option_bone = {
+	                        title: {
+	                            text: 'bmi'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        //toolbox: {
+	                        //    feature: {
+	                        //        saveAsImage: {}
+	                        //    }
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 50,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: 'bmi',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: bmiRate
+	                        }]
+	                    };
+	                    var option_muscle = {
+	                        title: {
+	                            text: '肌肉比例(kcal)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 100,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '肌肉比例(kcal)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: meatRate
+	                        }]
+	                    };
+	                    var option_boneWeight = {
+	                        title: {
+	                            text: '骨量(kg)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 10,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '骨量(kg)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: boneWeight
+	                        }]
+	                    };
+	                    var option_metabolismRate = {
+	                        title: {
+	                            text: '基础代谢率(kcal)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        //toolbox: {
+	                        //    feature: {
+	                        //        saveAsImage: {}
+	                        //    }
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 4000,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '基础代谢率(kcal)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: metabolismRate
+	                        }]
+	                    };
+	                    var option_moistureRate = {
+	                        title: {
+	                            text: '水分比例(%)'
+	                        },
+	                        //tooltip: {
+	                        //    trigger: 'axis'
+	                        //},
+	                        grid: {
+	                            left: '3%',
+	                            right: '4%',
+	                            bottom: '3%',
+	                            containLabel: true
+	                        },
+	                        xAxis: [{
+	                            type: 'category',
+	                            boundaryGap: false,
+	                            data: x_data
+	                        }],
+	                        yAxis: {
+	                            type: 'value',
+	                            min: 0,
+	                            max: 100,
+	                            axisLine: {
+	                                show: false
+	                            }
+	                        },
+	                        series: [{
+	                            name: '水分比例(%)',
+	                            type: 'line',
+	                            //stack: '总量',
+	                            symbol: 'circle',
+	                            symbolSize: '14',
+	                            areaStyle: {
+	                                normal: {
+	                                    color: '#e9f8f5'
+	                                }
+	                            },
+	                            itemStyle: {
+	                                normal: {
+	                                    color: '#54d8c3'
+	                                }
+	                            },
+	                            data: moistureRate
+	                        }]
+	                    };
+	                    // 使用刚指定的配置项和数据显示图表。
+	                    myChart_weight.setOption(option_weight);
+	                    mychart_fat.setOption(option_fat);
+	                    mychart_bone.setOption(option_bone);
+	                    mychart_muscle.setOption(option_muscle);
+	                    mychart_boneWeight.setOption(option_boneWeight);
+	                    mychart_metabolismRate.setOption(option_metabolismRate);
+	                    mychart_moistureRate.setOption(option_moistureRate);
+	                }, 600);
+	            })();
+	        }
+	    }
+
+	    //componentWillUpdate:function(nextProps,nextState){
+	    //    //console.log(nextProps)
+	    //    if(nextProps.timelist!=''){
+	    //        let timelist=nextProps.timelist,
+	    //            templist=nextProps.templist,
+	    //            chartDom =ReactDOM.findDOMNode(this.refs.chart); // dom节点
+	    //        // 基于准备好的dom，初始化echarts实例
+	    //        setTimeout(function(){
+	    //            let myChart = echarts.init(chartDom),
+	    //                options = {
+	    //                    color:['#FFB9C4'],
+	    //                    grid: {
+	    //                        left: '3%',
+	    //                        right: '4%',
+	    //                        bottom: '30%',
+	    //                        top:"12%",
+	    //                        containLabel: true
+	    //                    },
+	    //                    tooltip : {
+	    //                        trigger: 'axis'
+	    //                    },
+	    //                    xAxis: {
+	    //                        type: 'category',
+	    //                        boundaryGap: false,
+	    //                        data:timelist
+	    //                    },
+	    //                    yAxis: {
+	    //                        type: 'value',
+	    //                        splitNumber:1,
+	    //                        interval:1,
+	    //                        min:35,
+	    //                        max:41
+	    //                    },
+	    //                    series: [
+	    //                        {
+	    //                            name:'温度',
+	    //                            type:'line',
+	    //                            data:templist
+	    //                        }
+	    //                    ]
+	    //                };
+	    //            // 绘制图表
+	    //            myChart.setOption(options);
+	    //        }, 500);
+	    //    }
+	    //
+	    //
+	    //}
+	});
+
+/***/ }
+/******/ ]);

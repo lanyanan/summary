@@ -1,0 +1,211 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css); 
+@import url(../../../common/src/lib/range.css); 
+@import url(../../../common/src/TimeSelect.css); 
+@import url(../../../common/src/lib/colorPicker/ColorPicker.css); 
+@import url(./SimpleSelect.css); 
+
+body{
+    background-color: #28263b;
+}
+header{
+    position: relative;
+    background:#fff url(../img/bg.jpg) no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+header>figure{
+    padding-top: 1.3rem;
+}
+header>figure>img{
+    width: 45%;
+    /* filter: drop-shadow(0 -16px 16px rgb(200, 200, 0)); */
+}
+header .tips{
+    position:absolute;
+    top:0;
+    width:100%;
+    background-color: rgba(59, 87, 158, 0.54);
+    line-height: 3;
+    padding: 0 .5rem;
+    text-align: left;
+    font-size: 12px;
+    box-sizing: border-box;
+    color: #d4dff0;
+    overflow: hidden;
+    /* background:rgba(59, 87, 158, 0.54) url(../img/close.png) no-repeat 97% center; */
+    background-size: 1.8rem;
+}
+header .tips>.close{
+    float:right;
+    width:1.5rem;
+    height:1.5rem;
+    margin-top: 0.5rem;
+    background: url(../img/close.png) no-repeat;
+    background-size: cover;
+}
+header .switch{
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    background: url(../img/switch-off.png) no-repeat right bottom;
+    background-size: 50%;
+}
+
+h2{
+    padding:15px;
+    font-size:16px;
+    color:rgb(138,135,164);
+}
+.colors{background-color:#28263b;border:1px solid #28263b;position: relative;z-index:3;}
+.colors>a{text-align:center;padding:5px 0 20px;color:transparent;}
+.colors>a>b{position:relative;display:inline-block;width:2rem;height:2rem;line-height:2rem;border-radius:0.5rem;}
+.colors>a.on>b:after{
+    position:absolute;
+    right:-3px;
+    bottom:-3px;
+    content: ' ';
+    width:1.2rem;
+    height:1.2rem;
+    background: url(../img/tick.png) no-repeat;
+    background-size: cover;
+}
+.colors>a>.c1{background-color:rgb(255,123,124);}
+.colors>a>.c2{background-color:rgb(255,255,255);}
+.colors>a>.c3{background-color:rgb(252,170,107);}
+.colors>a>.c4{background-color:rgb(252,218,111);}
+.colors>a>.c5{background-color:rgb(160,230,116);}
+.colors>a>.c6{background-color:rgb(89,189,239);}
+/* .colors>a>.c6{background-color:rgb(136,161,254);} */
+/* .colors>a>.c7{background-color:rgb(244,103,237);} */
+.colors>a>.c7{background:url(../img/ico3.png) no-repeat;background-size: cover;} 
+.colors>a.on>.c2{color:#777;}
+input.color-input{width:0;height:0;font-size:0;}
+
+.light-percent{
+    text-align:center;
+    color:#fff;
+    font-size:16px;
+}
+.light-range-wrap{
+    padding:2px 0 10px;
+}
+.light-range-wrap>i{
+    display:inline-block;
+    background:url(../img/ico1.png) no-repeat;
+    background-size:cover;
+    vertical-align:middle;
+}
+.light-range-wrap>i.l-low{
+    margin:7px 10px 0 15px;
+    width:1.5rem;
+    height:1.5rem;
+}
+.light-range-wrap>i.l-high{
+    margin:3px 15px 0 10px;
+    width:2rem;
+    height:2rem;
+}
+/* 调整滑块样式 */
+.light-range-wrap .__range>label>i{
+    background-color:#d8d3e9;
+    border-color:#d8d3e9;
+    color:#d8d3e9;
+    width:2rem;
+    height:2rem;
+}
+.light-range-wrap .__range>label>i:before{
+    background-color:rgb(93, 87, 113);
+    right:2rem;
+    height:.3rem;
+}
+.light-range-wrap .__range>label>i:after{
+    background-color:rgb(126, 119, 152);
+    left:2rem;
+    height:.3rem;
+}
+
+.fn-wrap{
+    text-align:center;
+}
+.fn-wrap>dl{
+    padding:2rem 0 3rem;
+    border:0 solid rgb(56,54,77);
+    border-width:1px 1px 1px 0;
+}
+.fn-wrap>dl:last-child{
+    border-right:none;
+}
+.fn-wrap dd{
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    height: 30px;
+}
+.fn-wrap dt{
+    position:relative;
+    width:4em;
+    margin:10px auto 0;
+    color:rgb(149,146,173);
+    font-size:14px;
+    padding-right:1rem;
+    background:url(../img/ico2.png) no-repeat right bottom;
+    background-size:auto 50%; 
+}
+.fn-wrap sub{
+    font-size: 14px;
+}
+.timeselect {
+    background-color: rgb(39,37,58);
+}
+.timeselect>.selecttitle, .timeselect>.time>.timetext,.timeselect>.selectbtn,.timeselect>.selectbtn>span:nth-child(1){
+    border-color:rgb(76,73,100);
+}
+.timeselect>.time>.timetext>.minute{
+    color:#fff;
+    left:57%!important;
+}
+.timeselect>.time>.hourvalue,.timeselect>.time>.minutevalue{
+    color:#fff;
+}
+.timeselect>.selectbtn{
+    color:#fff;
+}
+
+/* 关机样式设定 */
+.all-off header .switch{
+    background-image: url(../img/switch-on.png);
+}
+.all-off h2{
+    color:rgb(72,69,96);
+}
+.all-off .colors>a.on>b:after{
+    display: none;
+}
+.all-off .light-percent{
+    color:rgb(72,69,96);
+}
+.all-off .colors>a>b{
+    background-color: rgb(72,69,96)!important;
+    background-image: none;
+}
+.all-off .light-range-wrap .__range>label>i{
+    background-color:rgb(72,69,96);
+    border-color:rgb(72,69,96);
+    color:rgb(72,69,96);
+}
+.all-off .light-range-wrap .__range>label>i:before{
+    background-color:rgb(72,69,96);
+}
+.all-off .light-range-wrap .__range>label>i:after{
+    background-color:rgb(72,69,96);
+}
+.all-off .fn-wrap dd, .all-off .fn-wrap dt{
+    color:rgb(72,69,96);
+}

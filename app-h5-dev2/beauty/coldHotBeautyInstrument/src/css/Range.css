@@ -1,0 +1,157 @@
+
+.m-range{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+}
+.m-range>.range-shade{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 13;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+}
+.m-range>.range-con{
+	position: fixed;
+	left: 0;
+	bottom: -15rem;
+	z-index: 15;
+	width: 100%;
+	background: #fff;
+    animation: xup .2s linear;
+    -webkit-animation:xup .2s linear;
+    -moz-animation:xup .2s linear;
+    -o-animation:xup .2s linear;
+}
+@keyframes xup{
+    0% {bottom:-15rem;}
+    30% {bottom:-12rem;}
+    50% {bottom:-10rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-webkit-keyframes xup{
+    0% {bottom:-15rem;}
+    30% {bottom:-12rem;}
+    50% {bottom:-10rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-moz-keyframes xup{
+    0% {bottom:-15rem;}
+    30% {bottom:-12rem;}
+    50% {bottom:-10rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-o-keyframes xup{
+    0% {bottom:-15rem;}
+    30% {bottom:-12rem;}
+    50% {bottom:-10rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+
+.range-con>.confirm-btn{
+	width: 100%;
+	height: 4.0rem;
+	justify-content: space-between;
+	line-height: 4.0rem;
+	font-size: 16px;
+	color: #353535;
+	border-bottom: 1px solid #CCCCCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.confirm-btn>span:first-child{
+	padding-left: 4%;
+}
+.confirm-btn>span:last-child{
+	padding-right: 4%;
+}
+
+.range-con>.range-detail{
+	width: 100%;
+	height: 6.417rem;
+	justify-content: center;
+	align-items: flex-end;
+	
+}
+.range-detail>.rangeblock{
+	position: relative;
+	width: 90%;
+	height: 0.167rem;
+	margin-bottom: 1.333rem;
+	background: url(../../static/img/bar.png) no-repeat;
+	background-size: 100% 100%;
+
+}
+.rangeblock>.tip-text{
+	position: absolute;
+	top: -3.38rem;
+	z-index: 15;
+	width: 2.583rem;
+	height: 2.0rem;
+	line-height: 1.8rem;
+	text-align: center;
+	font-size: 1.333rem;
+	font-family: '黑体';
+	color: #fff;
+	background: url(../../static/img/tip-icon.png) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.rangeblock>.rangevalue{
+	display:inline-block;
+	position: absolute;
+	width:100%;
+	height:0.167rem;
+	opacity:0;
+	z-index:20;
+}
+.rangeblock>.rangeblock-on{
+	display:inline-block;
+	position: absolute;
+	top: -0.8rem;
+	z-index: 14;
+    width:1.667rem;
+    height:1.667rem;
+    color:#ffffff;
+    background:url("../../static/img/range-btn.png") no-repeat 0 0 #ffffff;
+    background-size: 100% 100%;
+}
+.rangeblock>.color-bar{
+	position: absolute;
+	bottom: 0;
+	z-index: 13;
+	height: 0.167rem;
+	background: rgba(251, 132, 166,.6);
+}
+
+.range-con>.range-icon{
+	width: 100%;
+	height: 1.833rem;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2.583rem; 
+}
+.range-icon>img:first-child{
+	display: block;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: none;
+	margin-left: 4%;
+}
+.range-icon>img:last-child{
+	display: block;
+	width: 1.792rem;
+	height: 1.75rem;
+	border: none;
+	margin-right: 4%;
+}

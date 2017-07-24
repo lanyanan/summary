@@ -1,0 +1,270 @@
+@charset "utf-8";
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+.container{width: 28.416667rem;height: 100%;margin: 0 auto;}
+.m-hd{width: 100%;height: 3.666667rem;background: #583F91;}
+.m-hd-ct{position:relative;width:100%;height:100%;justify-content:center;align-items:center;}
+.m-hd-ct .hd-bg1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto 0;width:0.958333rem;height:1.75rem;}
+.m-hd-ct .hd-bg2{display:block;position:absolute;right:3.833333rem;top:0;bottom:0;margin:auto 0;width:1.875rem;height:1.875rem;}
+.m-hd-ct h2{font-size:18px;color:#FFF;}
+
+.m-nodevice{width: 100%;height: 100%;justify-content: center;}
+.m-nodevice-ct{width: 15.0rem;padding-top: 5.833333rem;align-items: center;}
+.m-nodevice-ct .logo{width: 7.833333rem;height: 2.25rem;}
+.m-nodevice-ct .robot{width: 5.708333rem;height: 8.5rem;padding-top: 2.166667rem;}
+.m-nodevice-ct h2{font-size: 16px;color: #929292;padding-top: 1.833333rem;text-align: center;}
+
+.m-dataTip{ position: fixed;bottom: 6rem;left: 0;right: 0;margin: 0 auto;width: 7rem;height: 3rem;line-height: 3rem;text-align: center; border-radius: 0.5rem;background-color: rgba(0,0,0,0.6);color: #FFF;font-size: 12px;}
+.m-statusTip{ position: fixed;bottom: 6rem;left: 0;right: 0;margin: 0 auto;width: 7rem;height: 3rem;line-height: 3rem;text-align: center; border-radius: 0.5rem;background-color: rgba(0,0,0,0.6);color: #FFF;font-size: 12px; }
+.m-loading{position: fixed;bottom: 6rem;left: 0;right: 0;margin: 0 auto;width: 7rem;height: 3rem;line-height: 3rem;text-align: center; border-radius: 0.5rem;background-color: rgba(0,0,0,0.6);color: #FFF;font-size: 12px;}
+
+.m-btn{position: fixed;bottom: 0;left: 0;width: 100%;height: 4.8rem;/* 128px */ justify-content: center;align-items: center;background: #F3F3F3;z-index: 1000;}
+.m-btn-mn{width: 28.583333rem;height: 3.666667rem;justify-content: center;align-items: center;border: 1px solid #7748D6;border-radius: 0.416667rem;font-size: 18px;}
+.m-btn-mn a{width: 28.583333rem;height: 3.666667rem;display: inline-block;line-height: 3.666667rem;text-align: center;}
+
+.m-connect{width: 100%;height: 11.916667rem;overflow: hidden;background: #583F91;}
+.m-connect .container .light-logo{position: relative; width: 6.625rem;height: 8.666667rem;margin-left: 0.833333rem;margin-top: 1.416667rem;}
+.m-connect .container .light-logo .logo1{width: 6.625rem;height: 8.666667rem;}
+.m-connect .container .light-logo .logo2{position: absolute;left: 0;top: 2.75rem;bottom: 0;right: 0;margin:0 auto; width: 4.0rem;height: 1.166667rem;}
+.m-connect .container .showstate{margin-left: 3.166667rem;margin-top: 2.416667rem}
+.m-connect .container .showstate h2{height: 1.75rem;line-height: 1.75rem; font-size: 14px;color: #967CC0;white-space: nowrap;}
+.m-connect .container .showstate .name .name-cn{color: #FFF;}
+.m-connect .container .showstate .battery{margin-top: 1.0rem;}
+.m-connect .container .showstate .battery .battery-cn i{display: inline-block;position: relative;top: 1px; width: 6.666667rem;height: 0.583333rem;border: 2px solid #9178C2;border-radius: 0.375rem;}
+.m-connect .container .showstate .battery .battery-cn i em{position: absolute;top: 0;bottom: 0;left: 1px;margin: auto 0; /* 总宽度为6.5rem */ height: 0.416667rem;border-radius: 0.208333rem;background: #9178C2;}
+.m-connect .container .showstate .state{margin-top: 1.0rem;}
+
+.m-monitor{margin-top: 1.75rem;margin-bottom: 1.75rem; width: 100%;height: 4.541667rem;}
+.m-monitor .showtime{flex: 1;height: 100%;}
+.showtime h4{padding-left: 3.0rem;height: 1.5rem;line-height: 1.5rem;font-size: 12px;color: #969696;}
+.showtime p{padding-left: 3.0rem;height: 3.041667rem;line-height: 3.041667rem;font-size: 2.5rem;color: #646464;}
+.m-monitor .sleepstate{flex: 1;height: 100%; border-left: 1px solid #DCDCDC;}
+.sleepstate h4{padding-left: 5.0rem;height: 1.5rem;line-height: 1.5rem;font-size: 12px;color: #969696;}
+.sleepstate p{padding-left: 4.75rem;height: 3.041667rem;line-height: 3.041667rem;font-size: 2.5rem;color: #646464;}
+
+
+.m-calendar{width:100%;height: 3.583333rem;/* 高度为86px */background: #F3F3F3;}
+.m-calendar-bd{margin: 0 auto;position: relative;width: 18.833333rem;height: 100%;justify-content: center;align-items: center;}
+.m-calendar-bd .arrow{position: absolute;top: 0;height: 3.583333rem;width: 2.208333rem;align-items: center;justify-content: center;}
+.m-calendar-bd .arrow em{height:0;width:0;border-top: 0.6rem ;border-right: 0.7rem ; border-left: 0.7rem;border-bottom: 0.6rem;border-style: solid;border-color: transparent;}
+.m-calendar-bd .left-arrow{left: -0.5rem;}
+.m-calendar-bd .left-arrow em{border-left: 0;border-right-color: #888888;}
+.m-calendar-bd .right-arrow{right: -0.5rem;}
+.m-calendar-bd .right-arrow em{border-right: 0;border-left-color: #888888;}
+.m-calendar-bd .showcalendar{height: 100%;width: 14.375rem;align-items: center;justify-content: center;}
+.m-calendar-bd .showcalendar .showcalendar-contain{width: 12.75rem;height: 100%;align-items: center;justify-content: space-between;}
+.m-calendar-bd .showcalendar p{padding-top: 4px;padding-left: 1.25rem;font-size: 18px;color: #000;}
+.m-calendar-bd .showcalendar img{width: 1.333333rem;height: 1.291667rem;margin-right: 0.75rem; }
+
+.m-timewatch{width: 100%;height: 2.833333rem;background: #FFF;overflow: hidden;}
+.m-timewatch .container{justify-content: center;}
+.m-timewatch .container h2{height: 2.833333rem;line-height: 2.833333rem;font-size: 12px;color: #949494;}
+.m-timewatch .container h2 .w-time {display: inline-block;transform: translateY(1px);color: #000;}
+
+.m-charts{width: 100%;height: 62.6rem;/* 1570px */background: #F3F3F3;overflow: hidden;}
+.m-charts .singlechart{width: 100%;height: 19.083333rem;margin-top: 0.833333rem;border: 1px solid #EAEAEA;background: #FFF !important;font-size: 12px;}
+.m-charts .turnover-chart{height: 18rem;}
+/*.heart-echart{width: 100%;height: 19.083333rem;}*/
+
+/* 实时监测 */
+.start-monitor{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10000;background: #FFF;}
+
+/* 日历样式 */
+.hasdata{background-color: green;}
+@keyframes dialogSlipToUp {
+            0%{
+                transform: translateY(30px);
+            }
+            100%{
+                transform: translateY(0); 
+            }
+        }
+.cal-show{animation: dialogSlipToUp 0.2s linear}
+.calendar-ctrl{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);z-index: 3000;}
+.calendarBorder{
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0; margin: auto;
+    width:91%;height: 25.2rem;
+    background: #FFF;
+    box-shadow: 0 0 1px #000;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 2000;
+    font-size: 14px;
+}
+.calendarBorder ul{
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+.calendarBorder li{
+    float:left;
+    text-align: center;
+}
+.headerborder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 3.6rem;
+    background: #307AD0;
+    color: #FFF;
+    z-index: 999;
+}
+.headerborder p{
+    margin:0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    padding-top: 3px;
+}
+.triangle-left {
+    position: absolute;
+    top: 0;bottom: 0;left: 70px;margin: auto 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 12px solid #FFF;
+    border-bottom: 8px solid transparent;
+    cursor: pointer;
+}
+.triangle-right {
+    position: absolute;
+    top: 0;bottom: 0;right: 70px;margin: auto 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 12px solid #FFF;
+    border-bottom: 8px solid transparent;
+     cursor: pointer;
+}
+.CalendarDay{display: flex;justify-content: center;}
+.CalendarDay ul{width: 26.833333rem;overflow: hidden;}
+.CalendarDay li{
+    margin: 0;padding: 0;
+    width: 2.5rem;
+    height:2.5rem;
+    margin: 0.291667rem 0.666667rem;
+    line-height:2.5rem;
+    text-align: center;
+    color: #000;
+    border-radius: 50%;
+}
+.weekday{
+    height: 3.083333rem;/* 74px */ display: flex;justify-content: center;
+}
+.weekday ul{height: 3.083333rem;width: 26.833333rem;}
+.weekday li{
+    list-style: none;
+    float: left;
+    width: 3.833333rem;
+    height: 3.083333rem;
+    line-height: 3.083333rem;
+    color: #000;
+}
+
+/* 睡眠实时数据 */
+/*睡眠实时数据*/
+.sleepLiveName{
+    font-size:14px;
+    color: #4e4e4e;
+    padding-left:1.25rem;
+    height: 2.666667rem;
+    line-height: 2.666667rem;
+    background: #F3F3F3;
+}
+.sleepLiveWrap{
+    position: relative;
+    width: 100%;
+    height: 35.916666rem;
+    background: #4C476C;
+    /*background: #4C476C url("../../static/img/bg.png") no-repeat 0 0;
+    background-size: 100% 100%;*/
+}
+.stateinfo{position: absolute;left: 0;bottom: 0;width: 100%;height: 1.916667rem;justify-content: center;align-items: center;font-size: 16px;color: #FFF;background-color: rgba(0,0,0,.1);z-index: 999;}
+.sleepLiveChartWrap{
+    align-items: center;
+    width: 100%;
+    height: 11rem;
+   /* background: rgba(63, 57, 89,.3);*/
+    background: #3F3A59;
+}
+.s-top{margin-top: 0.5rem;}
+.sleepLiveChartWrap .sleepLiveChartWrap-contain{
+    width: 100%;
+    height: 9.583333rem;
+}
+.sleepLiveInfo{
+    width: 36%;
+    height: 100%;
+    overflow: hidden;
+}
+.sleepLiveInfo h3{
+    padding-left: 2rem;
+    padding-top: 1.2rem;/* 1.75rem */
+    height: 2.0rem;
+    line-height: 2.0rem;
+    color: #9391A0;
+    font-size: 14px;
+    letter-spacing: 0.166667rem;
+}
+.sleepLiveNumber{
+    flex-direction: column;
+    padding-left: 2.333333rem;
+    height: 5.0rem;
+    color: #FFF;
+} 
+.sleepLiveNumber .sleepRate{
+    font-size: 3.583333rem;
+    font-weight: normal;
+}
+.sleepLiveNumber .sleepUnit{
+    padding-left: 3.2rem;
+    font-size: 12px;
+}
+.sleepLiveChart{
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 1.166667rem;
+    width:64%;
+    height: 100%;
+}
+.sleepLiveChart .chart{
+    width: 100%;
+    height: 9.583333rem;
+}
+@keyframes moveBlock
+{
+    0%   {left:0px;}
+    100% {left:100%;}
+}
+
+.moveBlock{
+   position: absolute; 
+   height: 100%;
+   width: 4px;
+   background: #3F3A59;
+   z-index: 999;
+   top:0;
+   /*animation-name:moveBlock;
+   animation-duration:10s;
+   animation-delay:0s;
+   animation-iteration-count:infinite;*/
+}
+/*.moveBlockBreath{
+   position: absolute; 
+   height: 100%;
+   width: 0.208333rem;
+   background:#3F3A59;
+   z-index: 999;
+   top:0;*/
+   /*animation-name:moveBlock;
+   animation-duration:10s;
+   animation-delay:15s;
+   animation-iteration-count:infinite;*/
+}

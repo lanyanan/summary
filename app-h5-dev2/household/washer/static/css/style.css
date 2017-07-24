@@ -1,0 +1,1582 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  border: 1px solid #dedede;
+}
+
+input[type="button"] {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.flex-cell {
+  display: block;
+  /* OLD */
+  width: 100%;
+  /* OLD */
+}
+
+.flex,
+.flex-column {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex {
+  -webkit-box-orient: horizontal;
+  /* OLD */
+  -moz-box-orient: horizontal;
+  /* OLD */
+  -ms-box-orient: horizontal;
+  /* OLD */
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  /* OLD */
+  -moz-box-orient: vertical;
+  /* OLD */
+  -ms-box-orient: vertical;
+  /* OLD */
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-cell {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/*公共media query查询 1rem初始设置为12px
+dpr为2时对应750的效果图 dpr为3时对应1080的效果图
+查询区间间隔暂时设置为30px 对应3倍图时 1rem大小变化1px
+对于dpr为2的有额外百分之4.2增大的兼容*/
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width:350px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 71.62%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 68.75%;
+    }
+}
+}
+
+@media screen and (min-width: 351px) and (max-width:380px) {
+  html,
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width:410px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 84.64%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 81.25%;
+    }
+}
+}
+
+@media screen and (min-width: 411px) and (max-width:440px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 91.15%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 87.5%;
+    }
+}
+}
+
+@media screen and (min-width: 441px) and (max-width:470px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 97.66%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 93.75%;
+    }
+}
+}
+
+@media screen and (min-width: 471px) and (max-width:500px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 104.17%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 100%;
+    }
+}
+}
+
+@media screen and (min-width: 501px) and (max-width:539px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 110.68%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 106.25%;
+    }
+}
+}
+
+@media screen and (min-width: 540px) {
+  html,
+  body {
+    font-size: 150%;
+  }
+}
+
+html,
+body,
+#ROOT {
+  height: 100%;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+.container {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/**********************************  首页  ***********************************************/
+
+/*待机页面*/
+
+.watingPage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(42,204,250,1);
+}
+
+/*空格站位*/
+
+.device_nav {
+  height: 6rem;
+  width: 100%;
+}
+
+/*洗衣机动画*/
+
+.watingPage .deviceWasherImage {
+  box-sizing: border-box;
+  width: 240px;
+  height: 240px;
+  margin: 3rem auto 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background: url('../image/washer/guntong.png') no-repeat center;
+  background-size: 100%;
+}
+
+/*开关页面*/
+
+.diveceView {
+  height: 36rem;
+  background-color: rgba(42,204,250,1);
+  position: absolute;
+  bottom: 230px;
+  left: 0;
+  width: 100%;
+}
+
+.diveceView .device_control {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+}
+
+.device_control_relative {
+  position: relative;
+  width: 100%;
+  margin-top: -0.8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}
+
+.device_control .wash_children_lock {
+  position: absolute;
+  left: 24px;
+  top: 5px;
+}
+
+.device_control .wash_switch {
+  position: absolute;
+  right: 24px;
+  top: 5px;
+}
+
+.deviceWasherImage .deviceWashAnimation {
+  box-sizing: border-box;
+  width: 210px;
+  height: 210px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+.ControlPannelUpWave {
+  position: absolute;
+  left: 0;
+  bottom: 170px;
+  width: 100%;
+}
+
+.watingPage .diveceSetingView {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0.5rem auto 0 auto;
+  height: 170px;
+}
+
+.diveceSetingView  .deviceSeting_status {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #a9a9a9;
+  margin-bottom: 10px;
+}
+
+.diveceSetingView .deviceSeting_modeImage {
+  text-align: center;
+}
+
+.diveceSetingView .deviceSeting_modeImage img {
+  width: 132px;
+  height: 66px;
+}
+
+.diveceSetingView  .deviceSeting_alert {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #a9a9a9;
+}
+
+.diveceSetingView  .deviceSeting_alert.off {
+  color: #ccc;
+}
+
+.diveceSetingView .show_wash_his_button {
+  width: 100%;
+  height: 28px;
+  text-align: center;
+}
+
+.diveceSetingView .show_wash_his_button img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+/************************************  设置页面 *********************************************/
+
+.washerSetingPage {
+  width: 100%;
+  height: 100%;
+}
+
+/*导航*/
+
+.ios {
+  height: 64px;
+  width: 100%;
+  background-color: rgba(42,204,250,1);
+}
+
+.android {
+  height: 73px;
+  width: 100%;
+  background-color: rgba(42,204,250,1);
+}
+
+/*table cell*/
+
+.washerSetingPage .set {
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 16px;
+  margin: -1px auto 0;
+  color: #555;
+  font-size: 14px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.washerSetingPage .set span {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+.washerSetingPage .set span img {
+  width: 36px;
+  height: auto;
+  vertical-align: middle;
+  opacity: .25;
+}
+
+.washerSetingPage .set i {
+  display: inline-block;
+  height: 46px;
+  width: 9px;
+  margin-left: 9px;
+  background: url(../image/i-arrow-on.png) no-repeat center right;
+  background-size: 100% auto;
+  vertical-align: top;
+}
+
+.washerSetingPage .set.disabled  i {
+  opacity: .5;
+}
+
+.washerSetingPage .set.disabled {
+  color: #4c4c4c;
+}
+
+.washerSetingPage .set.disabled dd {
+  color: #c7c7c7;
+}
+
+.washerSetingPage .mode-items {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.mode-items {
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-direction: wrap;
+  flex-direction: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.mode-items .mode {
+  width: 25%;
+  padding-top: 36px;
+  padding-bottom: 20px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  color: #848484;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.mode-items .mode.on {
+  color: rgba(42,204,250,1);
+}
+
+.washerSetingPage .tal {
+  float: left;
+  width: 40%;
+}
+
+.washerSetingPage .tar {
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+
+/*尾部启动*/
+
+.washerSetingPage .toggle-mode {
+  height: 49px;
+  width: 100%;
+  background-color: rgba(42,204,250,1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  line-height: 48px;
+}
+
+/************************************    工作状态页面    *********************************************/
+
+/*工作页面*/
+
+.workingPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: white;
+  display: none;
+}
+
+/*开关机动画*/
+
+.slide-up,
+.slide-down {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.slide-up {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.slide-down {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.slide-down,
+.slide-up {
+  -webkit-transition: -webkit-transform 1.1s;
+  transition: -webkit-transform 1.1s;
+  transition: transform 1.1s;
+  transition: transform 1.1s, -webkit-transform 1.1s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.workingPage .controlView {
+  background-color: #2accfa;
+  height: 80px;
+  padding: 40px 10px 0 10px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+.workingPage .workStatus {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.workingPage .workStatus span {
+  padding: 3px;
+  background-color: #2accfa;
+  border-radius: 3px;
+}
+
+.workingPage  .workDetailMode {
+  margin-top: 11px;
+  text-align: center;
+}
+
+.workDetailModeSub1 {
+  color: #2accfa;
+  font-size: 14px;
+}
+
+.workDetailModeSub2 {
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+.controlView dt {
+  padding-top: 8px;
+}
+
+.WorkingLoadingStatusView {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.WorkingLoadingStatusView .veriticalLine1,
+.WorkingLoadingStatusView .veriticalLine2,
+.WorkingLoadingStatusView .veriticalLine3 {
+  margin: 0 auto;
+  width: 3px;
+  background-color: #DBF7FF;
+}
+
+.WorkingLoadingStatusView .veriticalLine1 {
+  height: 10px;
+}
+
+.WorkingLoadingStatusView .veriticalLine2 {
+  height: 7.5px;
+}
+
+.WorkingLoadingStatusView .veriticalLine3 {
+  height: 6px;
+}
+
+.WorkingLoadingStatusView .mode {
+  width: 50px;
+  height: 50px;
+  background-color: #DBF7FF;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: #2accfa;
+  margin: 0 auto;
+  font-size: 13px;
+}
+
+.workWaveDiv {
+  margin-top: -3px;
+}
+
+/*btn list*/
+
+.btn-title {
+  font-size: 13px;
+  color: #A9A9A9;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-list {
+  /* width: 100%; */
+  padding: 0 1rem;
+}
+
+.btn-list dl {
+  text-align: center;
+  font-size: 14.5px;
+}
+
+.btn-list .selected {
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.btn-list .unselected {
+  color: #848484;
+  opacity: 1;
+}
+
+.btn-list dl img {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-list dl p {
+  margin-top: 0.5rem;
+}
+
+.wash_his_button {
+  background-color: white;
+  width: 100%;
+  height: 140px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1.1s;
+  transition: -webkit-transform 1.1s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.wash_his_button h1 {
+  text-align: center;
+  font-size: 14px;
+  color: #848484;
+  padding-top: 15px;
+  height: 50px;
+  margin-top: 50px;
+  border-top: 1px solid #dcdcdc;
+}
+
+.wash_his_button h2 {
+  width: 100%;
+  height: 40px;
+}
+
+.wash_his_button img {
+  width: 20px;
+  height: 20px;
+  margin: 10px auto;
+}
+
+.ControlPannel {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 6.5rem;
+  height: 13rem;
+  overflow: hidden;
+}
+
+.ControlPannel div img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.ControlPannel div {
+  position: absolute;
+  top: 42.7%;
+  left: 0;
+  width: 100%;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+.ControlPannel .modeOne {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.ControlPannel .modeTwo {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.ControlPannel .modeThree {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.ControlPannel .modeFour {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.circleAnimation {
+  background-color: cornflowerblue;
+}
+
+.circleAnimation img {
+  background-color: red;
+  -webkit-animation: circleAnimation 5s ease-in-out infinite;
+          animation: circleAnimation 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes circleAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circleAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.wave_animation {
+  height: 60px;
+  background-color: white;
+  margin-top: -2px;
+}
+
+.waveAnimation {
+  height: 60px;
+}
+
+.washerAnimation {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 140px;
+  width: 140px;
+}
+
+.washerAnimation .washerClothes {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  -webkit-animation: washerclothesAnimation 10s ease-in infinite;
+          animation: washerclothesAnimation 10s ease-in infinite;
+}
+
+@-webkit-keyframes washerclothesAnimation {
+  0% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+
+  25% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translatey(0px) rotate(-18deg);
+            transform: translatey(0px) rotate(-18deg);
+  }
+
+  75% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+}
+
+@keyframes washerclothesAnimation {
+  0% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+
+  25% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translatey(0px) rotate(-18deg);
+            transform: translatey(0px) rotate(-18deg);
+  }
+
+  75% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+}
+
+.WorkingLoading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 107px;
+  height: 107px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-align-content: center;
+  -webkit-justify-content: center;
+}
+
+.WorkingLoading {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  box-sizing: border-box;
+}
+
+.WorkingLoading .workName {
+  padding-top: 3%;
+  color: #2accfa;
+  font-size: 14px;
+}
+
+.WorkingLoading .leftTime {
+  color: #2accfa;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 6%;
+  padding-bottom: 4.2%;
+}
+
+.WorkingLoading .leftalert {
+  color: #a9a9a9;
+  font-size: 11px;
+}
+
+.WorkingLoading img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-animation: workingLoadingAnimation 5s linear infinite;
+          animation: workingLoadingAnimation 5s linear infinite;
+}
+
+@-webkit-keyframes workingLoadingAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes workingLoadingAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*时间设置组件*/
+
+.timeSelect {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 99999;
+}
+
+
+
+
+
+.timeSelect>section:first-child {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 22.22rem;
+  width: 100%;
+  height: 100%;
+}
+
+.timeselect {
+  height: 22.22rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #ffffff;
+}
+
+.timeselect>.selecttitle {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid transparent;
+}
+
+.timeselect>.selecttitle>.title {
+  margin-left: 1.25rem;
+  font-size: 16px;
+  color: #848484;
+}
+
+.timeselect>.time {
+  height: 14.67rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.timeselect>.time>section.hour,
+.timeselect>.time>section.minute {
+  display: inline-block;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+}
+
+.timeselect>.time>section.hour {
+  left: 0%;
+}
+
+.timeselect>.time>section.minute {
+  left: 50%;
+}
+
+.timeselect>.time>.timetext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  line-height: 3.75rem;
+  height: 3.75rem;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.timeselect>.time>.timetext>.hour {
+  position: absolute;
+  left: 33%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.timetext>.minute {
+  position: absolute;
+  left: 66%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.timetext>.status {
+  display: none;
+  position: absolute;
+  /* right:10%;*/
+  right: 12%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.timetext>.show {
+  display: inline-block;
+}
+
+.timeselect>.time>.hourvalue,
+.timeselect>.time>.minutevalue {
+  width: 1.67rem;
+  font-size: 18px;
+  color: #323232;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  margin-top: -2.73rem;
+}
+
+.timeselect>.time>.hourvalue {
+  left: 25%;
+}
+
+.timeselect>.time>.minutevalue {
+  left: 56%;
+}
+
+.timeselect>.time>.hourvalue>span,
+.timeselect>.time>.minutevalue>span {
+  line-height: 2.73rem;
+  height: 2.73rem;
+  display: block;
+}
+
+.timeselect>.time>.hourvalue>.line1,
+.timeselect>.time>.minutevalue>.line1 {
+  opacity: 0.2;
+}
+
+.timeselect>.time>.hourvalue>.line2,
+.timeselect>.time>.minutevalue>.line2 {
+  opacity: 0.5;
+}
+
+.timeselect>.time>.hourvalue>.line3,
+.timeselect>.time>.minutevalue>.line3 {
+  line-height: 3.75rem;
+  height: 3.75rem;
+}
+
+.timeselect>.time>.hourvalue>.line4,
+.timeselect>.time>.minutevalue>.line4 {
+  opacity: 0;
+}
+
+.timeselect>.selectbtn {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  font-size: 16px;
+  color: #515151;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.timeselect>.selectbtn>span:nth-child(1) {
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.timeselect>.selectbtn>span:nth-child(2) {
+  text-align: right;
+  padding-right: 1.25rem;
+}
+
+/*菊花*/
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 99999;
+}
+
+.loading>figure:first-child {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.loading-flower {
+  display: -webkit-box;
+  box-sizing: border-box;
+  position: relative;
+  top: 42%;
+  width: 86%;
+  height: 8.88rem;
+  padding-top: 5.5rem;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: url("../../static/image/i-loading.gif") no-repeat center 24px;
+  background-size: 2.1rem auto;
+  color: #555;
+  font-size: 16px;
+  text-align: center;
+  -webkit-box-pack: center;
+}
+
+.washhistory {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.contanner_history {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contanner_history .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.contanner_history #wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.contanner_history #scroller {
+  position: relative;
+  /*	-webkit-touch-callout:none;*/
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+
+.contanner_history #scroller ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.contanner_history #scroller li {
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  background-color: red;
+  font-size: 14px;
+}
+
+.contanner_history #scroller li > a {
+  display: block;
+}
+
+/**
+ *
+ * 下拉样式 Pull down styles
+ *
+ */
+
+#pullDown,
+#pullUp {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+}
+
+
+
+#pullDown .pullDownIcon {
+  display: block;
+  /*float:left;*/
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  background: url("../image/XiaoC_loading.gif") 0 0 no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 250ms;
+}
+
+/*#pullDown .pullDownIcon {*/
+
+/*-webkit-transform:rotate(0deg) translateZ(0);*/
+
+/*}*/
+
+/*#pullUp .pullUpIcon  {*/
+
+/*-webkit-transform:rotate(-180deg) translateZ(0);*/
+
+/*}*/
+
+/*#pullDown.flip .pullDownIcon {*/
+
+/*-webkit-transform:rotate(-180deg) translateZ(0);*/
+
+/*}*/
+
+/*#pullUp.flip .pullUpIcon {*/
+
+/*-webkit-transform:rotate(0deg) translateZ(0);*/
+
+/*}*/
+
+#pullDown.loading .pullDownIcon,
+#pullUp.loading .pullUpIcon {
+  background-position: 0 100%;
+  -webkit-transform: rotate(0deg) translateZ(0);
+  -webkit-transition-duration: 0ms;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+  }
+}
+
+/*------------- S 以下css主要是仿IOS滚动条样式(可选样式)  -------------*/
+
+/**
+ * Horizontal Scrollbar
+ */
+
+.myScrollbarH {
+  position: absolute;
+  z-index: 100;
+  height: 7px;
+  bottom: 1px;
+  left: 2px;
+  right: 7px;
+}
+
+.myScrollbarH > div {
+  height: 100%;
+}
+
+/**
+ * Vertical Scrollbar
+ */
+
+.myScrollbarV {
+  position: absolute;
+  z-index: 100;
+  width: 7px;
+  bottom: 7px;
+  top: 2px;
+  right: 1px;
+}
+
+.myScrollbarV > div {
+  width: 100%;
+}
+
+/**
+ * Both Scrollbars
+ */
+
+.myScrollbarH > div,
+.myScrollbarV > div {
+  position: absolute;
+  z-index: 100;
+  /* The following is probably what you want to customize */
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 3px;
+  -webkit-border-image: url("../../static/image/scrollbar.png") 6 6 6 6;
+  border-image: url("../../static/image/scrollbar.png") 6 6 6 6;
+}
+
+/*------------- E 以上css主要是仿IOS滚动条样式  -------------*/
+
+.waterConsumer,
+.powerConsumer {
+  width: 49%;
+  height: 40px;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+.waterConsumer {
+  border-right: 1px solid #ccc;
+}
+
+.waterConsumer .title,
+.powerConsumer .title {
+  font-size: 12px;
+  color: #848484;
+}
+
+.waterConsumer .value,
+.powerConsumer .value {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #323232;
+}
+
+.washhistory .tableCell {
+  width: 100%;
+  height: 90px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.tableCell .cellContent {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.tableCell .workMode {
+  margin-bottom: 8px;
+}
+
+.tableCell .consumer {
+  margin-bottom: 8px;
+}

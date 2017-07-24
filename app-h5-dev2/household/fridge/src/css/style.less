@@ -1,0 +1,127 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/static/TimeSelect.css);
+
+@color1:#3999ea; // 字体颜色 蓝
+@color2:#9ba6b3; // 字体颜色 灰
+@linecolor:#d6dbe1; // 边框颜色
+
+body{background-color:rgb(238,243,247);}
+
+.dev-head{padding:1.25rem 1rem;}
+.dev-name{font-size:1.17rem;line-height:1.17rem;}
+.dev-name>*{vertical-align:middle;}
+.dev-name>b{font-size:1.58rem;color:@linecolor;font-weight:bold;font-family:serif;}
+.dev-name>b:first-child{padding-right:1rem;}
+.dev-name>b:last-child{padding-left:1rem;}
+.online{font-size:1rem;color:#9ba6b3;text-align:right;}
+
+.main-wrap{width:23rem;border:1px solid @linecolor;border-width:1px 0 1px 0;background-color:#fff;}
+.vice-wrap{border:1px solid @linecolor;border-width:1px 0 1px 1px;background-color:#fff;}
+
+.blue-box{width:19.667rem;height:14.944rem;margin:1.5rem;background:url(../img/blue-box@3x.png) no-repeat;background-size:cover;}
+.blue-box>dl{text-align:center;margin-top:3.86rem;}
+.blue-box>dl>dt{font-size:1.17rem;}
+.blue-box>dl>dd{margin-top:1rem;font-size:2.5rem;color:@color1;}
+.blue-box>dl>dd>sup{font-size:1rem;vertical-align:top;}
+
+.child-lock{text-align:center;}
+.child-lock-ico{margin-top:6.833rem;}
+.child-lock-ico>img{width:4.611rem;}
+.child-lock-txt{margin-top:0.667rem;font-size:1.17rem;}
+
+/* 主控制面板 */
+.main-panel{margin-top:1.333rem;}
+
+.mode-panel{text-align:center;font-size:1rem;padding-bottom:1.388rem;color:@color2;}
+.mode-panel>dl{margin-top:1.388rem;}
+.mode-panel>dl>dt{margin-top:0.555rem;}
+.mode-panel>dl>dd>img{width:2.833rem;}
+.mode-panel>dl>dt.on{color:rgb(90,206,255);}
+
+.bottom-buttons{text-align:center;}
+.b-clock img{width:2.75rem;}
+.b-clock dt{color:#5aceff;font-size:1rem;}
+.b-switch img{width:4.33rem;}
+
+// 导入滑动组件样式
+@import url(./../../../common/src/lib/range.css);
+.temperate{margin-top:1.322rem;}
+.temperate>li{margin:1.111rem 0;font-size:1rem;text-align:center;color:@color2;}
+.temperate>.t-wrap{height:11.333rem;margin-bottom:-30%;}
+.temperate .t-range{transform:rotate(90deg);margin-top:50%;margin-left:-1.5rem;}
+.temperate .t-value{margin-left:4.5rem;}
+/* range样式调整 */
+.__range>label>i{width:1.833rem;height:1.833rem;background-color:#fafafa;font-size:0;border-color:#e4e4e4;}
+.__range>label>i:before,.__range>label>i:after{margin-top:-.26rem;height:0.33rem;border:1px solid #dcdcdc;}
+.__range>label>i:before{background-color:rgb(68,181,223);right:1.67rem;border-right-width:0;}
+.__range>label>i:after{background-color:rgb(249,249,249);left:1.67rem;border-left-width:0;}
+
+.bottom-buttons{margin-top:1rem;padding-bottom:1rem;}
+
+/* 童锁蒙板界面 */
+.childlock{position:absolute;top:0;left:0;bottom:0;right:0;z-index:9999;width:100%;}
+.childlock>.mask{position:fixed;top:0;left:0;bottom:0;right:0;z-index:1;background-color:rgba(0,0,0,.4);}
+.childlock>.surface{position:absolute;top:0;left:0;right:0;z-index:2;}
+.childlock .aux{width:23rem;font-family:\9ED1\4F53;color:#fff;font-size:1.17rem;}
+.childlock .lock{width:100%;margin-top:3.8rem;font-family:\9ED1\4F53;color:#fff;font-size:1.17rem;}
+.childlock .lock>li{width:100%;text-align:center;}
+.childlock .lock>.s{margin-top:4rem;margin-left:-220%;width:300%;text-align:right;}
+.childlock .lock>.b{margin-top:.5rem;font-size:5rem;}
+
+
+/*首页按钮*/
+.btnlist-body{
+    background:#FFF;
+    opacity: 1;
+    animation:fade 1s;
+}
+.btnlist{
+    /* width: 100%;
+    height: 80px; */
+    padding:0 3.75rem;
+}
+
+.btn-title{
+	font-size:13px;
+	color:#A9A9A9;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.btnlist article{
+    text-align: center;
+    color:#848484;
+    font-size:14.5px;
+}
+
+.btnlist article img{
+    /* width:4rem;
+    height:4rem; */
+    width:48px;
+    height:48px; 
+}
+
+.btnlist article p{ 
+    font-size:14.5px;
+    margin-top: 0.5rem;
+}
+
+@keyframes fade{
+    0%{
+        opacity:0.3;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fade{
+    0%{
+        opacity:0.3;
+    } 
+    100%{
+        opacity:1;
+    }
+}

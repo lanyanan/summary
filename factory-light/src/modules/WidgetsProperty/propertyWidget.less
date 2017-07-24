@@ -1,0 +1,383 @@
+.textproperty{
+    position: relative;
+    margin:32px 10px 0px 10px;
+    height:145px;
+    span{
+        color:#a8aeb7;
+        height:32px;
+        line-height:32px;
+        display:inline-block;
+        font-size:12px;
+        font-family:'宋体','SimSun';
+        font-weight:bold;
+    }
+    textarea{
+        width:294px;
+        height:113px;
+        display:block;
+        box-sizing: border-box;
+        padding:0px;
+        position: absolute;
+        color:#555555;
+        font-size:12px;
+        font-family:'宋体','SimSun';
+        border:1px solid #dde1e8;
+        border-radius:5px;
+    }
+    textarea.hidden{
+        z-index:2;
+    }
+}
+.captionproperty,.sizeproperty,.colorproperty,.fontstyleproperty{
+    position:relative;
+    height:40px;
+    line-height:40px;
+    span{
+        color: #a8aeb7;
+        margin-left: 10px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        font-family:'宋体','SimSun';
+    }
+}
+.switchproperty{
+    padding-top:6px;
+    padding-left: 10px;
+    height:40px;
+    line-height:40px;
+    label{
+        display:inline-block;
+        width:50%;
+        height:32px;
+        line-height:32px;
+        text-align:center;
+        color:#a8aeb7;
+        cursor:pointer;
+    }
+    label.active{
+        color:#ffffff;
+        background-color:#68a5fe;
+    }
+}
+.imageproperty{
+    position: relative;
+    margin-top:4px;
+    margin-bottom:8px;
+    .imageupload{
+        margin-top: 8px;
+        padding-left: 14px;
+        width: 69px;
+        display: inline-block;
+        position: relative;
+        height: 69px;
+        .uploadfile{
+            position: absolute;
+            z-index: 3;
+            width: 325px;
+            height: 69px;
+            opacity: 0;
+        }
+        img{
+            position: absolute;
+            z-index: 2;
+            width: 69px;
+            height: 69px;
+        }
+    }
+    .imageinfo{
+        span{
+            color: #a8aeb7;
+            font-family:'宋体','SimSun';
+            margin-left: 10px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            vertical-align: text-bottom;
+        }
+        input.picname,input.picnamehidden{
+            position: absolute;
+            right:59px;
+            width: 169px;
+            border: 1px solid #dde1e8;
+            height: 32px;
+            line-height: 32px;
+            box-sizing:border-box;
+            padding: 0px;
+            border-right: 0px !important;
+        }
+        input.picnamehidden{
+            z-index:2;
+        }
+        .deleteinfo{
+            padding-left:0px;
+            position: absolute;
+            right:-40px;
+            top: 4px;
+            width: 32px;
+            height: 32px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: inline-block;
+            background: url(../../../img/del-icon.png) no-repeat;
+            background-size:100%;
+            vertical-align: bottom;
+        }
+    }
+    label{
+        margin-top: -50px;
+        float: right;
+        width: 200px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 29px;
+        color: #ffffff;
+        background-color: #68a5fe;
+        border-radius: 5px;
+    }
+}
+.switchproperty{
+    select{
+        position: absolute;
+        right: 10px;
+        border: 1px solid #d4d4d4;
+        width: 108px;
+        height:20px;
+        -webkit-appearance:none;
+        padding: 0px 20px 0px 0px;
+        border-right: 0px !important;
+        background: url(../../../img/down-icon.png) no-repeat scroll right center transparent;
+    }
+}
+.showproperty{
+    height:40px;
+    line-height:40px;
+    input{
+        vertical-align:5px;
+        -webkit-appearance:none;
+        width:33px;
+        height:16px;
+        border:none;
+        margin-left:210px;
+        background-size:100% 100%;
+        box-sizing: border-box;
+        display:inline-block;
+    }
+    input:focus{
+        outline:none;
+    }
+    input.on{
+        background-image: url(../../../img/switch-on.png);
+    }
+    input.off{
+        background-image: url(../../../img/switch-off.png);
+    }
+    span{
+        color:#a8aeb7;
+        margin-left: 10px;
+        display:inline-block;
+        font-size:12px;
+        font-weight:bold;
+        vertical-align:text-bottom;
+    }
+}
+.captionproperty{
+    margin-bottom:34px;
+    input.captiontext,input.captiontexthidden{
+        position: absolute;
+        left:10px;
+        top:40px;
+        width: 267px;
+        border: 1px solid #dde1e8;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px;
+        color:#555555;
+        text-align:center;
+        font-weight:bold;
+        font-size:12px;
+        font-family:'宋体','SimSun';
+        border-right: 0px !important;
+        box-sizing: border-box;
+        border-radius:5px;
+    }
+    input.captiontexthidden{
+        z-index:2;
+    }
+    span.deletecaption{
+        position: absolute;
+        left:264px;
+        top:40px;
+        width:32px;
+        height: 32px;
+        background: url(../../../img/del-icon.png) no-repeat;
+        background-size:100%;
+        vertical-align: bottom;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.sizeproperty{
+    padding-top:4px;
+    input{
+        position: absolute;
+        right:29px;
+        top:8px;
+        width: 199px;
+        border: 1px solid #dde1e8;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px;
+        color:#555555;
+        text-align:center;
+        font-weight:bold;
+        box-sizing: border-box;
+        border-radius:5px;
+    }
+}
+.colorproperty{
+    margin-top:8px;
+    input{
+        width:164px;
+        position: absolute;
+        right:62px;
+        top: 4px;
+        height: 32px;
+        padding: 0px;
+        text-align:center;
+        color:#555555;
+        font-weight:bold;
+        border: 1px solid #dde1e8;
+        box-sizing:border-box;
+    }
+    input.extendblock{
+        position: absolute;
+        right:28px;
+        bottom: 2px;
+        width: 34px;
+        border-left:0px;
+        margin-left:0px;
+        display: inline-block;
+        background-color: #efefef;
+    }
+    ::-webkit-color-swatch-wrapper {
+        display:none;
+    }
+    &:after{
+        display:inline-block;
+        width:0;
+        height:100%;
+        content:"center";
+        vertical-align:middle;
+        overflow:hidden;
+    }
+}
+.fontstyleproperty{
+    margin-top:4px;
+    input{
+        width:118px;
+        height: 32px;
+        text-align:center;
+        color:#555555;
+        font-weight:bold;
+        box-sizing: border-box;
+        border: 1px solid #dde1e8;
+        margin-left:51px;
+        margin-right:-2px;
+        vertical-align:1px;
+    }
+    input::-webkit-inner-spin-button {
+         -webkit-appearance: none;    /* 上下小箭头按钮，你丫太丑了，滚粗，负分 */
+    }
+    span:nth-child(4),span:nth-child(3){
+        vertical-align:1px;
+        border: 1px solid #dde1e8;
+        height: 32px;
+        line-height:30px;
+        width: 32px;
+        text-align:center;
+        display:inline-block;
+        box-sizing: border-box;
+        text-align:center;
+        cursor:pointer;
+        margin-right:-2px;
+    }
+}
+.commandproperty{
+    padding-left:4px;
+    margin-top:4px;
+    position:relative;
+    span{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+        font-family:'宋体','SimSun';
+        margin-right: 70px;
+        font-weight: bold;
+        color: #a8aeb7;
+    }
+    .checkbox,.checklist>li{
+        height:40px;
+        line-height:40px;
+        padding-left:6px;
+        input{
+            width:14px;
+            height:14px;
+            color: #555555;
+            vertical-align:-3px;
+            border:1px solid #dde1e8;
+            display:inline-block;
+        }
+        select{
+            box-sizing: border-box;
+            height:32px;
+            line-height:32px;
+            width:150px;
+            position: absolute;
+            top:4px;
+            right:78px;
+            text-align:center;
+            font-weight:bold;
+            color:#555555;
+            border-radius:5px;
+            -webkit-appearance: none;
+            border:1px solid #dde1e8;
+            padding: 0px 32px 0px 0px;
+            border-right: 0px;
+            background: url(../../../img/down-icon.png) no-repeat scroll right center transparent;
+        }
+        button{
+            position: absolute;
+            top:4px;
+            right:26px;
+            border-radius:5px;
+            width:32px;
+            height:32px;
+            padding:0px;
+            box-sizing: border-box;
+            border:1px solid #d4d4d4;
+        }
+    }
+    .checklist{
+        position: absolute;
+        top:0px;
+        left:0px;
+        background-color:#fff;
+        z-index:5;
+        width:100%;
+        padding-top:10px;
+        span.listclose{
+            display:inline-block;
+            width:32px;
+            height:32px;
+            line-height:32px;
+            cursor:pointer;
+            position: absolute;
+            right:-50px;
+            top:0px;
+            font-family:'宋体','SimSun';
+            font-size: 16px;
+        }
+    }
+}

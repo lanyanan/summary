@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>C-Life</title>
+<link rel="stylesheet" href="../static/css/style.css">
+<script type="text/javascript">
+var errorcode = 0;
+var errormsg = null;
+window.onload=function(){
+    if(document.body.offsetHeight<10){
+        window.bindJavaScript.onLoadH5Failed(errorcode || 2,
+            errormsg || "页面未能加载，请检查文件或网络情况");
+    }
+}
+window.onerror=function(msg,url,line){
+    errorcode = line || 1;
+    errormsg = msg;
+    return false;
+}
+</script>
+</head>
+<body>
+</body>
+<div id="ROOT">
+    <section class="reference">
+        <p>此标准仅供参考，具体请遵医嘱</p>
+        <h2>1、血压</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>收缩压</th>
+                    <th>舒张压</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>正常血压</td>
+                    <td>＜139</td>
+                    <td>＜89</td>
+                </tr>
+                <tr>
+                    <td>高血压</td>
+                    <td>≥140</td>
+                    <td>≥90</td>
+                </tr>
+                <tr>
+                    <td>低血压</td>
+                    <td>≤91</td>
+                    <td>≤61</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ta-r">单位：mmHg</p>
+        <h2>2、心率</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>脉搏</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>正常心率</td>
+                    <td>60-100</td>
+                </tr>
+                <tr>
+                    <td>心率过快</td>
+                    <td>＞100</td>
+                </tr>
+                <tr>
+                    <td>心率过慢</td>
+                    <td>＜60</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ta-r">单位：次/分钟</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>注：此标准为成人安静时测量参考标准。</p>
+        <p>&nbsp;</p>
+    </section>
+</div>
+<!-- <script src="http://10.8.5.122:8080/target/target-script-min.js#anonymous"></script> -->
+</html>

@@ -1,0 +1,91 @@
+body {
+  background: #fff;
+}
+
+.mark {
+  padding: 7.541667rem 0 13.916667rem 2.541667rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.light {
+  width: 10.375rem;
+  height: 25.25rem;
+  float: left;
+}
+
+.content {
+  float: left;
+  font-size: 1.291667rem;
+  color: #000;
+  line-height: 2.541667rem;
+  padding-top: 9.25rem;
+  padding-left: 0.875rem;
+  width: 14.35rem;
+}
+
+.content .highlight {
+  font-size: 1.541667rem;
+  color: #34abac;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3.666667rem;
+}
+
+.footer>button {
+  border: 0;
+  background: #bebebe;
+  width: 100%;
+  height: 100%;
+  font-size: 1.208333rem;
+  color: #fff;
+}
+
+.h-box {
+  padding: 3.625rem 1.375rem;
+}
+
+.h-light {
+  display: block;
+  width: 10.375rem;
+  height: 25.25rem;
+  margin: 0 auto;
+}
+
+.section-1 {
+  overflow: hidden;
+  padding-left: 1.375rem;
+  font-size: 1.125rem;
+  line-height: 2.083333rem;
+}
+
+.label-1 {
+  float: left;
+  color: #ff8400;
+  background: url("../../static/img/triangle-1.png") no-repeat right center;
+  padding-right: 1.291667rem;
+  background-size: 0.583333rem 0.875rem;
+}
+
+.label-2 {
+  float: left;
+  color: #00aec3;
+  background: url("../../static/img/triangle-2.png") no-repeat right center;
+  padding-right: 1.291667rem;
+  background-size: 0.583333rem 0.875rem;
+}
+
+.text {
+  float: left;
+  margin-left: 1.166667rem;
+  width: 83%;
+}
+
+.margin-t-30 {
+  margin-top: 1.25rem;
+}

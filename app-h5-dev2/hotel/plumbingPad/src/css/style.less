@@ -1,0 +1,683 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/src/TimeSelect.css);
+
+
+/*默认变量*/
+
+/*颜色值*/
+@color-boder-bottom: #ddd;
+@color-title: #989b9e;
+@color-txt: #cccccc;
+
+/*字体*/
+@font-title: 1.5rem;  //标题字体
+@font-tips: 1rem;   //提示字体 24px
+@font-list: 1.5rem; 
+@padding-left: 1.416rem; 
+@font-temperature1: 3.334rem; 
+@font-temperature2: 2.5rem; 
+@font-slide: 1.166rem; 
+@font-icon: 0.833rem; 
+@font-li: 1rem;
+
+/*宽度和高度*/
+@list-height: 4rem;  	//列表高度
+@switch-height: 2.5rem; //switch高度 
+@switch-width: 4.333rem; //switch宽度	
+@h4-height: 3.584rem; //h4高度  
+@header-height: 5rem;
+
+/*盒子布局*/
+.box-hori {
+	box-sizing: border-box !important;
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	box-orient: horizoutal;
+}
+.box-vart {
+	box-sizing: border-box !important;
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	box-orient: vartival;
+}
+.box-hori-1 {
+	box-sizing: border-box !important;
+	display: block;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
+	max-width: 100%;
+}
+.box-hori-2 {
+	box-sizing: border-box !important;
+	display: block;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 50%;
+	-webkit-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.box-hori-3 {
+	box-sizing: border-box !important;
+	display: block;
+	-webkit-box-flex: 1;
+	-ms-flex: 0 0 33.33333%;
+	-webkit-flex: 0 0 33.33333%;
+	flex: 0 0 33.33333%;
+	max-width: 33.33333%;
+}
+.box-hori-4 {
+	box-sizing: border-box !important;
+	display: block;
+	-webkit-box-flex: 1;
+	-ms-flex: 0 0 25%;
+	-webkit-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+.content {
+	height: 100%;
+	max-width: 53.333rem;
+	margin: 0 auto;
+	position: relative;
+
+}
+.clear:after, .clear:before {
+	display: table;
+	content: ' '
+}
+.clear:after {
+	clear: both
+}
+
+/*header*/
+.header{
+	width: 100%;
+	height: @header-height;
+	position: relative;
+	background: #2087e0;
+}
+
+.header-left{
+	width: 20%;
+	height: @header-height;
+	position: absolute;
+	left: 0px;
+}
+.header-center{
+	width: 60%;
+	height: @header-height;
+	position: absolute;
+	left: 20%;
+}
+
+.header-center h1{
+	line-height: @header-height;
+	text-align: center;
+	font-size: 1.562rem;
+	font-weight: normal;
+	color: #fff;
+}
+
+.icon-back{
+	display: block;
+	width: 0.948rem;
+	height: @header-height;
+	margin-left: 1.333rem;
+	background: url(../img/back.png) no-repeat center center;
+	background-size:auto 1.666rem;
+}
+.slide {
+	overflow: hidden;
+	position: relative;
+	background: -webkit-linear-gradient(top, #2087e0, #459eea, #67b3f4);
+	background: -moz-linear-gradient(top, #2087e0, #459eea, #67b3f4);
+	padding: 2.8rem 0 5.916rem 0;
+}
+.slide-tips {
+	height: @font-tips;
+	line-height: @font-tips;
+	padding-left: 17.06%;
+	margin-bottom: 1.68rem;
+	font-size: @font-tips;
+	color: #dff0fe;
+	vertical-align: middle;
+}
+.icon-litle-white-circle {
+	display: inline-block;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-right: 0.5rem;
+	background: #dff0fe;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.slide-blanket {
+	position: relative;
+	padding-left: 14%;
+}
+.slide-blanket em {
+	display: inline-block;
+	width: 3rem;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	padding-top: 1.25rem;
+	position: absolute;
+	left:  14%;
+	top: 1.25rem;
+	background: url(../img/waterbox.png) no-repeat top center;
+	background-size: auto 1rem;
+	text-align: center;
+	font-size: @font-icon;
+	color: #dff0fe;
+	opacity: 0.6;
+}
+
+/*四区*/
+.slide-blanket-four {
+	margin-left: 3.75rem;
+}
+.slide-blanket-four .slide-blanket-img {
+	width: 15.6rem;
+	height: 7.88rem;
+	margin-bottom: 1.5rem;
+	position: relative;
+	background: url(../img/blanket.png) no-repeat;
+	background-size: 100% 100%;
+}
+.slide-blanket-four .slide-blanket-img span {
+	display: block;
+	width: 7.6rem;
+	height: 3.80rem;
+	line-height: 3.50rem;
+	background: url(../img/fourframe.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	font-size: @font-li;
+	text-align: center;
+	color: #ebff41;
+}
+.slide-blanket-four .slide-blanket-img span:nth-of-type(1) {
+	top: 0px;
+	left: 0px;
+}
+.slide-blanket-four .slide-blanket-img span:nth-of-type(2) {
+	top: 0px;
+	right: 0px;
+}
+.slide-blanket-four .slide-blanket-img span:nth-of-type(3) {
+	bottom: 0px;
+	left: 0px;
+}
+.slide-blanket-four .slide-blanket-img span:nth-of-type(4) {
+	bottom: 0px;
+	right: 0px;
+}
+.slide-blanket-type {
+	width: 16rem;
+	text-align: center;
+}
+.slide-blanket-type span {
+	display: inline-block;
+	height: 1.2rem;
+	margin: 0 .3rem .6rem 0;
+	line-height: 1.2rem;
+	font-size: @font-slide;
+	color: #dff0fe;
+}
+.slide-blanket-type span strong {
+	font-size: @font-slide;
+	color: #ebff41;
+}
+
+/*二区*/
+.slide-blanket-two {
+	margin-left: 3.75rem;
+}
+.slide-blanket-two .slide-blanket-img {
+	width: 15.6rem;
+	height: 7.88rem;
+	margin-bottom: 1.5rem;
+	position: relative;
+	background: url(../img/blanket.png) no-repeat;
+	background-size: 100% 100%;
+}
+.slide-blanket-two .slide-blanket-img span {
+	display: block;
+	width: 7.6rem;
+	height: 7.80rem;
+	line-height: 7.80rem;
+	background: url(../img/twoframe.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	font-size: 1.33rem;
+	text-align: center;
+	color: #ebff41;
+}
+.slide-blanket-two .slide-blanket-img span:nth-of-type(1) {
+	top: 0px;
+	left: 0px;
+}
+.slide-blanket-two .slide-blanket-img span:nth-of-type(2) {
+	top: 0px;
+	right: 0px;
+}
+
+/*switch*/
+.slide .slide-switch {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	right: 3%;
+	bottom: 5%;
+	background: url(../img/switch.png);
+	background-size: 100% 100%;
+	border-radius: 3rem;
+}
+
+/*模式*/
+.modle {
+	height: 8.334rem;
+	overflow: hidden;
+	border-bottom: 1px solid @color-boder-bottom;
+}
+.modle h4 {
+	height: @h4-height;
+	line-height: @h4-height;
+	padding-left: @padding-left;
+	font-style: normal;
+	font-size: @font-title;
+	color: @color-title;
+}
+.modle ul {
+	overflow: hidden;
+	padding: 0 1rem;
+}
+.modle ul li {
+	height: 4.666rem;
+	line-height: 1.416rem;
+	padding-top: 2rem;
+	text-align: center;
+	font-size: @font-li;
+	color: @color-txt;
+}
+.modle ul li.active {
+	color: #5faef1;
+}
+.modle ul li:nth-of-type(1) {
+	background: url(../img/total_.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(1).active {
+	background: url(../img/total.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(2) {
+	background: url(../img/partition_.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(2).active {
+	background: url(../img/partition.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(3) {
+	background: url(../img/sleep_.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(3).active {
+	background: url(../img/sleep.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(4) {
+	background: url(../img/mites_.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+.modle ul li:nth-of-type(4).active {
+	background: url(../img/mites.png) no-repeat center top;
+	background-size: auto 1.834rem;
+}
+
+/*模式详情*/
+
+/*整机*/
+.temperature-content {
+	height: 10.708rem;
+	border-bottom: 1px solid @color-boder-bottom;
+}
+.temperature-content h4 {
+	height: @h4-height;
+	line-height: @h4-height;
+	padding-left: @padding-left;
+	font-style: normal;
+	font-size: @font-title;
+	color: @color-title;
+}
+
+/*二区-整机温度*/
+.total-temperature {
+	height: 7.125rem;
+	text-align: center;
+    overflow: hidden;
+}
+.total-temperature span {
+	display: inline-block;
+	min-width: 3rem;
+	height: @font-temperature1;
+	line-height: @font-temperature1;
+	margin: 1.458rem 1.666rem 0rem;
+	vertical-align: middle;
+}
+.total-temperature .temperature-txt{
+	position: relative;
+	font-size: @font-temperature1;
+	color: #5dadf1;
+}
+.temperature-txt i{
+	display: inline-block;
+	font-style: normal;
+	font-size: 1.666rem;
+}
+.temperature-add {
+	background: url(../img/add.png) no-repeat center center;
+	background-size: auto 1.834rem;
+}
+.temperature-reduce {
+	background: url(../img/reduce.png) no-repeat center center;
+	background-size: auto 1.834rem;
+}
+.no-tap-reduce {
+	background: url(../img/reduce_.png) no-repeat center center;
+	background-size: auto 1.834rem;
+}
+.no-tap-add {
+	background: url(../img/add_.png) no-repeat center center;
+	background-size: auto 1.834rem;
+}
+
+/*二区-分区温度*/
+.partition-temperature {
+	position: relative;
+	text-align: center;
+}
+.partition-temperature-border {
+	border-bottom: 1px solid @color-boder-bottom;
+}
+.partition-temperature li {
+	height: 7.125rem;
+	position: relative;
+	text-align: center;
+    overflow: hidden;
+}
+.partition-temperature li:nth-of-type(1):after {
+	display: block;
+	content: "";
+	width: 1px;
+	height: 7.125rem;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: #ddd;
+}
+.partition-temperature li span {
+	display: inline-block;
+	min-width: 1.833rem;
+	height: 1.833rem;
+	line-height: 1.833rem;
+	padding: 1rem;
+	vertical-align: middle;
+	font-size: @font-temperature2;
+	color: #5dadf1;
+}
+.partition-temperature li em {
+	color: #989a9e;
+	font-size: 1.166rem;
+}
+.modle-content-list {
+	height: @list-height;
+	line-height: @list-height;
+	padding: 0 @padding-left;
+	position: relative;
+	border-bottom: 1px solid @color-boder-bottom;
+	color: @color-title;
+	font-size: @font-list;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.modle-content-list span.het-switch {
+	float: right;
+	margin-top: 0.8rem;
+}
+.modle-content-list span {
+	float: right;
+	color: #5f5f5f;
+	font-size: 1.25rem;
+}
+
+.modle-content-list .appointment-mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	background: rgb(228,228,228);
+	opacity: 0.1;
+}
+.het-switch {
+	display: block;
+	width: @switch-width;
+	height: @switch-height;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	box-shadow:inset 1px 1px 1px #e5e5e5;
+	border-radius: 2.5rem;
+	color: rgba(0,0,0,0);
+	-webkit-transform: translate3d(0, 0, 0); /*开启硬件加速*/
+	-webkit-backface-visibility: hidden; /*元素旋转时隐藏背面*/
+	-webkit-transform-style: preserve-3d; /*保留3D空间*/
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.het-switch em {
+	display: block;
+}
+.het-switch em:before {
+	content: "";
+	display: block;
+	width: @switch-height;
+	height: @switch-height;
+	position: absolute;
+	top: -1px;
+	z-index: 2;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 100%;
+	box-shadow:inset 1px 1px 1px #e5e5e5;
+	color: rgba(0,0,0,0);
+	transition: all .3s ease;
+	-moz-transition: all .3s ease; /* Firefox 4 */
+	-webkit-transition: all .3s ease; /* Safari 和 Chrome */
+	-o-transition: all .3s ease; /* Opera */
+}
+.het-switch-on{
+	color: rgba(0,0,0,0);
+	border: 1px solid #60aff2;
+	box-shadow:inset 1px 1px 1px #60aff2;
+}
+.het-switch-on em:before {
+	color: rgba(0,0,0,0);
+	right: -1px;
+	border: 1px solid #60aff2;
+	box-shadow:inset 1px 1px 1px #60aff2;
+}
+.het-switch em:after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: -10rem;
+	top: 0;
+	height: 3.666rem;
+	width: 10rem;
+	background: #f00;
+}
+.het-switch-on em:after {
+	left: -5rem;
+	background: #60aff2;
+}
+
+.icon-arrow{
+	display: inline-block;
+	width: 2rem;
+	height: @list-height;
+	position: absolute;
+	right: @padding-left;
+	top: 0;
+	background: url(../img/arrow.png) no-repeat center center;
+	background-size: 1.083rem 1.833rem;
+}
+/*关机*/
+.shut-down{
+	width: 100%;
+	height: 120%;
+	position: fixed;
+	top:0rem;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100;
+	background: #707f96;
+	opacity: 0;
+}
+.shut-down-color{
+	-webkit-transition:all 0.5s .2s ease;
+	transition:all 0.5s .2s ease;
+	background: #707f96;
+}
+.shut-down-blanket{
+	width: 15rem;
+	height: 7.333rem;
+	margin-left: -7.5rem;
+	position: absolute;
+	top: 9.58rem;
+	left: 50%;
+	background: url(../img/shutdown.png) no-repeat center center;
+	background-size: 100% 7.333rem;
+}
+.shut-down-switch{
+	width: 6.25rem;
+	height: 6.25rem;
+	margin-left: -3.125rem;
+	position: absolute;
+	bottom: 11.208rem;
+	left: 50%;
+	background: url(../img/switch.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.shut-down-time{
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	position: absolute;
+	top: 50%;
+	margin-top: -1rem;
+	text-align: center;
+	color: #fff;
+	font-size: @font-list;
+	.shut-down-time-text{
+		display: block;
+		width: 100%;
+		height: 1rem;
+		line-height: 1rem;
+		position: absolute;
+		top: -2.5rem;
+		font-size: @font-tips;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+	.shut-down-open{
+		display: block;
+		height: 2rem;
+		line-height: 2rem;
+		font-size: @font-list;
+	}
+}
+
+/*动画*/
+.fade-in{-webkit-animation:fadein 0.5s .2s ease both;-moz-animation:fadein 0.5s .2s ease both;}
+.fade-out{-webkit-animation:fadeout 0.5s .2s ease both;-moz-animation:fadeout .5s .2s ease both;}
+@-webkit-keyframes fadein{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+@keyframes fadein{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+
+@-webkit-keyframes fadeout{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+@keyframes fadeout{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+
+@keyframes mask-fadein {
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-moz-keyframes mask-fadein { /* Firefox */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-webkit-keyframes mask-fadein { /* Safari 和 Chrome */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-o-keyframes mask-fadein { /* Opera */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+
+/*设备在线*/
+.mask{
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	animation: mask-fadein 0.2s ease both;
+	-moz-animation: mask-fadein 0.2s ease both;	    /* Firefox */
+	-webkit-animation: mask-fadein 0.2s ease both;	/* Safari 和 Chrome */
+	-o-animation: mask-fadein 0.2s ease both;	        /* Opera */
+}
+.error-flag h1{
+	width: 100%;
+	min-height: @h4-height;
+	line-height: @h4-height;
+	padding-left: @padding-left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	text-indent: 0.5rem;
+	font-style: normal;
+	font-size: @font-title;
+	font-weight: normal;
+	background: rgb(0,0,0);
+	opacity: 0.4;
+	color: #fff;
+}

@@ -1,0 +1,59 @@
+.animation-alert-enter {
+  animation: enter 500;
+  -moz-animation: enter 500;
+  /* Firefox */
+  -webkit-animation: enter 500;
+  /* Safari and Chrome */
+  -o-animation: enter 500;
+  /* Opera */
+}
+
+.animation-alert-leave {
+  animation: leave 500;
+  -moz-animation: leave 500;
+  /* Firefox */
+  -webkit-animation: leave 500;
+  /* Safari and Chrome */
+  -o-animation: leave 500;
+  /* Opera */
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

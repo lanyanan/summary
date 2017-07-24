@@ -1,0 +1,148 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(./footer-buttons.css);
+@import url(./help.css);
+@import url(./result-table.css);
+
+body{
+    background-color:#eee;
+    padding-top:244px;
+    padding-bottom:58px;
+}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:180px;
+    padding-top:64px;
+    background:url(../img/bg.jpg) no-repeat 0 0;
+    background-size:100% auto;
+    z-index:99;
+}
+header>figure{
+    position:absolute;
+    left:15px;
+    right:15px;
+    bottom:10px;
+    clear:both;
+    color:#fff;
+    line-height:1.2;
+    font-size:14px;
+}
+header>figure>.user-info{
+    float:left;
+    margin-right:15px;
+    text-align:center;
+}
+header>figure>.user-info dt{
+    width:5em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:12px;
+}
+header>figure .avatar{
+    display:inline-block;
+    width:4.1rem;
+    height:4.1rem;
+    border:3px solid #b1d7dd;
+    border-radius:50%;
+    overflow:hidden;
+    animation:fadein 1s;
+}
+header>figure .avatar>img{
+    width:4.1rem;
+    height:4.1rem;
+    max-width:4.1rem;
+    max-height:4.1rem;
+}
+
+header>figure>p{
+    line-height:1.5;
+}
+header>figure i{
+    padding:3px 5px;
+    line-height:1;
+    background-color:#5ed29a;
+    border-radius:5px;
+}
+header>figure .cell{
+    display:inline-block;
+    width:8.6rem;
+}
+header>figure p.s{
+    margin-top:5px;
+    font-size:16px;
+}
+header>figure .bg-normal{
+    background-color:#5ed29a;
+}
+header>figure .bg-high{
+    background-color:#ff5f5f;
+}
+header>figure .bg-low{
+    background-color:#3cc6d1;
+}
+header>figure .num{
+    font-size:24px;
+}
+header>figure .time{
+    font-size:12px;
+}
+
+.hd-record{
+    position:fixed;
+    width:100%;
+    box-sizing:border-box;
+    margin-top:-16px;
+    padding:20px 15px 10px;
+    color:#5e5e5e;
+    background-color:#ececec;
+    font-size:12px;
+}
+.hd-record>a{
+    float: right;
+    font-size:12px;
+    color:#303030;
+}
+.hd-record>a .h{
+    display: inline-block;
+    width:1rem;
+    height:1rem;
+    padding:0;
+    background:url(../img/ico1.png) no-repeat 0 0;
+    background-size:cover;
+    vertical-align: middle;
+}
+
+.reference{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow: auto;
+    padding:70px 15px 0;
+    background-color:#fff;
+    line-height:1.8;
+    color:#5e5e5e;
+    font-size:14px;
+}
+.reference>table{
+    width:100%;
+    text-align:center;
+    color:#303030;
+}
+.reference>table td,.reference>table th{
+    border:1px solid #ababab;
+    line-height:3;
+}
+.reference>table th{
+    background-color: #e2e2e2;
+}
+
+@keyframes fadein{
+    from {opacity:0.2;}
+    to {opacity:1;}
+}

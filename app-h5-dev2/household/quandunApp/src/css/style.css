@@ -1,0 +1,159 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css); 
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    #ROOT{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: rgb(238,238,238);
+		width: 100%;
+       
+    }
+.quandun-first  span{
+	display: block;
+	width: 15rem;
+	height: 4.6rem;
+	margin: 3rem auto 0.4rem;
+	background: url("../../static/img/quandun-title.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+.qdImg img {
+	width: 20.2rem;
+	height: 20.2rem;
+
+}
+.quandun-second a {
+	text-decoration: none;
+	width: 18rem;
+	height: 18rem;
+	display: block;
+	margin: 0 auto;
+	background: url("../../static/img/quanduan-day.jpg") no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+.quandun-seconds a {
+	background: url("../../static/img/quandun-jingshui.png") no-repeat;
+	background-size: 100% 100%;
+}
+.quandun-second3 a {
+	background: url("../../static/img/quandun-qingli.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.quandun-second a span{
+	font-size: 96px;
+	display: block;
+	height: 6rem;
+	padding-top: 6rem;
+	color: #6A6868;	
+}
+.quandun-three {
+	font-size: 2rem;
+	color: rgb(75,122,86);
+	margin-top: 3.4rem;
+}
+
+.quandun-four {
+	color: rgb(75,122,86);
+	font-size: 1.6rem;
+	margin-top: 0.6rem;
+}
+.quandun-threes,.quandun-fours {
+	color: rgb(120,182,207);
+}
+
+
+.quandun-four a {
+	font-size: 2.6rem;
+    font-weight: 200 !important;
+    font-family: "";
+
+}
+.quandun-three3 ,.quandun-four3{
+	color: rgb(153,97,136);
+}
+.quandun-second4 a{
+	background: url("../../static/img/quandun-jiesheng.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+.pingzhuang {
+	font-size: 0.6rem;
+	color: rgb(182,103,60);
+	margin-top: 1.2rem;
+}
+.quandun-three4 {
+	margin-top: 0.6rem;
+}
+.quandun-three4 ,.quandun-four4{
+	color: rgb(182,103,60);
+}
+.quandun-second5 a{
+	background: url("../../static/img/quandun-haoshui.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+.quandun-three5 {
+	font-size: 2rem;
+	color: rgb(101,111,113);
+	font-weight: 700;
+	margin-top: 0.6rem;
+	margin-bottom: 0.4rem;
+}
+.quandun-four5 {
+	margin-top: 0.2rem;
+}
+.quandun-four5 span{
+	color: rgb(6,148,220);
+	font-size: 1rem;
+	padding: 0 3px;
+}
+.quandun-five5 {
+	color: rgb(131,80,59);
+	font-size: 2rem;
+	margin-top: 1rem;
+
+}
+
+.quandun-six5 a{
+	color: rgb(131,80,59);
+	font-size: 1rem;
+}
+.quan-img {
+	margin: 2.2rem auto;
+}
+.swiper-slide:after{content:" ";position:absolute;width:2.4rem;height:2rem;margin:0 auto;
+left:0;right:0;bottom:.5rem;background:url(../img/web-swipe-tip_95ef4d6.png) no-repeat;
+background-size:100% 100%;-webkit-animation:fadeOutUp 1.5s infinite ease-in-out;
+animation:fadeOutUp 1.5s infinite ease-in-out;z-index:100}
+.swiper-slide:last-child:after{display:none}
+@-webkit-keyframes fadeOutUp{
+	0%{opacity:1;filter:alpha(opacity=100)}
+	100%{opacity:0;filter:alpha(opacity=0);
+		-webkit-transform:translate3d(0,-100%,0);
+	transform:translate3d(0,-100%,0)}}
+	@keyframes fadeOutUp{
+		0%{opacity:1;filter:alpha(opacity=100)}
+		100%{opacity:0;filter:alpha(opacity=0);
+			-webkit-transform:translate3d(0,-100%,0);
+		transform:translate3d(0,-100%,0)}}

@@ -1,0 +1,137 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/src/tips.css);
+
+
+@media screen and (max-width: 329px) {
+    .devscreen{height:240px !important; min-height:230px !important; width:228px !important;}
+    .boxtitle{font-size:14px !important;}
+    .filterlife>.smalltitle{left:1.5rem !important;}
+}
+html,body{font-size:75%;font-family:"Microsoft Yahei" !important;}
+a{-webkit-tap-highlight-color:transparent;}
+.app-body{position:absolute;top:0;bottom:0;left:0;right:0;overflow: auto;overflow-x: hidden;}
+#panel-scroller{height: 100%;}
+.slide-down,.slide-up{
+    -webkit-transition: -webkit-transform 1.1s;
+    -ms-transition: -ms-transform 1.1s;
+    -o-transition: -o-transform 1.1s;
+    transition: transform 1.1s;
+} 
+.slide-up{
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.slide-down{
+	overflow: hidden;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.startupface{z-index:1;top:0;bottom:0;left:0;right:0;}
+
+/*盒子标题文字样式*/
+.boxtitle{padding:0.1rem 1.3rem ; font-size: 18px; }
+
+/*关机界面样式*/
+.shutdownface{position:absolute;z-index:999;top:0;bottom:0;left:0;right:0;background-color:#959595;text-align:center;overflow: hidden;}
+.shutdownface>.pic{margin:0 auto;width:20.5rem;height:21.5rem;background:url("../img/airPurifier/bg.png") no-repeat 0 0;background-size:100%;}
+.shutdownface>.power{background:url("../img/airPurifier/power.png") no-repeat 0 0;background-size: 100% 100%;width:6.6rem;height: 6.6rem;display:block;margin: 8.6rem auto 0;}
+#mytoast{z-index:9999;height:50px;font-size:18px;}
+#mytoast div.block{color:#eb917f;}
+#childlock{position: absolute;z-index:10;height:100%;width:100%;top:0;left:0;}
+/*主界面样式*/
+.mainscreen{width: 100%;margin: 0px; height:25rem;padding:20px 0px;position: relative;}
+.bg-y{background: -webkit-linear-gradient(#288ce2, #69b4f4); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(#288ce2, #69b4f4); /* Opera 11.1 - 12.0 */background: -moz-linear-gradient(#288ce2, #69b4f4); /* Firefox 3.6 - 15 */
+background:linear-gradient(#288ce2, #69b4f4);background-size:100% 100%;}
+.bg-l{background: -webkit-linear-gradient(#2088E0, #4BA2EC); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(#2088E0, #4BA2EC); /* Opera 11.1 - 12.0 */background: -moz-linear-gradient(#4853d5, #4BA2EC); /* Firefox 3.6 - 15 */
+background:linear-gradient(#2088E0, #4BA2EC);background-size:100% 100%;}
+.bg-z{background: -webkit-linear-gradient(#c06a00, #f4bb00); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(#c06a00, #f4bb00); /* Opera 11.1 - 12.0 */background: -moz-linear-gradient(#c06a00, #f4bb00); /* Firefox 3.6 - 15 */
+background:linear-gradient(#c06a00, #f4bb00);background-size:100% 100%;}
+.bg-c{background-color: #ff0000;}
+.bg-w{background-color: gray;}
+
+/*背景色渐变样式*/
+@-webkit-keyframes myfirst{
+    0%   {background-color: #288ce2;}
+    25%  {background-color: #0665a5;}
+    50%  {background-color: #c06a00;}
+    100% {background-color: #ff0000;}
+}
+.bg-change
+{
+    animation: myfirst 10s linear  infinite alternate;
+    /* Firefox: */
+    -moz-animation: myfirst 10s linear  infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: myfirst 10s linear  infinite alternate;
+    /* Opera: */
+    -o-animation: myfirst 10s linear  infinite alternate;
+}
+
+/*室内组件样式*/
+.devscreen{width: 69%;min-height: 84%;max-width: 20rem;background: url("../img/airPurifier/bg.png") no-repeat 0 0;margin: 0 auto;background-size: 100% 100%;}
+.screenul{list-style: none;text-align: center;width: 65%;margin: 0rem auto; padding-top: 4.28rem;color: #ffffff;}
+.screenul>.titleli{font-size: 14px;}
+.screenul>.airli{font-size: 48px;padding-top: 0.34rem;margin-bottom: 0.6rem;}
+.screenul>.templi{font-size:14px; padding-bottom: 0.41rem; border-bottom: 1px solid rgba(255,255,255,0.5);}
+.screenul>.pmli{font-size:16px;margin: 3px auto;}
+.warn{background: #FF6262;width: 45px;}
+
+/*室外组件及开关(表情)按钮样式*/
+.mainscreen>.al>img{width:3rem;float: left;}
+.mainscreen>.ar>img{float: right;width:3rem;}
+.outdoorscreen{width:100%;display: flex;  text-align: center;font-size: 1rem; height:3.3rem;line-height: 3.3rem; color: #ffffff;position: absolute;bottom: 0rem;}
+.outdoorscreen>div>img{width:1rem;max-height: 2rem;}
+.pos-a{position: absolute;}
+.al{bottom: 4.2rem; left: 1.3rem; z-index:12;}
+.ar{bottom: 4.2rem; right: 1.3rem;z-index: 2;}
+.outdoorscreen>.divl{border-top: 1px rgba(255,255,255,0.5) solid; border-right: 1px rgba(255,255,255,0.3) solid;}
+.outdoorscreen>.divl>.inforspacing{margin-left: 2rem;}
+.outdoorscreen>.divr{border-top: 1px rgba(255,255,255,0.5) solid;}
+
+/*模式选择组件样式*/
+.modes{display: flex;text-align: center;background-color:#fff;border-bottom:1px solid rgba(212,214,217,0.8);}
+.modes>dl{margin:1rem 0.9rem; color: #A8ACB2;}
+.modes>dl.on{color:#4F9BE7;}
+.modes>dl>dd>img{width:84%;}
+.modes>dl>dt{margin:0.51rem auto 0.45rem;font-size: 1.3rem; letter-spacing: 0.1rem;}
+
+/*定时切换组件样式*/
+.clock{display:flex;padding:1.7rem 0;color: #6f7680;}
+.clock>.left-btn{padding-left: 2rem;background: url(../img/airPurifier/larrow-off.png) 30%  no-repeat;background-size: 22%; }
+.clock>.right-btn{ padding-right: 2rem;background: url(../img/airPurifier/rarrow-off.png) 30%  no-repeat;background-size: 22%; }
+.clock>.mvalue-on{font-size: 4rem; margin: -1.4rem 0; display: block;}
+.clock>.mvalue-off{display: none;}
+.clock>.remain-on{font-size: 1.8rem; margin: -0.3rem 0 -0.3rem -1.8rem; display: block;}
+.clock>.remain-off{display: none;}
+.clock>.remain-on>.svalue{font-size: 1.33rem;}
+.clock>.remain-off>.svalue{font-size: 1.33rem;}
+.clock>.mvalue-on>.svalue{font-size: 1.33rem;}
+.clock>.mvalue-off>.svalue{font-size: 1.33rem;}
+/*.clock>.center-cell{text-align: center;-webkit-flex: 2;-ms-flex: 2;flex: 2;/* NEW, Spec - Opera 12.1, Firefox 20+ }*/
+
+/*紫外线开关组件样式*/
+.uv{display:flex;overflow: hidden; border-bottom:1px solid rgba(212,214,217,0.8);padding:1.7rem 0;color: #6f7680;position: relative;}
+.uv>.flex-cell>.on{position: absolute;right: -8.25rem;width: 14.2rem;height: 8.33rem;z-index: 2; background: url(../img/airPurifier/switch-on.png) no-repeat;background-size: 33%;}
+.uv>.flex-cell>.off{position: absolute;right: -8.25rem;width: 14.2rem;height: 8.33rem;z-index: 2; background: url(../img/airPurifier/switch-off.png) no-repeat;background-size: 33%;}
+
+/*负离子开关组件样式*/
+.anion{overflow:hidden;display: flex; border-bottom:1px solid rgba(212,214,217,0.8);padding:1.7rem 0;color: #6f7680;position: relative;}
+.anion>.flex-cell>.on{position: absolute;right: -8.25rem;width: 14.1rem;height: 8.33rem;z-index: 2; background: url(../img/airPurifier/switch-on.png) no-repeat;background-size: 33%;}
+.anion>.flex-cell>.off{position: absolute;right: -8.25rem;width: 14.1rem;height: 8.33rem;z-index: 3; background: url(../img/airPurifier/switch-off.png) no-repeat;background-size: 33%;}
+
+
+
+.speed{border-bottom:1px solid rgba(212,214,217,0.8);}
+.speed>span{margin: 1.7rem 1.25rem;font-size: 18px;color:#6f7680}
+.speed>dl{padding:1rem 0.2rem;}
+.speed dd{height:42px;line-height:42px;width:42px;font-size:12px;border-radius: 50%;text-align: center; color:#9FA4AB;border:1px solid #9FA4AB;}
+.speed .on{color:#4AA1EC;border:1px solid #4AA1EC;}
+.speed .off{color:#9FA4AB;border:1px solid #9FA4AB;}
+
+.clock .time b{font-size: 20px;}

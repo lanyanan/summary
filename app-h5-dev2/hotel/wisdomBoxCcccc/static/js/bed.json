@@ -1,0 +1,62 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 57,
+            "level": "A",
+            "lightSensation": 0,
+            "dataTime": "2016-08-31",
+            "temperature": 27.44,
+            "noise": 0
+        },
+        {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 52,
+            "level": "A",
+            "lightSensation": 0,
+            "dataTime": "2016-09-06",
+            "temperature": 27.6,
+            "noise": 0
+        },
+        {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 54,
+            "level": "A-",
+            "lightSensation": 0,
+            "dataTime": "2016-09-07",
+            "temperature": 27.44,
+            "noise": 0
+        },
+        {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 58,
+            "level": "A-",
+            "lightSensation": 0,
+            "dataTime": "2016-09-08",
+            "temperature": 29.44,
+            "noise": 0
+        },
+            {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 58,
+            "level": "B+",
+            "lightSensation": 0,
+            "dataTime": "2016-09-09",
+            "temperature": 29.44,
+            "noise": 0
+        },
+                {
+            "dataSource": "ÖÇ»ÛºÐ×Ó",
+            "humidity": 58,
+            "level": "A",
+            "lightSensation": 0,
+            "dataTime": "2016-09-10",
+            "temperature": 29.44,
+            "noise": 0
+        }
+    
+        
+        
+    ]
+}

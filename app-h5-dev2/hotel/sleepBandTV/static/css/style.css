@@ -1,0 +1,1265 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  border: 1px solid #dedede;
+}
+
+input[type="button"] {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.flex-cell {
+  display: block;
+  /* OLD */
+  width: 100%;
+  /* OLD */
+}
+
+.flex,
+.flex-column {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex {
+  -webkit-box-orient: horizontal;
+  /* OLD */
+  -moz-box-orient: horizontal;
+  /* OLD */
+  -ms-box-orient: horizontal;
+  /* OLD */
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  /* OLD */
+  -moz-box-orient: vertical;
+  /* OLD */
+  -ms-box-orient: vertical;
+  /* OLD */
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-cell {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/*默认放缩为1*/
+
+.scale {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@font-face {
+  font-family: DINCOND;
+  src: url('./DINCOND-BOLD.OTF');
+}
+
+/* 登录界面相关样式 */
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  z-index: -1;
+}
+
+.centerBox {
+  width: 494px;
+  height: 690px;
+  margin: 224px auto 0;
+  padding-top: 39px;
+  box-sizing: border-box;
+  background-color: rgba(7,3,22, 0.4);
+}
+
+.centerBox>label {
+  display: inline-block;
+  width: 100%;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.centerBox>.qrcodeBox {
+  position: relative;
+  width: 358px;
+  height: 358px;
+  margin: 30px auto 48px;
+  border: 1px solid #fff;
+  background: url('../img/code.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.qrcodeBox>.qrcodeInvaild {
+  text-align: center;
+}
+
+.qrcodeInvaild>.invaildText {
+  display: inline-block;
+  width: 100%;
+  margin-top: 102px;
+  font-size: 36px;
+  color: #fff;
+}
+
+.qrcodeInvaild>.tipsText {
+  display: inline-block;
+  width: 100%;
+  font-size: 32px;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: -20px;
+}
+
+.qrcodeInvaild>.invaildBtn,
+.qrcodeInvaild>.activeBtn {
+  display: inline-block;
+  width: 260px;
+  height: 72px;
+  margin-top: 50px;
+  line-height: 72px;
+  border: 1px solid #50349e;
+  border-radius: 50px;
+  background-color: #50349e;
+  font-size: 30px;
+  color: #fff;
+}
+
+.qrcodeInvaild>.invaildBtn {
+  background-color: rgba(97,65,200, 0.1);
+  border: 2px solid #6141c8;
+}
+
+.qrcodeInvaild>.invaildBtn:active,
+ {
+  opacity: 0.5;
+}
+
+.qrcodeBox .qrcode {
+  display: inline-block;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  width: 316px;
+  height: 316px;
+}
+
+.qrcodeBox .qrcodeIcon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 84px;
+  margin-top: -42px;
+  margin-left: -42px;
+}
+
+.centerBox>.description {
+  width: 325px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.description>.codeIcon {
+  display: inline-block;
+  width: 50px;
+  height: 44px;
+  background: url('../img/login_icon.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.description>.detail {
+  display: inline-block;
+  width: 257px;
+  margin-left: 18px;
+  text-align: left;
+}
+
+.description>.detail>span {
+  font-size: 24px;
+  color: #716790;
+}
+
+.description>.detail>i {
+  margin-left: 18px;
+  font-size: 24px;
+  color: #b19bff;
+}
+
+.detail>.lineTwo {
+  display: inline-block;
+  width: 120%;
+}
+
+/* 顶部tab相关样式 */
+
+.headerTab {
+  position: relative;
+  width: 100%;
+  height: 144px;
+  line-height: 144px;
+  background-color: rgba(7,3,22, 0.4);
+  overflow: hidden;
+}
+
+.userIcon {
+  display: inline-block;
+  width: 84px;
+  height: 84px;
+  margin: 30px 20px 30px 80px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-sizing: border-box;
+}
+
+.userName {
+  position: relative;
+  display: inline-block;
+  width: 168px;
+  height: 144px;
+  text-align: left;
+  overflow: hidden;
+  color: #716790;
+  font-size: 20px;
+}
+
+.userName>.name {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 62px;
+  line-height: 72px;
+  overflow: hidden;
+}
+
+.userName>.loginOut {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.headerTab>.tab {
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 174px;
+  height: 52px;
+  line-height: 52px;
+  margin: 46px 4px 46px 0px;
+  padding: 2px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.headerTab>.active,
+.userName>.active {
+  color: #b19bff;
+  background-color: rgba(97,65,200, 0.1);
+  border: 2px solid #6141c8;
+  border-radius: 40px;
+  padding: 0px;
+}
+
+.userName>.active {
+  padding: 0 10px;
+}
+
+.headerTab>.tab:active {
+  border-radius: 40px;
+  background-color: rgba(97,65,200, 0.5);
+}
+
+.weather {
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  height: 84px;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.weather>li {
+  display: inline-block;
+  overflow: hidden;
+  height: 84px;
+  line-height: 84px;
+  margin-right: 24px;
+  color: #ffffff;
+}
+
+.weather>.twoFloor {
+  width: 88px;
+}
+
+.weather .upText {
+  float: left;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin-top: -15%;
+  text-align: center;
+}
+
+.weather .downText {
+  float: left;
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin-top: -7%;
+  text-align: center;
+}
+
+.weatherIcon {
+  display: inline-block;
+}
+
+.cityName {
+  font-size: 36px;
+  margin-left: 6px;
+}
+
+/* 报告主体样式 */
+
+.reportMain {
+  position: relative;
+}
+
+.noData {
+  width: 100%;
+  height: 100%;
+  padding-top: 12.5%;
+  margin-top: 18px;
+  font-size: 86px;
+  color: #fff;
+  background-color: rgba(7,3,22, 0.4);
+  text-align: center;
+}
+
+.noData>label {
+  display: inline-block;
+  width: 100%;
+  font-size: 40px;
+}
+
+/* 左侧边栏样式 */
+
+.leftTab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  margin: 40px 36px;
+  overflow: hidden;
+}
+
+.leftTab .dateSelect {
+  height: 80px;
+  line-height: 80px;
+  padding-left: 57px;
+}
+
+.leftTab .active {
+  height: 68px;
+  line-height: 68px;
+  background-color: rgba(97,65,200, 0.1);
+  border: 2px solid #6141c8;
+  border-radius: 40px;
+}
+
+.leftTab .selected {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 68px;
+  line-height: 68px;
+  border: 2px solid #fff;
+  border-radius: 40px;
+}
+
+.leftTab .dateSelect:active {
+  border-radius: 40px;
+  background-color: rgba(97,65,200, 0.5);
+}
+
+.leftTab .sleepDate {
+  display: block;
+  width: 100%;
+  height: 50%;
+  line-height: 40px;
+  color: #fff;
+  font-size: 24px;
+  margin-top: 3px;
+}
+
+.leftTab .sleepStatus {
+  display: block;
+  width: 100%;
+  height: 50%;
+  line-height: 40px;
+  color: #716790;
+  font-size: 20px;
+  margin-top: -12px;
+}
+
+.active .sleepDate,
+.active .sleepStatus {
+  color: #b19bff;
+  line-height: 34px;
+}
+
+.active .sleepStatus {
+  margin-top: -6px;
+  /* color: #716790; */
+}
+
+/* 报告详情样式 */
+
+.reportDetail {
+  width: 600px;
+  margin: 18px 18px 0 272px;
+  background-color: rgba(7,3,22, 0.4);
+}
+
+.radialGradient {
+  position: relative;
+  width: 388px;
+  height: 311px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.radialGradient .message {
+  position: absolute;
+  left: 0;
+  top: 188px;
+  width: 388px;
+  z-index: 3;
+  text-align: center;
+}
+
+.radialGradient .sleepQuality {
+  display: inline-block;
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  font-size: 54px;
+  color: #fff;
+}
+
+.radialGradient .sleepType {
+  display: inline-block;
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 18px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.radialGradient .sleepRank {
+  display: inline-block;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 12px;
+  font-size: 24px;
+  color: #8c71e0;
+}
+
+.radialGradient>.radialBg {
+  position: absolute;
+  top: 28px;
+  left: -106px;
+  z-index: 1;
+}
+
+.radialGradient>.radial {
+  position: absolute;
+  top: 28px;
+  left: -106px;
+  z-index: 2;
+}
+
+.reportDetail>.sleepIcon {
+  width: 295px;
+  margin: 38px auto 0;
+  text-align: center;
+}
+
+.sleepIcon>li>span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+.sleepIcon>.fallAsleep {
+  color: #30d2b9;
+  font-size: 24px;
+}
+
+.sleepIcon>.fallAsleep>span {
+  background-color: #30d2b9;
+}
+
+.sleepIcon>.shallowSleep {
+  color: #6275ff;
+  font-size: 24px;
+}
+
+.sleepIcon>.shallowSleep>span {
+  background-color: #3e55ff;
+}
+
+.sleepIcon>.deepSleep {
+  color: #d03bfb;
+  font-size: 24px;
+}
+
+.sleepIcon>.deepSleep>span {
+  background-color: #c52ff0;
+}
+
+.reportDetail>.sleepData {
+  margin-top: 40px;
+  height: 110px;
+  border-bottom: 1px solid #281c44;
+  line-height: 110px;
+}
+
+.sleepData>.gap {
+  width: 1px;
+  height: 56px;
+  margin-top: 18px;
+  background-color: rgba(133,115,192,0.2);
+}
+
+.sleepData>.dataDetail>section {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 48px;
+  color: #fff;
+  font-family: DINCOND;
+}
+
+.sleepData>.dataDetail>div {
+  width: 100%;
+  height: 72px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.dataDetail .bigText {
+  margin-right: 13px;
+  font-size: 24px;
+  color: #716790;
+}
+
+.dataDetail .smallText {
+  font-size: 18px;
+  color: #716790;
+}
+
+.sleepAnalysis {
+  min-height: 300px;
+}
+
+.sleepAnalysis>.analysisHeader {
+  margin-top: 48px;
+}
+
+.analysisHeader>.starIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 50px;
+  margin-right: 12px;
+  background-image: url('../img/star.png');
+  background-size: 100% 100%;
+}
+
+.analysisHeader>.analysisTitle {
+  font-size: 24px;
+  color: #fff;
+}
+
+.analysisDetail {
+  margin: 18px 42px 0;
+  font-size: 24px;
+  color: #9e8fca;
+}
+
+/*报告图表样式*/
+
+.chartsTab {
+  position: absolute;
+  top: 0;
+  right: 18px;
+  width: 1012px;
+  height: 100%;
+  background-color: rgba(7,3,22, 0.4);
+}
+
+.chartsTab>.reportTime {
+  height: 84px;
+  border-bottom: 1px solid rgba(53, 45, 86, 0.4);
+  line-height: 84px;
+}
+
+.reportTime>label {
+  margin-left: 54px;
+  margin-right: 12px;
+  font-size: 28px;
+  color: #716790;
+}
+
+.reportTime>i {
+  margin-right: 12px;
+  font-size: 28px;
+  color: #bfb6dd;
+}
+
+.chartsTab>.reportChart {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.reportChart>.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85px;
+  height: 85px;
+  margin: -42.5px 0 0 -42.5px;
+}
+
+.reportChart>.averageValue {
+  position: absolute;
+  top: 35px;
+  right: 42px;
+  color: #bfb6dd;
+  font-size: 16px;
+}
+
+.reportChart>.averageValue>span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.chartsTab #reportSleepChart,
+#reportHeartChart,
+#reportBreathingChart,
+#reportOverChart {
+  position: relative;
+  width: 480px;
+  height: 360px;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+/* 实时数据样式 */
+
+.time>.leftSide {
+  display: inline-block;
+  width: 32%;
+  margin: 18px 18px 0 18px;
+}
+
+.leftSide>.sleepStatus,
+.leftSide>.monitoringTime {
+  width: 100%;
+  height: 441px;
+  margin-bottom: 18px;
+  padding: 20.5% 0 0 28%;
+  background-color: rgba(7,3,22, 0.4);
+  box-sizing: border-box;
+}
+
+.leftSide>.sleepStatus>span,
+.leftSide>.monitoringTime>span {
+  display: inline-block;
+  width: 100%;
+  font-size: 36px;
+  color: #9e8fca;
+}
+
+.leftSide>.sleepStatus>label,
+.leftSide>.monitoringTime>label {
+  font-size: 68px;
+  color: #fff;
+}
+
+.time>.rightSide {
+  position: absolute;
+  right: 18px;
+  top: 162px;
+  width: 65.2%;
+  padding-bottom: 66px;
+  background-color: rgba(7,3,22, 0.4);
+}
+
+/*实时数据*/
+
+.moniter {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 66px;
+  padding-right: 44px;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes myfirst1 {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    left: -80%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes myfirst1 {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    left: -80%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.running {
+  -webkit-animation: myfirst1 5s linear infinite;
+          animation: myfirst1 5s linear infinite;
+}
+
+.moniter-chart {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  overflow: hidden;
+}
+
+.moniter-chart>.chart-left {
+  float: left;
+  width: 32%;
+  height: 100%;
+}
+
+.moniter-chart>.grid {
+  float: left;
+  width: 68%;
+  height: 100%;
+  /* background: rgb(7,3,22); */
+  background: url('../img/line.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.moniter-chart .chart-right {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-left>.data-name {
+  margin: 42px auto 18px 108px;
+  font-size: 36px;
+  color: #716790;
+}
+
+.chart-left>.data-number {
+  margin-top: -25px;
+}
+
+.data-number>h3 {
+  display: inline-block;
+  margin-left: 108px;
+  font-size: 96px;
+  color: #fff;
+}
+
+.data-number>i {
+  display: inline-block;
+  margin-left: 24px;
+  font-size: 30px;
+  color: #fff;
+}
+
+/*选择设备页面样式*/
+
+.selectTitle {
+  display: inline-block;
+  width: 100%;
+  margin-top: 216px;
+  text-align: center;
+  font-size: 42px;
+  color: #b19bff;
+}
+
+.deviceList {
+  min-width: 3000px;
+  height: 360px;
+  margin-top: 100px;
+  overflow-y: hidden;
+}
+
+.deviceList>.bandDevice {
+  width: 750px;
+  height: 360px;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 12px;
+  border: 4px solid transparent;
+}
+
+.deviceList>.hiddenLi {
+  display: none;
+}
+
+.deviceList>.showLi {
+  display: block;
+  margin-left: -540px;
+}
+
+.deviceList>.active {
+  border-color: #6141c8;
+}
+
+.bandDevice>.bandIcon {
+  float: left;
+  width: 41.6%;
+  height: 100%;
+  background-color: rgba(7, 3, 22, 0.4);
+  text-align: center;
+}
+
+.bandIcon>img {
+  display: inline-block;
+  width: 66%;
+  margin-top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bandDevice>.bandInfo {
+  float: left;
+  width: 58.4%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(7, 3, 22, 0.48);
+}
+
+.bandDevice>.bandInfo>label {
+  display: inline-block;
+  width: 100%;
+  margin-left: 12.3%;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.bandDevice>.bandInfo>.deviceName {
+  font-size: 36px;
+  margin: 72px 0 72px 12.3%;
+}
+
+/*兼容720P*/
+
+@media screen and (min-width: 1110px) and (max-width:1350px) {
+  .deviceList {
+    margin-top: 67px;
+    -webkit-transform: scale(0.6) translate(-33.5%, -33.5%);
+            transform: scale(0.6) translate(-33.5%, -33.5%);
+  }
+
+  .deviceList>.showLi {
+    margin-left: -534px;
+  }
+
+  .selectTitle {
+    margin-top: 123px;
+  }
+
+  .headerTab {
+    height: 124px;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    margin-bottom: -25px;
+  }
+
+  .weather {
+    right: -16px;
+  }
+
+  .weather .downText {
+    margin-top: -20%;
+  }
+
+  .scale {
+    -webkit-transform: scale(0.67) translate(-48%, -33%);
+            transform: scale(0.67) translate(-48%, -33%);
+  }
+
+  .reportDetail {
+    -webkit-transform: scale(0.67) translate(-57%, -24.7%);
+            transform: scale(0.67) translate(-57%, -24.7%);
+  }
+
+  .centerBox {
+    -webkit-transform: scale(0.67);
+            transform: scale(0.67);
+    margin-top: 0px;
+  }
+
+  .leftSide>.sleepStatus,
+  .leftSide>.monitoringTime {
+    height: 249px;
+    padding-left: 14%;
+  }
+
+  .chartsTab {
+    width: 53.3%;
+    right: 5px;
+  }
+
+  .leftSide>.sleepStatus>label,
+  .leftSide>.monitoringTime>label {
+    font-size: 42px;
+  }
+
+  .leftSide>.monitoringTime>label {
+    font-family: DINCOND;
+  }
+
+  .moniter-chart {
+    height: 128px;
+  }
+
+  .moniter-chart>.grid {
+    background-size: cover;
+  }
+
+  .chart-left>.data-name {
+    margin: 21px auto 9px 54px;
+  }
+
+  .data-number>h3 {
+    margin-left: 54px;
+    font-size: 48px;
+    font-family: DINCOND;
+  }
+
+  .data-number>i {
+    font-size: 16px;
+  }
+
+  .chartsTab #reportSleepChart,
+  #reportHeartChart,
+  #reportBreathingChart,
+  #reportOverChart {
+    width: 321px;
+    height: 240px;
+    margin-left: 12px;
+    margin-top: 0px;
+  }
+
+  #reportBreathingChart,
+  #reportOverChart {
+    margin-top: -40px;
+  }
+
+  .reportChart>.averageValue {
+    top: 4%;
+  }
+
+  .reportChart>.breathAverage,
+  .reportChart>.trunAverage {
+    top: -14.5%;
+  }
+
+  .reportTime>label {
+    margin-left: 36px;
+  }
+
+  .sleepAnalysis>.analysisHeader {
+    margin-top: 20px;
+  }
+
+  .reportDetail>.sleepData {
+    margin-top: 20px;
+  }
+
+  .time>.rightSide {
+    top: 117px;
+    width: 64%;
+  }
+
+  .leftSide>.sleepStatus>span,
+  .leftSide>.monitoringTime>span {
+    font-size: 20px;
+  }
+
+  .leftTab .dateSelect {
+    height: 64px;
+    line-height: 64px;
+  }
+
+  /* .leftTab .active{
+		height: 60px;
+		line-height: 60px;
+	} */
+
+  .gapLine {
+    height: 384px !important;
+    top: 66px !important;
+  }
+
+  .chart-left>.data-number {
+    margin-top: -13px;
+  }
+
+  .userIcon {
+    margin-left: 30px;
+  }
+
+  .userName {
+    width: 134px;
+    height: 144px;
+  }
+
+  .weather {
+    font-size: 18px;
+  }
+
+  .weather>.twoFloor {
+    width: 72px;
+  }
+
+  .weather .weatherIcon {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}

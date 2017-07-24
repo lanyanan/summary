@@ -1,0 +1,60 @@
+{
+    "code": 0,
+    "data": {
+        "sleepDuration": 458,
+        "fallSleepDuration": 15,
+        "lightSleepDuration": 112,
+        "deepSleepDuration": 316,
+        "wakeDuration": 0,
+        "sleepScope": "2016-11-07 08:00:00~2016-11-07 06:35:00",
+        "wakePercent": 0,
+        "lightSleepPercent": 0.24,
+        "deepSleepPercent": 0.69,
+        "dataTime": "2016-01-26",
+        "sleepStatusList": [
+            {
+                "startTime": "2016-01-26 15:34:00",
+                "status": 1
+            },
+            {
+                "startTime": "2016-01-26 18:39:00",
+                "status": 3
+            },
+            {
+                "startTime": "2016-01-26 18:44:00",
+                "status": 4
+            },
+            {
+                "startTime": "2016-01-26 19:35:00",
+                "status": 9
+            },
+            {
+                "startTime": "2016-01-26 19:50:00",
+                "status": 7
+            },
+            {
+                "startTime": "2016-01-26 20:39:00",
+                "status": 1
+            },
+            {
+                "startTime": "2016-01-26 23:44:00",
+                "status": 8
+            },
+            {
+                "startTime": "2016-01-27 06:35:00",
+                "status": 9
+            }
+        ],
+        "sleepQuality": "较好",
+        "sleepTypeList": [
+            {
+                "sleepTypeId": 2,
+                "sleepTypeName": "健康型",
+                "sleepTypeDesc": null,
+                "sleepTypeTips": "健康的睡眠是一种习惯，遵循睡眠的自然规律，是预防睡眠障碍的最好办法。",
+                "rules": "非下述类型，则属于健康型",
+                "sequence": 2
+            }
+        ]
+    }
+}

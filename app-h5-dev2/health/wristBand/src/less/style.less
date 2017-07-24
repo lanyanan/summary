@@ -1,0 +1,561 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(./TimeSelect.less);
+@import url(../css/calendar.css);
+@color-base: #000;
+@color-gray: #b0bdc6;
+@color-orange: #ce4b19;
+@color-blue: #637efa;
+@color-dark: #54586b;
+@color-light: #b0bac4;
+@color-line-gray: #444350;
+@color-purple: #c52ff0;
+@font-face {
+    font-family: 'Dincond';
+    src: url('../font/dincond-bold-webfont.eot'),
+    url('../font/dincond-bold-webfont.ttf'),
+    url('../font/dincond-bold-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html,body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.8);
+}
+html {
+    background-image: url('../img/data/masker-indexs.jpg?vdassdadassda=21');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/*公共样式*/
+.hide {
+    display: none!important;
+}
+.transparent {
+    opacity: 0;
+    visibility: hidden!important;
+}
+/*导航栏*/
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    z-index: 99999;
+    display: flex;
+    &:before {
+        z-index: -1;
+    }
+    &.ios {
+        padding-top: 20px;
+        height: 44px;
+        line-height: 44px;
+        overflow: hidden;
+    }
+    &.android {
+        padding-top: 25px;
+        height: 48px;
+        line-height: 48px;
+    }
+    a {
+        display: block;
+        color: @color-gray;
+        &:nth-child(1) {
+            flex: 15%;
+            background: url(../img/layout/i-nav-back.png) no-repeat center center;
+            background-size:  48% auto;
+        }
+        &:nth-child(2) {
+            flex: 70%;
+            height: 44px;
+            line-height: 44px;
+            color: @color-gray;
+            overflow: hidden;
+        }
+        &:nth-child(3) {
+            flex: 15%;
+            background: url(../img/layout/i-nav-dot.png) no-repeat center center;
+            background-size:  42% auto;
+        }
+    }
+    .back {
+        flex: 20%;
+        display: block;
+        //float: left;
+        height: 100%;
+        width: 100px;
+    }
+    .title {
+        flex: 60%;
+        display: block;
+        color: #fff;
+        width: 60%;
+        margin: 0 auto;
+        height: 44px;
+        line-height: 44px;
+    }
+    .detail {
+        flex: 20%;
+        display: block;
+        //float: right;
+        width: 1rem;
+    }
+}
+
+
+/*导航栏*/
+.main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    &.ios {
+        padding-top: 64px;
+    }
+    &.android {
+        padding-top: 73px;
+    }
+}
+/*日期控件*/
+.calendar-module {
+    position: relative;
+    z-index: 10;
+    line-height: 2.8333rem;
+    text-align: center;
+    &.expansion {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+    }
+    .expansion-btn {
+        display: inline-block;
+        line-height: 2.8333rem;
+        vertical-align: baseline;
+        color: @color-gray;
+        font-size: 16px;
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin: -0.24rem 6px 0 0;
+            vertical-align: middle;
+        }
+    }
+    .calendar-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+        .calendar:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            background: rgba(8,8,8,0.2);
+            filter: blur(20px);
+        }
+        .calendar-body {
+            position: relative;
+            z-index: 10;
+        }
+        .calendar-ctrl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+/*仪表盘 */
+.dashboard {
+    position: relative;
+    width: 776/36rem;
+    height: 776/36rem;
+    margin: auto;
+    text-align: center;
+    .slogan {
+        position: relative;
+        z-index: 3;
+        color: @color-orange;
+        font-size: 16px;
+        line-height: 2rem;
+        padding-top: 4.5rem;
+    }
+    .percent {
+        position: relative;
+        z-index: 3;
+        height: 6.5rem;
+        color: @color-blue;
+        font-size: 90px;
+        line-height: 6.5rem;
+        font-family: 'Dincond';
+        span {
+            font-size: 18px;
+        }
+    }
+    .status {
+        height: 2rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+        color: @color-dark;
+        font-size: 14px;
+        img {
+            height: 14px;
+            padding-right: 5px;
+            margin-top: -3px;
+            vertical-align: middle;
+        }
+    }
+    .steps {
+        width: 372/36rem;
+        height: 82/36rem;
+        margin: 0 auto;
+        border: 2px solid @color-blue;
+        border-radius: 82/36/2rem;
+        color: @color-blue;
+        font-size: 16px;
+        line-height: 82/36rem;
+    }
+    .canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+/*里程计步*/
+.mileage {
+    padding: 68/36rem 84/36rem;
+    text-align: center;
+    color: @color-gray;
+    font-family: 'Dincond';
+    h2 {
+        font-size: 28px;
+    }
+    h5 {
+        font-size: 12px;
+        line-height: 16px;
+        b {
+            font-size: 16px;
+            line-height: 16px;
+            vertical-align: text-top;
+        }
+    }
+
+}
+/*睡眠心率*/
+.recording {
+    padding: 0 90/36rem;
+    border-top: 1px solid @color-line-gray;
+    a {
+        height: 282/36rem;
+        align-content:center;
+        color: @color-dark;
+        &:first-child {
+            border-bottom: 1px solid @color-line-gray;
+        }
+        .left {
+            width: 92/36rem;
+            margin-right: 42/36rem;
+            line-height: 282/36rem;
+            img {
+                width: 92/36rem;
+                height: 92/36rem;
+                vertical-align: middle;
+            }
+        }
+        .mid,.right {
+            display: flex;
+            flex-grow: 1;
+            flex-direction:column;
+            align-content:flex-end;
+            h2 {
+                padding-top: 84/36rem;
+                color: @color-light;
+                font-size: 16px;
+                line-height: 2rem;
+            }
+            h5{
+                font-size: 14px;
+                line-height: 1.8rem;
+            }
+            .blue {
+                color: @color-blue;
+            }
+            .light {
+                color: @color-light;
+            }
+            &.arrow {
+                background: url('../img/layout/i-index-arrow.png') no-repeat center right;
+                background-size: 0.8rem auto;
+            }
+        }
+        .right {
+            text-align: right;
+        }
+    }
+}
+/*设备连接页面*/
+.connect-page {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    &.ios {
+        padding-top: 64px;
+    }
+    &.android {
+        padding-top: 73px;
+    }
+    .dashboard {
+        margin-top: 2.8333333rem;
+    }
+    .hint {
+        margin-top: 102/36rem;
+        font-size: 16px;
+        text-align: center;
+        &.dark {
+            color: @color-dark;
+        }
+        &.blue {
+            color: @color-blue;
+        }
+    }
+    .btn {
+        position: absolute;
+        bottom: 4rem;
+        left: 50%;
+        display: block;
+        width: 744/36rem;
+        height: 120/36rem;
+        margin: 0 0 0 -744/2/36rem;
+        border-radius: 120/2/36rem;
+        border: 1px solid @color-blue;
+        font-size: 16px;
+        line-height: 120/36rem;
+        text-align: center;
+        &.connect{
+            color: #1e1c23;
+            background: @color-blue;
+        }
+        &.cancel {
+            color: @color-blue;
+            background: rgba(99,126,250,.1);
+        }
+    }
+}
+/*心率*/
+.heartrate {
+    .times {
+        height: 320/36rem;
+        color: @color-blue;
+        font-family: 'Dincond';
+        text-align: center;
+        h2 {
+            font-size: 90px;
+            line-height: 90px;
+        }
+        div {
+            font-size: 16px;
+        }
+    }
+    .measure {
+       a {
+           display: block;
+           width: 216/36rem;
+           height: 216/36rem;
+           margin: 24/36rem auto 0;
+           line-height: 216/36rem;
+           border: 2px solid @color-blue;
+           border-radius: 50%;
+           font-size: 16px;
+           text-align: center;
+           &.start {
+               color: #fff;
+               background: @color-blue;
+           }
+           &.stop {
+                color: @color-blue;
+           }
+       }
+    }
+}
+/*睡眠，心率*/
+.module-a {
+    height: 320/36rem;
+    color: @color-blue;
+    font-family: 'Dincond';
+    text-align: center;
+    overflow: hidden;
+    h2 {
+        font-size: 90px;
+        line-height: 90px;
+    }
+    div {
+        font-size: 16px;
+    }
+    &.sleep-a {
+        h2 {
+            font-size: 40px;
+            line-height: 70px;
+        }
+        div {
+            color: @color-dark;
+        }
+    }
+
+}
+.module-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 144/36rem;
+    line-height: 144/36rem;
+    background: rgba(0,0,0,.20);
+    color: @color-dark;
+    font-size: 14px;
+    text-align: center;
+    .active {
+        color: @color-blue;
+        background: rgba(0,0,0,.30);
+    }
+}
+/*运动周月数据*/
+.sport-echarts {
+    text-align: center;
+    overflow-y: scroll;
+}
+/*运动日数据*/
+.sport-daily {
+    text-align: center;
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: 33.33%;
+        //height: 468/36rem;
+        //
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(106,119,249,.2);
+        font-family: 'Dincond';
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    h2 {
+        color: @color-blue;
+        font-size: 60px;
+        span {
+            font-size: 14px;
+        }
+    }
+    h5 {
+        color: @color-dark;
+        font-size: 12px;
+    }
+}
+/*历史数据请求日期选择*/
+.date-select {
+    padding: 7px 0;
+    text-align: center;
+    line-height: 4.5rem;
+    i {
+        display: inline-block;
+        width: auto;
+        min-width: 14px;
+        height: 4.5rem;
+        color: @color-light;
+        font-size: 14px;
+        line-height: 4.5rem;
+        vertical-align: top;
+        &:first-child {
+            background: url('../img/layout/i-select-before.png') no-repeat center left;
+            background-size: auto 1rem;
+        }
+        &:nth-child(2) {
+            padding: 0 22px;
+            line-height: 4.6rem;
+        }
+        &:last-child {
+            background: url('../img/layout/i-select-after.png') no-repeat center right;
+            background-size: auto 1rem;
+        }
+    }
+}
+#steps,#calories {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 5%;
+        z-index: 9999;
+        border-left: 3px solid @color-blue;
+        height: 14px;
+        line-height: 14px;
+        padding-left: 5px;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+#steps {
+    &:before {
+        content: '步数';
+    }
+}
+#calories {
+    &:before {
+        content: '卡路里';
+    }
+}
+.purple {
+    color: @color-purple;
+}
+.blue {
+    color: @color-blue;
+}
+.dark-gray {
+    color: @color-dark;
+}
+.color-blue {
+    color: @color-blue;
+}
+.ios {
+    padding-top: 64px;
+}
+.android {
+    padding-top: 73px;
+}
+.none {
+    opacity: 0!important;
+}

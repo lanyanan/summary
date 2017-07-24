@@ -1,0 +1,97 @@
+.text {
+  height: 65px;
+  position: relative;
+}
+
+.text .left,
+.text .right {
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+.text .left {
+  width: 25%;
+  left: 10%;
+  line-height: 65px;
+  cursor: default;
+}
+
+.text .right {
+  background-color: #000000;
+}
+
+@media (max-width: 880px) {
+  .text .right {
+    right: 0;
+  }
+}
+
+@media (min-width: 880px) {
+  .text .right {
+    right: 10%;
+  }
+}
+
+.text .right .power {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.picture {
+  margin-top: 24px;
+  position: relative;
+  padding-left: 37px;
+}
+
+.picture .img {
+  position: absolute;
+  top: 130px;
+}
+
+.picture #qrcode,
+.picture .right {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.picture #qrcode {
+  left: 12%;
+}
+
+.picture #qrcode canvas {
+  border: 30px solid #fff;
+}
+
+.picture #codeWrap {
+  margin-left: 66px;
+  border: 1px solid;
+  height: 240px;
+}
+
+.picture .right {
+  width: 396px;
+  height: 690px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  border: 10px solid #656e7d;
+  border-radius: 5px;
+}
+
+.picture .right > .resize-canvas {
+  position: absolute;
+  bottom: -14px;
+  width: 100%;
+  height: 30px;
+  cursor: n-resize;
+  background: #dee1e4 url("../../../../static/img/resize-canvas.png") no-repeat center 0;
+}

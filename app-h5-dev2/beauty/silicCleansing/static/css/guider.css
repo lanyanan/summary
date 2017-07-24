@@ -1,0 +1,59 @@
+.fclear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.tar {
+  text-align: right;
+}
+
+.c-steps-title {
+  margin: 36px 0 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #323232;
+}
+
+.c-step-wrap {
+  width: 100%;
+}
+
+.c-step-head {
+  width: 35%;
+  line-height: 30px;
+  font-size: 16px;
+  color: #323232;
+}
+
+.c-step-text {
+  width: 35%;
+  font-size: 14px;
+  color: #707070;
+  line-height: 1.6;
+}
+
+.c-step-circle {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ACABAF;
+  color: #fff;
+  font-size: 14px;
+}
+
+.c-step-hr {
+  margin: 0 auto;
+  width: 4px;
+  height: 66px;
+  background-color: #ACABAF;
+}

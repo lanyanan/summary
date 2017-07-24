@@ -1,0 +1,590 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+/*@import url(../../../common/src/lib/toast.css);*/
+@import url(../../../common/static/tips.css);
+@import url(TimeSelect.css);
+
+.tal {
+    text-align: left;
+}
+.tar{
+    text-align: right;
+}
+.tac {
+    text-align: center;
+}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+html,body,.app-body {
+    height: 100%;
+    overflow: hidden;
+}
+.app-body, .slide-up, .slide-down {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background: #3285ff;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+header .dev-back {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 100%;
+    background: url(../img/i-back-new.png) no-repeat 0 center;
+    background-size: auto 70%;
+}
+header .dev-name {
+    padding: 0 70px;
+    text-align: center;
+    flex-grow:1;
+    box-sizing: content-box;
+}
+header .dev-info {
+    position: absolute;
+    right: 16px;
+    width: 70px;
+    color: #fff;
+    text-align: right;
+}
+.main-panel, .dev-open, .dev-close {
+    position: relative;
+    overflow: hidden;
+    background: #f7f7f6;
+    /*background: #f7f7f6 url('../img/dev-screen.jpg') no-repeat top center;
+    background-size: auto 100%;*/
+}
+.screen {
+    width: 100%;
+    height: 12rem;
+    background: #f7f7f6;
+    overflow: hidden;
+    background: #f7f7f6 url('../img/dev-screen.jpg') no-repeat center top;
+    background-size: cover;
+}
+.screen img {
+    width: 100%;
+}
+/*背景*/
+.setting-screen{
+    width: 100%;
+    position: relative;
+    top: -8.5rem;
+    background: #f7f7f6 url('../img/dev-screen.jpg') no-repeat top center;
+    background-size: cover;
+}
+.setting-screen img {
+    width: 100%;
+    position: relative;
+    opacity: 0;
+}
+/*状态展示*/
+.setting-show {
+    position: absolute;
+    left: 0;
+    bottom: 220px;
+    bottom: 13.5rem;
+    width: 100%;
+}
+.setting-show dl {
+    padding: 0 16px;
+    height: 60px;
+}
+.setting-show .flex-cell {
+    position: relative;
+    height: 50%;
+    line-height: 30px;
+    color: #555;
+    font-size: 13px;
+}
+.setting-show .temperature{
+    line-height: 33px;
+}
+.setting-show .time {
+    width: 100%;
+    height: 30px;
+    line-height: 34px;
+    margin: 0 auto;
+}
+.setting-show .timer {
+    position: absolute;
+    top:-25px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.setting-show .status {
+    display: inline-block;
+    min-width: 44px;
+    max-width: 65px;
+    height: 20px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 22px;
+    border-radius: 3px;
+    background: #59b30f;
+}
+.setting-show .switch {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: end;
+    justify-content:flex-end;
+    -webkit-tap-highlight-color: transparent;
+}
+.setting-show .switch i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+    background: url("../img/switch.png") no-repeat top right;
+    background-size: auto 100%;
+}
+.setting-show .switch span {
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.setting-show .orange {
+    background-color: #ff9b3a;
+}
+.setting-show .red {
+    background-color: #ff563a;
+}
+/*状态设置*/
+.setting-act {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.setting-act dl {
+    height: 210px;
+    height: 13rem;
+}
+.setting-act dl h5 {
+    position: relative;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 13px;
+}
+.setting-act dl h5>i {
+    display: block;
+    position: absolute;
+    right: -12px;
+    bottom: 0;
+    width: 13px;
+    height: 13px;
+    background: url(../img/i-set-off.png) no-repeat bottom right;
+    background-size: 50% 50%;
+}
+.setting-act .act-show .on h5,.setting-act .act-show .on strong,.setting-act .act-show .on i {
+    color: #4c91fc;
+}
+.setting-act .act-show .on h5>i {
+    background: url(../img/i-set-on.png) no-repeat bottom right;
+    background-size: 50% 50%;
+}
+.setting-act dd {
+    float: left;
+    width: 50%;
+    height: 50%;
+    background: #fff;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    box-sizing: border-box;
+}
+.setting-act dd:nth-child(1){
+    border-top: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+.setting-act dd:nth-child(2){
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+.setting-act dd:nth-child(3){
+    border-right: 1px solid #dcdcdc;
+}
+/*状态图标*/
+.setting-act dd .act-icon {
+    display: block;
+    width: 130px;
+    height: 30px;
+    color: #555;
+    text-align: center;
+}
+.setting-act dd .act-icon {
+    background: url(../img/i-data-on.png) no-repeat center center;
+    background-size: auto 100%;
+}
+.setting-act dd .act-icon strong {
+    display: inline-block;
+    height: 100%;
+    line-height: 32px;
+    vertical-align: bottom;
+    font-size: 28px;
+    font-weight: 700;
+}
+.setting-act dd .act-icon i {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: bottom;
+    font-size: 12px;
+    font-style: normal;
+}
+/*启动按钮*/
+.start-up {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background: #4c91fc;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+.start-up.disable {
+    background: #bec1c5;
+}
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+/*开机*/
+.dev-open {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+.dev-open .setting-act .mode .act-icon {
+    background: url(../img/m-0-on.png) no-repeat center center;
+    background-size: auto 100%;
+}
+/*关机*/
+.dev-close {
+    position: absolute;
+    overflow: hidden;
+    z-index: 9999;
+}
+.dev-close .setting-show .time {
+    width: 100%;
+    height: 30px;
+    background: url(../img/i-data-on.png) no-repeat center center;
+    background-size: auto 100%;
+}
+.dev-close .setting-act .mode .act-icon {
+    background: url(../img/m-0-off.png) no-repeat center center;
+    background-size: auto 100%;
+}
+.dev-close .setting-act dd .act-icon {
+    background: url(../img/i-data-off.png) no-repeat center center;
+    background-size: auto 100%;
+}
+.dev-close .setting-act h5 {
+    color: #d1d1d1;
+    position: relative;
+}
+.dev-close .setting-show .status {
+    background: #bec1c5;
+}
+/*不显示背景*/
+.change {
+    background: none!important;
+}
+
+/*开关机动画*/
+.slide-up {
+    z-index:1000;
+    opacity: 1;
+    /*-webkit-transform: translateY(0);
+    transform: translateY(0);*/
+}
+.slide-down {
+    z-index: 999;
+    opacity: 1;
+    /*-webkit-transform: translateY(100%);
+    transform: translateY(100%);*/
+}
+.slide-down, .slide-up {
+    /*-webkit-transition: -webkit-transform 1.1s;
+    transition: -webkit-transform 1.1s;
+    transition: transform 1.1s;
+    transition: transform 1.1s, -webkit-transform 1.1s;*/
+    -webkit-transition: all 1.2ms;
+    transition:all 1.2ms;
+}
+
+/*上下滑抽屉弹窗*/
+.slide-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slide-dialog-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transform: translateZ(0);
+    user-select: none;
+    touch-action: pan-y;
+    font-smoothing: antialiased;
+    tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+.slide-dialog-inner {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top:0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 32px 0;
+    background: #fff;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 1.1s;
+    transition: -webkit-transform 1.1s;
+    transition: transform 1.1s;
+    transition: transform 1.1s,-webkit-transform 1.1s;
+}
+.slide-dialog-up {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.slide-dialog-down {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.slide-dialog-inner h3 {
+    padding: 0 16px;
+    margin-bottom: 20px;
+    height: 64px;
+    line-height: 64px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background: #4c91fc;
+}
+.slide-dialog-inner .ios {
+    height: 64px;
+    line-height: 64px;
+}
+.slide-dialog-inner .android {
+    height: 64px;
+    line-height: 64px;
+}
+.slide-dialog-inner dl {
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    -webkit-flex-wrap:wrap;
+    flex-direction:wrap;
+}
+.slide-dialog-inner .mod {
+    display: inline-block;
+    width: 20%;
+    padding-top: 36px;
+    padding-bottom: 27px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+}
+
+.slide-dialog-inner img {
+    display: block;
+    height: 30px;
+    padding-bottom: 6px;
+    margin: auto;
+}
+.slide-dialog-inner .mod.on {
+    color: #4c91fc;
+}
+.slide-dialog-inner .set {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 16px;
+    margin: -1px auto 0;
+    color: #555;
+    /*color: #d1d1d1;*/
+    font-size: 14px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.slide-dialog-inner .set span {
+    display: inline-block;
+    vertical-align: top;
+}
+.slide-dialog-inner .set i {
+    display: inline-block;
+    height: 46px;
+    width: 9px;
+    margin-left: 9px;
+    background: url(../img/i-arrow-on.png) no-repeat center right;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+.slide-dialog-inner .disabled i{
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    width: 9px;
+    margin-left: 9px;
+    background: url(../img/i-arrow-off.png) no-repeat center right;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+.slide-dialog-inner h3 {
+    position: relative;
+}
+.slide-dialog-inner .back {
+    display: block;
+    position: absolute;
+    left: 16px;
+    height: 100%;
+    width: 100px;
+    background: url(../img/i-back.png) no-repeat center left;
+    background-size:  28% auto;
+}
+.slide-dialog-inner .tal {
+    float:left;
+    width: 50%;
+}
+.slide-dialog-inner .tar {
+    float: right;
+    width: 50%;
+}
+.slide-dialog-inner .mode-box {
+    width: 100%;
+    height: 152px;
+}
+/*首页按钮*/
+.btnlist-body{
+    background:#FFF;
+    opacity: 1;
+    animation:fade 1s;
+}
+.btnlist{
+    padding:0 1rem;
+}
+
+.btn-title{
+    font-size:13px;
+    color:#A9A9A9;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.btnlist article{
+    text-align: center;
+    color:#848484;
+    font-size:14.5px;
+}
+
+.btnlist article img{
+    width:48px;
+    height:48px;
+}
+
+.btnlist article p{
+    margin-top: 0.5rem;
+}
+.btnlist .triggered {
+    color: #dedede;
+    opacity: .5;
+}
+.outer-close .item {
+    color: #dedede;
+}
+
+@keyframes fade{
+    0%{
+        opacity:0.3;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fade{
+    0%{
+        opacity:0.3;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.console {
+    position: absolute;
+    width: 96%;
+    padding: 1% 2%;
+    background: #5ac3e7;
+    font-size: 15px;
+    z-index: 1001;
+    word-break: break-all;
+    color: #f2f2f2;
+}
+.settingA {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: darkgreen;
+}
+
+/*修改公用tips组件*/
+section.tips-main .box-btn{width: 100%;border-right: none;}
+section.tips-main .box-btn:nth-child(2){display: none;border: 1px solid #000;}
+section.tips{background: rgba(0,0,0,0.6);}
+section.tips-main{width: 90%;color: #000;}
+section.toast-main{color: #fff;font-size:16px;font-weight: normal;}
+section.tips-main{margin:10rem auto 0; height: auto}
+section.tips-main>.box-tips{height: auto}
+section.tips-main>.box-tips{padding: 20px;}
+section.box-toast{height: 40px;background-color: #656565;color: #fff;border-radius:25px}

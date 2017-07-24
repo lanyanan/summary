@@ -1,0 +1,63 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/src/lib/slided-calendar.css);
+@import url(./result-table.css);
+
+html,body,#ROOT,.viewing-area{
+    height:100%;
+}
+body{
+    background-color:#eee;
+    font-size:14px;
+    color:#303030;
+}
+a{
+    color:#303030;
+}
+.condition{
+    padding:15px 15px 10px;
+    line-height:2rem;
+    background-color:#fff;
+    box-sizing:border-box;
+    border-bottom:1px solid #eee;
+}
+.condition>dl{
+    margin:10px 0;
+}
+.condition>dl>dt{
+    width:65px;
+}
+.condition>dl>dd>a{
+    display:inline-block;
+    line-height:2rem;
+    border:1px solid #919191;
+    border-radius:5px;
+    width:30%;
+    margin:0 2.5%;
+    text-align:center;
+    box-sizing:border-box;
+    color:#5e5e5e;
+}
+.condition>dl>dd>a:first-child{
+    margin-left:0;
+}
+.condition>dl>dd>a:last-child{
+    margin-right:0;
+}
+.condition>dl>dd>a.date{
+    width:100%;
+    background:url(../img/ico2.png) no-repeat 9% center;
+    background-size:6%;
+    color:#303030;
+}
+.condition>dl>dd>a.selected{
+    background-color: #3cc6d1;
+    border-color: #3cc6d1;
+    color:#fff;
+}
+#history-wrap{
+    width:100%;
+    height:100%;
+    overflow:auto;
+}

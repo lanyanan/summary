@@ -1,0 +1,92 @@
+html,body{
+	height: 100%;
+}
+.swiper-container{width:100%;height:27.916667rem;-webkit-perspective:1000px;-moz-perspective:1000px;-ms-perspective:1000px;perspective:1000px;background: #000;}
+.swiper-slide{width:68%;height:100%;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;position: relative;}
+.swiper-slide>img{
+	position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%);height: 100%;
+}
+.swiper-slide .main-img-w{width: 100% !important; height: auto;}
+.swiper-slide .main-img-h{height: 100% !important; width: auto;}
+.swiper-pagination-bullet{background: #e9e4de;}
+.swiper-pagination-bullet-active{background: #ffffff;}
+.group{
+	padding-top: 1.333333rem;
+	padding-bottom: 1.291667rem;
+	border-bottom: 1px solid #dadada;
+	background: #fff;
+}
+.p-text{
+	font-size: 14px;
+	color: #693f4a;
+}
+.group p:nth-child(2){
+	margin:1rem 0;
+}
+.tc{text-align: center;}
+.margin-t20{
+	margin-top: 0.833333rem;
+}
+.border-tb{
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+}
+/* 提交和参与按钮 */
+.m-btn{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5.0rem;
+    align-items: center;
+    background-color: rgba(255,255,255,0.8);
+}
+.m-btn button{
+    display: block;
+    color:#db7600;
+    font-size: 16px;
+    font-weight: 600;
+    border:0;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(240,240,240,0);
+}
+.m-btn .btn1{
+    width: 11.833333rem;
+    height: 3.333333rem;
+    margin-left: 4.8%;
+    background: url(../../static/img/vote.png) no-repeat;
+    background-size: 100% 100%;
+}
+.m-btn .btn1-active{
+    width: 11.833333rem;
+    height: 3.333333rem;
+    margin-left: 4.8%;
+    background: url(../../static/img/vote-active.png) no-repeat;
+    background-size: 100% 100%;
+}
+.m-btn .btn2{
+    width: 14.75rem;
+    height: 3.333333rem;
+    margin-left: 5.3%;
+    background: url(../../static/img/join.png) no-repeat;
+    background-size: 100% 100%;
+}
+.m-btn .btn2-active{
+    width: 14.75rem;
+    height: 3.333333rem;
+    margin-left: 5.3%;
+    background: url(../../static/img/join-active.png) no-repeat;
+    background-size: 100% 100%;
+}
+.m-btn .btn2-disabled{
+    width: 14.75rem;
+    height: 3.333333rem;
+    margin-left: 5.3%;
+    opacity: 0.4;
+    background: url(../../static/img/join-active.png) no-repeat;
+    background-size: 100% 100%;
+}
+.placeholder{
+	width: 100%;
+	height: 5.0rem;
+}

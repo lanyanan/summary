@@ -1,0 +1,83 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+/* @import url(../../../common/static/mediaQuery.css); */
+
+html,body,.app-body{height:100%;overflow:hidden;}
+body{background-color:rgb(244,244,244);}
+input[type="button"]{background:none;border:none;outline:none;}
+h2{padding:.2rem 1rem;font-weight:bold;}
+a{-webkit-tap-highlight-color:transparent;}
+.slide-down,.slide-up{
+    -webkit-transition: -webkit-transform 1.1s;
+    -ms-transition: -ms-transform 1.1s;
+    -o-transition: -o-transform 1.1s;
+    transition: transform 1.1s;
+}
+.slide-up{
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.slide-down{
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.app-body{position:absolute;top:0;bottom:0;left:0;right:0;}
+.shutdownface{position:absolute;z-index:9999;top:0;bottom:0;left:0;right:0;background-color:#acc;text-align:center;}
+.shutdownface>.pic{margin:10% auto;width:154px;height:226px;background:url(../img/aromaDiffuser/aroma2.png) no-repeat 0 0;background-size:100%;}
+.shutdownface>.switch{position:static;display:inline-block;}
+.startupface{position:absolute;z-index:1;top:0;bottom:0;left:0;right:0;}
+.screen{
+    position:absolute;
+    z-index:2;
+    height:205px;
+    height: 170px;
+    width:100%;
+    background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35));
+    background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35));
+    background-repeat:repeat-x;
+    background-color:#18b2d3;
+    padding:7% 0 3%;
+    text-align:center;
+}
+.screen>.pic{margin:0 auto;width:127px;height:205px;height: 170px;background:url(../img/aromaDiffuser/aroma.png) no-repeat 0 0;background-size:100%;}
+.screen>.pic>img{width:127px;}
+.switch{position:absolute;right:3%;bottom:5%;width:3rem;height:3rem;background:url(../img/aromaDiffuser/switch.png);background-size:100% 100%;border-radius:3rem;}
+#panel-scroller{position:absolute;top:190px;bottom:0;margin-top:10%;width:100%;z-index:1;}
+
+.lights{text-align:center;color:#bbb;background-color:#fff;border-bottom:1px solid #ccc;}
+.lights>dl{margin:5px 20px;}
+.lights>dl.on{color:rgb(29,180,215);}
+.lights>dl>dd>img{width:40%;}
+
+.mists{text-align:center;color:#bbb;background-color:#fff;border-bottom:1px solid #ccc; }
+.mists>dl{margin:20px;}
+.mists>dl.on{color:rgb(29,180,215);}
+.mists>dl>dd>img{width:40%;}
+
+.clock{padding:0.7rem 1rem;background-color:#fff;border:1px solid #ccc;}
+.clock>dl{text-align:center;color:#bbb;}
+.clock>dl.on{color:rgb(26,191,229);}
+.clock>dl.on>dd{border-color:rgb(26,191,229);}
+.clock>dl>dd{margin:10px auto;width:1.5rem;height:1.5rem;border:1px solid #ccc;border-radius:1rem;}
+
+.colors{background-color:#fff;border:1px solid #ccc;}
+.colors>a{text-align:center;padding:20px 0;color:transparent;}
+.colors>a.on{color:#fff;}
+.colors>a>b{display:inline-block;width:2rem;height:2rem;line-height:2rem;border-radius:0.5rem;}
+.colors>a>.c1{background-color:rgb(231,86,86);}
+.colors>a>.c2{background-color:rgb(244,103,23); }
+.colors>a>.c3{background-color:rgb(239,242,152);}
+.colors>a>.c4{background-color:rgb(125,230,123);}
+.colors>a>.c5{background-color:rgb(145,236,240);}
+.colors>a>.c6{background-color:rgb(107,150,237);}
+.colors>a>.c7{background-color:rgb(244,103,237);}
+.colors>a>.c8{background-color:rgb(248,250,232);}
+
+.clock2{padding:0.7rem 1rem;margin-top:20px;background-color: #fff;border:1px solid #ccc;}
+.clock2>p{text-align: right;}
+.clock2>dl>dt{color:#ccc;}
+.clock2>dl>dd{font-weight:bold;font-size:2em;}

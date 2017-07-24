@@ -1,0 +1,540 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+
+html,body,#ROOT {
+    height: 100%;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tl {
+    text-align: left;
+}
+
+
+.container{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+}
+/**********************************  首页  ***********************************************/
+/*待机页面*/
+.watingPage{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: rgba(42,204,250,1);
+
+}
+/*空格站位*/
+.device_nav{
+    height: 6rem;
+    width: 100%;
+
+}
+/*洗衣机动画*/
+.watingPage .deviceWasherImage {
+
+    box-sizing: border-box;
+    width: 240px;
+    height: 240px;
+    margin: 3rem auto 0 auto;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    background: url('../image/washer/guntong.png') no-repeat center;
+    background-size: 100%;
+
+}
+
+/*开关页面*/
+.diveceView {
+    height: 36rem;
+    background-color: rgba(42,204,250,1);
+
+    position: absolute;
+    bottom: 230px;
+    left: 0;
+    width: 100%;
+}
+
+.diveceView .device_control{
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 100%;
+}
+
+.device_control_relative{
+    position: relative;
+    width: 100%;
+    margin-top: -0.8rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+
+}
+
+.device_control .wash_children_lock{
+    position: absolute;
+    left: 24px;
+    top: 5px;
+}
+
+.device_control .wash_switch{
+    position: absolute;
+    right: 24px;
+    top: 5px;
+}
+
+
+.deviceWasherImage .deviceWashAnimation{
+
+    box-sizing: border-box;
+    width: 210px;
+    height: 210px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ControlPannelUpWave{
+    position: absolute;
+    left: 0;
+    bottom: 170px;
+    width: 100%;
+}
+
+.watingPage .diveceSetingView{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0.5rem auto 0 auto;
+    height: 170px;
+}
+
+.diveceSetingView  .deviceSeting_status{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 4px;
+    color: #a9a9a9;
+    margin-bottom: 10px;
+}
+.diveceSetingView .deviceSeting_modeImage {
+    text-align: center;
+}
+.diveceSetingView .deviceSeting_modeImage img{
+    width: 132px;
+    height: 66px;
+}
+
+.diveceSetingView  .deviceSeting_alert{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: #a9a9a9;
+}
+
+.diveceSetingView  .deviceSeting_alert.off {
+    color: #ccc;
+}
+
+.diveceSetingView .show_wash_his_button{
+    width: 100%;
+    height: 28px;
+    text-align: center;
+
+}
+
+.diveceSetingView .show_wash_his_button img{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+    /************************************  设置页面 *********************************************/
+.washerSetingPage {
+    width: 100%;
+    height: 100%;
+}
+
+/*导航*/
+.ios {
+    height: 64px;
+    width: 100%;
+    background-color: rgba(42,204,250,1);
+}
+
+ .android {
+    height: 73px;
+    width: 100%;
+    background-color: rgba(42,204,250,1);
+}
+
+/*table cell*/
+.washerSetingPage .set{
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 16px;
+    margin: -1px auto 0;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+.washerSetingPage .set span {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.washerSetingPage .set span img {
+    width: 36px;
+    height: auto;
+    vertical-align: middle;
+    opacity: .25;
+}
+.washerSetingPage .set i {
+    display: inline-block;
+    height: 46px;
+    width: 9px;
+    margin-left: 9px;
+    background: url(../image/i-arrow-on.png) no-repeat center right;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+
+.washerSetingPage .set.disabled  i{
+    opacity: .5;
+}
+.washerSetingPage .set.disabled {
+    color: #4c4c4c;
+}
+.washerSetingPage .set.disabled dd {
+    color: #c7c7c7;
+}
+
+.washerSetingPage .mode-items {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mode-items {
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+
+
+    -webkit-flex-wrap:wrap;
+    -webkit-flex-direction: wrap;
+    flex-direction: wrap;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+
+
+}
+
+.mode-items .mode{
+    width: 25%;
+
+    padding-top: 36px;
+    padding-bottom: 20px;
+
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    color: #848484;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.mode-items .mode.on {
+    color:  rgba(42,204,250,1);
+}
+
+.washerSetingPage .tal{
+    float: left;
+    width: 40%;
+}
+
+.washerSetingPage .tar{
+    float: right;
+    width: 60%;
+    text-align: right;
+}
+
+/*尾部启动*/
+.washerSetingPage .toggle-mode {
+    height: 49px;
+    width: 100%;
+    background-color: rgba(42,204,250,1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+}
+
+/************************************    工作状态页面    *********************************************/
+/*工作页面*/
+.workingPage{
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+
+    background-color: white;
+    display: none;
+}
+
+
+/*开关机动画*/
+ .slide-up, .slide-down {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+}
+.slide-up {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.slide-down {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.slide-down, .slide-up {
+    -webkit-transition: -webkit-transform 1.1s;
+    transition: -webkit-transform 1.1s;
+    transition: transform 1.1s;
+    transition: transform 1.1s, -webkit-transform 1.1s;
+    -webkit-transition: all 1.2s;
+    transition: all 1.2s;
+}
+
+
+.workingPage .controlView{
+    background-color: #2accfa;
+    height: 80px;
+    padding: 40px 10px 0 10px;
+    text-align: center;
+
+    color: white;
+    font-size: 13px;
+}
+
+.workingPage .workStatus{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.workingPage .workStatus span {
+
+    padding: 3px;
+    background-color: #2accfa;
+    border-radius: 3px;
+}
+
+.workingPage  .workDetailMode{
+    margin-top: 11px;
+    text-align: center;
+}
+
+.workDetailModeSub1 {
+    color: #2accfa;
+    font-size: 14px;
+}
+.workDetailModeSub2 {
+    color: #a9a9a9;
+    font-size: 14px;
+}
+
+.controlView dt {
+    padding-top: 8px;
+}
+
+.WorkingLoadingStatusView{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.WorkingLoadingStatusView .veriticalLine1,.WorkingLoadingStatusView .veriticalLine2,.WorkingLoadingStatusView .veriticalLine3{
+    margin: 0 auto;
+    width: 3px;
+    background-color:  #DBF7FF;
+}
+
+.WorkingLoadingStatusView .veriticalLine1{
+    height: 10px;
+}
+
+.WorkingLoadingStatusView .veriticalLine2{
+    height: 7.5px;
+}
+
+
+.WorkingLoadingStatusView .veriticalLine3{
+    height: 6px;
+
+}
+
+
+.WorkingLoadingStatusView .mode{
+    width: 50px;
+    height: 50px;
+    background-color: #DBF7FF;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #2accfa;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.workWaveDiv {
+    margin-top: -3px;
+}
+
+/*btn list*/
+.btn-title{
+    font-size:13px;
+    color:#A9A9A9;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.btn-list {
+    /* width: 100%; */
+    padding: 0 1rem;
+}
+
+.btn-list dl{
+    text-align: center;
+    font-size: 14.5px;
+}
+
+.btn-list .selected{
+    color: #ccc;
+    opacity: 0.5;
+}
+
+
+
+.btn-list .unselected{
+    color: #848484;
+    opacity: 1;
+}
+
+.btn-list dl img{
+    width: 48px;
+    height: 48px;
+}
+
+.btn-list dl p{
+    margin-top: 0.5rem;
+}
+
+
+.wash_his_button {
+    background-color: white;
+    width: 100%;
+    height: 140px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+    text-align: center;
+
+    -webkit-transition: -webkit-transform 1.1s;
+    transition: -webkit-transform 1.1s;
+
+    -webkit-transition: all 1.2s;
+    transition: all 1.2s;
+
+}
+
+
+
+.wash_his_button h1 {
+    text-align: center;
+    font-size: 14px;
+    color: #848484;
+    padding-top: 15px;
+    height: 50px;
+
+    margin-top: 50px;
+    border-top: 1px solid #dcdcdc;
+
+}
+
+
+.wash_his_button h2{
+
+    width: 100%;
+    height: 40px;
+
+}
+.wash_his_button img {
+    width: 20px;
+    height: 20px;
+    margin: 10px auto;
+}
+
+@import url(./controlpanel.css);
+@import url(./circleAnimation.css);
+
+@import url(./wave.css);
+
+@import url(./waveAnimation.css);
+
+@import url(./washerWave.css);
+@import url(./WorkingLoadingAnimation.css);
+
+@import url(./TimeSelect.css);
+
+@import url(./loading.css);
+
+@import url(./washHistory.css);

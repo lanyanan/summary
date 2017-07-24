@@ -1,0 +1,74 @@
+{
+"code": 0,
+"data": {
+    "sceneId":999,
+    "sceneName": "酒店极致舒适睡眠体验",
+    "pictureUrl": "../static/img/scene.png",
+    "addedStatus": null,
+    "summary": "酒店极致舒适睡眠体验酒店极致舒适睡眠体验酒店极致舒适睡眠体验酒店极致舒适睡眠体验",
+    "runStatus": 1,
+    "validity": 0,
+    "deviceList": [
+        {
+            "deviceId": "2F52061F947B99A04EC7110855BEEA6E",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 14006,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },
+        {
+            "deviceId": "2F52061F947B99A04EC7110855BEEA6E",
+            "status": 1,
+            "deviceName": "香薰v73dddddddddd",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 14006,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },{
+            "deviceId": "2F52061F947B99A04EC7110855BEEA6E",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 14006,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },{
+            "deviceId": "0F2F502ECB613BFE6BBBB9CAA8F3D0ED",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 11001,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },
+        {
+            "deviceId": "0F2F502ECB613BFE6BBBB9CAA8F3D0ED",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 11001,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },{
+            "deviceId": "0F2F502ECB613BFE6BBBB9CAA8F3D0ED",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 11001,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },{
+            "deviceId": "0F2F502ECB613BFE6BBBB9CAA8F3D0ED",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 11001,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        },
+        {
+            "deviceId": "0F2F502ECB613BFE6BBBB9CAA8F3D0ED",
+            "status": 1,
+            "deviceName": "香薰v7",
+            "deviceTypeId": 11,
+            "deviceSubTypeId": 11001,
+            "productIcon": "http://200.200.200.58:8981/group1/M00/04/69/yMjIOlczF9iAD4QOAACpgiImhpQ6224022"
+        }
+    ]
+    }
+}

@@ -1,0 +1,833 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  border: 1px solid #dedede;
+}
+
+input[type="button"] {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.flex-cell {
+  display: block;
+  /* OLD */
+  width: 100%;
+  /* OLD */
+}
+
+.flex,
+.flex-column {
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: -webkit-box;
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex {
+  -webkit-box-orient: horizontal;
+  /* OLD */
+  -moz-box-orient: horizontal;
+  /* OLD */
+  -ms-box-orient: horizontal;
+  /* OLD */
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  /* OLD */
+  -moz-box-orient: vertical;
+  /* OLD */
+  -ms-box-orient: vertical;
+  /* OLD */
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-cell {
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  /* IE 10 */
+  -webkit-box-flex: 1;
+          flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/*公共media query查询 1rem初始设置为12px
+dpr为2时对应750的效果图 dpr为3时对应1080的效果图
+查询区间间隔暂时设置为30px 对应3倍图时 1rem大小变化1px
+对于dpr为2的有额外百分之4.2增大的兼容*/
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width:350px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 71.62%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 68.75%;
+    }
+}
+}
+
+@media screen and (min-width: 351px) and (max-width:380px) {
+  html,
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width:410px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 84.64%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 81.25%;
+    }
+}
+}
+
+@media screen and (min-width: 411px) and (max-width:440px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 91.15%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 87.5%;
+    }
+}
+}
+
+@media screen and (min-width: 441px) and (max-width:470px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 97.66%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 93.75%;
+    }
+}
+}
+
+@media screen and (min-width: 471px) and (max-width:500px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 104.17%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 100%;
+    }
+}
+}
+
+@media screen and (min-width: 501px) and (max-width:539px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 110.68%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 106.25%;
+    }
+}
+}
+
+@media screen and (min-width: 540px) {
+  html,
+  body {
+    font-size: 150%;
+  }
+}
+
+/**................................................................index样式..............................................................................*/
+
+body {
+  font-family: "SimHei";
+}
+
+.indexBody {
+  width: 100%;
+}
+
+.beautyDiv {
+  width: 100%;
+}
+
+.beautyDiv .product_info {
+  width: 100%;
+  background: -webkit-linear-gradient(top,#ff5ab7,#8e67ff);
+  background: linear-gradient(top,#ff5ab7,#8e67ff);
+}
+
+.beautyDiv .header {
+  width: 100%;
+  height: 61px;
+  background-color: #f8f8f5;
+  clear: both;
+}
+
+.beautyDiv .header div {
+  float: left;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.beautyDiv .header .logo {
+  width: 48px;
+  height: 48px;
+  background: url("../../static/images/logo.png") no-repeat;
+  background-size: 100%;
+  margin-left: 1.33rem;
+}
+
+.beautyDiv .header .text {
+  margin-left: 1rem;
+  font-size: 14px;
+}
+
+.beautyDiv .header .down {
+  width: 30px;
+  height: 30px;
+  background: url("../../static/images/down.png") no-repeat;
+  background-size: 100%;
+  margin-right: 1.33rem;
+  float: right;
+}
+
+.beautyDiv .activityDiv {
+  width: 91%;
+}
+
+.beautyDiv .activityDiv .productImg {
+  width: 14.33rem;
+  height: 14.33rem;
+  background: url("../../static/images/productImg1.png") no-repeat;
+  background-size: 100%;
+  margin: 1.33rem 0rem 1.33rem 0rem;
+}
+
+.beautyDiv .activityDiv .productText {
+  width: 100%;
+  color: #ffffff;
+}
+
+.beautyDiv .activityDiv .productText .productTitle {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 1.33rem;
+  text-align: center;
+}
+
+.beautyDiv .activityDiv .productText .productContent {
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.beautyDiv .activityDiv .productText .activityTetail {
+  width: 100%;
+  height: 1.95rem;
+  background: url("../../static/images/activityTetail.png") no-repeat;
+  background-size: 100%;
+  margin: 1.2rem 0rem 1.66rem 0rem;
+}
+
+.beautyDiv .activityDiv .productText .activityTetailText {
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.beautyDiv .activityDiv .productText .activityTetailText .TetailTitle {
+  font-weight: bold;
+}
+
+.beautyDiv .activityDiv .productText .activityTetailText .TetailTitle_margin {
+  margin-top: 1.33rem;
+}
+
+.beautyDiv .footer {
+  width: 100%;
+  height: 4.0rem;
+  text-align: center;
+  color: #333333;
+  background-color: #ffffff;
+  filter: alpha(opacity=90);
+  line-height: 4.0rem;
+  font-size: 16px;
+}
+
+/***...............................................................download.........................................................**/
+
+.downloadBody {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63,63,63,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  font-family: "SimHei";
+}
+
+.download_div {
+  width: 85%;
+  height: 31.75rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.download_div .img_div {
+  width: 14.33rem;
+  height: 14.33rem;
+  margin-bottom: 1.66rem;
+}
+
+.download_div .img_div img {
+  width: 14.33rem;
+  height: 14.33rem;
+  margin-top: 1.66rem;
+}
+
+.download_div .p_div {
+  width: 26.66rem;
+  color: #4e4e4e;
+  font-size: 16px;
+  text-align: center;
+}
+
+.download_div .p_div p {
+  width: 26.66rem;
+  line-height: 2;
+}
+
+.download_div .jump {
+  width: 20.41rem;
+  height: 3.66rem;
+  background-color: #fe8176;
+  border-radius: 30px;
+  margin-top: 2.71rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 3.66rem;
+}
+
+/**................................................................share样式..............................................................................*/
+
+.shareBody {
+  width: 100%;
+  background: url("../../static/images/bakShare.png") no-repeat;
+  background-size: 100%;
+  font-family: "SimHei";
+}
+
+.shareDiv {
+  width: 100%;
+}
+
+.shareDiv .shareHader {
+  width: 100%;
+  height: 15.0rem;
+  background: url("../../static/images/headerBack.png") no-repeat;
+  background-size: 100%;
+}
+
+.shareDiv .shareHader .timeDiv {
+  height: 2.0rem;
+  width: 7.25rem;
+  color: #ffffff;
+  background: url("../../static/images/bg@2x.png") no-repeat;
+  background-size: 100%;
+  position: relative;
+  top: 3.33rem;
+  float: right;
+  font-size: 11px;
+  text-align: right;
+  line-height: 2.0rem;
+}
+
+.shareDiv .activityNews {
+  width: 100%;
+  height: 7.0rem;
+  clear: both;
+}
+
+.shareDiv .activityNews div {
+  width: 31%;
+  height: 5.5rem;
+  float: left;
+  margin-left: 1.6%;
+  margin-top: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  filter: alpha(opacity=70);
+}
+
+.shareDiv .activityNews .activityNumber {
+  background: -webkit-linear-gradient(left,#a200ff,#008aff);
+  background: linear-gradient(left,#a200ff,#008aff);
+}
+
+.shareDiv .activityNews .activityValue {
+  background: -webkit-linear-gradient(left,#ff5e39,#ffcc35);
+  background: linear-gradient(left,#ff5e39,#ffcc35);
+}
+
+.shareDiv .activityNews .activityPeople {
+  background: -webkit-linear-gradient(left,#00fff0,#00c7de);
+  background: linear-gradient(left,#00fff0,#00c7de);
+}
+
+.shareDiv .activityNews div span {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.shareDiv .activityNews div span.text {
+  font-size: 12px;
+  margin-top: 0.66rem;
+}
+
+.shareDiv .activityNews div .number {
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+
+.shareDiv .activityNews div .moneyIcon {
+  font-size: 1.5rem;
+}
+
+.shareDiv .applyDiv {
+  width: 21.83rem;
+  height: 5.08rem;
+  background: url("../../static/images/applyBtn.png") no-repeat;
+  background-size: 100%;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 5.08rem;
+  margin-bottom: 1.0rem;
+}
+
+.shareDiv .applyDiv p {
+  margin-left: 1.66rem;
+}
+
+.shareDiv .applyDiv p span {
+  display: inline-block;
+}
+
+.shareDiv .applyDiv p .verticalBar {
+  width: 0.08rem;
+  height: 2.60rem;
+  margin: 0rem 1.0rem;
+  position: relative;
+  top: 0.95rem;
+}
+
+.shareDiv .applyDiv p .OkArrows {
+  width: 0.91rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 1.7rem;
+  right: 2.4rem;
+}
+
+.shareDiv .apply_zero {
+  width: 21.83rem;
+  height: 5.08rem;
+  background: url("../../static/images/apply_zero1.png") no-repeat;
+  background-size: 100%;
+  font-size: 1.66rem;
+  color: #623627;
+  line-height: 4.0rem;
+  margin-bottom: 1.0rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  display: block;
+}
+
+.shareDiv .apply_zero span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.shareDiv .apply_zero .love {
+  width: 2.79rem;
+  height: 2.37rem;
+  margin: 0rem 1.66rem 0rem 3.58rem;
+  background: url("../../static/images/love1.png") no-repeat;
+  background-size: 100%;
+}
+
+/* .shareDiv .apply_zero img{width: 1.51rem;height: 2.67rem;margin:0em 0rem -1.0rem 1.6rem;position: relative;box-sizing:border-box;background-color: transparent;display: block;
+ 
+ }  */
+
+.shareDiv .Awi {
+  width: 91%;
+  height: 1.95rem;
+  background: url("../../static/images/activityProcess.png") no-repeat;
+  background-size: 100%;
+  margin-bottom: 1.0rem;
+}
+
+.shareDiv .Awi_details {
+  width: 91%;
+  height: 1.95rem;
+  background: url("../../static/images/activityTetail_xi.png") no-repeat;
+  background-size: 100%;
+  margin-bottom: 1.0rem;
+}
+
+.shareDiv .award_Tetail {
+  width: 91%;
+  height: 1.95rem;
+  background: url("../../static/images/award_Tetail.png") no-repeat;
+  background-size: 100%;
+  margin: 1.0rem 0rem 1.0rem 0rem;
+}
+
+.shareDiv .activeDirectory {
+  width: 94%;
+  height: 6.41rem;
+  clear: both;
+  margin-bottom: 1.0rem;
+}
+
+.shareDiv .activeDirectory div {
+  float: left;
+}
+
+.shareDiv .activeDirectory .roundDiv {
+  width: 5.4rem;
+  height: 6.0rem;
+  color: #631580;
+}
+
+.shareDiv .activeDirectory .roundDiv_1 {
+  background: url("../../static/images/arrow_1.png") no-repeat;
+  background-size: 100%;
+}
+
+.shareDiv .activeDirectory .roundDiv_2 {
+  background: url("../../static/images/arrow_2.png") no-repeat;
+  background-size: 100%;
+}
+
+.shareDiv .activeDirectory .roundDiv_3 {
+  background: url("../../static/images/arrow_3.png") no-repeat;
+  background-size: 100%;
+}
+
+.shareDiv .activeDirectory .roundDiv_4 {
+  background: url("../../static/images/arrow_4.png") no-repeat;
+  background-size: 100%;
+}
+
+.shareDiv .activeDirectory .roundDiv p {
+  width: 5.4rem;
+  height: 1.4rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.shareDiv .activeDirectory .roundDiv .pTop {
+  margin-top: 1.8rem;
+}
+
+.shareDiv .activeDirectory .Splice {
+  width: 1.4rem;
+  height: 1.18rem;
+  background: url("../../static/images/icon_arrow.png") no-repeat;
+  background-size: 100%;
+  margin-top: 2.83rem;
+}
+
+.shareDiv .activity_rule {
+  width: 91%;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.shareDiv .activity_rule .p_bold {
+  font-weight: bold;
+}
+
+.shareDiv .activity_rule .p_top {
+  margin-top: 0.70rem;
+}
+
+.shareDiv .two_dimension_div {
+  text-align: center;
+}
+
+.shareDiv .two_dimension_div img {
+  width: 10.41rem;
+  height: 10.41rem;
+  margin: 1.0rem 0rem 0.83rem 0rem;
+}
+
+.shareDiv .two_dimension_div p {
+  font-size: 12px;
+  color: #ffffff;
+  height: 1.37rem;
+}
+
+.shareDiv .award_img {
+  width: 27.75rem;
+  height: 11.83rem;
+  margin-bottom: 1.0em;
+}
+
+.shareDiv .award_img img {
+  width: 27.75rem;
+  height: 11.83rem;
+}
+
+.translateX {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}

@@ -1,0 +1,150 @@
+.mistAndTime{
+    border-top: 0.5px solid #4b4865;
+    border-bottom: 0.5px solid #4b4865;
+    position: relative;
+    height: 139px;
+    /*margin-top: 10px;*/
+    /*background-color: rgb(61, 36, 223);*/
+
+}
+
+.mistAndTime p, span{
+    color: #fff;
+    font-size: 18px;
+}
+
+.mistAndTime img{
+    height: 10px;
+    width: 10px;
+    vertical-align:text-bottom;
+}
+
+
+.mistAndTime .left{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 50%;
+    border-right: 0.5px solid #4b4865;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mistAndTime .right{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mistAndTime > .item:nth-child(1){
+    flex-basis: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.mistAndTime > .item:nth-child(2){
+    flex-basis: 40%;
+}
+
+.mistAndTime > .setTimeView{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+    overflow: hidden;
+    /*z-index: 11;*/
+    background-color: rgba(0,0,0,0.3);
+}
+.mistAndTime > .setTimeView_hidden{
+    transition-duration: 1s;
+    z-index: -1;
+}
+.mistAndTime > .setTimeView_show{
+    transition-duration: 1s;
+    z-index: 11;
+}
+.mistAndTime > .setTimeView > .table{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 176px;
+    width: 100%;
+    background-color: rgba(40, 38, 58,0.95);
+
+    display: flex;
+    flex-direction: column;
+    /*transform: translateY(100%);*/
+}
+
+.setTimeView .table .item{
+    padding-left: 16px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #45435c;
+}
+/*.setTimeView .table .item:nth-child(1){
+    background-color: rgb(159, 184, 86);
+}*/
+.mistAndTime .setTimeView .show{
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: translateY(0);
+}
+
+.mistAndTime .setTimeView .hidden{
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: translateY(100%);
+}
+
+.mistAndTime > .setMistView{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.mistAndTime > .setMistView_show{
+    transition-duration: 1s;
+    z-index: 11;
+}
+.mistAndTime > .setMistView_hidden{
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.mistAndTime > .setMistView > .pickerView{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 224px;
+    width: 100%;
+    background-color: rgba(40, 38, 58,0.95);
+}
+
+.mistAndTime > .setMistView > .show{
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: translateY(0);
+}
+
+.mistAndTime > .setMistView > .hidden{
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: translateY(100%);
+}

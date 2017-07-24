@@ -1,0 +1,227 @@
+/*时间设置组件*/
+.timeSelect{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -ms-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;
+    z-index: 99999;
+}
+.timeSelect-down{}
+.timeSelect-up{}
+
+.timeSelect>section:first-child{
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    /*bottom: 21.22rem;*/
+    width: 100%;
+    height: 100%;
+}
+.timeselect{
+    height:36%;
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index:999;
+    background-color:#ffffff;
+}
+.timeselect>.selecttitle{
+    height:2.75rem;
+    line-height:3.75rem;
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid transparent;
+}
+.timeselect>.selecttitle>.title{
+    margin-left:1.25rem;
+    font-size:16px;
+    color:#848484;
+}
+.timeselect>.time{
+    height:14.67rem;
+    position: relative;
+    overflow:hidden !important;
+}
+.timeselect>.time>section.hour,.timeselect>.time>section.minute{
+    display:inline-block;
+    height:100%;
+    z-index:5;
+    opacity:0;
+    position: absolute;
+}
+.timeselect>.time>section.hour{
+    left:0%;
+}
+.timeselect>.time>section.minute{
+    left:50%;
+}
+.timeselect>.time>.timetext{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    line-height:3.75rem;
+    height:3.75rem;
+    width:100%;
+    border-bottom:1px solid #cccccc;
+    border-top:1px solid #cccccc;
+    box-sizing:border-box;
+}
+.timeselect>.time>.timetext>.hour{
+    position: absolute;
+    left:33%;
+    color:#666666;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.minute{
+    position:absolute;
+    left:66%;
+    color:#666666;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.status{
+    display: none;
+    position: absolute;
+    /* right:10%;*/
+    right: 10%;
+    color:#666666;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.show {
+    display: inline-block;
+}
+.timeselect>.time>.hourvalue,.timeselect>.time>.minutevalue{
+    /*width:4.67rem;*/
+    font-size:18px;
+    color:#323232;
+    position: absolute;
+    z-index: 4;
+    text-align:center;
+    margin-top:-2.73rem;
+}
+.timeselect>.time>.hourvalue{
+    left:25%;
+}
+.timeselect>.time>.minutevalue{
+    left:56%;
+}
+.timeselect>.time>.hourvalue>span,.timeselect>.time>.minutevalue>span{
+    line-height:2.73rem;
+    height:2.73rem;
+    display:block;
+}
+.timeselect>.time>.hourvalue>.line1,.timeselect>.time>.minutevalue>.line1{
+    opacity:0.2;
+}
+.timeselect>.time>.hourvalue>.line2,.timeselect>.time>.minutevalue>.line2{
+    opacity:0.5;
+}
+.timeselect>.time>.hourvalue>.line3,.timeselect>.time>.minutevalue>.line3{
+    line-height:3.75rem;
+    height:3.75rem;
+}
+.timeselect>.time>.hourvalue>.line4,.timeselect>.time>.minutevalue>.line4{
+    opacity:0;
+}
+.timeselect>.selectbtn{
+    height:3.75rem;
+    line-height:3.75rem;
+    font-size:16px;
+    color:#515151;
+    text-align:center;
+    border-top:1px solid #cccccc;
+}
+.timeselect>.selectbtn>span:nth-child(1){
+    text-align: left;
+    padding-left: 1.25rem;
+}
+.timeselect>.selectbtn>span:nth-child(2){
+    text-align: right;
+    padding-right: 1.25rem;
+}
+
+/*range*/
+.range{
+    display: block;
+    width:25.56rem;
+    margin:4.72rem auto 0;
+    background-color:#ffffff;
+    color:#ffffff;
+}
+.range>span{
+    display:inline-block;
+}
+
+.range>.label1,.label2{
+    width:2.33rem;
+    height:2.33rem;
+    font-size:15px;
+    font-family: '黑体';
+    color: black;
+    text-align: right;
+}
+
+/*!*进度条组件样式*!*/
+.range>.rangeblock{
+    display:inline-block;
+    vertical-align:text-top;
+    position: relative;
+    width:18.39rem;
+    margin:-0.495rem 1.25rem 0;
+    /*background-color:gray;*/
+}
+.range>.rangeblock>.rangevalue{
+    display:inline-block;
+    position: absolute;
+    width:18.39rem;
+    height:0.33rem;
+    top:1rem;
+    opacity:1;
+    z-index:3;
+}
+
+
+.range>.rangeblock>.slider-runnable-track {
+    border: none;
+    position: absolute;
+    width:18.39rem;
+    height:0.33rem;
+    top:1rem;
+    display:inline-block;
+}
+
+@import url(./../../../common/src/lib/range.css);
+
+/*!* range样式调整 *!*/
+/*设置游标滑块的样式*/
+.__range>label>i{width:1.833rem;height:1.833rem;background-color:#fafafa;font-size:0;border-color:#e4e4e4;border: 1px solid #e8e8e9}
+.__range>label>i:before{background-color:rgb(1,160,64);right:1.67rem;border-right-width:0;}
+.__range>label>i:after{background-color: rgb(229, 229, 229);left:1.67rem;border-left-width:0;}
+.temperate .t-range{
+    width:18.39rem;
+    margin:1.72rem auto 0;
+}
+
+.selecttitle>h5{
+    position: relative;
+    top: 1.9rem;
+    text-align:center;
+    color: #01a040;
+    font-size:3rem;
+    font-family: "DIN Condensed";
+
+}
+
+.selecttitle>h4{
+    position: relative;
+    text-align:center;
+    color: #555555;
+    font-size:1rem;
+    font-family: "DIN Condensed";
+    top: 0.6rem;
+}

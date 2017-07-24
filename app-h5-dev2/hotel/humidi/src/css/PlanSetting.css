@@ -1,0 +1,102 @@
+.maskView-animate-enter{
+    opacity: 0.01;
+}
+.maskView-animate-enter.maskView-animate-enter-active{
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+.maskView-animate-leave{
+    opacity: 1;
+}
+.maskView-animate-leave.maskView-animate-leave-active{
+    opacity: 0.01;
+    transition: opacity 300ms linear;
+}
+
+.comfirmBaranimate-enter{
+    transform: translateY(100%);
+}
+.comfirmBaranimate-enter.comfirmBaranimate-enter-active{
+    transform: translateY(0);
+    transition: transform 300ms linear;
+}
+
+.comfirmBaranimate-leave{
+    transform: translateY(0);
+}
+.comfirmBaranimate-leave.comfirmBaranimate-leave-active{
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+}
+
+.setBright-animate-enter{
+    transform: translateY(100%);
+}
+.setBright-animate-enter.setBright-animate-enter-active{
+    transform: translateY(0);
+    transition: transform 300ms linear;
+}
+.setBright-animate-leave{
+    transform: translateY(0);
+}
+.setBright-animate-leave.setBright-animate-leave-active{
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+}
+
+/*SetColorRing css*/
+.setColorRing{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(40, 38, 57, 0.92);
+}
+
+/*SetColorRingView.css*/
+
+.setColorRingViewContainer{
+    position: relative;
+}
+
+
+.setColorRingViewContainer .colorBar{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 80px;
+    height: 24px;
+}
+
+.setColorRingViewContainer div{
+    /*margin-top: 75px;
+    margin-bottom: 20px;*/
+    padding-top: 75px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*setBrightness.css*/
+.setBrightness{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(40, 38, 57, 0.92);
+}
+
+/*确认按钮 应该删掉*/
+.planSetting .comfirmBtn{
+    text-align: center;
+    font-size: 18px;
+    color: #dddddd;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid rgb(59, 68, 66);
+    border-radius: 4px;
+    width: 80%;
+    height: 44px;
+    line-height: 44px;
+}

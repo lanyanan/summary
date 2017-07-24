@@ -1,0 +1,132 @@
+.widgetSwitch{
+	span{
+		-webkit-transform: translate3d(0, 0, 0); 
+		-webkit-backface-visibility: hidden; 
+		-webkit-transform-style: preserve-3d; 
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		color: rgba(0,0,0,0);
+	}
+}
+.switchStyle0{
+	&>div{
+		span{
+			display: block;
+			width: 50px;
+			height: 30px;
+			overflow: hidden;
+			position: relative;
+			background: #fff;
+			border: 1px solid #e1e1e1;
+			border-radius: 2.5rem;
+			color: rgba(0,0,0,0);
+			em{
+				display: block;
+				&:before{
+					content: "";
+					display: block;
+					height: 30px;
+	    			width: 30px;
+					position: absolute;
+					top: -1px;
+					left: -1px;
+					z-index: 2;
+					background: #fff;
+					border: 1px solid #e5e5e5;
+					border-radius: 100%;
+					box-shadow:inset 1px 1px 1px #e5e5e5;
+					transition: all .3s ease;
+					-moz-transition: all .3s ease; 
+					-webkit-transition: all .3s ease; 
+					-o-transition: all .3s ease; 
+					color: rgba(0,0,0,0);
+				}
+			}
+		}
+	}
+	
+	.switch-on{
+		border: 1px solid #3a92f9;
+		background: #3a92f9;
+	}
+	.switch-off{
+		background: #fff;
+		border: 1px solid #e1e1e1;
+		em:before{
+			color: rgba(0,0,0,0);
+			left: -1px;
+			border: 1px solid #e5e5e5;
+			box-shadow:inset 1px 1px 1px #e5e5e5;
+		}
+	}
+	.switch-on{
+		em:before{
+			left: 20px;
+			border: 1px solid #e5e5e5;
+			box-shadow:inset 1px 1px 1px #e5e5e5;
+		}
+	}
+}
+.switchStyle1{
+	.switch-xi{
+		span{
+			display: block;
+			width: 50px;
+			height: 10px;
+			margin-top: 10px;
+			position: relative;
+			border-radius: 10px;
+			transition: all .3s ease;
+			em{
+				display: block;
+				display: block;
+				height: 30px;
+				width: 30px;
+				position: absolute;
+				top: 50%;
+				margin-top: -15px;
+				border-radius: 50%;
+				left: -1px;
+				z-index: 2;
+				-moz-transition: all .3s ease; 
+				-webkit-transition: all .3s ease; 
+				-o-transition: all .3s ease; 
+				color: rgba(0,0,0,0);
+			}
+		}
+	}
+	.switch-off{
+		background: #c5c5c5;
+		opacity: 0.5;
+		em{
+			right: -1px;
+			background: #fff;
+			border: 1px solid #e1e1e1;
+			box-shadow:inset 1px 1px 1px #e1e1e1;
+		}
+	}
+	.switch-on{
+		background: rgb(157,202,255);
+		em{
+			left: 20px;
+			border: 1px solid #3b96ff;
+			background: #3b96ff;	
+		}
+		em:after{
+			
+		}
+	}
+}
+.switch-normal,.switch-xi{
+	display: none;
+}
+.switchStyle0{
+	.switch-normal{
+		display: block;
+	    height: 100%;
+	}
+}
+.switchStyle1{
+	.switch-xi{
+		display: block;
+	}
+}

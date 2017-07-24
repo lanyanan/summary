@@ -1,0 +1,69 @@
+.washerAnimation {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 140px;
+  width: 140px;
+}
+
+.washerAnimation .washerClothes {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  -webkit-animation: washerclothesAnimation 10s ease-in infinite;
+          animation: washerclothesAnimation 10s ease-in infinite;
+}
+
+@-webkit-keyframes washerclothesAnimation {
+  0% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+
+  25% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translatey(0px) rotate(-18deg);
+            transform: translatey(0px) rotate(-18deg);
+  }
+
+  75% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+}
+
+@keyframes washerclothesAnimation {
+  0% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+
+  25% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translatey(0px) rotate(-18deg);
+            transform: translatey(0px) rotate(-18deg);
+  }
+
+  75% {
+    -webkit-transform: translatey(-12px) rotate(0deg);
+            transform: translatey(-12px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) rotate(18deg);
+            transform: translatey(0px) rotate(18deg);
+  }
+}

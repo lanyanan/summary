@@ -1,0 +1,11 @@
+{
+	"code":"0",
+	"data":{
+		"sleepQuality":"良好",
+		"sleepType":"健康型",
+		"sleepStartTime":"22:00 am",
+		"sleepEndTime":"22:00 pm",
+		"sleepAllCount":"12:30"
+	},
+	"message":"请求成功"
+}

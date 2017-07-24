@@ -1,0 +1,567 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+html,body,.app-body {
+    height: 100%;
+    overflow: hidden;
+}
+.app-body, .slide-up, .slide-down,main {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+main{
+    overflow: hidden;
+}
+/*快捷按钮*/
+.btnlist-body{
+    background:#FFF;
+    opacity: 1;
+    animation:fade 1s;
+}
+.btnlist{
+    padding:0 1rem;
+}
+
+.btn-title{
+    font-size:13px;
+    color:#A9A9A9;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.btnlist article{
+    text-align: center;
+    color:#848484;
+    font-size:14.5px;
+}
+
+.btnlist article img{
+    width:48px;
+    height:48px;
+}
+
+.btnlist article p{
+    margin-top: 0.5rem;
+}
+.btnlist .triggered {
+    color: #8e8e8e;
+    opacity: 0.5!important;
+}
+
+
+/*---------------------首页----------------*/
+/*主界面样式*/
+.fanmain{
+    position: relative;
+    width:100%;
+    padding-top:1.08rem;
+}
+.errorLab{
+    position: relative;
+    top: -2rem;
+
+}
+/*.errorLab span .off {*/
+    /*color: transparent;*/
+/*}*/
+.errorLab span{
+    color: #d90416;
+}
+
+.errorLab .errorLaboff{
+    color: transparent;
+}
+/*主界面样式---- 上面背景 */
+.first-page{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+.dev-screen {
+    position: relative;
+    width: 100%;
+}
+.dev-screen img {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+.app_bgimghg{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+    background: url('../img/dev-screen01.jpg') no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.app_bgimgHG{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+    background: url('../img/dev-screen01.jpg') no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    text-align: center;
+    -webkit-animation: greenPulse 4s infinite linear ;
+    animation: greenPulse 4s infinite linear ;
+}
+
+@-webkit-keyframes greenPulse {
+    from {
+        background: url('../../static/img/dev-screen01.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+    25% {  background: url('../../static/img/dev-screen01.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+
+    35% {  background: url('../../static/img/dev-screen01.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+
+    50% {  background: url('../../static/img/dev-screen02.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+    70% {  background: url('../../static/img/dev-screen02.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+    85% {  background: url('../../static/img/dev-screen02.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+    to {   background: url('../../static/img/dev-screen01.jpg')no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;}
+}
+
+
+/*主界面样式---- 下面控制div*/
+.dev-operate {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    width: 100%;
+    /*height: 23rem;*/
+    background-color: #fff;
+}
+/*工作标签*/
+.working-status {
+    position: relative;
+    top: -2.5rem;
+    /*left: 0;*/
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2rem;
+}
+.working-status span {
+    display: inline-block;
+    padding: 0 5px;
+    width: auto;
+    border-radius: 4px;
+}
+.working-status.green span {
+    background-color: #59b30f;
+}
+.working-status.orange span {
+    background-color: #ff9b3a;
+}
+.working-status.red span {
+    background-color: #ff563a;
+}
+
+.dev-operate>h3 {
+    height: 3rem;
+    line-height: 3rem;
+    color: #848484;
+    font-size: 13px;
+    text-align: center;
+}
+
+.dev-operate>h3.off {
+    color: transparent;
+}
+
+.dev-operate .workingText{
+    position: relative;
+    top: -3rem;
+}
+
+.dev-operate .subscribeText{
+    position: relative;
+    top: -1rem;
+}
+
+/*dev-model*/
+.dev-operate .dev-Model {
+    position: relative;
+    top:1rem;
+    width: 100%;
+    height:8rem;
+}
+
+
+/*设置图片居中
+/*
+.dev-operate .dev-Model span,.dev-operate .dev-Model a {
+    display: -webkit-box;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    height: 10.55rem;
+    border: 1px solid #dcdcdc;
+    margin: 0px -1px 0px 0px;
+    -webkit-tap-highlight-color: transparent;
+}
+.dev-operate .dev-Model i{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 7px;
+    background-size: cover !important;
+}
+.dev-operate .dev-Model .roundDiv{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid #898989;
+    border-radius: 4rem;
+
+}*/
+
+.dev-operate .dev-1{
+    position: relative;
+    width: 100%;
+    height:8rem;
+    top:-3.5rem;
+    display: -webkit-box;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.dev-operate .dev-1 .dev-round{
+    /*position: absolute;*/
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #DEDDE0;
+    border-radius: 10rem;
+    display: -webkit-box;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+.dev-operate .dev-round i{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    /*margin-bottom: 7px;*/
+    background-size: cover !important;
+
+}
+
+.dev-operate .dev-round h5{
+    color: #848484;
+    font-size: 13px;
+}
+
+.dev-operate .dev-round:nth-child(1).on h5 {
+    color: #4c91fc;
+}
+/*.dev-operate .dev-round h5{*/
+    /*color: #4c91fc ;*/
+    /*font-size: 10px;*/
+/*}*/
+
+.dev-operate .cancel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.95rem;
+    line-height: 3.95rem;
+    font-size: 16px;
+    border: 0;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.dev-operate .cancel.on {
+    color: #4c91fc;
+    /*border: 1px solid  #848484;*/
+}
+.dev-operate .cancel.off {
+    color: #c7c7c7;
+}
+/*---------------------Setting页面----------------*/
+/*导航栏*/
+.ios { padding-top: 64px; box-sizing: border-box; }
+.android { padding-top: 73px; box-sizing: border-box; }
+.ios:before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 64px; background: #4c91fc; }
+.android:before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 73px; background: #4c91fc; }
+/*重用样式*/
+.tal { text-align: left; }
+.tar { text-align: right; }
+.tac { text-align: center; }
+.clearfix:before,
+.clearfix:after { content: ""; display: table;  }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1;/*IE/7/6*/ }
+
+
+/*模式设置*/
+.setting-page {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+}
+
+.setting-page nav {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.setting-page nav:before {
+    z-index: -1;
+}
+.setting-page nav.ios {
+    padding-top: 0;
+    height: 64px;
+    line-height: 84px;
+}
+.setting-page nav.android {
+    padding-top: 0;
+    height: 73px;
+    line-height: 73px;
+}
+.setting-page nav .back {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    height: 100%;
+    width: 100px;
+    background: url(../img/i-back.png) no-repeat 16px center;
+    background-size:  28% auto;
+}
+.setting-page nav span {
+    color: #fff;
+}
+.setting-page .mode-items {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+.setting-page dl {
+     -webkit-align-content: flex-start;
+     align-content: flex-start;
+     -webkit-flex-wrap: wrap;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -webkit-flex-direction: wrap;
+     flex-direction: wrap;
+ }
+.setting-page .mode {
+    display: inline-block;
+    width: 20%;
+    padding-top: 36px;
+    padding-bottom: 27px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    color: #848484;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+}
+.setting-page .mode.on {
+    color: #4c91fc;
+}
+
+/*预约时间*/
+.setting-page .set {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 16px;
+    margin: -1px auto 0;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.setting-page .set span {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+.setting-page .set span img {
+    width: 36px;
+    height: auto;
+    vertical-align: middle;
+    opacity: .25;
+}
+.setting-page .set i {
+    display: inline-block;
+    height: 46px;
+    width: 9px;
+    margin-left: 9px;
+    background: url(../img/i-arrow-on.png) no-repeat center right;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+
+.setting-page .tal {
+    float:left;
+    width: 50%;
+}
+.setting-page .tar {
+    float: right;
+    width: 50%;
+}
+
+.setting-page .toggle-mode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background: #4c91fc;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+/*时间选择控件*/
+@import url(./TimeSelect.css);
+
+.timeselect>.time>.timetext>.status.hide{
+    opacity: 0;
+}
+
+.timeselect>.selecttitle {
+
+    border-bottom: 0px solid #cccccc;
+    border-top: 1px solid #cccccc;
+}
+
+.timeselect>.selectbtn {
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+}
+
+
+.timeselect>.selectbtn>span:nth-child(1){
+    border-left:20px solid  #FFFFFF;
+    border-right: 0px solid #cccccc;
+    text-align: left;
+}
+
+.timeselect>.selectbtn>span:nth-child(2){
+    border-right:20px solid #FFFFFF ;
+    text-align: right;
+}
+
+/*设备离线*/
+.dev-offline {
+    display: -webkit-box;
+    box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack : center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 26.15rem;
+    padding-top: 125px;
+    background: #fff url("../../static/img/i-dev-offline.png") no-repeat center 61px;
+    background-size: 3.4rem auto;
+    color: #848484;
+    font-size: 13px;
+    text-align: center;
+    z-index: 3;
+}
+
+/*开关机动画*/
+.slide-up {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.slide-down {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.slide-down, .slide-up {
+    -webkit-transition: -webkit-transform 1.1s;
+    transition: -webkit-transform 1.1s;
+    transition: transform 1.1s;
+    transition: transform 1.1s, -webkit-transform 1.1s;
+    -webkit-transition: all 1.2s;
+    transition: all 1.2s;
+}
+
+/*菊花*/
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    z-index: 99999;
+}
+.loading>figure:first-child {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.loading-flower {
+    display: -webkit-box;
+    box-sizing: border-box;
+    position: relative;
+    top: 48%;
+    width: 86%;
+    height: 8.88rem;
+    padding-top: 5.5rem;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #fff url("../../static/img/i-loading.gif") no-repeat center 30px;
+    background-size: 2.1rem auto;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    -webkit-box-pack: center;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+}
+.hide {
+    display: none;
+    opacity: 0;
+}
+/*alert选择控件*/
+@import url(./alert.css);
+

@@ -1,0 +1,78 @@
+.colorRingView {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.colorRingView_backHidden {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: -1;
+}
+
+.colorRingView_backShow {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+.colorRingView .ringView {
+  background-color: rgba(40, 38, 58,0.95);
+  position: absolute;
+  width: 100%;
+  /*height: 315px;*/
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+
+.ringViewShow {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.ringViewHidden {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.colorRingView .ringView .colorBar {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 80px;
+  height: 24px;
+}
+
+.colorRingView .ringView div {
+  margin-top: 75px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 20rem;
+    height: 20rem;*/
+}
+
+.colorRingView .ringView .closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-image: url(../../static/img/ringViewClose.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}

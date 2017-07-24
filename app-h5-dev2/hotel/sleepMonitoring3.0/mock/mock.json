@@ -1,0 +1,20 @@
+{   
+	"code":"0",
+	"data":{
+		"sceneId":"0",
+		"sceneTitle":"浪漫春天",
+		"sceneImgUrl":"../static/img/u189.jpg",
+		"sceneDetails":"浪漫春天浪漫春天浪漫春天浪漫春天浪漫春天浪漫春天浪漫春天浪漫春天浪漫春天",
+		"sceneDevices":[
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备1","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备2","deviceImgUrl":"../static/img/lemp.png"},
+		{"deviceName":"设备15","deviceImgUrl":"../static/img/lemp.png"}
+		]
+		},
+	"message":"请求成功"
+}

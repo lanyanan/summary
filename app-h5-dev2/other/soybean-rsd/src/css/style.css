@@ -1,0 +1,638 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+/* @import url(../../../common/static/mediaQuery.css);
+ *//*appBtnList*/
+.btnlist-body {
+  background: #FFF;
+  opacity: 1;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.btnlist {
+  /* width: 100%; */
+  padding: 0 1rem;
+}
+
+.btn-title {
+  font-size: 13px;
+  color: #A9A9A9;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.btnlist article {
+  text-align: center;
+  color: #848484;
+  font-size: 14.5px;
+}
+
+.btnlist article img {
+  width: 48px;
+  height: 48px;
+}
+
+.btnlist article p {
+  margin-top: 0.5rem;
+}
+.btnlist .disabled{
+  opacity: 0.5;
+}
+.app-body{
+  position:absolute;top:0;bottom:0;left:0;right:0;overflow: auto;overflow-x: hidden;
+  /* display: -webkit-flex; Safari
+  display: flex;
+  flex-wrap:wrap ; */
+}
+.app-body .indexTop,.app-body .indexCon{
+  width: 100%;
+  height: 50%;
+}
+.app-body .indexCon{position: relative;min-height: 326px;}
+.indexTop{
+  background: url('../../static/img/index-bg.jpg') no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCon{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+.stateCons{
+  display: none;
+}
+.stateTitle{
+  color: rgb(255,87,59);
+  line-height: 1.6rem;
+  font-size: 1rem;
+  height: 1.6rem;
+}
+.stateMode {
+  line-height: 2rem;
+}
+.stateMode span{
+  color: #fff;
+  /*background-color: rgb(255,155,58);*/
+  border-radius: 4px;
+  padding: 0.2rem 0.3rem;
+}
+.stateMode0 span{
+  background-color: rgb(89,179,15);
+}
+.stateMode1 span{
+  background-color: rgb(255,155,58);
+}
+.stateMode2 span{
+  background-color: rgb(76,145,252);
+}
+.stateMode3 span{
+  background-color: rgb(89,179,15);
+}
+.currState{
+  font-size: 1rem;
+  color: rgb(138,138,138);
+  line-height: 2rem;
+  height: 2rem;
+}
+.stateCir{
+  width: 8.88rem;
+  height: 8.88rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: url('../../static/img/state-circle.png') no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  
+}
+.stateCir p{
+  color: rgb(85,85,85);
+}
+.stateCir p i{
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  
+}
+.stateCir0 p i{
+  background: url('../../static/img/moshi2.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir1 p i{
+  background: url('../../static/img/wugu1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir2 p i{
+  background: url('../../static/img/ganshi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir3 p i{
+  background: url('../../static/img/mihu1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+/*.stateCir3 p i{
+  background: url('../../static/img/mizhou1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir4 p i{
+  background: url('../../static/img/mihu1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}*/
+.stateCir4 p i{
+  background: url('../../static/img/lvdou1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir5 p i{
+  background: url('../../static/img/fushi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.stateCir7 p i{
+  background: url('../../static/img/guozhi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir8 p i{
+  background: url('../../static/img/qingsong1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.stateCir0  p{
+  color: rgb(76,145,252);
+}
+.stateCir p:nth-child(1){
+  padding-top: 2.4rem;
+}
+.stateCir p:nth-child(2){
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.stateDao{
+  color: rgb(158,158,158);
+  font-size: 1rem;
+  line-height: 3rem;
+}
+.cancel,.KeyFlagSta{
+  position: absolute;
+  height: 2.6rem;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 2.6rem;
+  font-size: 1.2rem;
+  color: rgb(157, 195, 255);
+  border-top: 1px solid rgb(238,238,238)
+}
+.cancels{
+  display: none;
+}
+.KeyFlagSta{
+  color: rgb(231,234,237) !important;
+}
+.unline-bg{
+  display: block;
+  margin: 7rem auto 1rem;
+  width: 3.9rem;
+  height: 3.9rem;
+  background: url('../../static/img/unline.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.unline{
+  text-align: center;
+  color: rgb(132,132,132);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.unlines{
+  display: none;
+}
+/* 路由  模式界面*/
+.SetMode{
+  position:absolute;top:0;bottom:0;left:0;right:0;overflow: hidden;
+
+  
+}
+#flex-cell{
+      -webkit-box-flex: 0.25;
+  
+  flex:0.25;
+}
+.modeSel,.modeTime{
+  width: 100%;height: 50%;
+}
+.modeSel{
+/*   display: -webkit-flex; Safari
+display: flex;
+flex-wrap:wrap ; */
+  padding: 1rem 0.4rem 0.4rem;
+  
+}
+.modeSel div{
+ 
+  width: 25%;
+  height: 50%;
+  float: left;
+}
+.modeSel>div  i{
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+}
+.modeSel>div span{
+  display: block;
+  font-size: 1rem;
+  color: rgb(175,175,175);
+  line-height: 2rem;
+  text-align: center;
+  height: 2rem;
+  width: 100%;
+}
+.modeSel>div span.active{
+  color: rgb(76,145,252);
+}
+.modeSel .photo0{
+  background: url('../../static/img/wugu1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo0.active{
+  background: url('../../static/img/wugu2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo1{
+  background: url('../../static/img/ganshi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo1.active{
+  background: url('../../static/img/ganshi2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo2{
+  background: url('../../static/img/xishi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo2.active{
+  background: url('../../static/img/xishi2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo3{
+  background: url('../../static/img/mizhou1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo3.active{
+  background: url('../../static/img/mizhou2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo4{
+  background: url('../../static/img/mihu1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo4.active{
+  background: url('../../static/img/mihu2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo5{
+  background: url('../../static/img/lvdou1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo5.active{
+  background: url('../../static/img/lvdou2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo6{
+  background: url('../../static/img/fushi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo6.active{
+  background: url('../../static/img/fushi2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo7{
+  background: url('../../static/img/guozhi1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo7.active{
+  background: url('../../static/img/guozhi2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo8{
+  background: url('../../static/img/qingsong1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo8.active{
+  background: url('../../static/img/qingsong2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeSel .photo9{
+  background: url('../../static/img/yun1.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.photo9.active{
+  background: url('../../static/img/yun2.png')no-repeat !important;
+  -webkit-background-size: 100% 100% !important;
+  background-size: 100% 100% !important;
+}
+.modeTime{
+  position: relative;
+}
+.timeOrder{
+  height: 3.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(236,236,236);
+  border-bottom: 1px solid rgb(236,236,236)
+}
+.start{
+  /*height: 4rem;*/
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background-color: rgb(76,145,252);
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+}
+.timeOrder span:nth-child(1){
+  display: block;
+  float: left;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  padding-left: 0.6rem;
+  color: rgb(85,85,85);
+}
+.timeOrder span:nth-child(2){
+  display: block;
+  float: right;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  padding-right: 0.6rem;
+  color: rgb(147,147,147);
+}
+.timeOrder span:nth-child(2) i{
+  width: 0.78rem;
+  height: 1.33rem;
+  display: block;
+  float: right;
+  margin-top: 1.1rem;
+  margin-left: 0.4rem;
+  background: url('../../static/img/time-mode.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.finishs{display: none;}
+.finish{
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 3.6rem;
+  bottom: 0;
+  background-color: rgb(76,145,252);
+  color: #fff;
+  line-height: 3.6rem;
+  font-size: 1.2rem;
+}
+
+/*时间设置组件*/
+.timeSelect{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -ms-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;
+    z-index: 999;
+}
+.timeSelect-down{}
+.timeSelect-up{}
+
+.timeSelect>section:first-child{
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 22.22rem;
+    width: 100%;
+    height: 100%;
+}
+.timeselect{
+    height:22.22rem;
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index:999;
+    background-color:#ffffff;
+}
+.timeselect>.selecttitle{
+    height:3.75rem;
+    line-height:3.75rem;
+   
+    border-top:1px solid #cccccc;
+}
+.timeselect>.selecttitle>.title{
+    margin-left:1.25rem;
+    font-size:20px;
+    color:#666666;
+}
+.timeselect>.time{
+    height:14.67rem;
+    position: relative;
+    overflow:hidden !important;
+}
+.timeselect>.time>section.hour,.timeselect>.time>section.minute{
+    display:inline-block;
+    height:100%;
+    z-index:5;
+    opacity:0;
+    position: absolute;
+}
+.timeselect>.time>section.hour{
+    left:0%;
+}
+.timeselect>.time>section.minute{
+    left:50%;
+}
+.timeselect>.time>.timetext{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    line-height:3.75rem;
+    height:3.75rem;
+    width:100%;
+    border-bottom:1px solid #cccccc;
+    border-top:1px solid #cccccc;
+    box-sizing:border-box;
+}
+.timeselect>.time>.timetext>.hour{
+    position: absolute;
+    left:33%;
+    color:#666666;
+    font-size:20px;
+}
+.timeselect>.time>.timetext>.minute{
+    position:absolute;
+    left:66%;
+    color:#666666;
+    font-size:20px;
+}
+.timeselect>.time>.timetext>.status{
+    position: absolute;
+    right:10%;
+    color:#666666;
+    font-size:20px;
+}
+.timeselect>.time>.timetext>.timeLeft{
+    position: absolute;
+    left: 10%;
+    color: #666666;
+    font-size: 20px;
+}
+.timeselect>.time>.hourvalue,.timeselect>.time>.minutevalue{
+    width:1.67rem;
+    font-size:20px;
+    color:#323232;
+    position: absolute;
+    z-index: 4;
+    text-align:center;
+    margin-top:-2.73rem;
+}
+.timeselect>.time>.hourvalue{
+   left:25%;
+}
+.timeselect>.time>.minutevalue{
+   left:56%;
+}
+.timeselect>.time>.hourvalue>span,.timeselect>.time>.minutevalue>span{
+    line-height:2.73rem;
+    height:2.73rem;
+    display:block;
+}
+.timeselect>.time>.hourvalue>.line1,.timeselect>.time>.minutevalue>.line1{
+    opacity:0.2;
+}
+.timeselect>.time>.hourvalue>.line2,.timeselect>.time>.minutevalue>.line2{
+    opacity:0.5;
+}
+.timeselect>.time>.hourvalue>.line3,.timeselect>.time>.minutevalue>.line3{
+    line-height:3.75rem;
+    height:3.75rem;
+}
+.timeselect>.time>.hourvalue>.line4,.timeselect>.time>.minutevalue>.line4{
+    opacity:0;
+}
+.timeselect>.selectbtn{
+    height:3.75rem;
+    line-height:3.75rem;
+    font-size:20px;
+    color:#666666;
+    text-align:center;
+    padding: 0 1.25rem;
+    border-top:1px solid #cccccc;
+}
+.timeselect>.selectbtn>span:nth-child(1){
+    text-align: left;
+}
+.timeselect>.selectbtn>span:nth-child(2){
+    text-align: right;
+}
+.waiting-rotation{
+  animation: rotation 1s linear infinite;
+  -webkit-animation: rotation 1s linear infinite;
+  -moz-animation: rotation 1s linear infinite;
+  -o-animation: rotation 1s linear infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  from { 
+    transform: rotate(0);   
+  }
+  to {
+    transform: rotate(360deg);  
+  }
+}
+
+.layer-loading{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+.icon-loading{
+  position: relative;
+  z-index: 101;
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.icon-loading span{
+  display: table-cell;
+  vertical-align: middle;
+}
+.icon-loading img{  
+  width: 47px;
+  height: 47px;
+}
+.layer-loader{
+  display: none;
+}

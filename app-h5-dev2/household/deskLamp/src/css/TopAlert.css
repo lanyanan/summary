@@ -1,0 +1,51 @@
+
+
+.TopAlert{
+    height: 42px;
+    background-color: #fff2ca;
+    position: relative;
+    transition: opacity .5s linear;
+}
+
+.TopAlert_show{
+    opacity: 1;
+}
+
+.TopAlert_hidden{
+    opacity: 0;
+}
+
+.TopAlert>.alertContent{
+    text-align: center;
+    line-height: 42px;
+
+}
+
+.TopAlert>.alertContent>img{
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+}
+
+
+.TopAlert>.alertContent>p{
+    display: inline-block;
+    padding-left: 8px;
+    font-size: 18px;
+    color: #95540d;
+    vertical-align: middle;
+}
+
+
+.TopAlert>.alertCloseBtn{
+    position: absolute;
+    right: 16px;
+    top: 12px;
+
+}
+
+.TopAlert>.alertCloseBtn>img{
+    width: 21px;
+    height: 21px;
+
+}

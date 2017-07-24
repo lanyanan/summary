@@ -1,0 +1,112 @@
+.animation-alert-enter {
+  animation: enter 200ms;
+  -moz-animation: enter 200ms;
+  /* Firefox */
+  -webkit-animation: enter 200ms;
+  /* Safari and Chrome */
+  -o-animation: enter 200ms;
+  /* Opera */
+}
+
+.animation-alert-leave {
+  animation: leave 200ms;
+  -moz-animation: leave 200ms;
+  /* Firefox */
+  -webkit-animation: leave 200ms;
+  /* Safari and Chrome */
+  -o-animation: leave 200ms;
+  /* Opera */
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.two-btn-wrapper {
+  position: relative;
+  border-top: 1px solid #e2e2e4;
+  line-height: 48px;
+}
+.two-btn-wrapper:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: #e2e2e4;
+}

@@ -1,0 +1,8 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+.appBody>img{
+    width: 100%;
+    height: 55.5417rem /* 1333/24 */;
+}

@@ -1,0 +1,201 @@
+.propertyArea{
+    width:335px;
+    margin-bottom:100px;
+    background:#ffffff;
+    font-size:12px;
+    header{
+        color:#222429;
+        font-family:'宋体','SimSun';
+        height:32px;
+        padding-left:10px;
+        line-height:32px;
+        font-weight:bold;
+        border-top:1px solid #e6e6e6;
+    }
+    .propertybody{
+        @import './propertyWidget.less';
+        width:335px;
+        position: relative;
+        background-color: #ffffff;
+        border-radius:0px 5px 5px;
+        .heading{
+            margin-top:-1px;
+            height:24px;
+            line-height:24px;
+        }
+        span.imagetitle{
+            .spantitle(0px 0px 15px);
+        }
+        span.eventtitle,span.statustitle{
+            .spantitle(8px 0px);
+        }
+        .spantitle (@margin) {
+            margin:@margin;
+            display: inline-block;
+            text-align:center;
+            background-color: #ffffff;
+            border-top:1px solid #e6e6e6;
+            color:#6997f2;
+            font-size:12px;
+            font-weight:bold;
+            width: 100%;
+            height: 32px;
+            line-height:32px;
+            position:relative;
+        }
+        span.del,span.toggle{
+            position: absolute;
+            width: 31px;
+            height: 31px;
+            display: inline-block;
+            top: 8px;
+            background: #ddd;
+        }
+        span.toggle{
+            left: 14px;
+            /* background-position:5px 9px; */
+            cursor:pointer;
+        }
+        span.on{
+            background: url(../../../img/down-icon.png) no-repeat;
+        }
+        span.off{
+            top:10px;
+            background: url(../../../img/up-icon.png) no-repeat;
+        }
+        span.del{
+            right: 14px;
+            background: url(../../../img/delpage.png) no-repeat;
+            cursor:pointer;
+            background-position:8px;
+        }
+        .status{
+            position:relative;
+            div.showproperty{
+                input{
+                    margin-left:162px;
+                }
+            }
+        }
+        .event{
+            position:relative;
+            .checklistsection{
+                margin-top:4px;
+                span:first-child{
+                    font-size: 12px;
+                    color: #a8aeb7;
+                    vertical-align: top;
+                    font-size: 12px;
+                    margin-left: 10px;
+                    margin-right: 70px;
+                    font-weight: bold;
+                }
+                .checklist>li{
+                    input:first-child{
+                        margin-left:105px;
+                        width:14px;
+                        height:14px;
+                        color: #919191;
+                        border:1px solid #d4d4d4;
+                        display:inline-block;
+                    }
+                    span{
+                        width:108px;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                        display: inline-block;
+                        vertical-align:3px;
+                        font-size: 12px;
+                        color: #5e5e5e;
+                    }
+                    .statusList>li{
+                        height:20px;
+                        line-height:20px;
+                        input{
+                            margin-left:125px;
+                            width:14px;
+                            height:14px;
+                            color: #919191;
+                            border:1px solid #d4d4d4;
+                            display:inline-block;
+                        }
+                        span{
+                            width:88px;
+                        }
+                    }
+                }
+            }
+            section:first-child{
+                label{
+                    display:inline-block;
+                    width:44px;
+                    height:32px;
+                    line-height:32px;
+                    border:1px solid #dde1e8;
+                    box-sizing:border-box;
+                    text-align:center;
+                    font-weight:bold;
+                    color:#a8aeb7;
+                    margin-right:8px;
+                    border-radius:5px;
+                }
+                label.active{
+                    background-color:#f1f3f6;
+                    color:#4887f5;
+                }
+            }
+        }
+        .status section,.event section{
+            width:100%;
+            height:40px;
+            line-height:40px;
+            color:#a8aeb7;
+            margin-top:4px;
+            position:relative;
+            span{
+                color:#a8aeb7;
+                font-family:'宋体','SimSun';
+                font-size:12px;
+                vertical-align: top;
+                margin-left:10px;
+                margin-right:70px;
+                font-weight:bold;
+            }
+            input,select{
+                margin-top:4px;
+                position:absolute;
+                right:25px;
+                display: inline-block;
+                width: 203px;
+                height: 32px;
+                padding: 0px;
+                text-align: center;
+                font-weight: bold;
+                color:#555555;
+                border: 1px solid #dde1e8;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+            select{
+                width: 203px;
+                height:32px;
+                -webkit-appearance:none;
+                padding: 0px 32px 0px 0px;
+                border-right: 0px !important;
+                background: url(../../../img/down-icon.png) no-repeat scroll right center transparent;
+            }
+            &.addstatus,&.addevent{
+                margin:8px 0px 4px 10px;
+                width:300px;
+                height:35px;
+                color:#ffffff;
+                background-color:#68a5fe;
+                cursor:pointer;
+                border-radius:5px;
+                line-height:35px;
+                text-align:center;
+            }
+        }
+    }
+
+}

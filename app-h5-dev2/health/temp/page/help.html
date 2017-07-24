@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="help">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>C-Life</title>
+<link rel="stylesheet" href="../static/css/style.css">
+<!-- <script src="../vm/virtualApp.js"></script> -->
+<script src="../../common/static/reactFrame-0.14.js"></script>
+<script src="../../common/static/hetsdk.js"></script>
+<script src="../static/js/appHelp.js"></script>
+<script src="http://10.8.5.136:8080/target/target-script-min.js#anonymous"></script>
+<script type="text/javascript">
+var errorcode = 0;
+var errormsg = null;
+window.onload=function(){
+	if(document.body.offsetHeight<10){
+		window.bindJavaScript.onLoadH5Failed(errorcode || 2,
+			errormsg || "页面未能加载，请检查文件或网络情况");
+	}
+}
+window.onerror=function(msg,url,line){
+	errorcode = line || 1;
+	errormsg = msg;
+	return false;
+}
+</script>
+</head>
+<body  class="">
+</body>
+<div id="ROOT">
+</div>
+<!-- <script src="http://10.8.9.107:8080/target/target-script-min.js#anonymous"></script> -->
+</html>

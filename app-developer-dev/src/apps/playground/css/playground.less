@@ -1,0 +1,476 @@
+@import url(reset.css);
+@frame-left-width: 216px;
+// 框架左侧宽度
+@frame-right-width: 216px;
+// 框架右侧宽度
+@frame-common-font-family: "微软雅黑";
+
+// 字体样式
+
+html, body, body>.app-body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    -webkit-user-select: none;
+    background-color: #fafafa;
+    min-width: 1300px;
+    font-family: @frame-common-font-family;
+}
+.app-body {
+    display: flex;
+    flex-flow: column;
+}
+.spriterImg {
+    background-image: url(../../../img/sprite.png);
+    background-repeat: no-repeat;
+}
+// 顶部面板
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+
+    h1 {
+        width: 150px;
+        background-position: 0px 8px;
+        text-indent: -999px;
+        margin: 5px 20px;
+    }
+    .h-pannel {
+        flex: 1;
+        font-size: 25px;
+        color: #5e5e5e;
+    }
+    .h-btns {
+        width: @frame-right-width;
+
+        .tools-slide {
+            float: right;
+            margin-top: 10px;
+            margin-right: 30px;
+            width: 28px;
+            height: 28px;
+            line-height: 24px;
+            font-size: 36px;
+            text-align: center;
+            color: #ccc;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            text-decoration: none;
+
+            &:hover {
+                color: #aaa;
+                border-color: #aaa;
+            }
+        }
+    }
+}
+// 主视图区
+.main-view {
+    position: relative;
+    flex: 1;
+    display: flex;
+    background: #eff1f5;
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    /* background-image: url(../../../img/bg-mainview.png); */
+    @import '../../../modules/WidgetsPanel/WidgetsPanel.less';
+    @import '../../../modules/AssetsPanel/AssetsPanel.less';
+    @import '../../../modules/PagesManage/PagesManage.less';
+    @import '../../../modules/WidgetsExterior/WidgetsExterior.less';
+    @import '../../../modules/WidgetsSizePanel/WidgetsSizePanel.less';
+    @import '../../../modules/WidgetsProperty/WidgetsProperty.less';
+}
+// 顶部操作按钮区
+.operate-wrap {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: #ffffff;
+    background-color: #ffffff;
+    transition: height .5s;
+
+    &.unfold {
+        height: 0;
+        opacity: 0;
+    }
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #e9ebed;
+    background-size: 100% 100%;
+}
+.operate-list {
+    display: block;
+    width: 100%;
+}
+.operate-list h2 {
+    width: 286px;
+    height: 56px;
+    margin-left: 24px;
+    line-height: 56px;
+    font-size: 15px;
+    text-align: left;
+    color: #222429;
+    font-weight: bold;
+}
+.operate-btn {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.operate-btn ul {
+    height: 56px;
+    line-height: 56px;
+}
+.operate-btn ul li {
+    display: inline-block;
+    position: relative;
+    width: 27px;
+    height: 56px;
+    line-height: 56px;
+    margin-right: 25px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.operate-btn ul:nth-child(3) {
+    width: 200px;
+    height: 24px;
+    margin: 16px 0 0 0px;
+    padding-left: 25px;
+    border-left: 1px solid #dadde2;
+    li {
+        width: 24px;
+        height: 24px;
+        margin-right: 25px;
+        i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-style: normal;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+    }
+}
+.operate-btn ul li i {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    &:active {
+        opacity: 0.5;
+        margin-top: 0px;
+    }
+}
+.operate-btn ul li i:before{
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    width:0px; 
+    height:0px;
+    margin-left: -6px; 
+    content: "";
+    border-bottom:6px solid #181819; 
+    border-left:6px solid transparent; 
+    border-right:6px solid transparent; 
+    border-top:6px solid transparent;
+}
+.operate-btn ul li i:after{
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    width: 40px;
+    height: 24px;
+    margin-left: -20px;
+    line-height: 24px;
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    background: #181819;
+    z-index: 1;
+}
+.operate-btn ul li i:hover:before,.operate-btn ul li i:hover:after{
+    display: block;
+}
+
+.operate-btn ul li.icon-save i:after{
+    content: "保存"
+}
+.operate-btn ul li.icon-back i:after{
+    content: "后退"
+}
+.operate-btn ul li.icon-go i:after{
+    content: "前进"
+}
+.operate-btn ul li.icon-snapline i:after{
+    content: "对齐线"
+}
+.operate-btn ul li.icon-publish i:after{
+    content: "发布"
+}
+.operate-btn ul li.icon-preview i:after{
+    content: "预览"
+}
+
+
+.operate-btn ul li.icon-save i {
+    background-image: url("../../../img/icon2.png");
+    background-position: 0px -24px;
+    
+}
+
+.operate-btn ul li.icon-save i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: 0px 0px;
+    
+}
+
+.operate-btn ul li.icon-back i {
+    background-image: url("../../../img/icon2.png");
+    background-position: -24px -24px;
+}
+.operate-btn ul li.icon-back i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: -24px 0px;
+}
+
+.operate-btn ul li.icon-go i {
+    background-image: url("../../../img/icon2.png");
+    background-position: -48px -24px;
+}
+.operate-btn ul li.icon-go i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: -48px 0px;
+}
+.operate-btn ul li.icon-snapline i {
+    background-image: url("../../../img/icon2.png");
+    background-position: -72px -24px;
+}
+.operate-btn ul li.icon-snapline i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: -72px 0px;
+}
+
+.operate-btn ul li.icon-publish i {
+    background-image: url("../../../img/icon2.png");
+    background-position: -96px -24px;
+}
+
+.operate-btn ul li.icon-publish i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: -96px 0px;
+}
+
+.operate-btn ul li.icon-preview i {
+    background-image: url("../../../img/icon2.png");
+    background-position: -120px -24px;
+}
+.operate-btn ul li.icon-preview i:hover {
+    background-image: url("../../../img/icon2.png");
+    background-position: -120px 0px;
+}
+
+
+
+.left-view {
+    width: 312px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-right: 1px solid #e9ebed;
+
+    section.header {
+        height: 32px;
+        background: #ffffff;
+        line-height: 32px;
+        padding-left: 10px;
+        color: #222429;
+        font-weight: bold;
+        font-size: 12px;
+        border-top: 1px solid #e9ebed;
+        border-bottom: 1px solid #e9ebed;
+    }
+}
+.right-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 312px;
+    height: 100%;
+}
+.right-view > .right-view-scroll{
+    width: 312px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+}
+.widgets-view {
+    width: 312px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.size-view {
+    width: 312px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+}
+.exterior-view {
+    width: 312px;
+    background-color: #ffffff;
+}
+.property-view {
+    position: relative;
+    width: 312px;
+    background-color: #ffffff;
+    padding-bottom: 1px;
+}
+.pages-view {
+    width: 312px;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+// 主场景区
+.scene-screen {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+// 多选效果cover
+.select-cover {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    background-color: rgba(246, 207, 182, 0.5);
+}
+.preview-body {
+    overflow: scroll
+}
+.preview-body, .publish-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999999999;
+    background: rgba(69, 70, 72, 0.8);
+}
+
+.property-titile{
+    border-bottom:1px solid #dde1e8;
+}
+
+
+/* 分页*/
+.manage-paging {
+    width: 95%;
+    height: 30px;
+    padding: 2em 0 3em 0;
+    text-align: right;
+}
+.manage-paging a,.manage-paging input,.manage-paging .point {
+    vertical-align: middle;
+}
+.manage-paging input.icon-chevron-thin-left,.manage-paging input.icon-chevron-thin-right,.manage-paging input.icon-first,.manage-paging input.icon-last {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 13px;    
+    border: 1px solid #d8d8d8;
+    color: #c2c2c2;
+    background: none;
+    margin-right: 0.4em;
+    cursor: pointer;
+}
+.manage-paging a,.manage-paging .curPage,.manage-paging .point {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 13px;    
+    border: 1px solid #d8d8d8;
+    margin-right: 0.4em;
+    text-align: center;
+    overflow: hidden;
+}
+.manage-paging a,.manage-paging .point {
+    color: #c2c2c2;
+    border: 1px solid #d8d8d8;
+}
+.manage-paging a:hover,.manage-paging input:enabled.icon-chevron-thin-left:hover,.manage-paging input:enabled.icon-chevron-thin-right:hover {
+    color: #4f9be7;
+}
+.manage-paging .curPage {
+    background-color: #858585;
+    color: #fff;
+    border: 1px solid #858585;
+    vertical-align: middle;
+}
+.manage-paging .jump {
+    color: #999999;
+}
+.manage-paging .jump input {
+    width: 4.167em;
+    height: 2em;
+    line-height: 2em;
+    border: 1px solid #d8d8d8;
+    margin: 0 0.3em;
+    text-align: center;
+}
+.manage-paging .jump .btn-jump,.input-file-group .btn-addImg {
+    width: 5em;
+    height: 2.167em;
+}
+.manage-paging .jump .btn-jump {
+    border: 1px solid #dddddd;
+    background: none;
+    color: #444444;
+    cursor: pointer;
+}
+.manage-paging .jump .btn-jump {
+    margin-left: 1.5em;
+}
+
+// 显示总数量--分页
+.rx-pager {
+    position: relative;
+    .rx-exports {
+        position: absolute;
+        top: 27px;
+        left: 20px;
+        letter-spacing: 1px;
+        .rx-total-tip {
+            font-size: 20px;
+            color: #4F9BE7;
+            padding: 0 4px;
+            display: inline-block;
+            vertical-align: -3px;
+        }
+        a {
+            margin-left: 15px;
+            color: #4F9BE7;
+        }
+    }
+}
+
+
+@import '../../../modules/MagicView/MagicView.less';
+@import '../../../modules/CodePanel/CodePanel.less';

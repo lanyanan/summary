@@ -1,0 +1,350 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css); 
+@import url(./Taste.css);
+@import url(./TimeSelect.css);
+
+.btnlist-body {
+  background: #FFF;
+  opacity: 1;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.btnlist {
+  /* width: 100%; */
+  padding: 0 1rem;
+}
+
+.btn-title {
+  font-size: 13px;
+  color: #A9A9A9;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.btnlist article {
+  text-align: center;
+  color: #848484;
+  font-size: 14.5px;
+}
+
+.btnlist article img {
+  width: 48px;
+  height: 48px;
+}
+
+.btnlist article p {
+  margin-top: 0.5rem;
+}
+.btnlist .disabled{
+  opacity: 0.5;
+}
+
+.app-body{position:absolute;top:0;bottom:0;left:0;right:0;overflow: auto;overflow-x: hidden;}
+
+
+.banner-bg{
+	width:100%;
+	/*height: 33.611rem;*/
+	height: 33.611rem;
+	position: relative;
+	border-bottom: 1px solid #dcdcdc;
+}
+.banner-bg>img{
+	width:100%;
+	/*height: 33.611rem;*/
+	height: 33.611rem;
+}
+
+.tip-title{
+	position: absolute;
+	width:3.667rem;
+	height: 1.5rem;
+	left:50%;
+	margin-left: -1.833rem;
+	bottom: 1.333rem;
+	background: #59b30f;
+	font-size: 0.944rem;
+	color:#fff;
+	text-align: center;
+	line-height: 1.5rem;
+	border-radius: 0.333rem;
+}
+.tip-titles{
+	display: none;
+}
+.unline-bg{
+  display: block;
+  margin: 7rem auto 1rem;
+  width: 3.9rem;
+  height: 3.9rem;
+  background: url('../../static/img/unline.png')no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.unline{
+  text-align: center;
+  color: rgb(132,132,132);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.unlines{
+  display: none;
+}
+.content{
+	width: 100%;
+	height: 4.0rem;
+	font-size: 1.083rem;
+	text-align: center;
+	line-height: 4.0rem;
+	color:#848484;
+	border-bottom: 1px solid #dcdcdc;
+	
+}
+.content img{
+    vertical-align: middle;
+}
+.work-pattern{
+	width:100%;
+	height: 16.75rem;
+	position:relative; 
+}
+.select-section{
+	width:100%;
+	height: 10.139rem;
+	display: flex;
+	border-bottom:1px solid #dcdcdc;
+}
+.select-section>dl{
+	flex:1;
+	text-align: center;
+	padding-top:3.0rem; 
+	border-right:1px solid #dcdcdc;
+}
+.select-section dl img{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+.select-section dl dd{
+	font-size: 1.083rem;
+	margin-top: 0.556rem;
+}
+
+/*.unactive{
+	font-size: 1.083rem;
+	color:#c7c7c7;
+	margin-top: 0.556rem;
+}
+ .active{
+	color:#4c91fc;
+	font-size: 1.083rem;
+	margin-top: 0.556rem;
+}*/
+.message{
+	width:100%;
+	height: 3.5rem;
+	font-size: 0.917rem;
+	position: relative;
+	border-bottom:1px solid #dcdcdc;
+}
+/*.message:after{
+	content:'';
+	position: absolute;
+	bottom:0;
+	left:0;
+	display: block;
+	width:100%;
+	height: 0;
+	border-bottom:1px solid #dcdcdc;
+	transform:scaleY(0.5);
+}*/
+.footer{
+	width: 100%;
+	height: 3.944rem;
+	text-align: center;
+	/*position:fixed;
+	bottom: 0;
+	left:0;*/
+}
+.footer .cancel{
+	display: block;
+	width:100%;
+	font-size: 1.333rem;
+	color:#c7c7c7;
+	line-height: 3.944rem;
+}
+/*弹出对话框样式*/
+.alert{
+	height:12.667rem;
+	width:22.75rem;
+	background: #FAFAFC;
+	border-radius:0.333rem; 
+	position: absolute;
+	opacity: 1;
+	/*top:-22.056rem;*/
+	top:-18.056rem;
+	left: 13.8%;
+	margin: auto;
+	}
+.alert .innerbox{
+	height:8.639rem;
+	/*width:14.333rem;
+	padding-left: 3.444rem;*/
+	width:22.75rem;
+	border-bottom: 1px solid #e2e2e4;
+  }
+.alert .innerbox .title{
+	height:2.75rem;
+	width:22.75rem;
+	font-size:1.5rem;
+	padding-top: 2.417rem;
+	text-align: center;
+	font-weight:bolder;
+	color: #000000;
+  }
+.alert .innerbox .text-message{
+	height: 3.5rem;
+	width:16.75rem;
+	padding-left:6rem;
+	font-size: 1.333rem;
+	color: #333333;
+  }
+.two-button{
+	height: 4.0rem;
+	width:22.75rem;
+	display: flex;
+}
+.two-button .left{
+	flex:1;
+	line-height:4.0rem;
+	text-align: center;
+	border-right: 1px solid #e2e2e4;
+	box-sizing: border-box;
+	font-size: 1.417rem;
+	font-weight: bolder;
+	color: #333333;
+}
+.two-button .right{
+	flex:1;
+	line-height: 4.0rem;
+	text-align: center;
+	font-size: 1.417rem;
+	font-weight: bolder;
+	color: #3285ff;
+}
+/*工作模式界面样式*/
+.patten-page{position:absolute;top:0;bottom:0;left:0;right:0;overflow: auto;overflow-x: hidden;}
+.pattern-list{
+	padding-top: 2.778rem;
+	width:100%;
+	height: 19.222rem;
+	display: flex;
+	flex-wrap:wrap;
+	/*-webkit-box-lines: multiple;*/
+	border-bottom: 1px solid #c6c6c6;
+}
+.pattern-list .list-item{
+	width:20%;
+	height: 4.083rem;
+	text-align: center;
+	/*display: inline-block;*/
+}
+.pattern-list .list-item>img{
+	display: block;
+	width:2.5rem;
+	height: 2.5rem;
+	margin:0 auto;
+}
+.pattern-list .list-item>span{
+	display: block;
+	font-size: 1.083rem;
+	color:#848484;
+	margin-top: 0.5rem;
+}
+
+.pattern-list .list-item .span-active{
+	color:#4c91fc;
+}
+
+.taste-choice{
+	width:100%;
+	height: 3.972rem;
+	border-bottom: 1px solid #c6c6c6;
+	display: flex;
+}
+.taste-choice span:nth-child(1){
+	flex:1;
+	display: block;
+	font-size: 1.417rem;
+	margin-left: 1.333rem;
+	color:#555555;
+	line-height: 3.972rem;
+}
+.taste-choice span:nth-child(2){
+	font-size: 1.083rem;
+	color: #848484;
+	line-height: 3.972rem;
+	margin-right: 0.833rem;
+	}
+.taste-choice>img{
+   	display: block;
+   	margin-top:1.333rem; 
+   	width:0.722rem;
+	height: 1.278rem;
+   	margin-right: 1.333rem;
+   	text-align: right;
+ }
+.blank-space{
+	width:100%;
+	height: 9.278rem;
+}
+.pattern-footer{
+	width: 100%;
+	height: 4.0rem;
+	background: #4c91fc;
+	text-align: center;
+	line-height: 4.0rem;
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+.pattern-footer .start-work{
+	display: block;
+	font-size: 1.417rem;
+	color:#fff;
+	width: 100%;
+	height: 4.0rem;
+}
+/*口感选择界面样式*/
+/*.taste-confirm{
+	width:100%;
+	height: 3.972rem;
+	border-bottom:1px solid #c6c6c6;
+	display: flex; 
+}
+.taste-confirm a:nth-child(1){
+	display: block;
+	flex:1;
+	margin-left: 1.333rem;
+	font-size: 1.417rem;
+	color:#323232;
+	line-height: 3.972rem;
+}
+.taste-confirm a:nth-child(2){
+	display: block;
+	flex:1;
+	font-size: 1.417rem;
+	color:#323232;
+	margin-right: 1.333rem;
+	text-align: right;
+	line-height: 3.972rem;
+}
+.title{
+	margin-top: 1.611rem;
+	height: 3.972rem;
+	width:100%;
+	font-size: 1.333rem;
+	color:#848484;
+	margin-left: 1.333rem;
+}*/

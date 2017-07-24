@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let parseDate = {
+        "code": 0,
+        "data": {
+            "list": [{
+                "dataId": 100558,
+                "weight": "41.7",
+                "fatRate": "13.3",
+                "boneWeight": "2.6",
+                "meatRate": "48.8",
+                "metabolismRate": "113.7",
+                "moistureRate": "66.7",
+                "dataTime": "2016-08-25 10:29:26"
+            }, {
+                "dataId": 100557,
+                "weight": "42.1",
+                "fatRate": "13.6",
+                "boneWeight": "2.6",
+                "meatRate": "48.7",
+                "metabolismRate": "114.3",
+                "moistureRate": "66.4",
+                "dataTime": "2016-08-25 10:23:46"
+            }, {
+                "dataId": 100556,
+                "weight": "12.7",
+                "fatRate": "0.0",
+                "boneWeight": "0.0",
+                "meatRate": "0.0",
+                "metabolismRate": "0.0",
+                "moistureRate": "0.0",
+                "dataTime": "2016-08-25 10:12:29"
+            }, {
+                "dataId": 100555,
+                "weight": "32.7",
+                "fatRate": "0.0",
+                "boneWeight": "2.4",
+                "meatRate": "52.4",
+                "metabolismRate": "100.6",
+                "moistureRate": "73.0",
+                "dataTime": "2016-08-25 09:24:43"
+            }, {
+                "dataId": 100554,
+                "weight": "39.9",
+                "fatRate": "0.0",
+                "boneWeight": "2.5",
+                "meatRate": "49.5",
+                "metabolismRate": "111.1",
+                "moistureRate": "67.9",
+                "dataTime": "2016-08-25 09:14:12"
+            }, {
+                "dataId": 100552,
+                "weight": "40.3",
+                "fatRate": "12.3",
+                "boneWeight": "2.5",
+                "meatRate": "49.4",
+                "metabolismRate": "111.7",
+                "moistureRate": "67.7",
+                "dataTime": "2016-08-25 07:22:00"
+            }, {
+                "dataId": 100543,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-25 03:32:13"
+            }, {
+                "dataId": 100540,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-25 03:13:24"
+            }, {
+                "dataId": 100522,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-24 09:36:23"
+            }, {
+                "dataId": 100334,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-23 03:38:29"
+            }, {
+                "dataId": 100225,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-22 08:24:33"
+            }, {
+                "dataId": 100095,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-20 08:02:22"
+            }, {
+                "dataId": 100544,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-19 03:32:13"
+            }, {
+                "dataId": 100186,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-18 06:00:12"
+            }, {
+                "dataId": 100179,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-17 05:48:51"
+            }, {
+                "dataId": 100178,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-16 05:46:24"
+            }, {
+                "dataId": 100173,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-15 04:38:43"
+            }, {
+                "dataId": 100108,
+                "weight": "46.4",
+                "fatRate": "10.4",
+                "boneWeight": "16.3",
+                "meatRate": "6.4",
+                "metabolismRate": "3.4",
+                "moistureRate": "5.6",
+                "dataTime": "2016-08-14 03:06:51"
+            }],
+            "pager": {
+                "totalRows": 18,
+                "pageRows": 20,
+                "pageIndex": 1,
+                "paged": false,
+                "defaultPageRows": 20,
+                "totalPages": 1,
+                "currPageRows": 18,
+                "pageStartRow": 0,
+                "pageEndRow": 19,
+                "hasPrevPage": false,
+                "hasNextPage": false
+            }
+        }
+    };
+    function groupData(data) {
+        var newData = {};
+        var arrData = [];
+        data = data.data.list;
+        // 分组
+        for (var i in data) {
+            var key = (data[i].dataTime || '').replace(/\s.+$/, '');
+            if (!newData[key]) {
+                newData[key] = [];
+            }
+            newData[key].push(data[i]);
+        }
+        // 排序
+        for (var j in newData) {
+            newData[j].sort(function (a, b) {
+                return a.dataTime > b.dataTime;
+            });
+            arrData.push(newData[j]);
+        }
+        arrData.sort(function (a, b) {
+            return a[0].dataTime < b[0].dataTime;
+        });
+        return arrData;
+    }
+    ;
+
+    /**
+     * 数据分组排序
+     * @param    {json}     data     目标数据
+     * @param    {string}   groupKey 分组依据字段
+     * @param    {string}   orderKey 可选，排序依据字段。若省略，将以groupKey做排序依据
+     * @return   {json}              分组排序后的数据
+     */
+    function groupData1(data, groupKey, orderKey) {
+        var newData = {};
+        var arrData = [];
+        orderKey = orderKey ? orderKey : groupKey;
+        // 分组
+        for (var i in data) {
+            var  k = (data[i].dataTime || '').replace(/\s.+$/, '');
+            if (!newData[k]) {
+                newData[k] = [];
+            }
+            newData[k].push(data[i]);
+        }
+        // 排序
+        for (var j in newData) {
+            newData[j].sort(function (a, b) {
+                return a[orderKey] < b[orderKey];
+            });
+            arrData.push(newData[j]);
+        }
+//        for (var i = 0; i < newData.length - 1; i++) {
+//            for (var j = 0; j < newData.length - i - 1; j++) {
+//                if (newData[j] > newData[j + 1]) {
+//                    var swap = newData[j];
+//                    newData[j] = newData[j + 1];
+//                    newData[j + 1] = swap;
+//                }
+//            }
+//        }
+        return arrData;
+    }
+    function groupData2(data) {
+        var newData = {};
+        var arrData = [];
+        // 分组
+        for (var i in data) {
+            var  k = (data[i].dataTime || '').replace(/\s.+$/, '');
+            if (!newData[k]) {
+                newData[k] = [];
+            }
+            newData[k].push(data[i]);
+        }
+        // 排序
+        for (var j in newData) {
+            newData[j].sort(function (a, b) {
+                return a[j] < b[j+1];
+            });
+            arrData.push(newData[j]);
+        }
+        return arrData;
+    };
+    function groupData3(data) {
+        var newData = {};
+        var arrData = [];
+        // 分组
+        for (var i in data) {
+            var  k = (data[i].dataTime || '').replace(/\s.+$/, '');
+            if (!newData[k]) {
+                newData[k] = [];
+            }
+            newData[k].push(data[i]);
+        }
+        // 排序
+        for (var j in newData) {
+            newData[j].sort(function (a, b) {
+                return a[j] < b[j+1];
+            });
+            arrData.push(newData[j]);
+        }
+        return arrData;
+    };
+    function sort(elements) {
+        for (var i = 0; i < elements.length - 1; i++) {
+            for (var j = 0; j < elements.length - i - 1; j++) {
+                if (elements[j] > elements[j + 1]) {
+                    var swap = elements[j];
+                    elements[j] = elements[j + 1];
+                    elements[j + 1] = swap;
+                }
+            }
+        }
+    }
+    console.log(groupData3(parseDate.data.list, 'dataTime'));
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/src/lib/slided-calendar.css);
+@import url(./result-table.css);
+
+html,body,#ROOT,.viewing-area{
+    height:100%;
+}
+body{
+    background-color:#eee;
+    font-size:14px;
+    color:#303030;
+}
+a{
+    color:#303030;
+}
+.condition{
+    border-bottom:1px solid #eee;
+}
+.condition>header{
+    background-color: #648aea;
+    padding-bottom:20px;
+    text-align:center;
+}
+.condition>header a.date{
+    display:inline-block;
+    line-height:2.5rem;
+    border:1px solid #fff;
+    border-radius:1rem;
+    margin:0 2.5%;
+    text-align:center;
+    box-sizing:border-box;
+    color:#fff;
+    width:80%;
+    background:url(../img/ico2.png) no-repeat 9% center;
+    background-size:5%;
+    font-size:15px;
+}
+.condition>nav{
+    background-color:#fff;
+    padding:15px 10px;
+}
+.condition>nav>a{
+    background-color:#fff;
+    border:1px solid #919191;
+    border-radius:5px;
+    text-align:center;
+    line-height:2rem;
+    margin:0 5px;
+    color:#5e5e5e;
+}
+.condition>nav:last-child{
+    padding-top:0px;
+    padding-bottom:15px;
+}
+.condition>nav>a.active{
+    background-color: #648aea;
+    border-color: #648aea;
+    color:#fff;
+}
+
+.chart-wrap{
+    background-color:#fff;
+    padding-top:20px;
+    margin-top:10px;
+}
+.chart-wrap>h2{
+    padding:0 10px;
+}
+.chart-wrap>.chart{
+    width:100%;
+    height:260px;
+}
+
+#history-wrap{
+    width:100%;
+    height:100%;
+    overflow:auto;
+}

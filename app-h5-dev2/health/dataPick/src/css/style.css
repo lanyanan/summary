@@ -1,0 +1,386 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+body {
+    background: #fafcfb;
+}
+
+.date-pick-header {
+    width: 100%;
+    height: 0.85rem;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 0.85rem;
+}
+.data-confirm{
+    font-size: 0.34rem;
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 0.96rem;
+    line-height: 0.96rem;
+    background:#31c27d ;
+    position: fixed;
+    bottom: 0;
+
+}
+.data-confirm-a{
+    width: 100%;
+    height: 100%;
+    color:#fff;
+    display: block;
+}
+
+
+.date-pick-cancel {
+    position: absolute;
+    left: 0.34rem;
+    color: #1eb570;
+}
+
+.date-pick {
+    width: 100%;
+}
+
+.date-confirm {
+    width: 100%;
+    height: 0.96rem;
+    background: #31c27d;
+    text-align: center;
+    font-size: 0.32rem;
+    line-height: 0.96rem;
+    color: #fff;
+    outline: none;
+    display: inherit;
+}
+
+
+/*   start comp css*/
+
+/**
+ * =================================================
+ * TA主题
+ * =================================================
+ */
+.ta_date {
+    border: 0.01rem solid #d8d8d8;
+    border-radius: 0.03rem;
+    background-color: #fefefe;
+    background-image: -ms-linear-gradient(top, #fafafa, #f5f5f5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f5f5f5));
+    background-image: -moz-linear-gradient(top, #fafafa, #f5f5f5);
+    background-image: -o-linear-gradient(top, #fafafa, #f5f5f5);
+    background-image: linear-gradient(top, #fafafa, #f5f5f5);
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0.01rem 0.01rem rgba(0, 0, 0, 0.075);
+    float: left;
+}
+
+.ta_date {
+    display: inline-flex;
+    margin-left: 35%;
+}
+
+.ta_date .date_title {
+    font-size: 0.24rem;
+    color: #666666;
+    line-height: 0.56rem;
+    border-right: 0.01rem solid #d8d8d8;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.ta_date .opt_sel {
+    width: 0.30rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ta_date .i_orderd {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 0.05rem solid #727272;
+    border-right: 0.05rem dashed transparent;
+    border-left: 0.05rem dashed transparent;
+    font-size: 0;
+    content: "";
+    overflow: hidden;
+    *margin-top: 0.10rem;
+}
+
+.ta_calendar2 {
+    *width: 5.36rem;
+}
+
+.ta_calendar1 {
+    *width: 2.68rem;
+}
+
+.ta_calendar {
+    background-color: #ffffff;
+    border: 0.01rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.02rem;
+    box-shadow: 0 0.01rem 0.02rem rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    font-size: 0.24rem;
+    text-align: left;
+    position: absolute;
+    /*z-index: 100;*/
+    height: 5rem;
+    width: 100%;
+}
+
+.ta_calendar td.ta_dateRangeSelected, .ta_calendar td.first, .ta_calendar td.last, .ta_calendar td.today {
+    /*background:url(http://imgcache.qq.com/bossweb/mta/images/calendar_all.png) no-repeat;*/
+    background: url(../../static/img/calendar_all.png) no-repeat;
+    cursor: pointer;
+}
+
+.i_pre, .i_next {
+    width: 0.23rem;
+    height: 0.23rem;
+    font-size: 0.36rem;
+    color: #9e9e9e;
+    line-height: 0.35rem;
+    display: inline-block;
+}
+
+.ta_calendar td.ta_dateRangeSelected {
+    background: #fec85e;
+    color: #fff;
+}
+
+.ta_calendar td.ta_dateRangeGray {
+    color: #BBB;
+    cursor: default;
+}
+
+.ta_calendar td.first {
+    color: #6590c1;
+    border-radius: 0.12rem;
+    background: #ff9a24;
+}
+
+.ta_calendar td.last {
+    color: #6590c1;
+    border-radius: 0.16rem;
+    background: #ff9a24;
+}
+
+.ta_calendar td.today {
+    color: #2dbd78;
+    background: #fff;
+}
+
+.ta_calendar .dis {
+    color: #9e9e9e;
+}
+
+.ta_calendar table {
+    font-size: 0.24rem;
+    float: left;
+    _display: inline;
+    border-spacing: 0 0.07rem;
+    border-collapse: collapse;
+}
+
+.ta_calendar table caption {
+    text-align: center;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.24rem;
+}
+
+.ta_calendar table {
+    font-size: 0.24rem;
+    color: #5a5a5a;
+    width: 100%;
+}
+
+.ta_calendar table thead tr {
+    border: 0.01rem solid #e1e1e1;
+    background: #e7f6ef;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1.0);
+}
+
+.ta_calendar table thead th {
+    line-height: 20px;
+    padding: 4px 10px;
+    color: #444;
+    cursor: pointer;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.ta_calendar table.calendar-month {
+    font-size: 12px;
+    float: left;
+    margin: 0 8px;
+    _display: inline;
+    border-spacing: 7px;
+    border-collapse: separate;
+    margin-bottom: 10px;
+}
+
+.calendar-month caption {
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.calendar-month tbody td {
+    line-height: 30px;
+    padding: 4px 11px;
+    text-align: center;
+    white-space: nowrap;
+    /*font-family:"΢���ź�";*/
+    cursor: pointer;
+}
+
+.calendar-month td.hover, .calendar-month td:hover, .calendar-month caption span:hover {
+    /*background:#;*/
+    color: #6590c1;
+    border: 1px solid #6590c1;
+    padding: 3px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.calendar .dis:hover {
+    color: #9e9e9e;
+    border: 1px solid #d3d5d6;
+    padding: 3px 10px;
+}
+
+.calendar-month td.current {
+    background: #6590c1;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.ta_calendar table thead th.sun {
+    border-left: 1px solid #e1e1e1;
+}
+
+.ta_calendar table thead th.sat {
+    border-right: 1px solid #e1e1e1;
+}
+
+.ta_calendar table tbody td {
+    line-height: 20px;
+    padding: 4px 11px;
+    text-align: center;
+    white-space: nowrap;
+    /*font-family:"Tahoma";*/
+}
+
+.ta_calendar_cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ta_calendar_cont .i_pre, .ta_calendar_cont .i_next {
+    position: absolute;
+    top: 0.1rem
+}
+
+.ta_calendar_cont .i_pre {
+    left: 0.1rem;
+}
+
+.ta_calendar_cont .i_next {
+    right: 0.1rem;
+}
+
+.ta_calendar_footer {
+    border-top: 0.01rem solid #e5e5e5;
+    background: #fafafa;
+    padding-top: 0.06rem;
+    height: 0.34rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ta_calendar_footer .frm_btn {
+    float: right;
+    padding-right: 0.1rem;
+}
+
+.ta_calendar_footer .frm_btn input {
+    margin-left: 0.3rem;
+    background: lightgreen;
+    width: 1rem;
+}
+
+.ta_calendar_footer .frm_msg {
+    float: left;
+    padding-left: 0.1rem;
+    vertical-align: middle;
+}
+
+.ta_calendar_footer .ipt_text_s {
+    padding: 4px 4px;
+}
+
+.ta_ipt_text, .ta_ipt_textarea, .ta_ipt_text_s {
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    padding: 6px 4px;
+    position: relative;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    vertical-align: middle;
+    width: 180px;
+    z-index: 2;
+}
+
+.ta_ipt_text_s {
+    width: 80px;
+}
+.ta_btn {
+    background-repeat: repeat-x;
+    border-color: #CACACA #CACACA #B3B3B3;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 0;
+    outline: 0 none;
+    padding: 3px 12px;
+    text-align: center;
+}
+
+.ta_btn:focus {
+    outline: thin dotted #333333;
+}
+
+.ta_btn.active, .ta_btn:active {
+    background-color: #E6E6E6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0 none;
+}
+
+.ta_btn.disabled, .ta_btn[disabled] {
+    background-color: #E6E6E6;
+    /*background-image: none;*/
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.65;
+}
+
+
+/*date css end*/

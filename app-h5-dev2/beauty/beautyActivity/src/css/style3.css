@@ -1,0 +1,112 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+.m-bg{
+	width: 100%;
+	height: 55.583rem;
+	background: url(../../static/img/blueRose/bg.png) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.m-top1{
+	margin: 0 auto;
+	margin-top: 0.583rem;
+	width: 88%;
+	height: 5.25rem;
+	background: url(../../static/img/blueRose/banner1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.m-top2{
+	position: absolute;
+	top: 20.167rem;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	margin: 0 auto;
+	width: 88%;
+	height: 5.25rem;
+	background: url(../../static/img/blueRose/banner2.png) no-repeat;
+	background-size: 100% 100%;
+}
+.m-main{
+	margin: 0 auto;
+	margin-top: 18.667rem;
+	width: 86.66%;
+	height: 29.833rem;
+	background: url(../../static/img/blueRose/bg1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.m-main>.main-con{
+	padding-left: 7.6%;
+	width: 92.4%;
+	height: 100%;
+}
+.main-con>p{
+	max-width: 88%;
+}
+@media screen and (width:414px) {
+    .main-con>p{
+    	max-width: 94%;
+    }
+}
+.main-con>p>span.bd{
+	font-weight: bold;
+	color: #231714;
+}
+.main-con>h2{
+	text-indent: -1px;
+}
+.title{
+	height: 1.792rem;
+	line-height: 1.792rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #3881ff;
+}
+.title-date{
+	padding-top: 2.2rem;	
+}
+@media screen and (min-width:360px) and (max-width: 413px) {
+    .title-date{
+    	padding-top: 1.6rem;  	
+    }
+}
+.info-date{
+	height: 2.167rem;
+	line-height: 2.167rem;
+	font-size: 1.0rem;
+	color: #575C60;
+}
+
+.info-rule{
+	line-height: 1.375rem;
+	font-size: 1.0rem;
+	color: #575C60;
+}
+
+.title-award{
+	padding-top: 0.25rem;
+}
+.info-award{
+	line-height: 1.458rem;
+	font-size: 1.0rem;
+	color: #575C60;
+}
+.info-award1{
+	line-height: 1.542rem;
+	font-size: 1.0rem;
+	color: #575C60;
+}
+
+.title-book{
+	padding: 0.25rem 0;
+}
+.book-item{
+	width: 91.4%;
+	height: 1.375rem;
+	line-height: 1.375rem;
+	justify-content: space-between;
+	color: #575C60;
+	font-size: 1.0rem;
+}

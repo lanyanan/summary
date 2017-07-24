@@ -1,0 +1,90 @@
+.text {
+  height: 65px;
+  position: relative;
+}
+
+.text .left,
+.text .right {
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 65px;
+  display: inline-block;
+}
+
+.text .left {
+  left: 10%;
+  line-height: 65px;
+  cursor: default;
+}
+
+.text .right {
+  background-color: #F6F6F6;
+}
+
+@media (max-width: 880px) {
+  .text .right {
+    right: 0;
+  }
+}
+
+@media (min-width: 880px) {
+  .text .right {
+    right: 10%;
+  }
+}
+
+.text .right .power {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.picture {
+  position: relative;
+}
+
+.picture .img {
+  position: absolute;
+  top: 130px;
+}
+
+.picture #qrcode,
+.picture .right {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.picture #qrcode {
+  left: 12%;
+}
+
+.picture #qrcode canvas {
+  border: 20px solid #fff;
+}
+
+.picture #codeWrap {
+  margin-left: 66px;
+  border: 1px solid;
+  height: 220px;
+}
+
+.picture .right {
+  left: 35%;
+  width: 320px;
+  height: 480px;
+  position: relative;
+  box-sizing: border-box;
+  border-width: 16px;
+  border-image: url("../../../../static/img/border-magicview.png") 16 16 round;
+  padding-bottom: 14px;
+}
+
+.picture .right > .resize-canvas {
+  position: absolute;
+  bottom: -14px;
+  width: 100%;
+  height: 30px;
+  cursor: n-resize;
+  background: #dee1e4 url("../../../../static/img/resize-canvas.png") no-repeat center 0;
+}

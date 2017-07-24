@@ -1,0 +1,45 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../../common/static/calendar.css);
+
+
+img,span,a,b{display:inline-block; text-decoration:none;}
+.h100{height:100%}
+.fs16{font-size: 16px;}
+.fs18{font-size:18px;}
+.fr{float: right;}
+.cor-red{color:#FE6E83;}
+.temp{color:#fff;}
+.temp .main{background:url("../img/bg-main.png") no-repeat;background-size: 100% 100%;}
+.history .main{background:linear-gradient(#FFAEBA,#FFB18B);}
+/* 
+.header{font-size: 1.5rem;height: 3.333333rem;line-height: 3.333333rem;padding:0.833333rem;}
+.header .goback{float:left;height:3.333333rem;width:2.333333rem;background:url('../img/ic-goback.png') no-repeat left;background-size: 100%;}
+.header .title{width: 100%;  text-align: center;  position: absolute;left:0;pointer-events: none;}
+.header .leftIcon{float:right;height:2.333333rem;width:2.333333rem;} */
+
+.temp .content{height:23.333333rem;padding:0 0.833333rem;}
+.content .photo{width:3.666667rem;height:3.666667rem;border-radius: 50%;}
+.content .nikename{height:3.666667rem;vertical-align: middle;margin-left: 0.75rem;color:#fff;}
+.content .num{font-size: 5.416667rem;text-align: center;}
+.content .tip{font-size: 12px;text-align: center;}
+.content .num>b{font-size:2.25rem;vertical-align:top; }
+.content .slide-circle{width:22rem;height:4rem;background: url('../img/bg-rainbow.png')no-repeat;background-size: 100%;margin:2.333333rem auto;position:relative;}
+.content .slide-circle span{width:1.666667rem;height:1.666667rem;background: #fff;border-radius: 50%;border:0.166667rem solid #FEBE3F;position:absolute;left:0;top:1.4rem;}
+#hsty-btn{height:4.0rem;width:100%;background:url('../img/ic-history.png')no-repeat 37% #FFACB7;background-size: 5%;font-size: 14px;line-height: 4.0rem;justify-content: center;position:absolute;color:#fff;}
+#chart{width:100%;height:23.5rem;margin: 0 auto;marin-bottom: 4rem;}
+
+/* //历史数据 */
+.calendar-wrap{background:linear-gradient(#FFAEBA,#FFB18B);width: 100%; margin: 0 auto; font-size: 1.5rem;}
+
+/* 使用帮助 */
+.help{height:100%;width:100%;background:url('../img/bg-help.png')no-repeat;font-size: 16px;background-size:cover;}
+.step ,.chart{color:#FF7488;text-align: center;font-size: 16px;margin-top: 20px;}
+.step>p{margin:20px;}
+.help-list dt{height:3.75rem;line-height:3.75rem;color:#FF7488;margin-left:1.75rem;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.arrow{height:2rem;width:2rem;float: right;margin:10px 20px 0 0;}
+.helpimg{width:85%;margin-bottom: 55px;}
+
+
+

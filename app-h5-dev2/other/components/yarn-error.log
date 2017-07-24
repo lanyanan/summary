@@ -1,0 +1,36 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\TeH\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\local\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\bin;C:\Users\TeH\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Program Files\nodejs;D:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\Yarn\bin;C:\ProgramData\chocolatey\bin;D:\adt-bundle-windows-x86-20131030\sdk\tools;D:\adt-bundle-windows-x86-20131030\sdk\platform-tools;C:\Users\TeH\AppData\Roaming\npm;D:\MinGW\bin;C:\Users\TeH\AppData\Local\Microsoft\WindowsApps;C:\Users\TeH\AppData\Local\atom\bin;C:\Users\TeH\AppData\Local\Yarn\.bin;D:\Program Files\Git\usr\bin\vendor_perl;D:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  0.18.1
+
+Node version: 
+  4.2.2
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (D:\Program Files (x86)\Yarn\lib-legacy\reporters\console\console-reporter.js:204:59)
+      at Object.<anonymous> (D:\Program Files (x86)\Yarn\lib-legacy\cli\commands\init.js:111:38)
+      at next (native)
+      at step (D:\Program Files (x86)\Yarn\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+      at D:\Program Files (x86)\Yarn\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+      at run (D:\Program Files (x86)\Yarn\node_modules\core-js\library\modules\es6.promise.js:87:22)
+      at D:\Program Files (x86)\Yarn\node_modules\core-js\library\modules\es6.promise.js:100:28
+      at flush (D:\Program Files (x86)\Yarn\node_modules\core-js\library\modules\_microtask.js:18:9)
+      at doNTCallback0 (node.js:419:9)
+      at process._tickCallback (node.js:348:13)

@@ -1,0 +1,1567 @@
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+
+    .class{}
+
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+
+  .main header {
+      padding-top: 23px!important;
+  }
+  .main , .Dream {
+      font-family: 微软雅黑;
+  }
+  .main .returnImg{
+      top: 2.5rem;
+      left: 12%;
+  } 
+  .main header>h2 {
+      font-size: 15.5px;
+      font-weight: normal;
+  }
+  .main header>p{
+      font-weight: normal;
+  }
+  
+  .emotionU1 li button:nth-child(1) {
+      outline: none;
+          /*padding-top: 3px;*/
+  }
+
+  .main .MStyle{
+      padding-top: 5px;
+  }
+  
+
+  .main .emotionU1, .main .emotionU2{
+     height: 4.7rem;
+  }
+  .main .MStyle ul{
+     height: 6.267rem;
+     padding: 0 2rem;
+  }
+
+  .emotion>p, .MStyle>p {
+      margin: 0 auto 8px !important;
+  }
+  
+  .MStyle ul li button  {
+      width: 6.56rem !important;
+      height: 6.28rem !important;
+  }
+  .MStyle .MStyle-p {
+      margin: 10px auto 15px !important;
+  }
+  .main  .emotionCon span {
+      padding: 0px 0 2px 0;
+      font-size: 12px;
+  }
+  .main .Mkey, .main .Yname{
+      padding: 12px 0 9px 0;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0 2.5rem;
+  }
+  .main .Mkey input,.main .Yname input{
+      font-size: 14px;
+      width: 13.54rem;
+  }
+  .main .clickBox{
+      margin-top: 23px;
+      padding-bottom: 12px;
+  }
+  .main .clickBox span{
+      width:13.44rem;
+      height:3.98rem;
+  }
+  
+  .main .MName span, .mian .MkeyWord span{
+      line-height: 30px;
+  }
+  .main .DreamEnergy{
+    font-size: 12px;
+  }
+
+/*   .Dream .Dream-header-P {
+    margin-top: 15px;
+    font-size: 12px;
+} */
+  
+  .Dream  .fragment-Li {
+      width: 3.47rem ;
+      height: 3.47rem ;
+      margin: 0px 2px ;
+  }
+  
+  .Dream .fragment {
+      margin: 0 27px 0px;
+      font-size: 12px;
+     /* height: 3.75rem;*/
+  }
+  .Dream .DreamTips {
+    margin: 0px 32px -10px;
+    width: 77.5%;
+    font-size: 12px;
+  }
+  
+
+  
+  .Dream .CountDown {
+      top: 26rem;
+      font-size: 13px;
+  }
+
+  .Dream  .contentP1 i{
+      font-size: 40px;
+   }
+
+  .Dream .DreamLayer{
+     /* margin-top: -10px;
+      padding: 1rem 0 2.4rem 0;*/
+  }
+  .Dream .DreamOut {
+      left:29%;
+      font-size: 15px;
+      top:42%;    
+     /* padding-bottom: 0.5rem;
+      margin-top: 1rem;*/
+  }
+  .Dream .DreamContent p{
+      padding-bottom: 7px;
+  }
+  .Dream .DreamImgLayer {
+      top:36%;
+      height:244px;
+  }
+  .Dream .DreamContent{
+    /*  height: 19rem;
+      font-size: 12px;*/
+  }
+  .Dream #DreamTipsMiddle {
+      height:65px!important;
+
+  }
+/*   .Dream header {
+    padding-top:31px!important;
+} */
+  
+  .fragment ul {
+      margin-top: 0px;
+  }
+  .Dream .fragment ul {
+      margin-top: 0px;
+  }
+
+  
+  .Dream .DreamInfoP1{
+      padding: 15px 13px 18px;
+      font-size: 12px;
+
+  }
+  .Dream .ScanCode {
+    margin: 0 20px;
+    padding-bottom: 28px;
+    font-size: 12px;
+  }
+   .Dream .ScanCodeD1 {
+    float:left;
+    margin: 20px 5px 0 5px;  
+  }
+  .Dream .ScanCode div {
+    padding-top: 5px;
+  }
+  .Dream .ScanCode i:nth-child(1){
+    width:60px;
+    height:60px;
+  }
+
+  #numbersTip{
+    font-size: 14px;
+  }
+  .Dream #DreamImg img{
+        width: 68%;
+  }
+  .Dream #DreamImg {
+      height: 21.5rem!important;
+      margin-top: 11px;
+
+  }
+    .Dream .DreamShare {
+      width: 14.5rem;
+      height: 4rem;
+      padding: 13px 0 0;
+      margin-top: 30px;
+
+  }
+  .Dream .DreamInfoP1{
+    padding: 23px 25px 28px;
+  }
+
+/*   .Dream {
+      min-height: 568px!important;
+} */
+/*   .Dream .show {
+      margin-top: 10px;
+} */
+
+
+}
+
+
+@media (device-height:667px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone6 */
+
+/*     .Dream .Dream-header-P{
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+.Dream header{
+    padding-top: 42px;
+}
+.main .emotion>p, .main .MStyle>p{
+        margin: 0 auto 13px;
+}
+.main .emotionCon span{
+        padding: 1px 0 11px 0;
+} */
+
+}
+
+@media (device-height:736px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone6 Plus */
+
+.emotionU1 li:nth-child(1) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU1 li:nth-child(2) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU1 li:nth-child(3) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU1 li:nth-child(4) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+
+.emotionU2 li:nth-child(1) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU2 li:nth-child(2) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU2 li:nth-child(3) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.emotionU2 li:nth-child(4) button:hover{
+  width: 3.167rem!important;
+      background-repeat: no-repeat;
+}
+.Dream {
+      min-height: 667px!important;
+}
+
+.Dream .show{
+  padding-top: 25px;
+}
+.Dream .CountDown{
+  top:43%;
+}
+.Dream .ScanCode {
+  padding-bottom: 20px;
+}
+.Dream .DreamContent{
+  height: 23.6rem;
+}
+
+.Dream .headerDream{
+      line-height: 78px;
+}
+
+/*     .main  .emotion {
+ paddingTop:45px;
+   }
+  
+   .Mkey, .Yname {
+ font-size: 19px !important;
+ padding-top: 16px !important;
+   }
+   .Dream .DreamTips {
+   line-height: 19px;
+   }
+  .main .emotionU1 li button{
+   width:55%;
+  }
+  
+  .main .emotionU1 li:nth-child(3) button{
+   width:58%;
+  }
+  .main .emotion>p, .main .MStyle>p{
+ margin: 0 auto 13px;
+  }
+  
+  .main .emotionU1 li:nth-child(3) button img {
+ width: 90%;
+  }
+  .Dream .fragment ul {
+ margin-top: 10px;
+  }
+  
+  .Dream #DreamImg {
+ height: 310px!important;
+  }
+  .Dream  .DreamShare {
+ background-position: 0px 1.4rem;
+  }
+  .Dream .DreamInfoP1 {
+padding: 27px 18px 32px;
+  }  */
+
+
+}
+
+@media screen and (max-width: 345px) and (min-width: 325px){
+  .Dream .fragment-Li{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+   .Dream #DreamImg{
+        height: 100%!important;
+   }
+   .Dream .CountDown{
+        top:35%;
+   }
+   .main .MStyle ul li button{
+        width: 7.058rem;
+        height: 6.8rem;
+   }
+
+}
+
+
+@media screen and (max-width: 370px) and (min-width: 351px){
+  
+  #main .emotionCon span{
+      padding: 1px 0 7px 0;
+  }
+  #main .emotion>p, #main .MStyle>p{
+      margin: 0 auto 12px;
+  }
+  .main .MStyle ul{
+      margin-bottom: 8px;
+  }
+     
+  .Dream .fragment ul{
+      margin-top: 2px;
+  }
+  .Dream #DreamImg {
+      width: 100%;
+      height: 19.5rem!important;
+      margin-top: -5px;
+  }
+  .Dream  #DreamImg img{
+      width: 65%;
+  }
+
+  .Dream .DreamInfoP1 {
+      padding: 13px 15px 28px;
+  }
+
+  .main .MStyle ul li button {
+    width: 7.458rem;
+    height: 7.167rem;
+  }
+  .main .Mkey, .main .Yname{
+      padding-bottom: 8px;
+      padding-top: 8px;
+  } 
+  .Dream #DreamTipsMiddle{
+      height: 50px!important;
+      font-size: 12px;
+  }
+  .Dream .DreamShare{
+      margin-top: 14px;
+  }
+
+
+  .Dream .ScanCode {
+        margin: 0 23px;
+        padding-bottom: 17px;
+        height:8rem;
+        margin-top: -12px;
+  }
+  .Dream .ScanCodeD1 {
+    float:left;
+  }
+
+  .Dream .ScanCode i:nth-child(1) {
+    width:6rem;
+    height:6rem;
+  }
+  .Dream .sleepicon {
+    margin-top: 46px;
+    float: left;
+  }
+ .Dream .ScanCode div {
+      margin-top: 22px;
+      font-size: 13px;
+  }
+
+  .Dream .CountDown {
+   top: 42%;
+   font-size: 14px;
+  }
+  .Dream .show{
+    padding-top:5px; 
+  }
+  .Dream .returnImg {
+    top: 2.6rem;
+  }
+
+
+
+    
+}
+
+@media screen and (max-width: 490px) and (min-width: 420px){
+  .main .MStyle ul li button{
+        width: 6.458rem;
+        height: 6.167rem;
+    }
+    .main .emotion{
+        padding-top: 55.5px;
+    }
+    .main .emotion>p, .main .MStyle>p{
+        margin: 0 auto 10.5px;
+    }
+    .main .MStyle ul{
+        height: 6.167rem;
+    }
+    .main .Mkey,.main .Yname{
+        padding: 10px 0 10px 0;
+          /*  border: 1px solid #ffffff;*/
+    }
+    
+    
+}
+
+@media screen and (max-width: 420px) and (min-width: 400px){
+   .Dream  #DreamImg{
+    height: 22.55rem!important;
+   } 
+
+}
+
+
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+
+
+
+body {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+
+
+.main {
+	background-image: url(../../static/img/bg2.jpg);
+	background-size: 100% 100%;
+  min-height: 568px;
+}
+
+
+#ddd{
+    width:200px;
+    height:200px;
+}
+
+
+header>h2 {
+	font-size: 17.5px;
+	color:#c8a69f;
+	text-align: center;
+	width: 75%;
+	margin:0 auto;
+	font-weight: bold;
+    /*border: 1px solid greenyellow;*/
+} 
+header>p{
+	font-size: 11px;
+    /*font-weight: bold;*/
+	color:#846c6b;
+	text-align: center;
+}
+
+
+.Mkey ,.Yname{
+    margin: 0 3rem;
+	font-size: 15px;
+/*	padding-bottom: 0.68rem;*/
+/*     padding-bottom: 7px;
+padding-top: 8px; */
+    padding:15px 0 16px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #1A1015;
+}
+
+.MkeyWord ,.MName{
+	/*width:110px;*/
+	/*height:30px;*/
+	/*line-height: 30px;*/
+	/*background:gray;*/
+	/*border-radius: 10%;*/
+	/*display: inline-block;*/
+	color: #ebc4bb;
+    /*margin-right: 20px;*/
+}
+
+.MName span,.MkeyWord span {
+/*	margin-right: 3rem;  */
+    border-radius: 6%;
+    display: inline-block;
+  /*  width: 100px;
+    height: 30px;*/
+}
+
+
+.Mkey input, .Yname input {
+	width:13.04rem;
+	display:inline-block;
+	border-radius: 5%;
+    color: #ffffff;
+    border: 0;
+    background: transparent;
+    float: right;
+    text-align: right;
+    font-size: 15px;
+     font-weight: bold;
+
+}
+
+/*.Yname {
+    padding-top: 14px;
+}*/
+
+.emotion {
+	margin: 0 auto;
+	padding-top: 37.5px;
+}
+
+.emotion>p , .MStyle>p {
+	width:75.6%;
+    height:1.54rem;
+    margin: 0 auto 19.5px;
+
+}
+ /*.MStyle>p{
+     margin: 0 auto 21px;
+ }*/
+
+.emotion p img , .MStyle p img {
+	width:100%;
+}
+
+.emotionU1,.emotionU2{
+	padding: 0 3rem;
+	display:flex;
+	color:#ffffff;
+    height:3.875rem;
+}
+.emotion  ul li {
+	/*width:30px;*/
+	flex:1;
+	text-align: center;
+	display:inline-block;
+	font-weight: bold;
+    /*padding-top: 3px;*/
+   /* border: 1px solid #ffffff;*/
+
+}
+
+.emotionU1 li button,.emotionU2 li button {
+    border: 0;
+    padding: 0;
+    /*border-radius: 50%;*/
+    width: 3.167rem;
+    background-color: transparent;
+    outline: none;
+}
+
+.emotionU1 li:nth-child(3) button{
+    width: 3.167rem;
+      
+      /* border-radius:100%;*/
+      /* padding-top: 4.5px;*/
+}
+.emotionU1 li:nth-child(3) button img{
+    width:100%;
+      /*  border: 1px solid yellow;*/
+}
+
+
+.emotionU1 li button img {
+    width:100%;
+    border-radius: 10%;
+}
+.emotionU2 li button img{
+    width:100%;
+    border-radius: 10%; 
+}
+
+.emotionCon {
+    display:flex;
+    padding: 0 3rem;
+
+}
+.emotionCon span {
+    flex:1;
+    text-align: center;
+    padding-bottom: 11px;
+    color: #ebc4bb;
+    font-size: 13px;
+}
+
+.MKeyI {
+    width:91px;
+    line-height: 30px;
+    position:absolute;
+    font-size: 12px;
+}
+
+.MStyle {
+    /*padding-top: 15px;*/
+    padding-top: 14px;
+}
+
+.MStyle ul {
+	display: flex;
+	display: -moz-flex; 
+  	display: -ms-flexbox;  
+  	display: -webkit-flex;  
+    padding: 0 3rem;
+  	color: #ffffff;
+    margin-bottom: 13px;
+    /*border: 1px solid yellow;*/
+    height:7.167rem;
+}
+.MStyle ul li {
+	flex:1;
+	font-weight: bold;
+	text-align: center;
+}
+.MStyle ul li button {
+  /*  width: 6.76rem;
+    height: 6.46rem;
+  */
+    /*width: 89.5px;
+    height: 86px;*/
+    width: 7.458rem;
+    height: 7.167rem;
+    border: 0;
+    padding: 0;
+    background-size: 100%;
+    border-radius: 13%;
+    outline:0;
+}
+.MStyle ul li button img {
+    width:100%;
+    border-radius: 9%;
+}
+
+/*  .MStyle ul li:nth-child(1) button{
+   border-radius: 8%;
+   background-image: url(../img/dream1.png);
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.MStyle ul li:nth-child(1):hover button{
+   border-radius: 8%;
+    background-image: url(../../static/img/22.png);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.MStyle ul li:nth-child(2) button{
+   border-radius: 8%;
+   background-image: url(../../static/img/23.png);
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent; 
+}
+.MStyle ul li:nth-child(2):hover button{
+   border-radius: 8%;
+   background-image: url(../../static/img/24.png);
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent; 
+}
+
+
+.MStyle ul li:nth-child(3) button{
+   border-radius: 8%;
+   background-image: url(../../static/img/25.png);
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent; 
+}
+.MStyle ul li:nth-child(3) button:hover {
+   border-radius: 8%;
+   background-image: url(../../static/img/26.png);
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent; 
+} 
+*/
+
+
+.emotionU1 li:nth-child(1) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture11.png);
+} 
+
+
+.emotionU1 li:nth-child(2) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture22.png);
+} 
+
+.emotionU1 li:nth-child(3) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture33.png);
+} 
+
+.emotionU1 li:nth-child(4) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture44.png);
+} 
+
+.emotionU2 li:nth-child(1) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture55.png);
+} 
+.emotionU2 li:nth-child(2) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture66.png);
+} 
+
+.emotionU2 li:nth-child(3) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture77.png);
+} 
+
+.emotionU2 li:nth-child(4) button:hover {
+    width: 3.167rem;
+    height: 3.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/picture88.png);
+} 
+
+.MStyle ul li:nth-child(1) button:hover {
+    width: 7.458rem;
+    height: 7.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/dreamSty11.jpg);
+} 
+
+.emotionU3 li:nth-child(2) button:hover {
+    width: 7.458rem;
+    height: 7.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/dreamSty22.jpg);
+} 
+
+.emotionU3 li:nth-child(3) button:hover {
+    width: 7.458rem;
+    height: 7.167rem;
+    background-size: 100%;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-image:url(../../static/img/dreamSty22.jpg);
+} 
+
+
+
+
+
+
+
+
+
+.clickBox {
+	text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.clickBox span {
+/*    width: 13.8rem;
+    height: 4rem;
+*/
+    width: 15.416rem;
+    height: 4.667rem;
+	  background-image: url(../../static/img/noClick.png);
+    background-size: cover;
+	  display: inline-block;
+}
+
+.Layer{
+    width:200px;
+    height: 100%;
+    position: absolute;
+    top: 10%;
+    background-image: url(../../static/img/47.png);
+}
+
+.gan {
+    top: 0%;
+    left:0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-image: url(../../static/img/bg2.png);
+    background-size: 100% 100%;
+}
+
+.Mask-layer
+{
+	opacity: .7;
+    left: 0%;
+    top: 0;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    background: #000000;
+    right: 0%;
+    height: 100%;
+}
+
+.circle-tip  {
+	border-radius: 50%;
+    border: 3px solid red;
+    z-index: 999;
+    position: absolute;
+}
+
+
+.keyWord-Tips-circle {
+    width: 11rem;
+    height: 5rem;
+    top: 4.7rem;
+	left: 1%;    
+}
+.Tips {
+	font-size: 20px;
+    font-weight: bold;
+   	z-index: 999;
+    position: absolute;
+    color: #ffffff;
+    width: 23rem;
+    border: 1px solid #fff;
+}
+.keyWord-Tips {
+    width: 60%;
+    top: 18%;    
+    right: 1%;
+}
+.emotion-Tips-circle {
+    width: 13rem;
+    height: 4rem;
+	top: 0.5rem;
+    left: 6rem; 
+}
+.emotion-Tips {
+	top: 39%;
+    top: 5rem;
+}
+
+.emotionLayer,.MStyleLayer ,.PdlBoxLayer {
+	position: absolute;
+	top:30%;
+	z-index: 9999;
+	height:10rem;
+	border:1px solid #fff;
+	margin: 0px;
+    width: 100%;
+}
+
+.MStyleLayer{
+    top: 65%;
+    height:24%;
+}
+
+.PdlBoxLayer {
+	top:89%;
+	height:10%;
+}
+
+.MStyle-Tips-circle {
+    width: 11.5rem;
+    height: 4rem;
+    top: 16%;
+	left: 27%;    
+}
+.MStyle-Tips {
+	top: 49%;
+    left: 3%;
+}
+.PdlBox-Tips-circle {
+	width: 15.5rem;
+    height: 4rem;
+    bottom: 1%;
+    left: 20%;
+}
+.PdlBox-Tips {
+	width:26%;
+	bottom: 1%;
+  right: 1%;
+  margin:0;
+}
+
+
+
+.bgz {
+  padding-top: 1.4rem;
+  background-size: 100% 100%;
+  background-image:url(../../static/img/bgz5.png);
+}
+
+
+
+
+/*梦境图*/
+
+.Dream {
+  background-size: 100% 100%;
+  background-image:url(../../static/img/bgS.jpg);
+    /* position: absolute */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 570px;
+    height:100%;
+
+}
+/*
+.Dream header {
+        padding-top: 42.5px;
+}
+*/
+.Dream-header-P{
+ /*    margin-bottom: 12px;
+ font-size: 12.5px;
+ margin-top: 33px; */
+    /*
+    font-size: 14px;
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
+    */
+    /*border: 1px solid gray;*/
+}
+.Dream-header-span {
+/*   text-align: center;
+    width: 100%;
+    color: red;
+    display: block;
+    font-size: 22px;
+    font-weight: bold; */
+}
+
+.fragment {
+	font-size: 13.5px;
+    text-align: center;
+    margin: 0  35px;
+    display: flex; 
+        /*font-family: 黑体;
+    font-family:宋体;*/
+    font-family: 微软雅黑;  
+    line-height: 15px; 
+    height: 3.975rem;
+/*    border: 1px solid gainsboro;*/
+}
+/*
+.fragment ul {
+	display:inline-block;
+}
+.fragment  ul li {
+	display:inline-block;
+	width:4rem;
+	height:4rem;
+	border-radius: 50%;
+	border:1px solid gray;
+}
+*/
+
+
+
+.fragment-s1 {
+	width: 110px;
+    display: inline-block;
+    flex: 1;
+    padding-top: 8px;
+    color: #c8a69f;
+ 
+}
+.fragment-Li{
+	flex: 2;
+    display: inline-block;
+    width: 3.67rem;
+    height: 3.67rem;
+    /*border: 1px solid gray;*/
+    border-radius: 50%;
+    margin: 0px 3px;
+    padding:2px;
+    box-shadow:0px 0px 0px #605658 inset, 0px 0px 0px #26171a inset, 0px 0px 26px  #26171b inset;
+    background-clip: content-box;
+    background-size: cover;
+}
+
+.fragment-Li img {
+    width:98%;
+    height:98%;
+    border-radius: 50%;
+
+}
+.fragment ul {
+	/* flex: 4; */
+    flex: 7;
+    padding: 0;
+    display: inline-block;
+    /* display: flex; */
+    margin: 0;
+}
+
+.DreamTips {
+    font-size: 12px;
+	  margin: 0 auto;
+   /* text-align: center;*/
+    color:#ffffff;
+    font-family: 黑体;
+    line-height: 15px;
+   /* height:45px;*/
+    width:82%;
+}
+.DreamTips-s i {
+    font-size: 18px;
+}
+
+
+.DreamTips-s {
+	font-size: 16px;
+	color:#fff;
+    /*left: 7%;
+    position: absolute;
+    z-index: 99;*/
+    float: left;
+    margin-left: -1px;
+   /* padding-right: 8px;*/
+}
+#DreamTipsMiddle {
+    height:5.625rem;
+}
+
+.DreamTipRight
+{
+   /* margin-right: -9px;*/
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.DreamTips-s2    {
+    font-size: 25px;
+    color:#fff;
+   /* position: absolute;
+    right: 10%;*/
+}
+
+/*
+.DreamImg {
+    margin: 0 auto;
+    padding: 0.3rem;
+    width: 22.72rem;
+    height: 22.72rem;
+    background-size: contain;
+    text-align: center;
+    background-image: url(../../static/img/kuang.png);
+}
+
+.DreamImg img {
+    width: 22.72rem;
+    height: 22.72rem;
+    border-radius: 50%;
+}
+*/
+.DreamImg {
+    width:74%;
+    margin:0 auto;
+    border: transparent;
+   
+}
+
+.DreamImg img {
+   width:100%;
+    border-radius: 50%;
+    margin-top: -15px;
+    margin-left: 15px;
+        /*margin-top: -37px;*/
+
+}
+
+.DreamImg img:nth-child(2){
+    left: 12%;
+    position: absolute;
+    width: 76%;
+    opacity: .5;
+    border-radius: 0%;
+        border: transparent;
+ /* top:60%;*/
+
+}
+
+
+
+.DreamImgLayer {
+    position: absolute;
+    height: 288px;
+    width: 76%;
+    background: #000000;
+    opacity: .5;
+    border-radius: 50%;
+    top: 35%;
+}
+
+
+.DreamShare  button{
+    border-radius: 1rem;
+    width: 11rem;
+    height: 3rem;
+    background: red;
+    color: yellow;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+}
+.DreamShare {
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 49.6%;
+    height: 4.75rem;
+    margin-top: 21px;
+    background-position: 50%;
+    background-image: url(../../static/img/shareOff.png);
+}
+
+.DreamInfoP1 i {
+	color:#cc8e49;
+}
+	
+.DreamInfo span{
+	flex:1;
+}
+.DreamInfo span:last-child{
+	flex:0;
+}
+
+.CountDown {
+    visibility:hidden;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 41%;
+    color: #ffffff;
+    font-family: '宋体';
+    visibility:hidden;
+}
+
+.CountDown i,.contentP1 {
+    color:#e9a252;
+}
+.contentP1 i{
+    font-size: 44px;
+}
+
+.DreamEnergy{
+	top:0;
+	bottom:0;
+	left: 0;
+    right: 0;
+    width: 80%;    
+    height: 4rem;
+    margin: auto;
+    position: absolute;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    font-family: 黑体;
+    line-height: 4rem;
+    z-index: 999999;
+}
+.DreamLayer{
+   /* border: 1px solid #ffffff;*/
+    margin: 0% 11.5%;
+    width: 77%;
+    background:url(../../static/img/titlebg.png);
+    background-size: 100% 100%;
+    padding:2.3rem 0 3.2rem 0;
+    text-align: justify;
+}
+
+
+
+.DreamOut {
+    font-family: 黑体;
+    /* font-weight: bold; */
+    color: #592f1a;
+   /* position: absolute;*/
+   /* left: 31%;*/
+    font-size: 16px;
+    /*top: 42.5%;*/
+    text-align: center;
+    padding-bottom:1rem;
+}
+
+/* .DreamOut {
+      position: absolute;
+    top: 22%;
+      width: 80%; 
+      height: 20rem;
+      margin: 0 10%;  
+   /*  width:100%;
+     height:100%;*/
+
+    /* background: #000000;
+     opacity: .5;
+
+ }*/
+
+.DreamContent {
+   /* padding:50px 25px 30px;*/
+    padding:0 25px;
+    font-family: 微软雅黑;
+    color: #592f1a;
+    font-size: 13px;
+    overflow: auto;
+    height:23rem;
+   /* margin-top: 40px;*/
+}
+
+.DreamContent p i {
+    color:#c16002;
+    width:40px;
+
+}
+.DreamContent p {
+    padding-bottom: 12px;
+}
+.DreamContent p:last-child{
+    padding-bottom: 0px;
+}
+.DreamInfoP1 {
+    padding:28px 25px 28px;
+    text-align: center;
+    color: #c8a69f;
+    display:flex;
+    font-size: 12px;
+}
+
+.ScanCode {
+    margin: 0 25px;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.ScanCode > i:nth-child(1){
+    background:url(../../static/img/webwxgetmsgimg.jpg) no-repeat;
+    width: 6.2rem;
+    height: 6.2rem;
+    display:inline-block;
+    background-size: 100%;
+    float:left;
+    margin-bottom: 16px;
+}
+
+.sleepicon{
+    background:url(../../static/img/sleepicon.png) no-repeat center center;
+    width:2rem;
+    height:2rem;
+    display:inline-block;
+    background-size: cover;
+    margin-right: 5px;
+    position: absolute;
+    left: 0px;
+    top: 22px;
+}
+
+.ScanCode div {
+    display:inline-block;
+    position: absolute;
+    top: 0px;
+    left: 7rem;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.ScanCode div p{
+  padding-left: 2.5rem;
+}
+
+.ScanCode div p b{
+  font-style: normal;
+  font-weight: normal;
+  color: #cc8e49;
+}
+.ScanCodeC {
+    color: #c8a69f;
+}
+.ScanCodeD1{
+    margin: 0 10px 0 5px;
+}
+
+
+
+.returnImg {
+    position: absolute;
+    top: 2.8rem;
+    width: 2.64rem;
+    height: 2.64rem;
+    left: 12.5%;
+}
+
+.toastTip{
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    color: #000000;
+    display: none;
+    width: 50%;
+    border-radius: 5px;
+    height: 40px;
+    background: #ffffff;
+    line-height: 40px;
+    font-family: 黑体;
+    margin: 0 25%;
+    text-align: center;
+}
+
+#numbersTip{
+    width: 70%;
+    margin: 0 15%;
+}
+
+.ddd ,.dddddd{
+    display:none;
+        left: 50%;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+}
+.ddd img  ,.dddddd img {
+    width:100%;
+}
+
+
+
+
+
+#DreamPicture2 {
+    margin-left: 17px;
+    background: #000000;
+    height: 245px;
+    width: 246px;
+    /* width: 100%; */
+    display: inline-block;
+    opacity: .5;
+    border-radius: 50%;
+    position: absolute;
+    top: 264px;
+}
+
+/* #DreamImg {
+    position: relative;
+    border: 1px solid green;
+}
+
+#DreamImg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#000000;
+        z-index: 999;
+        opacity: .7;
+            margin-top: 5%;
+    margin-left: 5%;
+}
+
+.DreamImg img  {
+   position: relative;
+    z-index: 300;
+        border: 1px solid gray;
+} */
+/* .DreamImg img:before{
+        content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:yellow;
+    z-index: 22222;
+    margin: 0.5% 14%;
+    border-radius: 50%;
+} */
+
+
+#DreamImg {
+    position: relative;
+    width: 100%;
+    height: 23.75rem!important;
+    background: url('../../static/img/kuang.png') no-repeat 50% 50%;
+    background-size: auto 100%;
+    border-radius: 50%;
+}
+#DreamImg2{
+    position: relative;
+    width: 100%;
+    height: 277px!important;
+    background: url('../../static/img/layer.jpg') no-repeat 50% 50%;
+    background-size: auto 100%; 
+      border-radius: 50%;
+
+}
+
+
+
+#DreamImg img {
+    display:block;
+    width: 76%;
+    margin: 0 auto !important;
+
+}
+
+
+#expression{
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    color: #000000;
+    display: none;
+    width: 40%;
+    border-radius: 5px;
+    height: 40px;
+    background: #ffffff;
+    line-height: 40px;
+    font-family: 黑体;
+    margin: 0 30%;
+    text-align: center;
+}
+
+#DreamMapTips {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    color: #000000;
+    display: none;
+    width: 46%;
+    border-radius: 5px;
+    height: 40px;
+    background: #ffffff;
+    line-height: 40px;
+    font-family: 黑体;
+    margin: 0 27%;
+    text-align: center;
+}
+
+.headerTop {
+  margin-top: 20px;
+}
+
+.headerDream {
+      line-height: 57px;
+}
+.headerDream p {
+  font-size: 17.5px;
+  color:#c8a69f;
+  text-align: center;
+  width: 100%;
+  margin:0 auto;
+  font-weight: bold;
+  display:inline-block;
+}
+.Dream-header-P
+{
+    color: #846c6b;
+    text-align: center;
+    line-height: 22px;
+     font-size: 13px;
+
+}
+
+　input::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#A0A0A0;
+　　}
+　　input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#A0A0A0;
+　　}
+　　input::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#A0A0A0;
+　　}
+　　input:-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#A0A0A0;
+　　}
+
+ #field2::-webkit-input-placeholder { color:#A0A0A0; }
+#field3::-webkit-input-placeholder { color:#A0A0A0; } 

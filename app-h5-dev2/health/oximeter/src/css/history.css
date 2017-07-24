@@ -1,0 +1,81 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+/* @import url(../../../common/static/mediaQuery.css); */
+@import url(../../../common/static/calendar.css);
+
+html,body{height:100%;}
+body{font-family:"Microsoft YaHei";}
+img,span,a,b,li{display:inline-block; text-decoration:none;}
+.cor-orange{color:#EB6E4A !important;}
+.cor-gray{color:#969696 !important;}
+.fs24{font-size: 24px}
+.show{display:block;}
+.hide{display:none;}
+.green{background:#3FB57D;}
+.blue{background:#4DB8BE;}
+.orange{background:#EB6E4A;}
+.noHistory{text-align: center;margin-top: 50%;color:#646464;font-size: 14px}
+
+
+/* echart 表格 */
+.chart{width:88%;height:20.1rem;margin: 0 auto;padding: 0 1rem;overflow: hidden;}
+.yAxis-name{position: absolute;right: 12px;color: #969696;font-weight: bold;}
+.yAxis-name span{display: block;margin-top: 6.6rem;}
+
+
+.history{font-size: 12px;color:#323232;}
+.table{border-bottom: 1px solid #DCDCDC;margin-top: 10px;}
+.table h2{font-size: 14px;height: 3.5rem;line-height: 3.5rem;font-weight:bold;padding-left: 1.333333rem;border-top: 1px solid #DCDCDC;border-bottom: 1px solid #DCDCDC;}
+.table ul{border-right:1px solid #dcdcdc;padding: 1.333333rem 0;}
+.total{text-align: center;line-height: 27px;}
+.total>ul>li:first-child{font-size: 0.833333rem;text-align: left;text-indent: 1.5rem}
+.abnormal>ul{padding:10px 20px;}
+.abnormal>ul>li span:last-child{text-align: right;color: #EB6E4A;}
+.abnormal>ul>li:first-child{color:#969696;}
+.abnormal>ul>li:nth-child(n+1){font-size:14px;line-height: 1.666667rem;}
+.definition{padding:20px;color:#646464;line-height: 20px;}
+
+/* 日历标题*/
+.calendarTitle{height:40px;line-height:40px;text-align: center;border-bottom: 1px solid #DCDCDC;font-size: 16px;}
+.calendarTitle .date{margin:0 14px 0 8px;color:#323232;}
+.clndr-icon{height:19px;vertical-align:-4px;}
+.lastday+img{height:1.25rem;margin-left: 14px;vertical-align: -0.25rem;}
+.nextday ,.lastday{width:43px;text-align: center;}
+
+.timeTab{width: 80%;height: 35px;line-height: 35px;font-size: 14px;color:#3FB57D; margin: 16px auto;border: 1px solid #3FB57D;border-radius: 5px; text-align: center;}
+.timeTab li:not(:last-child){border-right:1px solid #3FB57D;}
+.timeTab li:last-child{border-radius:0 5px 5px 0;}
+.timeTab li:first-child{border-radius:5px  0 0 5px;}
+.timeTab .checked{background:#3FB57D;color:#fff;}
+
+
+/* 异常事件 */
+.event{margin: 0 20px;padding: 12px 0;border-top: 1px solid #dcdcdc;}
+.event .icon{width:0.833333rem;height:0.833333rem;line-height: 0.833333rem;border-radius: 50%;background:#EB6E4A;color:#fff;margin-right:0.5rem;text-align: center;font-weight: normal;font-size: 10px;vertical-align: 3px;}
+.event h2{font-size:13px;font-weight: bold;}
+.event ul{padding:16px 0;}
+.event ul li{margin-bottom:12px;}
+
+/* 曲线图例 */
+.legend{padding:20px;}
+.legend li{text-align: center;font-size: 0.666667rem;}
+.legend .circleIcon{width: 0.833333rem;height:0.833333rem;border-radius: 50%;color: #fff;margin-right: 10px;line-height: 0.833333rem;vertical-align: -1px; }
+.legend .flex-cell:last-of-type .circleIcon{vertical-align: 1px; }
+
+/* 日历选择*/
+.clndr{height:100%;position:relative;margin-top: 50px;}
+.calendar{width:100%;color:#323232;}
+.calendar-wrap{width: 100%; margin: 0 auto;}
+.clndrMain .on{background:#3FB57D;}
+.clndrMain .off{background:#e1e1e1;}
+.confirmBtn{position: absolute;bottom: 10px; color: #fff;font-size: 16px;width: 90%;  height: 43px;line-height: 43px;text-align: center;border-radius: 6px;margin-left: -45%;left: 50%;}
+.calendar .days{height:3.333333rem;line-height: 3.333333rem;padding:0;background:#3FB57D;}
+.calendar .days span {font-size: 12px;color:#fff;}
+.calendar .date span{width:2.5rem;height:2.5rem;line-height: 2.5rem;}
+.calendar .cal-header {height:3.333333rem;line-height: 3.333333rem;}
+.calendar .cal-header .title-wrap{font-size: 16px;height:3.333333rem;}
+.calendar .cal-header .pre-mon, .calendar .cal-header .next-mon{vertical-align: 0;}
+.calendar .oneweek > span{font-size: 13px;}
+.tag.curr-date > span{background:#3FB57D;} 
+.calendar .date span{opacity: 1;}
+.calendar .tag > span{border:1px solid #3fb57d;border-radius: 50%;}

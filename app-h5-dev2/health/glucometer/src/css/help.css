@@ -1,0 +1,36 @@
+.help{
+    background-color:#fff;
+    color:#5e5e5e;
+    font-size:14px;
+    line-height:1.8;
+    padding:20px 15px 10px;
+}
+.help>h1{
+    margin-bottom:10px;
+}
+.help h2{
+    line-height:1;
+    color:#303030;
+    margin-bottom:5px;
+}
+.help li{
+    padding-bottom:18px;
+    background:url(../img/help-vline.png) repeat-y 10px 20px;
+}
+.help li:last-child{
+    background-image:none;
+}
+.help li>h2>i{
+    display:inline-block;
+    font-size:12px;    
+    background-color:#ababab;
+    text-align:center;
+    width:20px;
+    line-height:20px;
+    border-radius:50%;
+    color:#fff;
+    margin-right:10px;
+}
+.help li>p{
+    padding-left:30px;
+}

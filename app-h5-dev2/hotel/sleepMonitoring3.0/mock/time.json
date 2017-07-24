@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": 
+    {
+        "dataTime": "2015-08-11 00:47:00",
+        "timeZone": "480",
+        "heartRate": 20,
+        "breathRate": 20,
+        "turnOverTimes": 2,
+        "snoreTimes": 20,
+        "hasAnybody": 1,
+        "sleepStatus": 3,
+        "batteryPower": 1,
+        "online": 1
+    }
+}

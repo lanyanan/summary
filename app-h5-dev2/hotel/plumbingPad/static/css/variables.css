@@ -1,0 +1,124 @@
+/*默认变量*/
+
+/*设计规范颜色值*/
+
+/*active伪类按压颜色*/
+
+/*字体尺寸*/
+
+/*行高*/
+
+/*弹出层级*/
+
+/*动画*/
+
+.fade-in {
+  -webkit-animation: fadein 0.5s .2s ease both;
+  -moz-animation: fadein 0.5s .2s ease both;
+}
+
+.fade-out {
+  -webkit-animation: fadeout 1s .2s ease both;
+  -moz-animation: fadeout 1s .2s ease both;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes mask-fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mask-fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes mask-fadein {
+  /* Safari 和 Chrome */
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* 从顶部淡入与淡出－－begin */
+
+.bottom-up {
+  -webkit-animation: bottomup 0.3s 0.1s ease both;
+  -moz-animation: bottomup 0.3s 0.1s ease both;
+}
+
+.bottom-down {
+  -webkit-animation: bottomdown 0.3s 0.1s ease both;
+  -moz-animation: bottomdown 0.3s 0.1s ease both;
+}
+
+@-webkit-keyframes bottomup {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bottomdown {
+  0% {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: -100%;
+  }
+}
+
+/*左到右*/
+
+.move-right {
+  -webkit-animation: moveright 0.3s 0.1s ease both;
+  -moz-animation: moveright 0.3s 0.1s ease both;
+}
+
+@-webkit-keyframes moveright {
+  100% {
+    opacity: 1;
+    right: 0%;
+  }
+}

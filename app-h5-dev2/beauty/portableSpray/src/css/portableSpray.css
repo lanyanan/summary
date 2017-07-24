@@ -1,0 +1,96 @@
+@import url(../../../common/src/reset.css);
+@import url(../../../common/src/common.css);
+@import url(../../../common/src/lib/toast.css);
+
+html,body{font-size:75%;}
+html,body,.app-body{height:100%;width:100%;}
+body{background-color:#fff;font-family:\534E\6587\7EC6\9ED1,SimSun,Arial,Helvetica,sans-serif;}
+h2{padding:0.7rem 1rem;font-weight:bold;}
+.app-body{position:absolute;top:0;bottom:0;left:0;right:0;font-size:1rem;}
+
+.screen{position:relative;z-index:10;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding-top:17px;background:url(../img/ico-b.png) center rgb(252,132,167);background-size: cover;text-align:center;color:#fff;}
+.screen>.pic{position:relative;width:50%;max-width:180px;margin-left:auto;margin-right:auto;}
+.screen>.pic>img{width:100%;display: block;}
+.screen>.pic>.offline{position:absolute;top:38%;left:93%;width:auto;white-space:nowrap;background-color:rgba(0,0,0,.5);border-radius:0 5px 5px 0;line-height:2;padding-right:6px;font-size:1rem;}
+.screen>.pic>.offline::before{position:absolute;top:0;left:-2rem;content:"";display:inline-block;border:1rem solid transparent;border-color:transparent rgba(0,0,0,.5) transparent transparent;}
+.screen-ctn>.tip{padding:10px 15px;text-align:left;line-height:1.6;min-height:3.2rem;font-weight:bold;font-size:1rem;background-color: #FC9CB8;color: #fff;}
+.screen-ctn>.tip a{color:rgb(254,219,131);}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{height:1%;}
+.model-info{padding: 15px 0;border-bottom: 2px solid #E8E8EA;}
+.model-info>div{width: 50%;float: left;text-align: center;box-sizing: border-box;}
+.model-info>div>p{font-family: 'Microsoft YaHei';}
+.model-info>div>.font-b{font-size: 1.5rem;}
+.model-info>div>.font-s{font-size: 1.2rem;color:#9a9a9a;}
+.model-info>.model{border-right: 1px solid #DEDDE0;padding-bottom: 20px;}
+.model-info>.model>.font-b>a{display:block;color:#000;padding:20px 0 16px;}
+.model-info>.model>.font-b>span{display:block;color:#000;padding:20px 0 16px;}
+.model-info>.model>.font-b>a:active{background-color:#f0f0f0;}
+.model-info>.info{padding-bottom: 20px;}
+.model-info>.info>.font-b>a{display: inline-block;width: 24px; height: 24px;vertical-align: -22px;padding: 18px 10% 17px;}
+.model-info>.info>.font-b>.ico-left{background: url(../img/pic_15.png) center no-repeat;}
+.model-info>.info>.font-b>.ico-right{background: url(../img/pic_16.png) center no-repeat;}
+
+#footer{position:absolute;z-index:10;width:100%;background-color:#fff;bottom: 0rem;}
+.battery{text-align:center;padding:10px 0;color:#707070;font-size:1.1rem;}
+.battery::before{content:" ";display:inline-block;width:1.5rem;height:1.5rem;margin-right:10px;background:url(../img/pict_13.png) no-repeat center;-webkit-background-size:100%;background-size:100%;vertical-align:middle;}
+
+.sync-btn{display:block;padding:15px 0;background-color:#b0b0b6;color:#fff;font-size:1.2rem;text-align:center;}
+.sync-btn.on{background-color: #fb84a6;}
+
+/* 弹窗样式 */
+.popselect-wrap{position:absolute;z-index:1000;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,.4);}
+.popselect-body{position:absolute;right:0;left:0;bottom:0;background-color:#fff;}
+.popselect-btns{padding:10px 20px;border-bottom:1px solid #c8c7cc;}
+.popselect-btns>a{font-size:1.2rem;font-weight:bold;}
+.popselect-btns-ok{text-align:right;color:#FB84A6;}
+.popselect-btns-no{text-align:left;color:#707070;}
+.popselect-hd{padding:10px 20px;margin-bottom:1rem;}
+.popselect-hd>h2{padding:0;font-size:1.3rem;color:#323232;}
+.popselect-body{
+    -webkit-transition:-webkit-transform .5s;
+    transition:transform .5s;
+    -webkit-transform:translateY(100%);
+    transform:translateY(100%);
+}
+.popselect-body.on{
+    -webkit-transform:translateY(0);
+    transform:translateY(0);
+}
+
+/* 滑块样式 */
+.gear-choose{
+	width: 62px;
+	height: 26px;
+	border-radius: 24px;
+	/*border: 1px solid #ddd;*/
+	position: relative;
+	background-color: #6EDBB6;
+}
+.gear-circle{
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	border: 1px solid rgba(221, 221, 221, 0.56);
+	position: absolute;
+	top:0;
+	right: 0;
+	background-color: #fff;
+}
+.gear-circles{
+	left: 0;
+}
+.gear-txt{
+	line-height: 26px;
+	color: #fff;
+	padding-left: 3px;
+}
+.gear-txts{
+	line-height: 26px;
+	color: #fff;
+	padding-right: 3px;
+	text-align: right;
+}
+#mytoast{overflow: hidden;}
+#mytoast>section>div{padding: 0px;}

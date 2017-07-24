@@ -1,0 +1,445 @@
+@import url(../../../common/static/reset.css);
+@import url(../../../common/static/common.css);
+@import url(../../../common/static/mediaQuery.css);
+@import url(../../static/css/TimeSelect.css);
+
+.m-main{
+    background: #F8F2F2;
+}
+
+/* 头部 */
+.m-header{
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 25.916667rem;
+    background: #FB84A6;
+}
+.m-header .photo{
+    margin-top: 2.583333rem;
+    width: 18.583333rem;
+    height: 18.625rem;
+    background: url("../../static/img/headPhoto.png") no-repeat;
+    background-size: 100% 100%;
+}
+.photo .mode-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.mode-con .deviceTip{
+    position: absolute;
+    bottom: 4.94rem;
+    right: -5.4rem;
+    width: 9.3rem;
+    height: 2.083333rem;
+}
+.mode-con .offline{
+    background: url("../../static/img/offline.png") no-repeat;
+    background-size: 100% 100%;
+}
+.mode-con .lowbat{
+    background: url("../../static/img/lowBattery.png") no-repeat;
+    background-size: 100% 100%;
+}
+.m-header .modeSwitch{
+    position: absolute;
+    right: 0.916667rem;
+    bottom: 0.916667rem;
+    width: 8.625rem;
+    height: 2.916667rem;
+}
+.m-header .auto{
+    background: url('../../static/img/autoMode.png') no-repeat;
+    background-size: 100% 100%;
+}
+.m-header .hand{
+    background: url('../../static/img/handMode.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 按钮控制 */
+.btnList{
+    width: 100%;
+    height: 7.75rem;
+    border-bottom: 1px solid #E4E4E4;
+    background: #FFF;
+}
+.btnList .btnSwitch{
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*align-items: center;*/
+}
+.btn1,.btn2{
+    border-right: 1px solid #E4E4E4;
+}
+.btnSwitch img,.btnSwitch h1{
+    padding-top: 1.333333rem;
+}
+.btnSwitch h1{
+    height: 2.75rem;
+    line-height: 2.75rem;
+}
+.btnSwitch p{
+    padding-bottom: 1.333333rem;
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+}
+.btnSwitch img.custom{
+    width: 2.75rem;
+    height: 2.5rem;
+}
+.btnSwitch img.control{
+    width: 1.958333rem;
+    height: 2.75rem;
+}
+.btnSwitch img.cool{
+    width: 2.708333rem;
+    height: 2.5rem;
+}
+.btnSwitch img.flex{
+    width: 2.5rem;
+    height: 2.75rem;
+}
+.btnSwitch img.water{
+    width: 2.833333rem;
+    height: 2.208333rem;
+}
+.btnSwitch img.shock{
+    width: 2.583333rem;
+    height: 2.583333rem;
+}
+.btnSwitch p{
+    
+    /*height: 1.166667rem;*/
+}
+.btnSwitch p span{
+    position: relative;
+    /*padding: 0 4px;*/
+    font-size: 12px;
+    color: #999999;
+}
+.btnSwitch p span em{
+    position: absolute;
+    display: block;
+    bottom: 2px;
+    right: -1.25rem;
+    /*right: -1.25rem;*/
+    /*margin-left: 0.833333rem;
+    margin-top: 0.583333rem;*/
+    width: 0.583333rem;
+    height: 0.583333rem;
+    background: url('../../static/img/Mark.png') no-repeat;
+    background-size: 100% 100%;
+}
+.btnSwitch h1 .value{
+    font-size: 3.0rem;
+    color: #666666;
+}
+.btnSwitch h1 .unit{
+    font-size: 1.166667rem;
+    color: #656565;
+}
+
+/* 护理流程 */
+.m-process{
+    width: 100%;
+    /*height: 29.166667rem;*/
+    margin-bottom: 50px;
+    padding-bottom: 0.815rem;
+    margin-top: 0.791667rem;
+    border-top: 1px solid #E4E4E4;
+    background: #F8F2F2;
+}
+.m-process .title{
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 2.916667rem;
+    background: #FFF;
+}
+.title h2{
+    padding-left: 1.333333rem;
+    font-size: 16px;
+}
+.title p{
+    padding-right: 1.333333rem;
+    font-size: 14px;
+    color: #999999;
+}
+.step-con{
+    border-bottom: 1px solid #E4E4E4;
+    background: #FFF;
+}
+.side-logo{
+    width: 5.583333rem;
+    background: #FFF;
+}
+.side-container{
+    width: 100%;
+    margin: 1.416667rem 0;
+    flex-direction: column;
+    align-items: center;
+}
+.hot{
+    width: 2.333333rem;
+    height: 2.333333rem;
+    background: url("../../static/img/hot.png") no-repeat;
+    background-size: 100% 100%;
+}
+.cold{
+    width: 2.333333rem;
+    height: 2.333333rem;
+    background: url("../../static/img/cold.png") no-repeat;
+    background-size: 100% 100%;
+}
+.line{
+    width: 0;
+    height: 2.916667rem;
+    border-left: 1px solid #E5E5E5;
+}
+.step-list{
+    flex: 1;
+    background: #FFF;
+    overflow: hidden;
+}
+.step-list li{
+    align-items: center;
+    padding-right: 1.25rem;
+    height: 5.208333rem;
+    border: 0;
+}
+.step-list li.active{border-bottom: 1px solid #E5E5E5;}
+.step-list li.last{
+    border: 0;
+}
+.step-list li p{
+    width: 7.5rem;
+    font-size: 16px;
+    color: #666666;
+}
+.step-list li span{
+    display: inline-block;
+    margin-left: 2.083333rem;
+    width: 7.5rem;
+    font-size: 16px;
+    color: #666666;
+}
+.step-list li img{
+    width: 0.541667rem;
+    height: 0.958333rem;
+    margin-left: 6.666667rem;
+}
+
+/* 模式选择 */
+.modeselect-bd{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    width:100%;
+    height:100%;
+    /*flex-direction: column;
+    justify-content: space-between;*/
+}
+
+.modeselect-bd .modeselect-shade{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.3);
+}
+.modeselect-bd .modeselect-content{
+    position: fixed;
+    left: 0;
+    bottom: -20.208333rem;
+    height: 20.208333rem;
+    z-index: 999;
+    width: 100%;
+    background: #FFF;
+    animation: up .2s linear;
+    -webkit-animation:up .2s linear;
+    -moz-animation:up .2s linear;
+    -o-animation:up .2s linear;
+}
+@keyframes up{
+    0% {bottom:-23rem;}
+    30% {bottom:-17rem;}
+    50% {bottom:-12rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-webkit-keyframes up{
+    0% {bottom:-23rem;}
+    30% {bottom:-17rem;}
+    50% {bottom:-12rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-moz-keyframes up{
+    0% {bottom:-23rem;}
+    30% {bottom:-17rem;}
+    50% {bottom:-12rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+@-o-keyframes up{
+    0% {bottom:-23rem;}
+    30% {bottom:-17rem;}
+    50% {bottom:-12rem;}
+    80% {bottom:-6rem;}
+    100% {bottom:0;}
+}
+.modeselect-content li{
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.333333rem;  
+    height: 4.0rem;  
+    border-top: 1px solid #E4E4E4;   
+    color: #353535;
+    font-size: 14px;
+}
+.modeselect-content li em{
+    width: 1.291667rem;
+    height: 0.916667rem;
+    margin-right: 1.333333rem;
+    background: url('../../static/img/gou.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 震动选择 */
+.shockselect-bd{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    width:100%;
+    height:100%;
+    /*flex-direction: column;
+    justify-content: space-between;*/
+}
+
+.shockselect-bd .shockselect-shade{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.3);
+}
+.shockselect-bd .shockselect-content{
+    position: fixed;
+    left: 0;
+    bottom: -8.083333rem;
+    height: 8.083333rem;
+    z-index: 999;
+    width: 100%;
+    background: #FFF;
+    animation: tup .2s linear;
+    -webkit-animation:tup .2s linear;
+    -moz-animation:tup .2s linear;
+    -o-animation:tup .2s linear;
+}
+@keyframes tup{
+    0% {bottom:-10rem;}
+    30% {bottom:-6rem;}
+    50% {bottom:-4rem;}
+    80% {bottom:-2rem;}
+    100% {bottom:0;}
+}
+@-webkit-keyframes tup{
+    0% {bottom:-10rem;}
+    30% {bottom:-6rem;}
+    50% {bottom:-4rem;}
+    80% {bottom:-2rem;}
+    100% {bottom:0;}
+}
+@-moz-keyframes tup{
+    0% {bottom:-10rem;}
+    30% {bottom:-6rem;}
+    50% {bottom:-4rem;}
+    80% {bottom:-2rem;}
+    100% {bottom:0;}
+}
+@-o-keyframes tup{
+    0% {bottom:-10rem;}
+    30% {bottom:-6rem;}
+    50% {bottom:-4rem;}
+    80% {bottom:-2rem;}
+    100% {bottom:0;}
+}
+.shockselect-content li{
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.333333rem;  
+    height: 4.0rem;  
+    border-top: 1px solid #E4E4E4;   
+    color: #353535;
+    font-size: 14px;
+}
+.shockselect-content li em{
+    width: 1.291667rem;
+    height: 0.916667rem;
+    margin-right: 1.333333rem;
+    background: url('../../static/img/gou.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* settingbtn */
+/*±£´æÉèÖÃ°´Å¥×é¼þ*/
+.setBut{
+    position:fixed;
+    bottom:0;
+    z-index:10;
+    width: 100%;
+    background-color:#FFF;
+}
+.settingbtn-on{
+    background-color:#fafafa;
+    line-height:49px;
+    height:49px;
+    text-align: center;
+    border-top: 1px solid #dadada;
+    color:#f45a4f;
+}
+.settingbtn-on>em,.settingbtn-active>em{
+    font-size: 17px;
+}
+.settingbtn-off{
+    background-color:#fafafa;
+    line-height:49px;
+    height:49px;
+    text-align: center;
+    border-top: 1px solid #dadada;
+}
+.settingbtn-off>em{
+    font-size: 17px;
+    color:#f45a4f;
+    opacity: 0.4;
+}
+.settingbtn-active{
+    background-color:#f45a4f;
+    line-height:49px;
+    height:49px;
+    text-align: center;
+    border-top: 1px solid #dadada;
+    color:#ffffff;
+}
+
+/*设备电量及状态提示*/
+@media screen and (min-width: 381px) and (max-width:410px) {
+    .mode-con .deviceTip{
+        right: -4.8rem;
+        width: 8.8rem;
+    }
+}
+@media screen and (width: 412px) {
+    .mode-con .deviceTip{
+        right: -4.55rem;
+        width: 8.5rem;
+    }
+}
+

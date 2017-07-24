@@ -1,0 +1,926 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  border: 1px solid #dedede;
+}
+
+input[type="button"] {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.flex-cell {
+  display: block;
+  /* OLD */
+  width: 100%;
+  /* OLD */
+}
+
+.flex,
+.flex-column {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex {
+  -webkit-box-orient: horizontal;
+  /* OLD */
+  -moz-box-orient: horizontal;
+  /* OLD */
+  -ms-box-orient: horizontal;
+  /* OLD */
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  /* OLD */
+  -moz-box-orient: vertical;
+  /* OLD */
+  -ms-box-orient: vertical;
+  /* OLD */
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-cell {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/*公共media query查询 1rem初始设置为12px
+dpr为2时对应750的效果图 dpr为3时对应1080的效果图
+查询区间间隔暂时设置为30px 对应3倍图时 1rem大小变化1px
+对于dpr为2的有额外百分之4.2增大的兼容*/
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width:350px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 71.62%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 68.75%;
+    }
+}
+}
+
+@media screen and (min-width: 351px) and (max-width:380px) {
+  html,
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width:410px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 84.64%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 81.25%;
+    }
+}
+}
+
+@media screen and (min-width: 411px) and (max-width:440px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 91.15%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 87.5%;
+    }
+}
+}
+
+@media screen and (min-width: 441px) and (max-width:470px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 97.66%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 93.75%;
+    }
+}
+}
+
+@media screen and (min-width: 471px) and (max-width:500px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 104.17%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 100%;
+    }
+}
+}
+
+@media screen and (min-width: 501px) and (max-width:539px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    html,
+    body {
+      font-size: 110.68%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    html,
+    body {
+      font-size: 106.25%;
+    }
+}
+}
+
+@media screen and (min-width: 540px) {
+  html,
+  body {
+    font-size: 150%;
+  }
+}
+
+/*时间设置组件*/
+
+.timeSelect {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 1;
+}
+
+.timeSelect>section:first-child {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 22.22rem;
+  width: 100%;
+  height: 100%;
+}
+
+.timeselect {
+  height: 22.22rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #ffffff;
+}
+
+.timeselect>.selecttitle {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
+
+.timeselect>.selecttitle>.title {
+  margin-left: 1.25rem;
+  font-size: 16px;
+  color: #666666;
+}
+
+.timeselect>.time {
+  height: 14.67rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.timeselect>.time>section.hour,
+.timeselect>.time>section.minute {
+  display: inline-block;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+}
+
+.timeselect>.time>section.hour {
+  left: 0%;
+}
+
+.timeselect>.time>section.minute {
+  left: 50%;
+}
+
+.timeselect>.time>.timetext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  line-height: 3.75rem;
+  height: 3.75rem;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.timeselect>.time>.timetext>.hour {
+  position: absolute;
+  left: 33%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.timetext>.minute {
+  position: absolute;
+  left: 66%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.timetext>.status {
+  position: absolute;
+  right: 10%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.timeselect>.time>.hourvalue,
+.timeselect>.time>.minutevalue {
+  width: 1.67rem;
+  font-size: 18px;
+  color: #323232;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  margin-top: -2.73rem;
+}
+
+.timeselect>.time>.hourvalue {
+  left: 25%;
+}
+
+.timeselect>.time>.minutevalue {
+  left: 56%;
+}
+
+.timeselect>.time>.hourvalue>span,
+.timeselect>.time>.minutevalue>span {
+  line-height: 2.73rem;
+  height: 2.73rem;
+}
+
+.timeselect>.time>.hourvalue>.line1,
+.timeselect>.time>.minutevalue>.line1 {
+  opacity: 0.2;
+}
+
+.timeselect>.time>.hourvalue>.line2,
+.timeselect>.time>.minutevalue>.line2 {
+  opacity: 0.5;
+}
+
+.timeselect>.time>.hourvalue>.line3,
+.timeselect>.time>.minutevalue>.line3 {
+  line-height: 3.75rem;
+  height: 3.75rem;
+}
+
+.timeselect>.time>.hourvalue>.line4,
+.timeselect>.time>.minutevalue>.line4 {
+  opacity: 0;
+}
+
+.timeselect>.selectbtn {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  font-size: 16px;
+  color: #666666;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.timeselect>.selectbtn>span:nth-child(1) {
+  border-right: 1px solid #cccccc;
+}
+
+.__range>label {
+  position: relative;
+  display: block;
+  width: 99%;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.__range>label>input {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 3rem;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+}
+
+.__range>label>input::-webkit-slider-runnable-track {
+  height: 2rem;
+}
+
+.__range>label>input::-webkit-slider-thumb {
+  padding: .9rem;
+}
+
+.__range>label>i {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.3rem;
+  background: rgb(255, 159, 187);
+  border-radius: 3rem;
+  border: .18rem solid rgb(255,211,224);
+  z-index: -1;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  top: .2rem;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.__range>label>i:before,
+.__range>label>i:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.1rem;
+  display: inline-block;
+  content: "";
+  width: 10000%;
+  height: .2rem;
+}
+
+.__range>label>i:before {
+  right: 2.3rem;
+  background-color: rgb(255, 159, 187);
+}
+
+.__range>label>i:after {
+  left: 2.3rem;
+  background-color: rgb(222,222,222);
+}
+
+body {
+  background-color: #3999ea;
+}
+
+.dev-head {
+  padding: 1.25rem 1rem;
+  color: #fff;
+}
+
+.dev-name {
+  font-size: 1.17rem;
+  line-height: 1.17rem;
+}
+
+.dev-name > * {
+  vertical-align: middle;
+}
+
+.dev-name > b {
+  font-size: 1.58rem;
+  color: #d6dbe1;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.dev-name > b:first-child {
+  padding-right: 1rem;
+}
+
+.dev-name > b:last-child {
+  padding-left: 1rem;
+}
+
+.online {
+  font-size: 1rem;
+
+  text-align: right;
+}
+
+.main-wrap {
+  width: 23rem;
+  border: 1px solid #d6dbe1;
+  border-width: 1px 0 1px 0;
+  background-color: #fff;
+}
+
+.vice-wrap {
+  border: 1px solid #d6dbe1;
+  border-width: 1px 0 1px 1px;
+  background-color: #fff;
+}
+
+.blue-box {
+  width: 19.667rem;
+  height: 14.944rem;
+  margin: 1.5rem;
+  background: url("../img/blue-box@3x.png") no-repeat;
+  background-size: cover;
+}
+
+.blue-box > dl {
+  text-align: center;
+  margin-top: 3.86rem;
+}
+
+.blue-box > dl > dt {
+  font-size: 1.17rem;
+}
+
+.blue-box > dl > dd {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  color: #3999ea;
+}
+
+.blue-box > dl > dd > sup {
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.child-lock {
+  text-align: center;
+}
+
+.child-lock-ico {
+  margin-top: 6.833rem;
+}
+.child-lock-icoser{
+  margin-top: 14.833rem;
+}
+.child-lock-icos{
+  margin-top: 15.4rem;
+}
+.child-lock-ico > img {
+  width: 4.611rem;
+}
+
+.child-lock-txt {
+  margin-top: 0.667rem;
+  font-size: 1.17rem;
+}
+
+/* 主控制面板 */
+
+.main-panel {
+  margin-top: 1.333rem;
+}
+
+.mode-panel {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 1.388rem;
+  color: #9ba6b3;
+}
+
+.mode-panel > dl {
+  margin-top: 1.388rem;
+}
+
+.mode-panel > dl > dt {
+  margin-top: 0.555rem;
+}
+
+.mode-panel > dl > dd > img {
+  width: 2.833rem;
+}
+
+.mode-panel > dl > dt.on {
+  color: #5aceff;
+}
+
+.bottom-buttons {
+  text-align: center;
+}
+
+.b-clock img {
+  width: 2.75rem;
+}
+
+.b-clock dt {
+  color: #5aceff;
+  font-size: 1rem;
+}
+
+.b-switch img {
+  width: 4.33rem;
+}
+
+.temperate {
+  margin-top: 1.322rem;
+}
+
+.temperate > li {
+  margin: 1.111rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #9ba6b3;
+}
+
+.temperate > .t-wrap {
+  height: 11.333rem;
+  margin-bottom: -30%;
+}
+
+.temperate .t-range {
+  transform: rotate(90deg);
+  margin-top: 50%;
+  margin-left: -1.5rem;
+}
+
+.temperate .t-value {
+  margin-left: 4.5rem;
+}
+
+/* range样式调整 */
+
+.__range > label > i {
+  width: 1.833rem;
+  height: 1.833rem;
+  background-color: #fafafa;
+  font-size: 0;
+  border-color: #e4e4e4;
+}
+
+.__range > label > i:before,
+.__range > label > i:after {
+  margin-top: -0.26rem;
+  height: 0.33rem;
+  border: 1px solid #dcdcdc;
+}
+
+.__range > label > i:before {
+  background-color: #44b5df;
+  right: 1.67rem;
+  border-right-width: 0;
+}
+
+.__range > label > i:after {
+  background-color: #f9f9f9;
+  left: 1.67rem;
+  border-left-width: 0;
+}
+
+.bottom-buttons {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* 童锁蒙板界面 */
+
+.childlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+.childlock > .mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.childlock > .surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.childlock .aux {
+  width: 23rem;
+  font-family: \9ED1\4F53;
+  color: #fff;
+  font-size: 1.17rem;
+}
+
+.childlock .lock {
+  width: 100%;
+  /*margin-top: 3.8rem;*/
+  font-family: \9ED1\4F53;
+  color: #fff;
+  font-size: 1.17rem;
+}
+
+.childlock .lock > li {
+  width: 100%;
+  text-align: center;
+}
+
+.childlock .lock > .s {
+  margin-top: 4rem;
+  margin-left: -220%;
+  width: 300%;
+  text-align: right;
+}
+
+.childlock .lock > .b {
+  margin-top: .5rem;
+  font-size: 5rem;
+}
+
+/*首页按钮*/
+
+.btnlist-body {
+  background: #FFF;
+  opacity: 1;
+  animation: fade 1s;
+}
+
+.btnlist {
+  /* width: 100%;
+    height: 80px; */
+  padding: 0 3.75rem;
+}
+
+.btn-title {
+  font-size: 13px;
+  color: #A9A9A9;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btnlist article {
+  text-align: center;
+  color: #848484;
+  font-size: 14.5px;
+}
+
+.btnlist article img {
+  /* width:4rem;
+    height:4rem; */
+  width: 48px;
+  height: 48px;
+}
+
+.btnlist article p {
+  font-size: 14.5px;
+  margin-top: 0.5rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

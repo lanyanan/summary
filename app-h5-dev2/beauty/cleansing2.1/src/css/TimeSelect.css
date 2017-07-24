@@ -1,0 +1,202 @@
+/*时间设置组件*/
+.timeSelect{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -ms-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;
+    z-index: 999;
+}
+.timeSelect-down{}
+.timeSelect-up{}
+
+.timeSelect>section:first-child{
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.timeselect{
+    min-height: 22.5rem;
+    width:100%;
+    position: fixed;
+    left:0;
+    bottom:-23rem;
+    z-index:999;
+    background-color:#ffffff;
+    animation:popUp .2s linear;
+    -webkit-animation:popUp .2s linear;
+    -moz-animation:popUp .2s linear;
+    -o-animation:popUp .2s linear;
+}
+@keyframes popUp{
+    0% {bottom:-26rem;}
+    30% {bottom:-16.1rem;}
+    50% {bottom:-11.5rem;}
+    80% {bottom:-4.6rem;}
+    100% {bottom:0;}
+}
+@-webkit-keyframes popUp{
+    0% {bottom:-26rem;}
+    30% {bottom:-16.1rem;}
+    50% {bottom:-11.5rem;}
+    80% {bottom:-4.6rem;}
+    100% {bottom:0;}
+}
+@-moz-keyframes popUp{
+    0% {bottom:-26rem;}
+    30% {bottom:-16.1rem;}
+    50% {bottom:-11.5rem;}
+    80% {bottom:-4.6rem;}
+    100% {bottom:0;}
+}
+@-o-keyframes popUp{
+    0% {bottom:-26rem;}
+    30% {bottom:-16.1rem;}
+    50% {bottom:-11.5rem;}
+    80% {bottom:-4.6rem;}
+    100% {bottom:0;}
+}
+.timeselect>.selecttitle{
+    height:3.5rem;
+    line-height:1.8rem;
+    background: #f9f4f3;
+    border-top:1px solid #cdcdcd;
+    font-size: 1.083333rem;
+    color: #666666;
+    padding:0.583333rem 1.333333rem;
+}
+.timeselect>.selecttitle>.title{
+    font-size:1.083333rem;
+    color:#666666;
+}
+.timeselect>.time{
+    height:14.67rem;
+    position: relative;
+    overflow:hidden !important;
+}
+.timeselect>.time>section.hour,.timeselect>.time>section.minute,.timeselect>.time>section.second{
+    display:inline-block;
+    height:100%;
+    z-index:5;
+    opacity:0;
+    position: absolute;
+}
+.timeselect>.time>section.hour{
+    left:0%;
+}
+.timeselect>.time>section.minute{
+    left:33%;
+}
+.timeselect>.time>section.second{
+    left:66%;
+}
+.timeselect>.time>.timetext{
+    position: absolute;
+    top:50%;
+    left: 2%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    line-height:2.833333rem;
+    height:2.833333rem;
+    width:96%;
+    border-bottom:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+    box-sizing:border-box;
+}
+.timeselect>.time>.timetext>.hour{
+    position: absolute;
+    left:0;
+    color:#000000;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.minute{
+    position:absolute;
+    left:33%;
+    color:#000000;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.second{
+    position:absolute;
+    left:66%;
+    color:#666666;
+    font-size:14px;
+}
+.timeselect>.time>.timetext>.status{
+    position: absolute;
+    right:10%;
+    color:#666666;
+    font-size:14px;
+}
+.timeselect>.time>.hourvalue,.timeselect>.time>.minutevalue,.timeselect>.time>.secondvalue{
+    width:1.67rem;
+    font-size:16px;
+    color:#323232;
+    position: absolute;
+    z-index: 4;
+    text-align:center;
+    margin-top:-2.73rem;
+}
+.timeselect>.time>.hourvalue{
+   left:10%;
+}
+.timeselect>.time>.minutevalue{
+   left:43%;
+}
+.timeselect>.time>.secondvalue{
+   left:79%;
+   width:10rem;
+}
+.timeselect>.time>.hourvalue>span,.timeselect>.time>.minutevalue>span,.timeselect>.time>.secondvalue>span{
+    line-height:2.73rem;
+    height:2.73rem;
+    display:block;
+}
+.timeselect>.time>.hourvalue>.line1,.timeselect>.time>.minutevalue>.line1,.timeselect>.time>.secondvalue>.line1{
+    opacity:0.2;
+    font-size: 14px;
+}
+.timeselect>.time>.hourvalue>.line2,.timeselect>.time>.minutevalue>.line2,.timeselect>.time>.secondvalue>.line2{
+    opacity:0.5;
+    font-size: 14px;
+}
+.timeselect>.time>.hourvalue>.line3,.timeselect>.time>.minutevalue>.line3,.timeselect>.time>.secondvalue>.line3{
+    line-height:3.75rem;
+    height:3.75rem;
+}
+.timeselect>.time>.hourvalue>.line4,.timeselect>.time>.minutevalue>.line4,.timeselect>.time>.secondvalue>.line4{
+    opacity:0;
+    font-size: 14px;
+}
+.timeselect>.selectbtn{
+    height:3.958333rem;
+    line-height:3.958333rem;
+    font-size:16px;
+    color:#333333;
+    text-align:left;
+    padding:0 1.375rem;
+    border-bottom:1px solid #e5e5e5;
+}
+.timeselect>.selectbtn>span:nth-child(2){
+    text-align:right;
+}
+.timedescription{
+    height: 3.666667rem;
+    width: 96%;
+    margin: 0 auto;
+    border-bottom: 1px solid #e5e5e5;
+    color:#fc84a7;
+}
+.timedescription>span{
+    height: 3.666667rem;
+    line-height: 3.666667rem;
+    font-size: 14px;
+    flex: 1;
+    text-align: center;
+}

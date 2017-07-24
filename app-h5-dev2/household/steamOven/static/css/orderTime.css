@@ -1,0 +1,172 @@
+/*时间设置组件*/
+
+.Ordertime {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*-webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -ms-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;*/
+  z-index: 999;
+}
+
+
+
+
+
+.Ordertime>section:first-child {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 22.22rem;
+  width: 100%;
+  height: 100%;
+}
+
+.ordertime {
+  height: 22.22rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #ffffff;
+}
+
+.ordertime>.selecttitle {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  /*  border-bottom:1px solid #cccccc;
+    border-top:1px solid #cccccc;*/
+}
+
+.ordertime>.selecttitle>.title {
+  margin-left: 1.25rem;
+  font-size: 1.167rem;
+  color: #303030;
+}
+
+.ordertime>.time {
+  height: 14.67rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.ordertime>.time>section.hour,
+.ordertime>.time>section.minute {
+  display: inline-block;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+}
+
+.ordertime>.time>section.hour {
+  left: 0%;
+}
+
+.ordertime>.time>section.minute {
+  left: 50%;
+}
+
+.ordertime>.time>.timetext {
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  line-height: 3.75rem;
+  height: 3.75rem;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.ordertime>.time>.timetext>.hour {
+  position: absolute;
+  left: 33%;
+  color: #303030;
+  font-size: 1.167rem;
+}
+
+.ordertime>.time>.timetext>.minute {
+  position: absolute;
+  left: 66%;
+  color: #303030;
+  font-size: 1.167rem;
+}
+
+.ordertime>.time>.timetext>.status {
+  position: absolute;
+  right: 10%;
+  color: #666666;
+  font-size: 14px;
+}
+
+.ordertime>.time>.hourvalue,
+.ordertime>.time>.minutevalue {
+  width: 1.67rem;
+  font-size: 1.5rem;
+  color: #303030;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  margin-top: -2.73rem;
+}
+
+.ordertime>.time>.hourvalue {
+  left: 25%;
+}
+
+.ordertime>.time>.minutevalue {
+  left: 56%;
+}
+
+.ordertime>.time>.hourvalue>span,
+.ordertime>.time>.minutevalue>span {
+  line-height: 2.73rem;
+  height: 2.73rem;
+  display: block;
+}
+
+.ordertime>.time>.hourvalue>.line1,
+.ordertime>.time>.minutevalue>.line1 {
+  opacity: 0;
+}
+
+.ordertime>.time>.hourvalue>.line2,
+.ordertime>.time>.minutevalue>.line2 {
+  opacity: 0.5;
+}
+
+.ordertime>.time>.hourvalue>.line3,
+.ordertime>.time>.minutevalue>.line3 {
+  line-height: 5.75rem;
+  height: 5.75rem;
+}
+
+.ordertime>.time>.hourvalue>.line4,
+.ordertime>.time>.minutevalue>.line4 {
+  opacity: 0;
+}
+
+.ordertime>.selectbtn {
+  height: 4.0rem;
+  line-height: 4.0rem;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.ordertime>.selectbtn>span:nth-child(1) {
+  border-right: 1px solid #cccccc;
+  font-size: 1.333rem;
+  color: #303030;
+}
+
+.ordertime>.selectbtn>span:nth-child(2) {
+  font-size: 1.333rem;
+  color: #ff7734;
+}
